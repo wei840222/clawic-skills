@@ -1,81 +1,58 @@
 ---
 name: hosting
-slug: hosting
-version: 1.0.0
-description: Choose and manage web hosting services for websites and apps without server administration.
-homepage: https://clawic.com/skills/hosting
+description: Choose and operate web hosting for websites and applications. Use when users need to select a host, deploy a project, configure a domain or DNS, plan backups, or migrate hosting without managing a server.
 metadata:
-  clawdbot:
-    emoji: 🌍
-    os:
-    - linux
-    - darwin
-    - win32
-    displayName: Hosting
+  version: "1.0.0"
+  openclaw: '{"emoji":"🌍"}'
 ---
 
 # Web Hosting Guidance
 
-## Choosing the Right Type
-- Static sites (HTML, CSS, JS only): Use Vercel, Netlify, Cloudflare Pages, GitHub Pages — free tier often enough, no server management
-- Dynamic sites with backend: Platform hosting (Railway, Render, Fly.io) handles servers without manual management
-- WordPress or PHP: Managed WordPress hosts (WP Engine, Kinsta) or traditional shared hosting
-- E-commerce: Shopify or platform-specific hosting — payment security is not worth DIY risk
-- Don't recommend VPS to someone uncomfortable with terminal — managed hosting exists for a reason
+## Start Here
 
-## Shared Hosting Reality
-- "Unlimited" bandwidth and storage always have fair use limits — read the terms
-- Performance depends on neighbors — bad neighbors slow your site
-- SSH access may be limited or unavailable — verify before assuming
-- Cron jobs and background processes often restricted
-- Fine for small sites and blogs — not for growing businesses
+1. Classify the workload: static site, application backend, WordPress/PHP, or e-commerce.
+2. Match the provider and region to the workload, expected traffic, and operational skill level.
+3. Before production, verify the deployment, HTTPS, backup scope, restore procedure, and billing limits.
 
-## Platform Hosting (Vercel, Netlify, Railway, etc.)
-- Free tiers have limits — check build minutes, bandwidth, function invocations
-- Serverless functions have cold start latency — first request after idle is slow
-- Vendor lock-in varies — static files portable, platform-specific features less so
-- Preview deployments per branch are invaluable for review workflows
-- Environment variables configured in dashboard — never commit secrets to repo
+Use managed hosting for people who do not want to administer servers. Use a VPS only when its operational responsibility is intentional and supported.
 
-## Database Considerations
-- Most platform hosts don't include databases — need separate provider (PlanetScale, Supabase, Neon)
-- Database location should match app location — cross-region latency hurts performance
-- Connection pooling often required for serverless — direct connections exhaust limits
-- Backups may or may not be included — verify and test restore process
+## Hosting Choices
 
-## Domain and DNS
-- Hosting provider often offers DNS — but separating them gives flexibility
-- Point nameservers to host: simpler setup, less control
-- Point A/CNAME records: more control, slightly more complex
-- SSL certificates usually automatic with modern hosts — verify HTTPS works after setup
+- **Static site:** Vercel, Netlify, Cloudflare Pages, or GitHub Pages are suitable for HTML, CSS, and JavaScript sites.
+- **Application backend:** Railway, Render, or Fly.io can operate application services without direct server administration.
+- **WordPress or PHP:** Use managed WordPress hosting or conventional shared hosting when its constraints fit the application.
+- **E-commerce:** Prefer Shopify or a platform designed for payments; confirm payment-security and compliance responsibilities before launch.
 
-## Email Separation
-- Web hosting and email hosting are different services — can use different providers
-- Don't rely on free email with web hosting — often limited and unreliable
-- Google Workspace, Zoho, or dedicated email providers are more reliable
-- MX records for email don't affect web hosting
+## Common Constraints
 
-## Backups
-- Managed hosts usually include backups — verify frequency and retention
-- Download periodic backups locally — host backups don't help if host goes away
-- Know the restore process before you need it
-- Database backups separate from file backups — need both
+- Shared-hosting “unlimited” plans have fair-use limits. Check the terms, SSH access, cron/background-process policy, and performance limits before choosing one.
+- Keep the application and database in nearby regions to reduce latency. Serverless database access often needs connection pooling.
+- Treat preview deployments as a release checkpoint before production.
+- Store deployment secrets in the platform’s managed secret configuration, not in the repository.
 
-## Cost Awareness
-- Monthly vs yearly billing — annual often 20-40% cheaper but commits you
-- Traffic spikes can trigger overage fees — understand the billing model
-- Free tiers often enough for side projects — don't overpay for unused capacity
-- Compare total cost including add-ons — base price rarely tells the whole story
+## Checkpoint Before Production
 
-## Migration Readiness
-- Keep content in portable formats — avoid excessive platform-specific features
-- Document how the current setup works — needed when moving
-- Export data regularly — don't assume you can always access it
-- DNS propagation takes up to 48 hours — plan migrations with overlap
+Confirm all of the following before moving traffic:
 
-## Common Mistakes
-- Choosing by price alone — support quality matters when things break
-- Not testing staging before production — preview environments prevent disasters
-- Ignoring geographic location — hosting in US for European users adds latency
-- Assuming backups exist — verify and test before you need them
-- Overcomplicating for small sites — a blog doesn't need Kubernetes
+- [ ] The domain points to the intended service and HTTPS succeeds.
+- [ ] The backup covers both files and data, has a documented retention period, and a restore has been tested.
+- [ ] Usage, bandwidth, build, and function limits match the expected workload.
+- [ ] The rollback and migration overlap plan is documented.
+
+## Load Detailed Guidance
+
+| Situation | Read |
+|---|---|
+| Comparing platform hosts, databases, free-tier limits, and portability | `references/providers.md` |
+| Configuring DNS, email, backups, billing, or a migration | `references/operations.md` |
+
+## Avoid These Failure Modes
+
+- Do not select hosting on price alone; support, recovery, and usage limits matter when a service fails.
+- Do not direct email through a web host by default; use a dedicated mail provider when reliability matters.
+- Do not assume a provider backup is recoverable; verify scope, retention, and restoration first.
+- Do not add orchestration complexity to a small site without a concrete operational need.
+
+## State Location
+
+This skill is stateless and does not persist local configuration or data.
