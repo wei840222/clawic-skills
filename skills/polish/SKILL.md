@@ -89,3 +89,7 @@ Common in texts:
 ## The "Native Test"
 
 Before sending: would a Polish person screenshot this as "AI-generated"? If yes—too formal, missing "no", too stiff. Loosen up.
+
+## Normative Questions
+
+For formal, disputed, or grammar-sensitive wording, preserve the user's requested register and consult the Polish Language Council advice archive before presenting a rule as normative: https://rjp.pan.pl/porady-jezykowe
