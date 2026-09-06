@@ -1,14 +1,14 @@
 # AI Logo Generation
 
-## Model Ranking (2026)
+## Model selection
 
 | Model | Best For | Text | Quality | Speed |
 |-------|----------|------|---------|-------|
 | **Nano Banana Pro** | Overall best, text + icons | Excellent | Excellent | Fast |
 | **GPT Image 1.5** | Conversational iteration | Excellent | Excellent | Medium |
-| **Ideogram** | Typography-focused logos | Excellent | Good | Fast |
+| **Ideogram** | Typography-oriented explorations | Varies | Varies | Varies |
 | **Midjourney v7** | Artistic/stylized icons | Poor | Beautiful | Medium |
-| **Flux Pro** | Photorealistic emblems | Good | Excellent | Slow |
+| **FLUX-family tools** | Concept exploration where available | Varies | Varies | Varies |
 
 **Start with Nano Banana Pro** for most logos. It's currently the best balance of quality, text rendering, and ease of use.
 
@@ -147,7 +147,7 @@ iOS 26 introduced Liquid Glass design. App icons now have depth, translucency, a
 
 ### iOS 26 Liquid Glass Prompt
 
-Tested prompt that matches Apple's new icon style:
+Use this as a concept prompt; adapt it to the current platform guidance:
 
 ```
 Create a highly polished, modern app icon in the style of iOS system icons.
@@ -163,8 +163,8 @@ on the background to create depth and a slight 3D, glassy effect,
 while maintaining an overall flat and clean appearance.
 Surfaces should be ultra-smooth, no harsh outlines, no pixelation, no textures.
 Add a subtle top-gloss or light reflection to enhance the glassy, premium feel.
-The icon should embody a friendly, approachable, and modern aesthetic.
-The design must be visually cohesive with Apple's iOS system icons.
+The icon should embody a clear, approachable, and modern aesthetic.
+Keep the design distinct from Apple trademarks and verify current platform requirements before finalizing.
 The icon represents [APP PURPOSE].
 ```
 
@@ -225,7 +225,7 @@ simple clean lines, vector style --ar 1:1 --stylize 50 --no text
 
 ## Quality Check Loop (CRITICAL)
 
-**NEVER deliver an AI-generated logo without visual inspection.** Every output must be reviewed before sharing or finalizing.
+**Always visually inspect an AI-generated logo before delivery.** Review every output before sharing or finalizing.
 
 ### Mandatory Review Process
 
@@ -241,7 +241,7 @@ simple clean lines, vector style --ar 1:1 --stylize 50 --no text
 |---------|----------|
 | Unwanted padding/margins | Crop the image |
 | Elements cut off at edges | Regenerate with "centered composition" |
-| Text misspelled or garbled | Use Nano Banana/Ideogram, or add text manually |
+| Text misspelled or garbled | Use a tool that produces acceptable typography in the observed output, or add text manually |
 | Wrong colors | Specify hex codes, regenerate |
 | Too complex for small sizes | Simplify prompt, request "minimalist" |
 | Asymmetric or unbalanced | Request "centered", "balanced composition" |
@@ -258,7 +258,7 @@ After 5-7 failed attempts with the same approach:
 
 ### Quick Fixes
 
-**Crop:** Many issues (padding, partial unwanted elements) are solved by cropping. Don't regenerate if a crop fixes it.
+**Crop:** Many issues (padding, partial unwanted elements) are solved by cropping. Prefer cropping when it resolves the issue without losing required content.
 
 **Prompt tweaks that help:**
 - "centered composition, no margins"
@@ -273,7 +273,7 @@ After fixing, always check at 32px, 180px, and 1024px. Issues visible at small s
 
 ## Post-Generation Workflow
 
-AI output is never the final logo. Always:
+Treat AI output as an initial draft. Always:
 
 1. **Vectorize** — Use vectorizer.ai, Adobe Illustrator Image Trace, or Figma
 2. **Clean shapes** — Fix imperfect curves, align elements
@@ -293,7 +293,7 @@ AI output is never the final logo. Always:
 ## Common Mistakes
 
 1. **Using AI output directly** — Always vectorize and refine
-2. **Wrong model for text** — Use Nano Banana or Ideogram, not Midjourney
+2. **Wrong model for text** — Evaluate the observed typography; add final text manually when generated text is unsuitable
 3. **Too much detail** — Complex designs fail at small sizes
 4. **No favicon test** — Always check at 32px before finalizing
 5. **Ignoring variants** — Create horizontal, stacked, icon-only versions
