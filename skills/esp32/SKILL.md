@@ -15,7 +15,7 @@ This skill is stateless and does not store local configuration or state.
 1. Identify the exact chip variant, board, framework (ESP-IDF, Arduino-ESP32, or another supported runtime), ESP-IDF/Arduino version, and requested behavior.
 2. Load `references/esp32-guidelines.md` for pin, sleep, Wi-Fi, task, memory, peripheral, OTA, or power guidance.
 3. Verify board-specific pin assignments and version-specific APIs against the framework documentation before proposing a wiring or firmware change.
-4. State the applicable chip/framework caveat with the recommendation. When the board, chip, or framework version is unknown, request it before giving pin-level or API-level instructions.
+4. State the applicable chip/framework caveat with the recommendation. With unknown board, chip, or framework version, first obtain those details, then give pin-level or API-level instructions.
 
 ## Scope boundary
 
