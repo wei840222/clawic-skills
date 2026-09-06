@@ -314,4 +314,4 @@ For every skill-refactor pull request:
 | tech-debt | 2026-09-06 | 85/100 | #280 |
 | logo | #289 | 2026-09-06 | 84/100 |
 
-| hosting | 2026-09-06 | 85/100 | #TBD |
+| hosting | 2026-09-06 | 85/100 | #293 |
