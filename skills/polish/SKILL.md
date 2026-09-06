@@ -94,7 +94,7 @@ Common in texts:
 
 ## The "Native Test"
 
-Before sending: would a Polish person screenshot this as "AI-generated"? If yes—too formal, missing "no", too stiff. Loosen up.
+Before sending, check whether the wording matches the intended Polish audience and sounds naturally human. For casual contexts, use idiomatic particles and a relaxed rhythm; for formal contexts, retain the appropriate distance.
 
 ## Normative Questions
 
