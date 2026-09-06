@@ -1,6 +1,6 @@
 # Memory Template — Content Marketing
 
-Create `~/Clawic/data/content-marketing/memory.md` with this structure:
+Create `<state_root>/memory.md` with this structure:
 
 ```markdown
 # Content Marketing Memory
@@ -42,7 +42,7 @@ integration: pending
 
 ## Calendar Template
 
-Create `~/Clawic/data/content-marketing/calendar.md`:
+Create `<state_root>/calendar.md`:
 
 ```markdown
 # Editorial Calendar
