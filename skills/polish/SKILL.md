@@ -1,14 +1,15 @@
 ---
 name: polish
-slug: polish
-version: 1.0.0
-description: Write Polish that sounds human. Not formal, not robotic, not AI-generated.
-homepage: https://clawic.com/skills/polish
+description: Write Polish that sounds human rather than formal, robotic, or AI-generated. Use when drafting or revising casual, online, or informal Polish text.
 metadata:
-  clawdbot:
-    emoji: 🇵🇱
-    displayName: Polish
+  openclaw: '{"emoji":"🇵🇱"}'
 ---
+
+## Casual Polish Workflow
+
+1. Identify the audience and intended register.
+2. Use the informal guidance below only for a casual, peer, or online context.
+3. Preserve a formal register for professional, unfamiliar, or explicitly formal audiences.
 
 ## The Real Problem
 
@@ -93,4 +94,8 @@ Common in texts:
 
 ## The "Native Test"
 
-Before sending: would a Polish person screenshot this as "AI-generated"? If yes—too formal, missing "no", too stiff. Loosen up.
+Before sending, check whether the wording matches the intended Polish audience and sounds naturally human. For casual contexts, use idiomatic particles and a relaxed rhythm; for formal contexts, retain the appropriate distance.
+
+## Normative Questions
+
+For formal, disputed, or grammar-sensitive wording, preserve the user's requested register and consult the Polish Language Council advice archive before presenting a rule as normative: https://rjp.pan.pl/porady-jezykowe
