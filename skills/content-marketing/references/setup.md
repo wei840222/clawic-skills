@@ -4,10 +4,10 @@ Read this on first use to help the user get started.
 
 ## Data Storage
 
-This skill stores content strategy data locally in `~/Clawic/data/content-marketing/`:
-- `memory.md` — Strategy, voice, goals
-- `calendar.md` — Editorial calendar
-- `content-bank/` — Ideas and drafts
+This skill stores content strategy data locally in `<state_root>/`:
+- `<state_root>/memory.md` — Strategy, voice, goals
+- `<state_root>/calendar.md` — Editorial calendar
+- `<state_root>/content-bank/` — Ideas and drafts
 
 On first use, ask the user: "I can help you plan and track your content strategy. Would you like me to create a local folder to store your calendar and preferences?"
 
@@ -19,7 +19,7 @@ If they agree, create the folder structure. If they decline, work without persis
 
 Before creating any files:
 - Explain what will be stored (calendar, voice preferences, content ideas)
-- Explain where it will be stored (`~/Clawic/data/content-marketing/`)
+- Explain where it will be stored (`<state_root>/`)
 - Get explicit confirmation before creating files
 
 ### 2. Then: Understand Their Situation
@@ -48,7 +48,7 @@ With user consent, save:
 - Voice guidelines (tone, examples)
 - Editorial calendar and content ideas
 
-Always confirm what was saved: "I've saved your content preferences to ~/Clawic/data/content-marketing/memory.md"
+Always confirm what was saved: "I've saved your content preferences to <state_root>/memory.md"
 
 ## Without Persistent Storage
 
