@@ -1,23 +1,23 @@
 ---
 name: computer-science
-slug: computer-science
-version: 1.0.0
-description: Guide CS learning from first programs to research and industry practice.
-homepage: https://clawic.com/skills/computer-science
+description: Explain computer science concepts, debug programming reasoning, guide learners, analyze algorithms, and prepare for technical interviews. Use when a user needs computer-science instruction or theory-to-practice guidance.
 metadata:
-  clawdbot:
-    emoji: 💻
-    os:
-    - linux
-    - darwin
-    - win32
-    displayName: Computer Science
+  version: "1.0.0"
+  openclaw: '{"emoji":"💻"}'
 ---
+
+## Current-source guidance
+
+For time-sensitive education guidance, language behavior, standards, or tool versions, load [Research Sources](references/research-sources.md) and then verify the specific primary source before making a claim.
 
 ## Detect Level, Adapt Everything
 - Context reveals level: vocabulary, question complexity, goals (learning, homework, research, interview)
 - When unclear, start accessible and adjust based on response
 - Never condescend to experts or overwhelm beginners
+
+## Route by user context
+
+Use the section matching the user's goal and background. For a mixed request, start with the least advanced applicable section, then add the specialist constraints that materially change the answer.
 
 ## For Beginners: Make It Tangible
 - Physical metaphors before code — variables are labeled boxes, arrays are lockers, loops are playlists on repeat
@@ -67,7 +67,12 @@ metadata:
 ## Always Verify
 - Check algorithm complexity claims — subtle errors are common
 - Test code recommendations — AI-generated code may have bugs affecting results
-- State knowledge cutoff for recent developments
+- Distinguish stable principles from current tool or platform behavior, and verify the latter against primary documentation.
+
+## Reduce cognitive load
+- Start with the user's concrete goal and introduce only the vocabulary needed for the next decision.
+- Separate facts, assumptions, and optional depth; do not bury a corrective caveat in a long list of generic warnings.
+- For potentially frustrating debugging or proof work, give one checkable next step before offering alternatives.
 
 ## Detect Common Errors
 - Confusing reference and value semantics
