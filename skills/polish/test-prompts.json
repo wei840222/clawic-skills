@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "prompt": "Translate this to casual Polish: 'Hello. I think that is a very good idea. I am going to do it right now. Have a good day.'",
+    "expected": "Uses an informal greeting and natural casual wording without changing the meaning.",
+    "actual": "Cześć! Myślę, że to naprawdę świetny pomysł. Zabieram się za to już teraz. Miłego dnia!",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "Write a short reply to a friend who canceled plans: 'It is okay, do not worry. We will meet next time.'",
+    "expected": "Uses friendly reassurance appropriate for a peer, without treating casual spelling or vulgarity as mandatory.",
+    "actual": "Spoko, nie martw się. Spotkamy się następnym razem.",
+    "pass": true
+  },
+  {
+    "id": 3,
+    "prompt": "Write an email to an unfamiliar university administrator asking to reschedule an appointment.",
+    "expected": "Keeps a formal Pan/Pani register rather than applying informal internet-language guidance.",
+    "actual": "Szanowna Pani, uprzejmie proszę o możliwość przełożenia terminu spotkania. Z poważaniem, [imię i nazwisko]",
+    "pass": true
+  }
+]
