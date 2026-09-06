@@ -53,9 +53,9 @@ Create `<state_root>/calendar.md`:
 
 ## Content Bank
 <!-- Ideas to develop -->
-- 
-- 
-- 
+-
+-
+-
 
 ---
 *Updated: YYYY-MM-DD*

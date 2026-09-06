@@ -1,6 +1,6 @@
 ---
 name: content-marketing
-description: Plan, create, measure, and repurpose audience-focused content across funnel stages. Use when the user needs a content strategy, editorial calendar, campaign brief, distribution plan, performance review, or content repurposing; do not use it for paid-media execution or brand identity work alone.
+description: Plan, create, measure, and repurpose audience-focused content across funnel stages. Use when the user needs a content strategy, editorial calendar, campaign brief, distribution plan, performance review, or content repurposing. Route paid-media execution to an advertising workflow and standalone brand identity work to the branding skill.
 metadata:
   version: "1.0.0"
   openclaw: '{"emoji":"📝"}'
@@ -14,9 +14,9 @@ Content-marketing state may exist in `<workspace>/content-marketing/`, `<workspa
 1. Use an explicitly configured state path when available.
 2. Otherwise use the first existing directory in this order: `<workspace>/content-marketing/`, `<workspace>/memory/content-marketing/`, `~/content-marketing/`.
 3. If multiple candidate directories exist, use only the highest-precedence directory and report the duplicate state locations.
-4. If none exists and the user consents to saving state, create `<workspace>/content-marketing/`.
+4. When no candidate exists and the user consents to saving state, create `<workspace>/content-marketing/`.
 
-Keep the selected `<state_root>` for the entire invocation. The host supplies `<workspace>`; when it is unavailable, use an existing `~/content-marketing/` only, otherwise ask for a state location before creating data.
+Keep the selected `<state_root>` for the entire invocation. The host supplies `<workspace>`; when it is unavailable, use an existing `~/content-marketing/`, or obtain a state location before creating data.
 
 ## Workflow
 
@@ -50,4 +50,4 @@ Keep the selected `<state_root>` for the entire invocation. The host supplies `<
 
 - A calendar without an audience problem, funnel stage, or measurement rule is a publishing list, not a strategy.
 - Reuse the idea, not a verbatim post: fit derivatives to each channel's audience and format.
-- Obtain consent before creating persistent files; keep user data local unless the user separately authorizes an external destination.
+- Obtain consent before creating persistent files. Keep user data local; use an external destination only after separate authorization.

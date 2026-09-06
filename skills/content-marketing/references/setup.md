@@ -5,9 +5,9 @@ Read this on first use to help the user get started.
 ## Data Storage
 
 This skill stores content strategy data locally in `<state_root>/`:
-- `memory.md` — Strategy, voice, goals
-- `calendar.md` — Editorial calendar
-- `content-bank/` — Ideas and drafts
+- `<state_root>/memory.md` — Strategy, voice, goals
+- `<state_root>/calendar.md` — Editorial calendar
+- `<state_root>/content-bank/` — Ideas and drafts
 
 On first use, ask the user: "I can help you plan and track your content strategy. Would you like me to create a local folder to store your calendar and preferences?"
 
