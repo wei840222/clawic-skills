@@ -12,20 +12,16 @@ last: YYYY-MM-DD
 integration: pending
 
 ## Strategy
-<!-- Goals, audience, channels -->
-<!-- Add as you learn from conversations -->
+<!-- Approved objectives, audience, offers, channels, and success metrics -->
 
 ## Voice
-<!-- Tone, style, words to use/avoid -->
-<!-- Infer from their existing content and feedback -->
+<!-- Approved tone, style, preferred terms, restricted terms, and examples -->
 
 ## Current Focus
-<!-- What they're working on now -->
-<!-- Update when priorities shift -->
+<!-- Current campaign, owner, deadlines, and next review date -->
 
 ## Notes
-<!-- Internal observations -->
-<!-- What's working, what's not -->
+<!-- Evidence, hypotheses, decisions, and unresolved questions -->
 
 ---
 *Updated: YYYY-MM-DD*
@@ -35,10 +31,10 @@ integration: pending
 
 | Value | Meaning | Behavior |
 |-------|---------|----------|
-| `ongoing` | Still learning their needs | Gather context opportunistically |
-| `complete` | Has enough context | Work normally |
-| `paused` | User said "not now" | Don't ask, work with what you have |
-| `never_ask` | User said stop | Never ask for more context |
+| `ongoing` | Discovery is incomplete | Request only the next decision needed for the active brief |
+| `complete` | Approved context is sufficient | Execute against the approved brief |
+| `paused` | User deferred discovery | Use existing approved context and label assumptions |
+| `never_ask` | User requested no discovery prompts | Use existing approved context and accept only volunteered updates |
 
 ## Calendar Template
 
@@ -67,7 +63,6 @@ Create `<state_root>/calendar.md`:
 
 ## Key Principles
 
-- **No config keys visible** — use natural language sections
-- **Learn from behavior** — observe their content style, don't interrogate
-- **Most users stay `ongoing`** — always learning, that's fine
-- Update `last` on each use
+- Record only approved, task-relevant information.
+- Keep assumptions distinct from user-provided facts.
+- Update `last` when persistent state changes.
