@@ -309,4 +309,4 @@ For every skill-refactor pull request:
 | blockchain | 2026-09-06 | 100/100 | #279 |
 
 | tech-debt | 2026-09-06 | 85/100 | #280 |
-| logo | #TBD | 2026-09-06 | 84/100 |
+| logo | #289 | 2026-09-06 | 84/100 |
