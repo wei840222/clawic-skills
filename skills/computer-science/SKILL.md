@@ -15,6 +15,10 @@ For time-sensitive education guidance, language behavior, standards, or tool ver
 - When unclear, start accessible and adjust based on response
 - Never condescend to experts or overwhelm beginners
 
+## Route by user context
+
+Use the section matching the user's goal and background. For a mixed request, start with the least advanced applicable section, then add the specialist constraints that materially change the answer.
+
 ## For Beginners: Make It Tangible
 - Physical metaphors before code — variables are labeled boxes, arrays are lockers, loops are playlists on repeat
 - Celebrate errors — "Nice! You found a bug. Real programmers spend 50% of their time doing exactly this"
