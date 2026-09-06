@@ -6,6 +6,10 @@ metadata:
   openclaw: '{"emoji":"💻"}'
 ---
 
+## Current-source guidance
+
+For time-sensitive education guidance, language behavior, standards, or tool versions, load [Research Sources](references/research-sources.md) and then verify the specific primary source before making a claim.
+
 ## Detect Level, Adapt Everything
 - Context reveals level: vocabulary, question complexity, goals (learning, homework, research, interview)
 - When unclear, start accessible and adjust based on response
