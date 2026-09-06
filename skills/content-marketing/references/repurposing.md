@@ -1,82 +1,25 @@
-# Repurposing Workflows — Content Marketing
+# Repurposing workflows
 
-## The Core Principle
+## Plan derivatives from a source asset
 
-Create once, distribute everywhere. Every pillar piece should generate 5-10 derivative pieces.
+1. Confirm that the user owns or is authorized to adapt the source material.
+2. Extract the source asset's audience problem, central claim, proof, and approved call to action.
+3. Choose only derivatives that fit a destination channel and the available review capacity.
+4. Rewrite for the format; preserve the claim and evidence, not the source wording.
+5. Schedule a measurement window and record learning after publication when the user has enabled local state.
 
-## Pillar to Derivatives
+## Format map
 
-### From Long-Form Blog Post
+| Source | Useful derivatives | Checks before release |
+| --- | --- | --- |
+| Long-form article | Email section, short social post, carousel, video outline, FAQ | Verify statistics, links, and CTA against the current source |
+| Video or podcast | Edited article, clips, quote cards, newsletter, thread | Obtain speaker and media rights; review transcript accuracy |
+| Webinar or workshop | Replay, lesson summary, slides, follow-up email, case study | Remove private attendee data and respect recording consent |
 
-| Derivative | Format | Platform |
-|------------|--------|----------|
-| Thread | 5-10 tweets | Twitter/X |
-| Carousel | 5-10 slides | LinkedIn, Instagram |
-| Summary video | 60-90 seconds | TikTok, Reels, Shorts |
-| Newsletter section | 200-300 words | Email |
-| Quote graphics | 3-5 images | All social |
-| Podcast talking points | Outline | Audio platforms |
-| Infographic | Visual summary | Pinterest, LinkedIn |
+## Release timing
 
-### From Video/Podcast
+Use the audience's channel cadence, campaign dependencies, and production capacity to sequence derivatives. If evidence is unavailable, publish a small pilot and set a review date before expanding distribution.
 
-| Derivative | Format | Platform |
-|------------|--------|----------|
-| Blog post | Transcript + editing | Website |
-| Clips | 30-60 second cuts | Short-form video |
-| Audiogram | Audio + waveform | Social |
-| Quote cards | Key moments | Image platforms |
-| Thread | Key insights | Twitter/X |
+## Updating evergreen assets
 
-### From Webinar/Workshop
-
-| Derivative | Format | Platform |
-|------------|--------|----------|
-| Replay | Full video | YouTube, course platform |
-| Clips | Best moments | Social |
-| Blog post | Written version | Website |
-| Slides | PDF download | Lead magnet |
-| Email series | Key lessons | Newsletter |
-
-## The 10x Rule
-
-Before publishing any pillar content, plan 10 derivatives:
-
-```markdown
-## Repurposing Plan for: [Title]
-
-Pillar: [Blog post / Video / Podcast]
-
-Derivatives:
-1. [ ] Twitter thread
-2. [ ] LinkedIn carousel
-3. [ ] Instagram carousel
-4. [ ] Newsletter mention
-5. [ ] Quote graphic 1
-6. [ ] Quote graphic 2
-7. [ ] Quote graphic 3
-8. [ ] Short video clip
-9. [ ] Community post
-10. [ ] Updated evergreen (in 6 months)
-```
-
-## Timing Strategy
-
-Don't publish all derivatives at once. Spread over 2-4 weeks:
-
-| Week | Derivatives |
-|------|-------------|
-| Week 1 (publish) | Pillar + thread + newsletter |
-| Week 2 | Carousel + quote graphics |
-| Week 3 | Video clip + community post |
-| Week 4 | Reshare pillar with new angle |
-
-## Evergreen Updates
-
-Every 6-12 months, update pillar content:
-- Refresh stats and examples
-- Add new sections
-- Update screenshots
-- Republish with "Updated for [Year]"
-
-Evergreen content should improve, not decay.
+Before refreshing an asset, verify factual claims, examples, screenshots, links, and publication permissions. Document the update date and changes in `<state_root>/analytics/` only after the user consents to persistent storage.

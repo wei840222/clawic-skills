@@ -1,79 +1,27 @@
-# Funnel Strategy — Content Marketing
+# Funnel planning
 
-## The Three Stages
+Use a funnel only as a planning model; select stages and metrics that match the user's business model and buyer journey.
 
-Every piece of content serves one funnel stage. Know which before creating.
+## Stages
 
-### TOFU — Top of Funnel (Awareness)
+### Awareness
 
-**Goal:** Attract new audience who don't know you exist.
+Use for people discovering a problem or category. Typical formats include explanatory articles, videos, social posts, and educational collaborations. Measure qualified reach, new subscribers, or the next intentional engagement rather than treating impressions alone as success.
 
-**Content types:**
-- SEO blog posts on broad topics
-- Social content for virality
-- Podcasts and YouTube for discovery
-- Guest posts and collaborations
+### Consideration
 
-**Metrics that matter:**
-- Traffic, impressions, reach
-- New followers, subscribers
-- Social shares
+Use for people comparing approaches. Typical formats include guides, comparisons, tutorials, case studies, webinars, and email sequences. Measure signals such as returning engagement, qualified signups, or completed education flows.
 
-**Trap:** TOFU content that doesn't lead anywhere. Always include a path to MOFU.
+### Decision
 
-### MOFU — Middle of Funnel (Consideration)
+Use for people evaluating a specific offer. Typical formats include product walkthroughs, evidence-led case studies, FAQs, pricing explanations, and landing pages. Measure the agreed conversion event and its quality.
 
-**Goal:** Educate people who know you but haven't decided.
+## Planning procedure
 
-**Content types:**
-- How-to guides and tutorials
-- Comparison posts (vs competitors, vs alternatives)
-- Case studies (showing process)
-- Webinars and workshops
-- Email sequences
+1. State the audience's current question and the desired next action.
+2. Choose the stage that best fits that question.
+3. Select a format and channel appropriate to the audience's context.
+4. Add a relevant bridge to the next stage only when it helps the user progress.
+5. Define the event, attribution model, review date, and owner before publishing.
 
-**Metrics that matter:**
-- Email signups, lead magnets downloaded
-- Time on page, content completion
-- Return visits
-
-**Trap:** Too much MOFU without TOFU means no new people enter. Balance.
-
-### BOFU — Bottom of Funnel (Decision)
-
-**Goal:** Convert people ready to buy.
-
-**Content types:**
-- Product demos and walkthroughs
-- Customer testimonials and case studies (results-focused)
-- Pricing pages and comparisons
-- FAQ and objection-handling content
-- Sales pages and landing pages
-
-**Metrics that matter:**
-- Conversions, signups, purchases
-- Cost per acquisition
-- Trial to paid rate
-
-**Trap:** Going straight to BOFU with cold traffic. They're not ready.
-
-## Funnel Ratios
-
-Healthy content mix:
-- **60% TOFU** — Feed the top, always
-- **30% MOFU** — Nurture interest
-- **10% BOFU** — Convert the ready
-
-If you're only creating BOFU, you're only selling to people already decided. If you're only creating TOFU, you're entertaining but not converting.
-
-## Content Bridges
-
-Every piece should bridge to the next stage:
-
-| From | Bridge | To |
-|------|--------|-----|
-| TOFU blog post | Lead magnet CTA | MOFU email sequence |
-| MOFU tutorial | "See how X did it" | BOFU case study |
-| BOFU case study | "Start your trial" | Conversion |
-
-No dead ends. Every piece leads somewhere.
+If the journey spans multiple stages, make the transition explicit in the brief instead of forcing a fixed funnel ratio.
