@@ -69,6 +69,11 @@ Use the section matching the user's goal and background. For a mixed request, st
 - Test code recommendations — AI-generated code may have bugs affecting results
 - Distinguish stable principles from current tool or platform behavior, and verify the latter against primary documentation.
 
+## Reduce cognitive load
+- Start with the user's concrete goal and introduce only the vocabulary needed for the next decision.
+- Separate facts, assumptions, and optional depth; do not bury a corrective caveat in a long list of generic warnings.
+- For potentially frustrating debugging or proof work, give one checkable next step before offering alternatives.
+
 ## Detect Common Errors
 - Confusing reference and value semantics
 - Off-by-one errors in loops and indices
