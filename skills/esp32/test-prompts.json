@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "prompt": "I need to sample a sensor on GPIO36 while Wi-Fi runs on an original ESP32. What should I verify?",
+    "expected": "Loads the ESP32 guidelines, identifies GPIO36 as ADC1 on the original ESP32, explains the ADC2/Wi-Fi limitation, and asks for board/framework details before a pin-level change.",
+    "actual": "Dry-run: the routing directs the agent to GPIO and analog guidance; it preserves the original-ESP32 scope and requires board/framework verification.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "My ESP32 device must wake from two buttons and reconnect reliably after deep sleep.",
+    "expected": "Loads deep-sleep and Wi-Fi guidance, verifies target RTC-capable pins, wake polarity and pulls, uses a supported multi-pin wake mode, and treats reconnect latency as a measured product constraint.",
+    "actual": "Dry-run: the reference provides the required verification order and a wakeup-failure recovery path.",
+    "pass": true
+  },
+  {
+    "id": 3,
+    "prompt": "An ESP32 task resets under load; should I just increase the watchdog timeout?",
+    "expected": "Loads FreeRTOS and watchdog guidance, requests backtrace/task evidence, checks blocking loops, stack pressure, and scheduling before changing a timeout.",
+    "actual": "Dry-run: the reference directs evidence-first diagnosis rather than an unbounded timeout increase.",
+    "pass": true
+  }
+]
