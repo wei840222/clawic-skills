@@ -1,13 +1,8 @@
 ---
 name: polish
-slug: polish
-version: 1.0.0
-description: Write Polish that sounds human. Not formal, not robotic, not AI-generated.
-homepage: https://clawic.com/skills/polish
+description: Write Polish that sounds human rather than formal, robotic, or AI-generated. Use when drafting or revising casual, online, or informal Polish text.
 metadata:
-  clawdbot:
-    emoji: 🇵🇱
-    displayName: Polish
+  openclaw: '{"emoji":"🇵🇱"}'
 ---
 
 ## The Real Problem
