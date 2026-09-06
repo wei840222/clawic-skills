@@ -19,4 +19,13 @@ This skill is stateless and does not store local configuration or state.
 
 ## Scope boundary
 
-Use this skill for ESP32-family hardware and firmware constraints. Load the reference rather than applying rules for the original ESP32 indiscriminately to S2/S3/C/H variants.
+Use this skill for ESP32-family hardware and firmware constraints. The reference organizes the decision areas so routine work loads one focused source instead of a broad, always-loaded pin list.
+
+## Fast routing
+
+- Pin assignment or analog input: GPIO and analog input.
+- Battery wakeup or retained data: Deep sleep and wakeup.
+- Connection instability: Wi-Fi.
+- Resets, stalls, or task timing: FreeRTOS and watchdogs.
+- Heap pressure: Memory.
+- Electrical or field-update risk: Peripherals or OTA and power.
