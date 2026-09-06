@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "Create a minimalist logo concept for a climate-tech startup named Northstar, including a small-size validation plan.",
+    "expected": "Produces a structured concept prompt, asks only essential brand questions, and gives a visual review plus vector-cleanup checklist.",
+    "actual": "Dry-run review: the quick-start formula, validation loop, and references/ai-generation.md provide the required workflow.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "I need deliverables for a new logo that will be used on a website, social profiles, and business cards.",
+    "expected": "Routes to references/formats.md and returns suitable vector, raster, color, lockup, and source-file deliverables.",
+    "actual": "Dry-run review: SKILL.md routes format requests to references/formats.md, which enumerates the needed deliverables and checks.",
+    "pass": true
+  }
+]
