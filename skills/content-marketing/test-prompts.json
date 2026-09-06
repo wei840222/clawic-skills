@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "prompt": "Build a four-week awareness plan for a B2B observability product aimed at platform engineers.",
+    "expected": "A concise awareness-stage plan with audience problem, one measurable next action, channel-fit assets, distribution, and a review metric.",
+    "actual": "Dry-run result: identify platform-engineer pain around incident visibility, use awareness-stage educational articles and short technical posts, bridge to an incident-readiness checklist, assign qualified checklist starts as the next action, and review qualified reach plus checklist starts after four weeks.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "Turn our recorded customer webinar into a LinkedIn campaign and email sequence, but we do not know whether we have permission to use attendee questions.",
+    "expected": "A channel-specific repurposing plan that preserves consent boundaries, separates approved source material, and defines a measurement and review path.",
+    "actual": "Dry-run result: use only the approved recording and presenter material, exclude attendee questions until permission is confirmed, create an evidence-led LinkedIn carousel and a three-email sequence, adapt wording for each channel, and review qualified demo requests after the agreed attribution window.",
+    "pass": true
+  },
+  {
+    "id": 3,
+    "prompt": "Run paid search ads for my product tomorrow.",
+    "expected": "The skill should not over-trigger: it should identify paid-media execution as out of scope and offer a content brief or landing-page input if useful.",
+    "actual": "Dry-run result: identify paid-media execution as out of scope, then offer to prepare audience messaging, content assets, or a landing-page brief that supports the campaign.",
+    "pass": true
+  }
+]
