@@ -60,3 +60,8 @@ Use the documentation matching the target chip and framework release:
 - ESP-IDF heap memory allocation — https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/system/mem_alloc.html
 - ESP-IDF FreeRTOS — https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/system/freertos_idf.html
 - ESP-IDF Wi-Fi — https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/network/esp_wifi.html
+
+## Research verification notes
+
+- GPIO, ADC, sleep, memory, FreeRTOS, and Wi-Fi recommendations above are scoped to the ESP-IDF documentation links in this reference; use the matching target/version selector for S2/S3/C/H devices.
+- The original ESP32 ADC2/Wi-Fi limitation and GPIO restrictions are original-ESP32 caveats, not family-wide pin assignments.
