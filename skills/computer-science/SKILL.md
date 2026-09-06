@@ -1,17 +1,9 @@
 ---
 name: computer-science
-slug: computer-science
-version: 1.0.0
-description: Guide CS learning from first programs to research and industry practice.
-homepage: https://clawic.com/skills/computer-science
+description: Explain computer science concepts, debug programming reasoning, guide learners, analyze algorithms, and prepare for technical interviews. Use when a user needs computer-science instruction or theory-to-practice guidance.
 metadata:
-  clawdbot:
-    emoji: 💻
-    os:
-    - linux
-    - darwin
-    - win32
-    displayName: Computer Science
+  version: "1.0.0"
+  openclaw: '{"emoji":"💻"}'
 ---
 
 ## Detect Level, Adapt Everything
@@ -67,7 +59,7 @@ metadata:
 ## Always Verify
 - Check algorithm complexity claims — subtle errors are common
 - Test code recommendations — AI-generated code may have bugs affecting results
-- State knowledge cutoff for recent developments
+- Distinguish stable principles from current tool or platform behavior, and verify the latter against primary documentation.
 
 ## Detect Common Errors
 - Confusing reference and value semantics
