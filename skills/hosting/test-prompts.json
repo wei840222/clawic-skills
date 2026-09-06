@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "I have a static portfolio site and no server administration experience. Where should I host it?",
+    "expected": "Classifies it as static, recommends a managed static host, and tells the user to verify plan limits and HTTPS before launch.",
+    "actual": "A managed static host such as Vercel, Netlify, Cloudflare Pages, or GitHub Pages fits a simple HTML/CSS/JavaScript portfolio. Pick a current plan after checking its limits, then verify the domain and HTTPS before launch. A VPS adds administration you do not need.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "We are moving a web app and its database to a new host. What must we verify?",
+    "expected": "Covers regional placement, database connection handling, DNS/HTTPS, backup restoration, cost limits, and rollback overlap.",
+    "actual": "Keep the app and database in nearby regions, use the database provider’s pooling guidance for serverless access, preserve mail DNS records, and verify the new domain and HTTPS. Before traffic moves, test restoring files and data, check usage limits, document rollback, and keep the old service available until the new one is proven.",
+    "pass": true
+  }
+]
