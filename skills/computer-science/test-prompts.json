@@ -1,0 +1,20 @@
+[
+  {
+    "id": "beginner-hash-map",
+    "prompt": "Explain a hash map to a middle-school student.",
+    "expected": "Uses a concrete metaphor, avoids unexplained jargon, and checks understanding with a small example.",
+    "pass_criteria": ["age-appropriate explanation", "concrete example", "no unsupported complexity claim"]
+  },
+  {
+    "id": "student-quicksort",
+    "prompt": "Why can quicksort be O(n^2) even though its average time is O(n log n)? Show the recurrence.",
+    "expected": "Separates average and worst cases, states pivot assumptions, derives T(n)=T(n-1)+O(n), and explains the resulting sum.",
+    "pass_criteria": ["correct recurrence", "explicit assumptions", "theory and practice distinguished"]
+  },
+  {
+    "id": "production-performance",
+    "prompt": "My O(n log n) service is slow in production. What should I do?",
+    "expected": "Does not equate asymptotic complexity with observed latency; asks for workload and profiling evidence, discusses constants and cache/I/O effects, and proposes tests.",
+    "pass_criteria": ["measurement before conclusion", "trade-offs identified", "safe actionable next step"]
+  }
+]
