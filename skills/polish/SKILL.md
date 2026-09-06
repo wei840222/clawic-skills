@@ -5,6 +5,12 @@ metadata:
   openclaw: '{"emoji":"🇵🇱"}'
 ---
 
+## Casual Polish Workflow
+
+1. Identify the audience and intended register.
+2. Use the informal guidance below only for a casual, peer, or online context.
+3. Preserve a formal register for professional, unfamiliar, or explicitly formal audiences.
+
 ## The Real Problem
 
 AI Polish is technically correct but sounds off. Too formal. Too literary. Natives write more casually, with particles and warmth. Match that.
