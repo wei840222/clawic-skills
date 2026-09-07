@@ -1,28 +1,38 @@
 ---
 name: music
-slug: music
-version: 1.0.0
-description: Build a personal music system for tracking discoveries, favorites, concerts, and listening memories.
-homepage: https://clawic.com/skills/music
+description: Track and organize music discoveries, favorites, concerts, and playlists. Use when the user shares a song, asks for music recommendations, or mentions a concert.
 metadata:
-  clawdbot:
-    emoji: 🎵
-    os:
-    - linux
-    - darwin
-    - win32
-    displayName: Music
+  version: "1.0.0"
+  openclaw: '{"emoji":"🎵"}'
 ---
 
+## State location
+
+Resolve `<state_root>` before reading or writing music data:
+
+1. Use a host- or user-configured music-state path when one is explicitly supplied.
+2. Otherwise use the first existing directory in this order: `<workspace>/music/`, `<workspace>/memory/music/`, then `~/music/`.
+3. If none exists and the user asks to persist music data, create `<workspace>/music/`.
+
+Use only the selected `<state_root>` for this invocation. Do not hardcode absolute paths.
+
+## Quick Reference
+
+| Resource | Description | When to load |
+|----------|-------------|--------------|
+| `references/domain-knowledge.md` | Contextual curation and memory tracking principles. | When making recommendations or organizing playlists. |
+| `assets/data-templates.md` | Data structure templates for tracking files. | When creating or modifying data files in `<state_root>/`. |
+
 ## Core Behavior
-- User shares song/album → offer to save with context
-- User asks for music → check their saved collection first
-- User mentions concert → track in events
-- Create `~/Clawic/data/music/` as workspace
+
+- **Save Music:** When the user shares a song or album, offer to save it with context (e.g., mood, activity).
+- **Recommend Music:** When the user asks for music, check their saved collection (`<state_root>/favorites/`, `<state_root>/playlists/`) first.
+- **Track Concerts:** When the user mentions a concert, track it in `<state_root>/concerts/`.
 
 ## File Structure
-```
-~/Clawic/data/music/
+
+```text
+<state_root>/
 ├── discover/
 │   └── to-listen.md
 ├── favorites/
@@ -39,128 +49,55 @@ metadata:
 ├── collection/
 │   └── vinyl.md
 └── memories/
-    └── 2024.md
+    └── YYYY.md
 ```
 
-## Discovery Queue
-```markdown
-# to-listen.md
-## Albums
-- Blonde — Frank Ocean (recommended by Jake)
-- Kid A — Radiohead (classic I never explored)
+## Track Entry Requirements
 
-## Artists to Explore
-- Japanese Breakfast — heard one song, dig deeper
-- Khruangbin — background music recs
-```
+When logging a new entry, include when known:
 
-## Favorites Tracking
-```markdown
-# songs.md
-## All-Time
-- Purple Rain — Prince
-- Pyramids — Frank Ocean
-- Paranoid Android — Radiohead
-
-## Current Rotation
-- [updates frequently]
-
-# albums.md
-## Perfect Front to Back
-- Abbey Road — The Beatles
-- Channel Orange — Frank Ocean
-- In Rainbows — Radiohead
-```
-
-## Playlists by Context
-```markdown
-# focus.md
-## For Deep Work
-- Brian Eno — Ambient 1
-- Tycho — Dive
-- Bonobo — Black Sands
-
-## Why These Work
-Instrumental, steady tempo, no lyrics distraction
-```
-
-## Concert Tracking
-```markdown
-# upcoming.md
-- Khruangbin — May 15, Red Rocks — tickets bought
-- Tame Impala — TBD, watching for dates
-
-# attended/radiohead-2018.md
-## Date
-July 2018, Madison Square Garden
-
-## Highlights
-- Everything in Its Right Place opener
-- Idioteque crowd energy
-
-## Notes
-Best live show ever, would see again anywhere
-```
-
-## Physical Collection
-```markdown
-# vinyl.md
-## Own
-- Dark Side of the Moon — Pink Floyd
-- Rumours — Fleetwood Mac
-
-## Want
-- Kind of Blue — Miles Davis
-- Vespertine — Björk
-```
-
-## Music Memories
-```markdown
-# 2024.md
-## Summer Soundtrack
-- Brat — Charli XCX
-- GNX — Kendrick
-
-## Discovery of the Year
-Japanese Breakfast — finally clicked
-```
-
-## By Mood/Activity
-- Workout: high energy, tempo 120+
-- Focus: instrumental, ambient, lo-fi
-- Cooking: upbeat, familiar favorites
-- Sad hours: cathartic, emotional
-- Party: crowd-pleasers, danceable
-- Road trip: singalongs, classics
-
-## What To Surface
-- "You saved that album 3 months ago, still unlistened"
-- "Artist you like is touring near you"
-- "Last time you needed focus music you liked Tycho"
-- "This sounds like artists in your favorites"
-
-## Artist Deep Dives
-When user discovers artist they love:
-- Map discography chronologically
-- Note fan-favorite albums
-- Flag essential tracks for sampling
-- Track which albums explored vs pending
-
-## What To Track Per Entry
 - Song/album/artist name
 - How discovered (who, where, when)
 - Context (mood it fits, activity)
 - Rating after listening
 - Standout tracks on albums
 
-## Progressive Enhancement
-- Week 1: list current favorite songs/albums
-- Ongoing: save discoveries with source
-- Build mood-based playlists over time
-- Log concerts attended
+## Artist Deep Dives
 
-## What NOT To Do
-- Assume streaming platform integration
-- Push genres they don't enjoy
-- Over-organize — simple lists work
-- Forget to ask what they're in the mood for
+When the user discovers an artist they love:
+
+- Map discography chronologically.
+- Note fan-favorite albums.
+- Flag essential tracks for sampling.
+- Track which albums have been explored vs pending.
+
+## By Mood/Activity Guidelines
+
+- **Workout:** High energy, tempo roughly 120+.
+- **Focus:** Instrumental, ambient, lo-fi.
+- **Cooking:** Upbeat, familiar favorites.
+- **Sad hours:** Cathartic, emotional.
+- **Party:** Crowd-pleasers, danceable.
+- **Road trip:** Singalongs, classics.
+
+## Surfacing Context
+
+Actively surface saved content when relevant:
+
+- "You saved that album months ago and still have not listened."
+- "An artist you like is touring near you."
+- "Last time you needed focus music you liked Tycho."
+- "This sounds like artists already in your favorites."
+
+## Progressive Enhancement
+
+- **Week 1:** Capture current favorite songs/albums.
+- **Ongoing:** Save discoveries with their source.
+- **Over time:** Build mood-based playlists and log attended concerts.
+
+## Required Operating Principles
+
+- **Platform Agnostic:** Stay independent of specific streaming platforms unless the user explicitly provides an integration.
+- **Respect Preferences:** Recommend only within genres and moods the user has shown interest in.
+- **Maintain Simplicity:** Keep organization structures flat and rely on simple markdown lists.
+- **Confirm Context:** Ask for the target mood or activity before generating a new playlist when that context is missing.
