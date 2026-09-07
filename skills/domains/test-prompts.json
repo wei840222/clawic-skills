@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "I'm thinking of buying a domain name for my new coffee shop. What should I check before registering, and what TLDs should I consider?",
+    "expected": "The agent should provide advice on checking availability, investigating past reputation (scams/controversy), trademark conflicts, and recommend .com or local country TLDs over new/confusing TLDs.",
+    "actual": "Based on best practices, before registering you should check availability directly on the registrar to prevent front-running, search for the domain + 'scam' to check reputation, and verify trademark conflicts. For TLDs, .com has the highest trust, but local country TLDs are great for geo-targeted businesses. Avoid newer TLDs if your audience is mainstream.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "We are migrating our web hosting to a new provider. Our root domain points to the old server. Should we use a CNAME for the root domain, and what should we do with DNS TTL?",
+    "expected": "The agent should explicitly state never to use a CNAME for the root domain (use an A record) and advise lowering the TTL before migration, then raising it afterward.",
+    "actual": "When migrating, you should lower the TTL (Time To Live) 24-48 hours before the move, then raise it after. For the root domain, never use a CNAME record; instead, use an A record pointing to the new server's IP address. Your MX records won't need to change if your email host stays the same.",
+    "pass": true
+  }
+]
