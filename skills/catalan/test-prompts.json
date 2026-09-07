@@ -1,0 +1,12 @@
+[
+  {
+    "id": "casual-central",
+    "prompt": "Translate to casual Central Catalan: 'Hi! Are you coming to the party tonight? It will be great.'",
+    "expected": "Uses an informal greeting and tu-form phrasing while preserving a natural casual register."
+  },
+  {
+    "id": "valencian-decline",
+    "prompt": "Write a friendly Valencian reply declining coffee this afternoon because of too much work.",
+    "expected": "Uses a consistent Valencian choice such as vesprada and idiomatic Catalan vocabulary."
+  }
+]
