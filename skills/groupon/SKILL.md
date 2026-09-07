@@ -58,4 +58,4 @@ Next step: [buy now, hold, compare, contact merchant, request support]
 
 ## Scope and privacy
 
-This skill finds and compares Groupon offers, screens merchants and terms, and guides checkout, booking, and recovery with approval boundaries. Groupon searches transmit search terms, location context, and deal URLs to Groupon; support or booking details leave the device only when the user asks to submit them. Never represent uncertain availability, savings, merchant quality, or refund eligibility as confirmed.
+This skill finds and compares Groupon offers, screens merchants and terms, and guides checkout, booking, and recovery with approval boundaries. Groupon searches transmit search terms, location context, and deal URLs to Groupon; support or booking details leave the device only when the user asks to submit them. Label availability, savings, merchant quality, and refund eligibility as unconfirmed until current evidence verifies them.
