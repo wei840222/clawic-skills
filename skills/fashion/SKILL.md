@@ -1,39 +1,28 @@
 ---
 name: fashion
-slug: fashion
-version: 1.0.0
-description: Style outfits, decode dress codes, and shop smart with body-aware advice, trend intelligence, and practical constraints.
-homepage: https://clawic.com/skills/fashion
+description: Provide outfit advice, decode dress codes, and strategize shopping. Use when the user asks for styling help, wardrobe planning, shopping guidance, or event attire advice.
 metadata:
-  clawdbot:
-    emoji: 👗
-    requires:
-      bins: []
-    os:
-    - linux
-    - darwin
-    - win32
-    displayName: Fashion
+  openclaw: '{"emoji":"👗"}'
 ---
 
 ## When to Use
 
 User needs outfit advice, wardrobe strategy, shopping guidance, or style problem-solving. Agent handles everything from daily dressing to event preparation, adapting to body type, budget, climate, and lifestyle constraints.
 
-## Quick Reference
+## Load targeted references
 
-| Topic | File |
-|-------|------|
-| User-specific guidance | `users.md` |
-| Styling fundamentals | `styling.md` |
-| Fabric knowledge | `fabrics.md` |
-| Shopping intelligence | `shopping.md` |
-| Occasion dressing | `occasions.md` |
+| Topic | File | When to load |
+|-------|------|--------------|
+| User-specific guidance | `references/users.md` | Load when advising users based on age, body type, budget, or lifestyle. |
+| Styling fundamentals | `references/styling.md` | Load when discussing proportions, silhouettes, aesthetics, or trends. |
+| Fabric knowledge | `references/fabrics.md` | Load when assessing garment care, climate suitability, or material quality. |
+| Shopping intelligence | `references/shopping.md` | Load when giving advice on sizing, sales, thrifting, or ethical brands. |
+| Occasion dressing | `references/occasions.md` | Load when styling for specific events, venues, or dress codes. |
 
 ## Core Rules
 
 ### 1. Ask Context Before Advising
-Never give generic advice. First establish:
+Provide specific, tailored advice. First establish:
 - **Body**: Height, build, proportions (short torso? broad shoulders?)
 - **Budget**: Actual spending limit (€50/month ≠ €500/month)
 - **Lifestyle**: Job type, commute, physical activity, kids?
@@ -44,12 +33,12 @@ Never give generic advice. First establish:
 Before suggesting purchases, ask what's already in their wardrobe. Build outfits from existing pieces first. "Buy a blazer" is useless when they need to get dressed NOW.
 
 ### 3. Body Proportions Over Generic Types
-Skip "apple/pear" labels. Ask specifics:
+Use specific measurements instead of "apple/pear" labels. Ask specifics:
 - Shoulder-to-hip ratio
 - Torso vs leg length
 - Where waist naturally sits
 
-Apply visual balancing: high-rise elongates short legs, V-necks balance broad shoulders. See `styling.md` for proportion rules.
+Apply visual balancing: high-rise elongates short legs, V-necks balance broad shoulders. See `references/styling.md` for proportion rules.
 
 ### 4. Practical Constraints Are Non-Negotiable
 Always factor in:
@@ -62,7 +51,7 @@ Always factor in:
 If someone needs to get dressed in 5 minutes, give ONE answer, not five choices. Decision fatigue is real. Save options for when they're exploring.
 
 ### 6. Confidence Over "Flattering"
-Never frame advice as "hiding" or "minimizing" body parts. Focus on what makes them feel powerful, comfortable, and like themselves. "This celebrates your shape" not "This hides your stomach."
+Frame advice around celebrating their shape. Focus on what makes them feel powerful, comfortable, and like themselves. "This celebrates your shape" not "This hides your stomach."
 
 ### 7. Context-Specific Dress Codes
 "Business casual" varies wildly:
@@ -73,7 +62,7 @@ Never frame advice as "hiding" or "minimizing" body parts. Focus on what makes t
 ## Adaptation Rules
 
 ### For Different Bodies
-- **Plus-size**: See `users.md` — know actual brand size ranges, avoid "hide your body" defaults
+- **Plus-size**: See `references/users.md` — know actual brand size ranges, avoid "hide your body" defaults
 - **Petite**: Translate standard lengths (their "midi" = your maxi), prioritize proportion
 - **Tall**: Inseam/sleeve length sourcing, proportion balancing
 - **Adaptive needs**: Seated proportions, closure types, medical device access
@@ -107,10 +96,13 @@ Never frame advice as "hiding" or "minimizing" body parts. Focus on what makes t
 
 ## Trend Guidance
 
-Never recommend trends without lifecycle context:
+Recommend trends only when accompanied by their lifecycle context:
 - **Emerging**: Runway only, not yet retail
 - **Ascending**: Street style adoption, entering stores
 - **Peak**: Fast fashion saturation — already over for early adopters
 - **Declining**: Ironic use only
 
-State which phase. See `styling.md` for aesthetic distinctions (old money ≠ quiet luxury ≠ mob wife).
+State which phase. See `references/styling.md` for aesthetic distinctions (old money ≠ quiet luxury ≠ mob wife).
+
+## State location
+This skill is stateless and does not store local configuration or state in `<state_root>`.

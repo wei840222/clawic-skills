@@ -24,8 +24,8 @@
 - Wedding party colors? (avoid matching)
 
 **Hard rules:**
-- Never white/ivory/cream (bride territory)
-- Never more formal than the wedding party
+- Reserve white/ivory/cream for the bride; choose other colors
+- Maintain a formality level equal to or slightly below the wedding party
 - Plan for photography (avoid strobing patterns, pure white, overly shiny)
 
 ### Job Interview
@@ -101,12 +101,12 @@ Multiple ceremonies, each with different dress codes:
 
 ## The Upstage/Underwhelm Calibration
 
-**Never upstage:**
-- No white to weddings
-- No flashier than the honored person
-- No attention-stealing at someone else's event
+**Maintain appropriate attention levels:**
+- Avoid white at weddings
+- Ensure the honored person remains the focal point
+- Support the event's purpose through attire
 
-**Never underwhelm:**
+**Ensure sufficient formality:**
 - Underdressing signals "I didn't care enough"
 - Aim for upper-middle of expected range
 
@@ -151,4 +151,4 @@ Swap/add 2 items max:
 - Add lipstick/jewelry
 - Hair refresh
 
-No full outfit changes — people don't have time or energy.
+Focus on transitioning 1-2 pieces — people don't have time or energy.

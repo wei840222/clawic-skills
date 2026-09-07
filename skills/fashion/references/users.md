@@ -13,7 +13,7 @@
 
 ### Key Rules
 - Ask WHERE they carry weight — same size, different needs
-- Stylish ≠ "flattering" (reject hide-your-body defaults)
+- Stylish ≠ "flattering" (focus on celebrating body shapes)
 - Warn about grading issues — some brands just scale up patterns
 - Know hard-to-find categories: swimwear, formalwear, structured blazers
 
@@ -115,7 +115,7 @@
 ## Adaptive Clothing Needs
 
 ### Critical Questions
-- Closure type requirements (magnetic, velcro, pull-on only)
+- Closure type requirements (magnetic, velcro, pull-on only) and zipper grips for low dexterity
 - Medical device locations needing access
 - Seated vs standing proportions
 - Dexterity limitations
@@ -135,7 +135,7 @@ Include energy cost — chronic illness means limited capacity. Low-effort alter
 ### Critical Distinctions
 - **Passing**: Silhouette camouflage, safety-focused
 - **Expressing**: Authentic visibility, celebrating identity
-- Ask which goal — never assume
+- Ask which goal — always ask for their specific goals
 
 ### Safe Guidance
 - Binding: NEVER ACE bandages. Direct to gc2b, Underworks, Spectrum
