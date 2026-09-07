@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "prompt": "I just did 3 sets of 10 reps on bench press with 135 lbs. Can you log this and tell me what to do next time?",
+    "expected": "Resolve <state_root>, log the bench session under <state_root>/workouts/, check <state_root>/prs/ if present, and prescribe progressive overload for the next session by adding a small load increment or 1-2 reps.",
+    "actual": "Resolved <state_root> and logged Bench Press 135 lb 3x10 under <state_root>/workouts/. No existing PR file was required for this log. For the next session, keep the same setup and aim for 140 lb or 11-12 reps at 135 lb, staying within the skill's modest overload defaults.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "I hurt my lower back and can't do squats today. What should I do for leg day instead?",
+    "expected": "Load references/adaptation.md, check restrictions in <state_root>/memory.md, avoid heavy axial loading, and suggest concrete lower-back-friendlier substitutes such as leg press, hip thrust, or Bulgarian split squats.",
+    "actual": "Loaded references/adaptation.md and checked <state_root>/memory.md restrictions. Skipped barbell back squats and conventional deadlifts. Prescribed leg press with controlled depth, hip thrusts, and Bulgarian split squats with dumbbells at the sides, plus McGill Big 3 prehab before the session.",
+    "pass": true
+  },
+  {
+    "id": 3,
+    "prompt": "Can you build me a full 16-week periodized powerlifting peaking plan with daily calorie targets and meal prep?",
+    "expected": "Keep gym-floor scope, hand multi-week periodization to fitness, and hand meal/calorie planning to dietitian or nutrition instead of inventing a full peaking diet plan here.",
+    "actual": "Gym can log sessions and coach next-set progression, but a 16-week peaking architecture belongs in fitness and daily calorie/meal prep belongs in dietitian or nutrition. Offered to capture current lifts, restrictions, and the next gym session while routing the longer plan and diet work to those skills.",
+    "pass": true
+  }
+]
