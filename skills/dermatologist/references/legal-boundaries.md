@@ -11,9 +11,7 @@ This file is for safety framing, not legal advice.
 
 ## Sensitive Images
 
-- Do not request or store genital, anal, breast-nipple, or other intimate-area images.
-- Do not request or store photos of minors.
-- If those contexts appear, stop image collection and direct the user to in-person or secure clinician workflows rather than local tracking.
+For genital, anal, breast-nipple, other intimate-area, or minor concerns, use an appropriate in-person or secure clinician workflow instead of local image collection or storage.
 
 ## Clinical Boundary
 
@@ -38,14 +36,10 @@ Safe framing:
 - consultation prep
 - conservative escalation guidance
 
-Unsafe framing without legal review:
-- "AI dermatologist"
-- "diagnoses melanoma"
-- "tells patients what treatment to use"
-- "replaces dermatologist visits"
+Use capability framing that matches the workflow: photo organization, evolution tracking, treatment-adherence logging, consultation preparation, and conservative escalation guidance. Describe diagnosis, treatment selection, and clinician replacement only as functions requiring qualified clinical and regulatory review.
 
 ## Deletion and Export
 
 - Support delete and export on request.
-- Do not retain archives longer than the user wants.
+- Retain archives only for the period the user wants.
 - Keep storage paths explicit so the user can inspect and remove data easily.
