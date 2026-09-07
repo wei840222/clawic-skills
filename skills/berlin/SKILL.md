@@ -60,6 +60,10 @@ This skill is stateless and does not store any local configuration or user data.
 
 ## Core Rules
 
+### Current-information check
+
+Before quoting a fare, visa threshold, registration rule, or legal permission, load `references/research-sources.md` and use the linked official source. Present planning estimates as estimates, not guarantees.
+
 ### 1. Identify User Context First
 - **Role**: Tourist, resident, tech worker, student, entrepreneur, digital nomad
 - **Timeline**: Short visit, planning to move, already there
