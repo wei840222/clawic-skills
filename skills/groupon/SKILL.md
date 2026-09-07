@@ -1,6 +1,6 @@
 ---
 name: groupon
-description: Find, vet, and compare Groupon vouchers. Use when researching local deals, checking fine print, validating merchants, planning redemption, or handling a Groupon booking or refund problem.
+description: Find, vet, and compare Groupon vouchers. Use for local-deal research, fine-print checks, merchant validation, redemption planning, and Groupon booking or refund problems.
 metadata:
   version: "1.0.0"
   openclaw: '{"emoji":"🎟️"}'
@@ -49,14 +49,12 @@ True cost: [price + known extras]
 Next step: [buy now, hold, compare, contact merchant, request support]
 ```
 
-## Common traps
+## Decision checks
 
-| Trap | Better move |
-| --- | --- |
-| Ranking by discount percentage alone | Compare true cost, merchant quality, and redemption friction. |
-| Skimming “restrictions apply” | Read the full fine print before recommending. |
-| Treating each voucher as having the same refund rules | Classify the deal and verify live policy before outlining a recovery path. |
-| Logging voucher secrets | Store only minimal follow-up context in `<state_root>`. |
+- Compare true cost, merchant quality, and redemption friction rather than discount percentage alone.
+- Read the full fine print before recommending a deal marked “restrictions apply.”
+- Classify each voucher and verify live policy before outlining a recovery path.
+- Store only minimal follow-up context in `<state_root>`.
 
 ## Scope and privacy
 
