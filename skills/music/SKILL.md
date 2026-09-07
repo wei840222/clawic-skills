@@ -1,9 +1,10 @@
 ---
 name: music
-description: Track and organize music discoveries, favorites, concerts, and playlists. Use when the user shares a song, asks for music recommendations, or mentions a concert.
+description: Track and organize music discoveries, favorites, concerts, and playlists. Use when the user shares a song or album to save, asks for music recommendations from their collection, wants a mood or activity playlist, or mentions a concert to log. Route original songwriting to `song`, AI music generation prompts to `music-generation`, and raw audio processing to `audio`.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
   openclaw: '{"emoji":"🎵"}'
+  related-skills: '{"song":"Write original lyrics, chords, and melody when the user wants to compose rather than track listening.","music-generation":"Generate AI music with style prompts once the listening goal is clear.","audio":"Process or convert audio files rather than curate personal listening memory.","journal":"Capture reflective concert or discovery narratives beyond structured music tracking.","remember":"Store durable cross-session preferences that should survive beyond the music state tree."}'
 ---
 
 ## State location
@@ -14,20 +15,21 @@ Resolve `<state_root>` before reading or writing music data:
 2. Otherwise use the first existing directory in this order: `<workspace>/music/`, `<workspace>/memory/music/`, then `~/music/`.
 3. If none exists and the user asks to persist music data, create `<workspace>/music/`.
 
-Use only the selected `<state_root>` for this invocation. Do not hardcode absolute paths.
+Use only the selected `<state_root>` for this invocation. Do not hardcode absolute paths. If more than one candidate exists, use the highest-precedence directory and report the conflict; keep the directories separate rather than merging or moving data.
 
 ## Quick Reference
 
 | Resource | Description | When to load |
 |----------|-------------|--------------|
-| `references/domain-knowledge.md` | Contextual curation and memory tracking principles. | When making recommendations or organizing playlists. |
-| `assets/data-templates.md` | Data structure templates for tracking files. | When creating or modifying data files in `<state_root>/`. |
+| `references/domain-knowledge.md` | Mood-regulation, concert-memory, and curation principles with sources. | When recommending, organizing playlists, or explaining why a tracking choice helps. |
+| `assets/data-templates.md` | Markdown templates for discovery, favorites, playlists, concerts, collection, and memories. | When creating or updating files under `<state_root>/`. |
 
 ## Core Behavior
 
-- **Save Music:** When the user shares a song or album, offer to save it with context (e.g., mood, activity).
-- **Recommend Music:** When the user asks for music, check their saved collection (`<state_root>/favorites/`, `<state_root>/playlists/`) first.
-- **Track Concerts:** When the user mentions a concert, track it in `<state_root>/concerts/`.
+- **Save Music:** When the user shares a song or album, offer to save it with discovery context (who/where/when), mood or activity fit, and a later rating slot.
+- **Recommend Music:** When the user asks for music, inspect `<state_root>/favorites/` and `<state_root>/playlists/` first; recommend inside demonstrated genres and moods.
+- **Track Concerts:** When the user mentions a concert, log it in `<state_root>/concerts/upcoming.md` or create an attended note under `<state_root>/concerts/attended/`.
+- **Confirm Context:** Ask for the target mood or activity before generating a new playlist when that context is missing.
 
 ## File Structure
 
@@ -100,4 +102,12 @@ Actively surface saved content when relevant:
 - **Platform Agnostic:** Stay independent of specific streaming platforms unless the user explicitly provides an integration.
 - **Respect Preferences:** Recommend only within genres and moods the user has shown interest in.
 - **Maintain Simplicity:** Keep organization structures flat and rely on simple markdown lists.
-- **Confirm Context:** Ask for the target mood or activity before generating a new playlist when that context is missing.
+- **No Forced Logging:** Offer to save; do not invent listening history the user did not confirm.
+- **Privacy:** Treat music taste, concert plans, and personal notes as private state under `<state_root>/`.
+
+## Failure Modes
+
+- Missing mood/activity for a playlist request → ask one clarifying question before writing a new playlist file.
+- Empty or missing `<state_root>` collection → say so, then offer to start with favorites or a discovery queue.
+- Conflicting candidate state directories → keep the highest-precedence tree and report the conflict.
+- User asks for composition or audio engineering → hand off to `song`, `music-generation`, or `audio`.
