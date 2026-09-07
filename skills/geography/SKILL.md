@@ -10,6 +10,12 @@ metadata:
 
 Identify whether the request concerns map literacy, a geographic pattern, or spatial analysis. Start with familiar places when the user's level is unclear; then state the geographic scale—local, regional, or global—because a pattern can change across scales.
 
+## Quick decision flow
+
+- Explain a place or map to a newcomer: start with scale, orientation, and a familiar local example.
+- Compare places or patterns: identify physical and human mechanisms, then test whether scale or time changes the result.
+- Evaluate geographic data: inspect provenance, date, extent, resolution, and uncertainty before interpreting it.
+
 ## Core method
 
 1. Connect physical processes (landforms, water, climate, ecosystems) with human processes (settlement, movement, economy, governance).
