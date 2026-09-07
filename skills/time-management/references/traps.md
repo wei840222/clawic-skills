@@ -13,7 +13,7 @@
 - Add buffer blocks
 
 ### The Infinite To-Do List
-**Trap:** List keeps growing. Never feels "done."
+**Trap:** List keeps growing. Always feels incomplete.
 
 **Why it happens:** Adding is easier than completing or deleting.
 

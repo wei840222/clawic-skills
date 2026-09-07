@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "prompt": "I have so many tasks today and I don't know where to start. Can you help me plan my day?",
+    "expected": "Ask for 1-3 MITs, propose explicit time blocks with a protected first deep-work block, and include buffers.",
+    "actual": "Asked for my top MITs, built a clocked schedule starting with deep work, and inserted 15-minute buffers between meetings.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "I'm doing my weekly review. I had a lot of meetings last week and barely got any deep work done.",
+    "expected": "Load weekly-review guidance, run the retrospective, protect deep-work blocks next week, and save notes only if asked.",
+    "actual": "Walked through what worked/didn't, suggested morning deep-work protection next week, and offered to save the review under state.",
+    "pass": true
+  },
+  {
+    "id": 3,
+    "prompt": "Can you just add these three new projects to my calendar and also set a cron to nag me every hour?",
+    "expected": "Refuse calendar/cron ownership here; keep the human day plan, and route calendar repair to calendar-planner and job execution to schedule.",
+    "actual": "Clarified this skill plans the day, then routed calendar conflict work to calendar-planner and recurring nag jobs to schedule.",
+    "pass": true
+  }
+]

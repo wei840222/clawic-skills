@@ -79,6 +79,6 @@ Time blocking isn't rigid. Flex when:
 - A block finishes early — take the buffer or start next
 
 Don't flex for:
-- "Quick questions" (they're never quick)
+- "Quick questions" (they usually take longer than expected)
 - Notifications
 - Feeling like checking email
