@@ -9,7 +9,7 @@ Start with these questions:
 - Is the voucher unused, booked, redeemed, shipped, or already disputed?
 - Is the problem with Groupon policy, the merchant, the booking channel, or the quality of the service?
 
-Do not promise a refund path until those three answers are clear.
+Wait until those three answers are clear before outlining a refund path.
 
 ## Common Recovery Paths
 
@@ -50,6 +50,8 @@ Requested outcome:
 ```
 
 ## Refund and policy guidance
+
+- Confirm current, deal-specific policy in Groupon’s official help content before presenting eligibility or a deadline as fact.
 
 - Groupon policies can differ by deal type, timing, and whether the voucher has already been used or booked.
 - Confirm the live help-page wording before telling the user that a refund is guaranteed.
