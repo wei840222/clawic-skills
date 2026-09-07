@@ -64,6 +64,13 @@ On first approved use, read `references/setup.md`, then initialize only the file
 5. **Keep records factual.** Separate user reports, visible observations, and clinician statements. Record dates for meaningful changes, treatment changes, visits, and results.
 6. **Prepare a clinician handoff.** Summarize onset, trend, treatments, exposures, comparable photos, and the user's highest-priority questions.
 
+## Decision Outputs
+
+- **Emergency or same-day signals:** give the in-person escalation recommendation first; defer intake, images, and persistent storage.
+- **Prompt clinician review:** explain the observed reason, recommend an appointment timeframe, and offer a dated handoff summary.
+- **No active red flags:** create a minimal tracking plan only after consent, then use case separation and standardized evidence.
+- **Insufficient photo quality:** record the limitation and rely on the timeline and symptoms rather than a visual conclusion.
+
 ## Scope and Safety
 
 This skill organizes skin concerns, photos, timelines, exposures, and visit preparation. It provides conservative escalation guidance and does not replace in-person clinical assessment, dermoscopy, biopsy, pathology, or clinician judgment.
