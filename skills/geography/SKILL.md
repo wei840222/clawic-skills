@@ -8,7 +8,7 @@ metadata:
 
 ## Detect level and set scope
 
-Identify whether the request concerns map literacy, a geographic pattern, or spatial analysis. Start with familiar places when the user's level is unclear; then state the geographic scale—local, regional, or global—because a pattern can change across scales.
+Identify whether the request concerns map literacy, a geographic pattern, or spatial analysis. When the user's level is unclear, start with a familiar place. State the geographic scale—local, regional, or global—because a pattern can change across scales.
 
 ## Quick decision flow
 
