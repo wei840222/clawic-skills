@@ -74,12 +74,12 @@ Berlin is Germany's capital with unique characteristics:
 
 ### 3. Visa Categories
 Non-EU citizens need proper documentation:
-- **EU Blue Card**: €45,300+ salary (€41,042 for shortage occupations), university degree
+- **EU Blue Card**: The annual salary threshold changes each year. Check `references/research-sources.md` and the official source before quoting the current threshold.
 - **Work Visa**: Job offer required, employer sponsorship
 - **Freelance Visa (Freiberufler)**: Most unique — self-sponsorship possible with client proof
 - **Job Seeker Visa**: 6 months to find employment
 - **Student Visa**: Enrolled in German institution
-See `references/visas.md` for current requirements (Feb 2026).
+See `references/visas.md` and `references/research-sources.md` for requirements and current thresholds.
 
 ### 4. Weather Reality
 Berlin has distinct seasons:
@@ -89,7 +89,7 @@ Berlin has distinct seasons:
 - **Key**: Winter affects mental health — light therapy common among expats
 See `references/climate.md` for monthly breakdown.
 
-### 5. Current Data (Feb 2026)
+### 5. Planning estimates (verify before relying on them)
 
 | Item | Range |
 |------|-------|
@@ -97,7 +97,7 @@ See `references/climate.md` for monthly breakdown.
 | 1BR rent (outer) | €800-1,300/month |
 | WG room (shared flat) | €500-900/month |
 | Senior SWE salary | €70,000-95,000/year gross |
-| BVG monthly pass | €86 (AB zones) |
+| BVG monthly pass | Check the current zone-specific fare before quoting |
 | Döner kebab | €6-8 |
 | Restaurant dinner | €20-50/person |
 | Health insurance | €200-400/month (public) |
@@ -145,7 +145,7 @@ See `references/food-overview.md` for complete guide.
 
 ## Berlin-Specific Realities
 
-- **Anmeldung** — Must register address within 14 days. Needed for EVERYTHING.
+- **Anmeldung** — Register or re-register within 14 days of moving in; use the official Berlin service page for appointment and document requirements.
 - **Schufa** — Credit score system. No Schufa = hard to rent.
 - **Housing crisis** — Finding apartments is brutal. Budget 2-3 months search.
 - **Cash culture** — Many places still cash-only. Always carry euros.
@@ -160,7 +160,7 @@ See `references/food-overview.md` for complete guide.
 ## Legal Awareness
 
 Key laws every visitor/resident must know:
-- **Drugs**: Cannabis legal for adults (2024), other drugs illegal but Berlin is tolerant
+- **Drugs**: Cannabis rules are conditional and changeable; use the Federal Ministry of Health CanG guidance for permissions and restrictions.
 - **Jaywalking**: Technically illegal (€5-10 fine), rarely enforced
 - **Photography**: GDPR strict — Always obtain consent before photographing people
 - **Employment**: Must have work permit BEFORE starting work
@@ -168,4 +168,4 @@ Key laws every visitor/resident must know:
 - **Tax**: Must file annual tax return (Steuererklärung)
 - **Rental**: Strong tenant protections, but Mietpreisbremse complex
 
-See `references/safety.md` for comprehensive legal guidance.
+See `references/safety.md` and `references/research-sources.md` for legal guidance and current official sources.

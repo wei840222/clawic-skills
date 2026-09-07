@@ -55,20 +55,19 @@ Useful for: Prenzlauer Berg, Mitte north
 **Night**: N-lines run during train closure hours
 **Useful**: M29 (Kreuzberg), 100/200 (tourist routes)
 
-## Tickets & Fares (Feb 2026)
+## Tickets & fares
 
 | Ticket | Price | Valid |
 |--------|-------|-------|
-| Single AB | €3.50 | 2 hours, one direction |
-| Short trip (Kurzstrecke) | €2.40 | 3 stops S/U or 6 stops bus/tram |
-| Day ticket AB | €8.80 | Until 3am next day |
-| 7-day AB | €41.00 | 7 consecutive days |
-| Monthly AB | €86.00 | Calendar month |
-| Annual AB | €899 | Best value for residents |
+| Single AB | Check current fare | 2 hours, one direction |
+| Short trip (Kurzstrecke) | Check current fare | 3 stops S/U or 6 stops bus/tram |
+| Day ticket AB | Check current fare | Check the current validity rule |
+| Monthly AB | Check current fare | Calendar-month ticket options vary |
+
+Consult `research-sources.md` and the official BVG ticket page for current fares and ticket availability.
 
 **Zone C additions**:
-- Single ABC: €4.40
-- Day ABC: €10.40
+- Check current ABC fares on the official BVG ticket page.
 
 ### Apps for Tickets
 - **BVG app**: Official, buy tickets, live times

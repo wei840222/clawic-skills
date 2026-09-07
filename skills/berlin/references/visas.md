@@ -1,4 +1,4 @@
-# Berlin Visa Guide (Feb 2026)
+# Berlin Visa Guide
 
 ## Quick Reference
 
@@ -6,7 +6,7 @@
 |----------------|-----------|-----------------|
 | EU/EEA citizen | None needed | Just Anmeldung |
 | Job offer in hand | Work Visa | Employer sponsors |
-| High-skill job offer | EU Blue Card | €45,300+ salary |
+| High-skill job offer | EU Blue Card | Check the current official annual salary threshold |
 | Looking for job | Job Seeker Visa | 6 months to search |
 | Freelance/consulting | Freelance Visa | Client contracts |
 | Starting business | Self-Employment | Business plan |
@@ -29,7 +29,7 @@ Best option for high-skilled workers.
 ### Requirements
 - University degree (recognized in Germany)
 - Job offer or contract
-- **Salary**: €45,300+/year (€41,042 for shortage occupations)
+- **Salary**: Check the current annual threshold in `research-sources.md`; regular and reduced routes have different conditions.
 - Health insurance
 - No criminal record
 
