@@ -37,7 +37,7 @@ Use this file for relocations from another state or from outside the U.S.
 
 ### 1. New York setup is sequence-sensitive
 - The same document often unlocks the next one.
-- Do not treat license, registration, utilities, school paperwork, insurance, and commute planning as separate tracks.
+- Treat license, registration, utilities, school paperwork, insurance, and commute planning as integrated tracks.
 
 ### 2. Ask "city, county, ZIP" early
 - New York answers often go wrong because the user says only "upstate" or "near the city."

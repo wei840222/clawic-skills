@@ -60,7 +60,7 @@ Most diverse zip code in US. South Asian meets Latin American.
 | **Agnanti** | $$ | Water views, classic taverna. |
 | **Telly's Taverna** | $$ | Family recipes 28+ years. |
 
-**Don't miss:** Loukoumades (Greek donuts with honey) at Omonia Cafe.
+**Must try:** Loukoumades (Greek donuts with honey) at Omonia Cafe.
 
 ---
 

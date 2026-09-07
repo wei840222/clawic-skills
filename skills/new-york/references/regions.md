@@ -34,7 +34,7 @@ Use this file when the user is choosing where in New York to live, base a trip, 
 
 - "I need NYC access without full Manhattan housing cost."
 - "I want strong public schools in New York but not two-hour daily commuting."
-- "I want four seasons and lower cost, but I do not want brutal lake-effect snow."
+- "I want four seasons and lower cost, but I wish to avoid brutal lake-effect snow."
 - "I want a New York road trip base that balances towns, parks, and cities."
 
 ## Common Mistakes

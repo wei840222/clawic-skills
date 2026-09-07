@@ -21,14 +21,14 @@ NYC has strong tipping expectations. Service workers rely on tips.
 
 **Walking:**
 - Walk on the RIGHT
-- Don't stop suddenly mid-sidewalk
+- Keep moving or step aside on sidewalks
 - Step aside to check phone
 - Walk fast or get out of the way
 
 **Subway:**
 - Let people OFF before boarding
 - Move to center of car
-- Don't block doors
+- Keep doorways clear
 - Give up seats for elderly/pregnant/disabled
 
 **General:**
