@@ -120,4 +120,4 @@ Load this file when the user reports pain, injury, mobility limits, age constrai
 
 ## Safety route
 
-If pain is sharp, worsening, neurological (numbness, radiating, unexplained weakness), or accompanied by chest pain, fainting, or unexplained swelling, pause gym programming and route to in-person care. This file substitutes movements; it does not diagnose injury.
+If pain is sharp, worsening, neurological (numbness, radiating, unexplained weakness), or accompanied by chest pain, fainting, or unexplained swelling, pause gym programming and route to in-person care. Prefer clinician-guided rehab over remote load progression when those signals appear. This file substitutes movements; it does not diagnose injury.
