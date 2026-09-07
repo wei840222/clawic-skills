@@ -64,3 +64,13 @@ Recommend a non-Groupon alternative when:
 - the same experience is similarly priced without voucher complexity
 - the user's date window is tight and the deal adds too much uncertainty
 - the support burden is already larger than the expected savings
+
+## Live policy verification sources
+
+Use Groupon’s current official pages as the primary source before stating a refund or cancellation outcome:
+
+- https://www.groupon.com/faq
+- https://www.groupon.com/pages/terms-and-conditions
+- https://www.groupon.com/customer_support
+
+If a page is unavailable, blocked, or does not cover the deal type, say that eligibility is unconfirmed and draft an evidence-based support request instead of inferring a policy.
