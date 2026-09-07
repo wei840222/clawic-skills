@@ -123,7 +123,7 @@
 - Those working at Hauptbahnhof
 - Value-seekers wanting central
 - Families on budget
-- People who don't need "scene"
+- People who prefer quieter areas
 - Remote workers (quiet)
 
 ### Hidden Gems

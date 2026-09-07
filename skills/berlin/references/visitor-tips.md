@@ -4,7 +4,7 @@
 
 ### Money
 - **Cash is king** — Many restaurants, bars, Spätis are cash-only
-- **ATMs**: Use bank ATMs (Sparkasse, Deutsche Bank), avoid Euronet (high fees)
+- **ATMs**: Use bank ATMs (Sparkasse, Deutsche Bank) instead of Euronet to bypass high fees
 - **Tipping**: 5-10% at restaurants, round up at bars
 - **No Amex**: Rarely accepted, Visa/Mastercard sometimes
 

@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "prompt": "I am visiting Berlin for three days. Build a practical itinerary and tell me which transport ticket I should buy.",
+    "expected": "The response identifies the visitor context, loads the itinerary and attractions references, and checks the current official fare source instead of quoting a stale fare.",
+    "actual": "For a three-day visit, use `references/visitor-itineraries.md` and `references/visitor-attractions.md` to structure the itinerary. Before selecting a ticket, load `references/research-sources.md` and check the official BVG ticket page for the current zone-specific fare and validity rules.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "I am a non-EU software engineer moving to Berlin. Can I use the EU Blue Card, and what should I do after I move in?",
+    "expected": "The response routes visa eligibility to the current official source, distinguishes annually changing Blue Card thresholds, and gives the Anmeldung deadline and required-document path without promising eligibility.",
+    "actual": "Use `references/visas.md` for the eligibility workflow, then verify the current annual salary threshold and route in `references/research-sources.md`. After moving in, register or re-register at a Bürgeramt within 14 days; the official Berlin source lists the appointment process and identity/landlord documentation.",
+    "pass": true
+  },
+  {
+    "id": 3,
+    "prompt": "Is cannabis legal in Berlin, and can I just smoke wherever I want?",
+    "expected": "The response avoids treating legality as unrestricted, directs the user to the current official CanG guidance, and separates adult permissions from location and youth-protection restrictions.",
+    "actual": "Use the Federal Ministry of Health CanG source in `references/research-sources.md`. It is the current authority for adult permissions and restrictions; do not characterize cannabis use as unrestricted or rely on a stale local-tolerance claim.",
+    "pass": true
+  }
+]

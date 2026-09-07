@@ -25,7 +25,7 @@ Berlin is NOT typical Germany. Key differences:
 
 ### Punctuality
 - **Meetings**: Be on time (Germans wait max 15 min)
-- **Social**: More flexible in Berlin, but don't be late
+- **Social**: More flexible in Berlin, but be punctual
 - **Appointments**: Arrive 5 min early
 - **Trains**: Leave on time (platform, not you)
 
@@ -34,7 +34,7 @@ Berlin is NOT typical Germany. Key differences:
 - **Not rude**: Just honest
 - **Complaints**: Normal, not personal
 - **Small talk**: Less than US/UK
-- **Privacy**: Respected, don't overshare initially
+- **Privacy**: Respected, maintain appropriate boundaries initially
 
 ### In Public
 - **Volume**: Keep it down (especially transit)
@@ -83,7 +83,7 @@ Berlin is NOT typical Germany. Key differences:
 ### Email/Communication
 - **Du vs Sie**: Tech mostly "Du", ask if unsure
 - **Email format**: More formal than US startup
-- **Response time**: Don't expect instant
+- **Response time**: Expect delayed
 - **After hours**: Not expected to reply
 
 ### Career
@@ -110,10 +110,10 @@ Berlin is NOT typical Germany. Key differences:
 - **Anti-tourist sentiment**: Exists, mostly about respect
 
 ### Taboos
-- **Nazi references**: Never joke about it
+- **Nazi references**: Treat this topic with utmost seriousness
 - **Holocaust**: Treat with respect
 - **Gentrification**: Sensitive topic
-- **Tourist behavior**: Don't be loud/disrespectful
+- **Tourist behavior**: Be quiet and respectful
 
 ## Etiquette Tips
 

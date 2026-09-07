@@ -53,7 +53,7 @@ Berlin is Germany's most diverse food city, but NOT a traditional German food de
 - **When**: Thursday 5-10pm (Street Food Thursday)
 - **What**: 40+ vendors, rotating concepts
 - **Vibe**: Crowded, loud, foodie heaven
-- **Tip**: Go early (5pm) to avoid worst crowds
+- **Tip**: Go early (5pm) to beat the worst crowds
 
 ### Arminiusmarkthalle (Moabit)
 - **When**: Daily

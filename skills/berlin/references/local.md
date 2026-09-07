@@ -2,7 +2,7 @@
 
 ## Anmeldung (Address Registration)
 
-**CRITICAL**: Must register within 14 days of moving.
+**Registration**: Register or re-register within 14 days of moving. Consult `research-sources.md` for the official Berlin service page and required documents.
 
 ### What You Need
 1. Passport/ID
