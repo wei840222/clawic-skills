@@ -1,14 +1,17 @@
 ---
 name: tattoo
-slug: tattoo
-version: 1.0.0
-description: Plan, research, and prepare for tattoos with artist discovery, design exploration, cultural research, and aftercare guidance.
-homepage: https://clawic.com/skills/tattoo
+description: Guide users through tattoo planning, artist discovery, and aftercare. Trigger when users ask about getting a tattoo, finding an artist, or healing procedures.
 metadata:
-  clawdbot:
-    emoji: 💉
-    displayName: Tattoo
+  openclaw: '{"emoji": "💉"}'
 ---
+
+## Quick Reference
+
+| Topic | Reference File | When to load |
+|---|---|---|
+| Healing Timeline & Aftercare | `references/aftercare.md` | When the user needs specific instructions for post-tattoo care or asks about the healing process. |
+| Cultural Research & Sensitivity | `references/cultural-research.md` | When the user is considering symbols or designs from specific cultures or closed practices. |
+| Research & Sources | `references/research-sources.md` | For comprehensive background knowledge on tattoos. |
 
 ## Before Any Tattoo Decision
 
@@ -49,8 +52,6 @@ Before using symbols from other cultures:
 3. When uncertain, consult cultural organizations, not just Google
 4. Find alternatives from your own heritage with similar aesthetics
 
-For detailed cultural research frameworks, see `cultural-research.md`.
-
 ## Preparation Checklist
 
 **24-48h before:**
@@ -68,11 +69,9 @@ For detailed cultural research frameworks, see `cultural-research.md`.
 ## Aftercare Essentials
 
 **Days 1-3:** Keep wrapped per artist instructions, wash gently, thin moisturizer
-**Days 4-14:** Peeling is normal — DO NOT SCRATCH. Keep moisturized.
-**Weeks 2-4:** No swimming, no direct sun, no gym (sweat irritates)
+**Days 4-14:** Peeling is normal — Allow the skin to flake naturally. Relieve itch by gently tapping or moisturizing. Keep moisturized.
+**Weeks 2-4:** Avoid submerging in water (swimming), direct sun exposure, and strenuous exercise that causes sweating.
 **After healing:** Sunscreen forever on tattooed skin
-
-For session-by-session healing timeline, see `aftercare.md`.
 
 ## Price Expectations
 
@@ -85,3 +84,6 @@ Factors: artist experience, style complexity, size, location (city), shop overhe
 - Full sleeve: €2000-8000+ (multiple sessions)
 
 Always clarify: deposit policy, touch-up inclusion, hourly vs. flat rate
+
+## State location
+This skill is stateless and does not store local configuration or state.

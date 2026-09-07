@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "I want to get my first tattoo. I'm thinking of getting something small on my ribs. What should I consider?",
+    "expected": "The agent should advise on the high-fade and pain levels of ribs, suggest reviewing the healing timeline by loading references/aftercare.md, and provide general artist discovery tips.",
+    "actual": "Consider that ribs are a high-fade and generally more painful area for a first tattoo. Fine lines may blur faster there. When looking for an artist, ensure you see healed examples (6+ months) of their work. Let's discuss artist vetting, and I can also load `references/aftercare.md` for post-tattoo care instructions.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "I really like the look of Maori tattoos and want to get one on my arm, but I have no Maori heritage. Is that okay?",
+    "expected": "The agent should load references/cultural-research.md to address cultural sensitivity, distinguish between closed and open practices, and recommend researching alternatives from the user's own heritage with similar aesthetics.",
+    "actual": "Before proceeding, it is important to understand cultural sensitivity regarding symbols from other cultures. I'll refer to `references/cultural-research.md` for a detailed framework. Generally, you should research the origins to see if it is a closed practice (requiring lineage) or open. When uncertain, consult cultural organizations and consider alternatives from your own heritage with similar aesthetics.",
+    "pass": true
+  }
+]
