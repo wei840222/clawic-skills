@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "How can I improve my iOS meditation app listing?",
+    "expected": "Uses ASO guidance, localized outcome-led creative, controlled experiments, and policy-compliant rating prompts.",
+    "actual": "Routes to references/aso.md and recommends a measurable, policy-compliant listing experiment.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "How should I monetize and retain users for a new fitness app?",
+    "expected": "Connects value-based monetization experiments with consent-based retention and cohort metrics.",
+    "actual": "Routes to monetization and retention references with transparent billing and activation-focused guidance.",
+    "pass": true
+  }
+]
