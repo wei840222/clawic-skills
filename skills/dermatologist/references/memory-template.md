@@ -1,6 +1,6 @@
 # Memory Template - Dermatologist
 
-Create `~/Clawic/data/dermatologist/memory.md` with this structure:
+Create `<state_root>/memory.md` with this structure:
 
 ```markdown
 # Dermatologist Memory
@@ -9,12 +9,12 @@ Create `~/Clawic/data/dermatologist/memory.md` with this structure:
 status: ongoing
 version: 1.0.0
 last: YYYY-MM-DD
-integration: pending | complete | paused | never_ask
+integration: pending | complete | paused | do-not-ask-again
 
 ## Activation
 - Use automatically when:
 - Ask first when:
-- Never activate for:
+- Do not activate automatically for:
 
 ## Privacy Limits
 - Storage approved: yes | no
@@ -39,7 +39,7 @@ integration: pending | complete | paused | never_ask
 *Updated: YYYY-MM-DD*
 ```
 
-Create `~/Clawic/data/dermatologist/cases/{case-id}/summary.md`:
+Create `<state_root>/cases/{case-id}/summary.md`:
 
 ```markdown
 # Case Summary - {case-id}
@@ -53,7 +53,7 @@ Create `~/Clawic/data/dermatologist/cases/{case-id}/summary.md`:
 - Last meaningful change:
 ```
 
-Create `~/Clawic/data/dermatologist/cases/{case-id}/timeline.md`:
+Create `<state_root>/cases/{case-id}/timeline.md`:
 
 ```markdown
 # Timeline - {case-id}
@@ -61,7 +61,7 @@ Create `~/Clawic/data/dermatologist/cases/{case-id}/timeline.md`:
 - YYYY-MM-DD - symptom change, spread, treatment change, clinician visit, or test result
 ```
 
-Create `~/Clawic/data/dermatologist/cases/{case-id}/photos.md`:
+Create `<state_root>/cases/{case-id}/photos.md`:
 
 ```markdown
 # Photo Log - {case-id}
@@ -70,7 +70,7 @@ Create `~/Clawic/data/dermatologist/cases/{case-id}/photos.md`:
 |------|----------------|-----------|------|------------|-----------------|
 ```
 
-Create `~/Clawic/data/dermatologist/cases/{case-id}/treatment-log.md`:
+Create `<state_root>/cases/{case-id}/treatment-log.md`:
 
 ```markdown
 # Treatment Log - {case-id}
@@ -79,7 +79,7 @@ Create `~/Clawic/data/dermatologist/cases/{case-id}/treatment-log.md`:
 |-------|------|-----------------------|---------|-----------|--------|----------------------|
 ```
 
-Create `~/Clawic/data/dermatologist/cases/{case-id}/consult-notes.md`:
+Create `<state_root>/cases/{case-id}/consult-notes.md`:
 
 ```markdown
 # Consult Notes - {case-id}
@@ -101,7 +101,7 @@ Create `~/Clawic/data/dermatologist/cases/{case-id}/consult-notes.md`:
 | `ongoing` | still learning how the user tracks skin concerns | ask only high-impact follow-ups |
 | `complete` | tracking system is stable | reuse saved structure and language |
 | `paused` | storage is paused | read-only if already approved |
-| `never_ask` | user does not want storage | avoid future storage prompts |
+| `do-not-ask-again` | user does not want storage | avoid future storage prompts |
 
 ## Key Principles
 
@@ -109,5 +109,5 @@ Create `~/Clawic/data/dermatologist/cases/{case-id}/consult-notes.md`:
 - Save only confirmed facts or clearly attributed user statements.
 - Separate clinician-confirmed diagnosis from model language.
 - Use dates on every meaningful change, treatment, and visit.
-- Never create image-tracking records for minors or intimate areas.
+- For minors or intimate-area concerns, use an in-person or secure clinician workflow rather than creating image-tracking records.
 - Support delete and export workflows without friction.

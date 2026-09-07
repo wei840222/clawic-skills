@@ -1,156 +1,86 @@
 ---
 name: dermatologist
-slug: dermatologist
-version: 1.0.0
-description: Track skin lesions, rashes, photos, treatment response, and dermatology visit prep with conservative triage, case-based records, and privacy guardrails.
-homepage: https://clawic.com/skills/dermatologist
-changelog: Initial release with case-based skin tracking, photo comparison, treatment logs, consultation prep, and privacy-first legal guardrails.
+description: Track skin lesions, rashes, photos, treatment response, and dermatology visit preparation. Use for conservative triage, case-based documentation, photo comparison, and clinician handoffs; do not use for diagnosis or prescribing.
 metadata:
-  clawdbot:
-    emoji: D
-    requires:
-      bins: []
-    os:
-    - linux
-    - darwin
-    - win32
-    configPaths:
-    - ~/Clawic/data/dermatologist/
-    displayName: Dermatologist
-  openclaw:
-    requires:
-      config:
-      - ~/Clawic/data/dermatologist/
+  version: "1.0.0"
+  openclaw: '{"emoji":"D"}'
+  related-skills: '{"doctor":"Provides broader symptom triage when a skin concern may reflect systemic illness.","health":"Covers general wellness questions outside dermatology tracking.","memory":"Maintains durable facts that are not part of a dermatology case record.","photos":"Organizes broader local photo libraries beyond clinical comparison workflows."}'
 ---
+
+## State location
+
+Dermatology state may exist in `<workspace>/dermatologist/`, `<workspace>/memory/dermatologist/`, or `~/dermatologist/`. Before reading or writing state, resolve `<state_root>` as follows:
+
+1. Use an explicitly configured path when one exists.
+2. Otherwise use the first existing directory in this order: `<workspace>/dermatologist/`, `<workspace>/memory/dermatologist/`, `~/dermatologist/`.
+3. If multiple candidates exist, use only the highest-precedence directory and tell the user; do not merge or synchronize copies.
+4. If none exists and the user approves persistent tracking, create `<workspace>/dermatologist/`. If the host cannot provide `<workspace>`, ask for a state root before creating data.
+
+Use the selected `<state_root>` for all state operations in this invocation. Resolve existing directories before creation; choosing a state root does not replace the user's consent for writing sensitive health information.
 
 ## When to Use
 
-Use when the user needs skin-photo comparison, case tracking, treatment-response logging, or dermatologist visit prep. This is for conservative triage and documentation, not prescribing.
+Use when the user needs skin-photo comparison, case tracking, treatment-response logging, conservative escalation guidance, or dermatologist visit preparation. First load `references/triage.md` for a new or changing symptom; use `references/red-flags.md` for a compact urgency check.
 
 ## Architecture
 
-Memory lives in `~/Clawic/data/dermatologist/`. If `~/Clawic/data/dermatologist/` does not exist, run `setup.md`. See `memory-template.md` for structure.
+When persistent tracking is approved, use this state tree:
 
 ```text
-~/Clawic/data/dermatologist/
-├── memory.md
-├── cases/
+<state_root>/
+├── memory.md                         # required after persistent tracking begins
+├── cases/                             # create a case folder only for an active concern
 │   └── {case-id}/
 │       ├── summary.md
 │       ├── timeline.md
-│       ├── photos.md
-│       ├── treatment-log.md
-│       └── consult-notes.md
-└── exports/
+│       ├── photos.md                  # create only when photo tracking is approved
+│       ├── treatment-log.md           # create when treatments or exposures are tracked
+│       └── consult-notes.md           # create when preparing or recording a visit
+└── exports/                           # create only for an approved clinician handoff
 ```
 
-## Quick Reference
+On first approved use, read `references/setup.md`, then initialize only the files needed from `references/memory-template.md`.
 
-| Topic | File |
-|-------|------|
-| Setup guide | `setup.md` |
-| Memory template | `memory-template.md` |
-| Urgency triage | `triage.md` |
-| New-case intake | `intake.md` |
-| Compact red-flag checklist | `red-flags.md` |
-| Standardized photo capture | `photo-protocol.md` |
-| Case naming and evolution | `tracking.md` |
-| Treatment and trigger logging | `treatment-log.md` |
-| Consultation prep and follow-up | `consult-prep.md` |
-| Visit-summary export pattern | `consult-workflow.md` |
-| Legal and privacy guardrails | `legal-boundaries.md` |
+## Load Detailed Guidance
 
-## Scope
+| Situation | Read |
+|---|---|
+| First activation, consent, or missing state root | `references/setup.md` |
+| New lesion, rash, or flare | `references/intake.md` and `references/triage.md` |
+| Urgency is unclear | `references/red-flags.md` |
+| Photo capture or comparison | `references/photo-protocol.md` |
+| Case separation and longitudinal review | `references/tracking.md` |
+| Treatments, products, triggers, or adherence | `references/treatment-log.md` |
+| Preparing questions or a visit summary | `references/consult-prep.md` or `references/consult-workflow.md` |
+| Storage, sharing, minors, intimate-area images, or productization | `references/legal-boundaries.md` |
+| Baseline dermatology and source-backed triage context | `references/domain.md` |
+| Darwin structural score and scenario assessment | `references/darwin-evaluation.md` |
 
-This skill ONLY:
-- organizes skin concerns, photos, timelines, exposures, and visit prep
-- stores local records in `~/Clawic/data/dermatologist/` if the user approves
-- gives conservative escalation guidance for clinician follow-up
+## Core Workflow
 
-This skill NEVER:
-- diagnose skin cancer, melanoma, infections, autoimmune disease, or drug reactions from chat or photos alone
-- prescribe medication, dosing, biopsy decisions, or treatment escalation without a clinician
-- ask for or store intimate-area images or any photos of minors
-- upload photos or health data to external services
-- present itself as a licensed clinician or substitute for in-person care
+1. **Triage first.** Check for emergency, same-day, and prompt clinician-review signals before discussing tracking or possible patterns.
+2. **Collect only decision-changing facts.** Capture body site, onset and trend, symptom burden, relevant exposures or treatments, and clinician-confirmed history.
+3. **Separate concerns.** Keep one case folder per distinct lesion, rash episode, or stable body-site problem.
+4. **Standardize evidence.** Before comparing photos, use the same camera, lighting, distance, angle, and body position where possible; state when comparisons are limited.
+5. **Keep records factual.** Separate user reports, visible observations, and clinician statements. Record dates for meaningful changes, treatment changes, visits, and results.
+6. **Prepare a clinician handoff.** Summarize onset, trend, treatments, exposures, comparable photos, and the user's highest-priority questions.
 
-## Security & Privacy
+## Decision Outputs
 
-**Data that leaves your machine:**
-- None.
+- **Emergency or same-day signals:** give the in-person escalation recommendation first; defer intake, images, and persistent storage.
+- **Prompt clinician review:** explain the observed reason, recommend an appointment timeframe, and offer a dated handoff summary.
+- **No active red flags:** create a minimal tracking plan only after consent, then use case separation and standardized evidence.
+- **Insufficient photo quality:** record the limitation and rely on the timeline and symptoms rather than a visual conclusion.
 
-**Data stored locally if approved by the user:**
-- activation preference and privacy choices in `~/Clawic/data/dermatologist/memory.md`
-- one case folder per skin concern with dated notes, photo metadata, and treatment logs
-- visit summaries in `~/Clawic/data/dermatologist/exports/`
+## Scope and Safety
 
-**This skill does NOT:**
-- upload images or call undeclared services
-- infer identity or diagnosis from a photo
-- create reminders or automations automatically
-- replace clinician judgment, pathology, biopsy, or emergency care
+This skill organizes skin concerns, photos, timelines, exposures, and visit preparation. It provides conservative escalation guidance and does not replace in-person clinical assessment, dermoscopy, biopsy, pathology, or clinician judgment.
 
-## External Endpoints
+For sensitive images, support care by directing minors or intimate-area concerns to an appropriate in-person or secure clinician workflow instead of collecting or storing images. Ask before writing local files, storing photo metadata, or generating an export. Keep data local unless the user explicitly requests an approved sharing workflow.
 
-This skill makes no external network requests.
+## Common Failure Modes
 
-| Endpoint | Data Sent | Purpose |
-|----------|-----------|---------|
-| None | None | N/A |
-
-No other data is sent externally.
-
-## Core Rules
-
-### 1. Triage Before Skin Theory
-- Open `triage.md` before giving pattern guesses or tracking advice.
-- Use `red-flags.md` when urgency needs a shorter checklist.
-- Rule out emergency, same-day, and urgent in-person care first.
-
-### 2. Keep One Case Per Concern
-- Use one folder per lesion, rash episode, or stable body-site problem.
-- Use `intake.md` to capture the first high-signal questions.
-- If the morphology, body area, or time course differs, split into a new case instead of merging.
-
-### 3. Standardize Photos Before Comparing
-- Use `photo-protocol.md` for lighting, angle, scale, and naming.
-- Prefer the same room, distance, body position, and camera whenever possible.
-- Do not claim change when the photo conditions are too different.
-
-### 4. Separate Facts, Impressions, and Clinician Statements
-- Record what the user reports, what is visible under a limited description, and what a clinician said as separate buckets.
-- Offer differentials as possibilities to discuss, not as conclusions.
-
-### 5. Log Exposures and Treatment Response With Dates
-- Use `treatment-log.md` to track products, prescriptions, triggers, and adherence.
-- Capture dates, frequency, missed doses, irritation, itch, pain, bleeding, and meaningful exposures.
-
-### 6. Prepare Consultations Like a Specialist Handoff
-- Use `consult-prep.md` to compress onset, evolution, failed treatments, triggers, and exact questions.
-- Use `consult-workflow.md` when the user wants an export-ready visit summary.
-- Surface the smallest set of facts that changes clinician decision-making.
-
-### 7. Privacy and Legal Boundaries Outrank Convenience
-- Use `legal-boundaries.md` whenever storage, sharing, or productization comes up.
-- Ask before writing local files or saving photo metadata.
-- If minors or intimate-area images appear, stop image collection and redirect to in-person or secure clinician workflows.
-- If the user is building a patient-facing product, require jurisdiction-specific legal review before deployment.
-
-## Common Traps
-
-- Comparing photos with different lighting, zoom, or camera modes -> fake progression.
-- Mixing acne, mole tracking, scalp symptoms, and a sudden rash into one timeline -> unusable record.
-- Treating words like "itchy," "red," or "raised" as a diagnosis -> overclaiming from low-signal inputs.
-- Suggesting "watch and wait" with bleeding, fast change, fever, eye involvement, mucosal lesions, or severe pain -> unsafe delay.
-
-## Related Skills
-More Clawic skills, get them at https://clawic.com/skills/<slug> (install if the user confirms):
-- `doctor` - general medical boundaries when a skin issue may reflect broader illness
-- `health` - broader symptom framing outside specialty care
-- `memory` - persistent local memory for long-running follow-up
-- `photos` - broader photo organization workflows beyond dermatology tracking
-
-## Feedback
-
-- If useful, star it: https://clawic.com/skills/dermatologist
-- Latest version: https://clawic.com/skills/dermatologist
+- Photos with different lighting, zoom, camera modes, or distance are weak comparison evidence; document the limitation rather than infer progression.
+- Distinct lesions, rashes, scalp symptoms, or acne courses need separate cases so a clinician can reconstruct each timeline.
+- Bleeding, rapid change, fever, eye or mouth involvement, severe pain, or fast spread needs urgency-based in-person evaluation rather than a watch-and-wait record.
+- A photo or symptom description can organize uncertainty, but cannot confirm a diagnosis.

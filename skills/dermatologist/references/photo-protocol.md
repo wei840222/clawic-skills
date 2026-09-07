@@ -4,7 +4,7 @@
 
 - Ask whether photo tracking is actually useful for this case.
 - Confirm the user is comfortable storing photo metadata locally.
-- Do not ask for intimate-area or minor photos unless a lawful caregiver context is already clear and the user explicitly wants tracking.
+- For intimate-area or minor concerns, direct the user to an appropriate in-person or secure clinician workflow instead of collecting photos.
 
 ## Standard Capture Rules
 
@@ -37,7 +37,7 @@ Examples:
 - Compare only photos with reasonably similar conditions.
 - If lighting or distance changed too much, describe the comparison as limited.
 - Separate visible change from user-reported symptoms such as itch or pain.
-- Never convert a photo difference into a diagnosis.
+- Describe a photo difference as an observation and direct diagnosis questions to a clinician.
 
 ## What to Log in `photos.md`
 

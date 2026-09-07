@@ -1,6 +1,6 @@
 # Setup - Dermatologist
 
-Read this on first activation when `~/Clawic/data/dermatologist/` does not exist or is incomplete.
+Read this after the State location procedure in `SKILL.md` selects `<state_root>` and persistent tracking is approved.
 
 ## Operating Attitude
 
@@ -17,11 +17,11 @@ Read this on first activation when `~/Clawic/data/dermatologist/` does not exist
    - only for tracking, photo comparison, or visit prep
 2. Ask permission before writing local files:
 ```bash
-mkdir -p ~/Clawic/data/dermatologist/cases ~/Clawic/data/dermatologist/exports ~/Clawic/data/dermatologist/archive
-touch ~/Clawic/data/dermatologist/memory.md
-chmod 700 ~/dermatologist
+mkdir -p <state_root>/cases
+touch <state_root>/memory.md
+chmod 700 <state_root>
 ```
-3. If approved and `memory.md` is empty, initialize it from `memory-template.md`.
+3. If approved and `<state_root>/memory.md` is empty, initialize it from `references/memory-template.md`. Create `exports/` or `archive/` only when the user requests that feature.
 4. Ask what matters most right now:
    - urgent triage
    - organize an existing history
@@ -48,11 +48,11 @@ If there is an active concern, keep setup short and move directly into triage or
 
 ## Runtime Defaults
 
-- If urgency is unclear, open with `triage.md`.
+- If urgency is unclear, open with `references/triage.md`.
 - If photos are involved, standardize capture before comparing.
 - If the user has multiple concerns, split them into separate case folders.
 - If the user declines memory, still help fully in-session without pushing storage again.
-- If minors, intimate areas, or product/legal deployment appear, bring in `legal-boundaries.md` immediately and stop any image-storage workflow.
+- If minors, intimate areas, or product/legal deployment appear, read `references/legal-boundaries.md` immediately and redirect image handling to an appropriate in-person or secure clinician workflow.
 
 ## Integration Preference
 
