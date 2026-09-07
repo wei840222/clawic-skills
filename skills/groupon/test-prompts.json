@@ -1,0 +1,16 @@
+[
+  {
+    "id": "local-deal-screen",
+    "prompt": "I need a massage deal in Chicago this weekend. Can you find a worthwhile Groupon?",
+    "expected": "Collect the decision-critical constraints, screen candidates with SAVE, read restrictions, and return a decision-ready verdict without purchasing.",
+    "actual": "dry-run: the workflow scopes date, budget, party, and travel constraints before a SAVE-based recommendation. Structural Darwin dry-run: pass.",
+    "pass": true
+  },
+  {
+    "id": "booking-conflict-recovery",
+    "prompt": "My escape-room Groupon says weekends are valid, but the merchant refused my Saturday booking. What should I do?",
+    "expected": "Classify the voucher and conflict, load recovery guidance, verify live policy before claims, and draft a support packet without submitting it.",
+    "actual": "dry-run: the recovery branch requires status classification, evidence gathering, live policy verification, and user approval before submission. Structural Darwin dry-run: pass.",
+    "pass": true
+  }
+]

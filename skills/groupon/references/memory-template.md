@@ -1,6 +1,6 @@
 # Memory Template - Groupon
 
-Create `~/Clawic/data/groupon/memory.md` with this structure:
+Create `<state_root>/memory.md` with this structure:
 
 ```markdown
 # Groupon Memory
@@ -42,7 +42,7 @@ Updated: YYYY-MM-DD
 Create these only when they become useful:
 
 ```markdown
-# ~/Clawic/data/groupon/shortlists.md
+# <state_root>/shortlists.md
 
 ## YYYY-MM-DD
 - Deal:
@@ -52,7 +52,7 @@ Create these only when they become useful:
 ```
 
 ```markdown
-# ~/Clawic/data/groupon/purchases.md
+# <state_root>/purchases.md
 
 ## Active vouchers
 - Deal:
@@ -62,7 +62,7 @@ Create these only when they become useful:
 ```
 
 ```markdown
-# ~/Clawic/data/groupon/incidents.md
+# <state_root>/incidents.md
 
 ## YYYY-MM-DD
 - Merchant or deal:
@@ -74,6 +74,6 @@ Create these only when they become useful:
 ## Key Principles
 
 - Store reusable context, not one-off chatter.
-- Never store payment methods, login secrets, or full voucher codes.
+- Keep payment methods, login secrets, and full voucher codes out of local files.
 - Keep notes short, concrete, and tied to better future decisions.
 - Update `last` whenever the file changes.
