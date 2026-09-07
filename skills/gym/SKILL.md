@@ -1,6 +1,6 @@
 ---
 name: gym
-description: Log workouts, track progressive overload and personal records, adapt sessions for injuries or equipment limits, and give gym coaching for sets, reps, rest, and recovery. Use when the user wants to record a session, plan the next gym workout, check PRs or volume, work around a restriction, or get gym-day coaching; route full program design to `fitness`, meal-level macros to `dietitian` or `nutrition`, and recurring attendance habits to `habits`.
+description: Log gym sessions, track progressive overload and personal records, adapt exercises for injuries or equipment limits, and coach sets, reps, rest, and recovery. Use when the user wants to record a workout, decide the next gym session, check PRs or weekly volume, work around a restriction, or get floor coaching; route multi-week program design to `fitness`, meal-level macros to `dietitian` or `nutrition`, and attendance streaks to `habits`.
 metadata:
   version: "1.0.1"
   openclaw: '{"emoji":"🏋️"}'
