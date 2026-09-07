@@ -1,40 +1,33 @@
 ---
 name: alipay
-slug: alipay
-version: 1.0.0
 description: Implement Alipay for web and mobile with signed request safety, gateway alignment, and production-ready payment operations.
-homepage: https://clawic.com/skills/alipay
-changelog: Initial release with implementation, validation, launch, and incident response playbooks for Alipay.
 metadata:
-  clawdbot:
-    emoji: 💴
-    requires:
-      bins:
-      - curl
-      - jq
-      env:
-      - ALIPAY_APP_ID
-    os:
-    - darwin
-    - linux
-    - win32
-    displayName: Alipay
+  version: "1.0.0"
+  openclaw: '{"emoji":"💴","requires":{"bins":["curl","jq"],"env":["ALIPAY_APP_ID"]}}'
+  related-skills: '{"payments":"General payment design and checkout decision frameworks","billing":"Billing models, reconciliation, and payment lifecycle decisions","api":"Reliable backend API contracts and failure-safe integrations","auth":"Authentication and session hardening in transaction flows","android":"Android checkout implementation and runtime troubleshooting patterns"}'
 ---
 
 ## Setup
 
-On first use, read `setup.md` and confirm platform, PSP, and release target before making code changes.
+On first use, read `references/setup.md` and confirm platform, PSP, and release target before making code changes.
 
 ## When to Use
 
 User needs Alipay in checkout, subscriptions, or cross-border wallet flows. Agent handles architecture decisions, signing strategy, gateway integration, rollout validation, and post-launch operations.
 
+
+## State location
+
+Before any state operation, use an explicitly configured state root when one exists. Otherwise choose the first existing directory in this order: `<workspace>/alipay/`, `<workspace>/memory/alipay/`, then `~/alipay/`. If more than one exists, use only the highest-precedence directory and tell the user that separate copies exist; never merge or synchronize them automatically. If none exists and persistent state is needed with authorization, create `<workspace>/alipay/`.
+
+Use the selected `<state_root>` consistently for the entire invocation. The host supplies `<workspace>`; do not substitute the shell working directory.
+
 ## Architecture
 
-Memory lives in `~/Clawic/data/alipay/`. See `memory-template.md` for setup and status fields.
+Memory lives in `<state_root>/`. See `references/memory-template.md` for setup and status fields.
 
 ```
-~/Clawic/data/alipay/
+<state_root>/
 |-- memory.md                 # Project snapshot, risk status, and rollout state
 |-- implementations.md        # Selected approach and platform notes
 |-- validation-log.md         # Test evidence and environment results
@@ -45,15 +38,16 @@ Memory lives in `~/Clawic/data/alipay/`. See `memory-template.md` for setup and 
 
 Use the smallest relevant file for the current task.
 
-| Topic | File |
-|-------|------|
-| Setup flow | `setup.md` |
-| Memory template | `memory-template.md` |
-| Implementation plan | `implementation-playbook.md` |
-| Validation matrix | `validation-checklist.md` |
-| Failure recovery | `failure-handling.md` |
-| Release and operations | `launch-playbook.md` |
-| Recurring and subscription flows | `recurring-payments.md` |
+| Topic | File | When to load |
+|-------|------|--------------|
+| Domain Knowledge | `references/domain-knowledge.md` | When you need cross-border details or callback requirements |
+| Setup flow | `references/setup.md` | For initial setup and credentials |
+| Memory template | `references/memory-template.md` | To initialize local state and memory |
+| Implementation plan | `references/implementation-playbook.md` | For step-by-step implementation guide |
+| Validation matrix | `references/validation-checklist.md` | Before considering the integration complete |
+| Failure recovery | `references/failure-handling.md` | When debugging payment failures |
+| Release and operations | `references/launch-playbook.md` | Before deploying to production |
+| Recurring and subscription flows | `references/recurring-payments.md` | When implementing subscriptions |
 
 ## Requirements
 
@@ -61,11 +55,11 @@ Use the smallest relevant file for the current task.
 - CLI tools for diagnostics: `curl`, `jq`
 - Access to Alipay merchant console and target PSP account
 
-Never ask users to paste private keys, full signed payloads, or PSP secrets into chat.
+Always use environment variables for private keys, full signed payloads, or PSP secrets rather than asking users to paste them into chat.
 
 ## Data Storage
 
-Local notes stay under `~/Clawic/data/alipay/`:
+Local notes stay under `<state_root>`:
 - memory file for current state and integration decisions
 - validation log file for test outcomes and evidence
 - incidents file for failure signatures and mitigations
@@ -84,7 +78,7 @@ Then choose one primary path:
 - In-app checkout with Alipay SDK handoff
 - PSP-mediated integration path
 
-Do not mix paths in one patch unless the user asks for a migration plan.
+Focus on a single integration path per patch unless the user asks for a migration plan.
 
 ### 2. Require Merchant and Environment Prerequisites
 Before implementation, confirm:
@@ -101,7 +95,7 @@ Amounts and currency must match across:
 - Server-side order totals
 - Alipay authorization and capture calls
 
-Never trust client totals for final charge amount.
+Always calculate and verify final charge amounts on the server.
 
 ### 4. Make Signing and Callback Verification Explicit
 Treat signing and verification as required controls:
@@ -109,13 +103,13 @@ Treat signing and verification as required controls:
 - Verify callback signatures before changing order state
 - Reject unsigned or invalid callbacks deterministically
 
-Never mark a payment successful before signature checks pass.
+Require signature checks to pass before marking a payment successful.
 
 ### 5. Keep Payment Payload Handling Minimal and Auditable
 Treat Alipay payloads as sensitive:
 - Forward payload only to backend or PSP
 - Persist metadata only (request id, status, amount, currency)
-- Never store raw signed payloads in logs, notes, or screenshots
+- Only store non-sensitive metadata (request id, status, amount, currency) in logs, notes, or screenshots
 
 ### 6. Build Idempotent and Recoverable Payment Steps
 Require idempotency and reconciliation for all critical calls:
@@ -126,7 +120,7 @@ Require idempotency and reconciliation for all critical calls:
 Every retried request must reuse stable idempotency keys to prevent duplicates.
 
 ### 7. Separate Test and Production Release Gates
-Do not recommend production rollout until all gates pass:
+Require all gates to pass before recommending a production rollout:
 - Test success, decline, cancellation, and timeout paths are covered
 - Device and browser matrix is complete for supported audience
 - Fallback card or alternative checkout works when Alipay is unavailable
@@ -149,7 +143,7 @@ Do not recommend production rollout until all gates pass:
 | https://openapi-sandbox.dl.alipaydev.com/gateway.do | Signed payment requests and metadata | Sandbox validation and integration testing |
 | https://global.alipay.com | Documentation and account console traffic | Merchant setup and operational reference |
 
-No other data should be sent externally unless the selected PSP requires it.
+Only send required data externally unless the selected PSP requires it.
 
 ## Security & Privacy
 
@@ -158,28 +152,15 @@ Data that leaves your machine:
 - Payment metadata and signed requests sent to configured PSP or backend
 
 Data that stays local:
-- Integration notes and rollout state under `~/Clawic/data/alipay/`
+- Integration notes and rollout state under `<state_root>`
 - Validation evidence and failure logs without raw signed payloads
 
-This skill does NOT:
-- Store raw signed request payloads in memory files
-- Skip mandatory merchant and callback verification requirements
-- Enable production release without explicit readiness checks
+This skill MUST ensure:
+- Raw signed request payloads remain out of memory files
+- All mandatory merchant and callback verification requirements are executed
+- Readiness checks pass before production release
 
 ## Trust
 
 Alipay integrations depend on Alipay infrastructure and the chosen PSP.
 Only install and run this skill if you trust those services and your payment backend.
-
-## Related Skills
-More Clawic skills, get them at https://clawic.com/skills/<slug> (install if the user confirms):
-- `payments` - General payment design and checkout decision frameworks
-- `billing` - Billing models, reconciliation, and payment lifecycle decisions
-- `api` - Reliable backend API contracts and failure-safe integrations
-- `auth` - Authentication and session hardening in transaction flows
-- `android` - Android checkout implementation and runtime troubleshooting patterns
-
-## Feedback
-
-- If useful, star it: https://clawic.com/skills/alipay
-- Latest version: https://clawic.com/skills/alipay
