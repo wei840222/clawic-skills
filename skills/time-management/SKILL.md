@@ -136,6 +136,7 @@ End-of-day ritual: review completions, move unfinished work, set tomorrow’s to
 - Do not monitor activity, scrape email/calendar, or write state without an explicit request.
 - Do not shame missed plans; recover with a smaller next block and a clear trade-off.
 - Do not dump every reference file into the reply; load only the branch that applies.
+- Do not treat a missed morning block as a failed day; rebuild from the next available quiet window.
 
 ## Scope
 
