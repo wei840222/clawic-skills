@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "prompt": "I'm moving from Pennsylvania to the Capital Region next month and need to handle my car and license. What should I do first, this week, and later?",
+    "expected": "Classify the user as a mover, separate license exchange from vehicle registration/insurance/inspection, give a sequenced checklist, and point to official DMV verification rather than inventing exact document lists.",
+    "actual": "Mode: mover to the Capital Region. Do this first: confirm residency timing, gather identity/residency proofs, and decide whether REAL ID or Enhanced ID timing matters for upcoming flights. This week: arrange New York liability insurance, plan registration/title/plate workflow together, and check inspection timing after registration. Later: clean up toll tags, parking permits, and winter equipment once the home base is stable. Exact document lists and office appointment rules must be verified on dmv.ny.gov before acting.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "We are comparing Buffalo, Saratoga Springs, and a Long Island suburb for a family move. Salary looks highest near the city. Which factors decide the real answer?",
+    "expected": "Refuse a rent-or-salary-only comparison. Require total cost and risk factors: commute corridor, property tax, heating, winter driving, school district, car dependence, and flood/snow exposure; route region-specific detail to references/regions.md and costs-and-taxes.md.",
+    "pass": true,
+    "actual": "Do not pick from headline salary alone. Compare each corridor on commute shape, local property-tax carrying cost, heating and insurance, winter driving, school-district fit, and whether NYC access is daily, occasional, or rare. Long Island suburbs can look fine until taxes/parking/insurance stack; Buffalo and Saratoga trade different winter, housing-stock, and job-market realities. Load regions.md and costs-and-taxes.md, then ask only for the missing constraint that changes the ranking."
+  },
+  {
+    "id": 3,
+    "prompt": "Plan a fall road trip from Manhattan through the Hudson Valley to the Adirondacks. What should we verify before trusting a simple map route?",
+    "expected": "Cover congestion pricing / toll exposure leaving the city, seasonal park access, thruway timing, limited cell service upstate, and wildlife/winter readiness; mark mutable toll and park details for official verification.",
+    "actual": "Leaving Manhattan, check Congestion Relief Zone / toll exposure and current MTA rules before quoting costs. Hudson Valley driving is usually scenic but speed enforcement and weekend traffic matter. In the Adirondacks, plan for limited cell service, winding roads, and seasonal park access; carry physical navigation backup and an emergency kit. Verify current tolls and park conditions on official sources rather than map distance alone.",
+    "pass": true
+  }
+]
