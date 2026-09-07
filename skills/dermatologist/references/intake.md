@@ -36,8 +36,8 @@ Reduce the intake to:
 4. recent exposures and treatments
 5. escalation risk
 
-## Do Not
+## Intake Boundaries
 
-- Ask a long questionnaire when urgent red flags are active.
-- Label the condition from one photo or one symptom line.
-- Merge clearly different lesions or rashes into the same case.
+- When urgent red flags are active, move directly to the appropriate in-person escalation path.
+- Describe uncertainty from one photo or symptom line and use clinician review for diagnosis.
+- Create separate cases for clearly different lesions or rashes.
