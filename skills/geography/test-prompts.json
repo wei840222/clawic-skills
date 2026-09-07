@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "I am new to maps. Why were many cities built beside rivers?",
+    "expected": "Explain the relationship between rivers and settlement in accessible language, identifying water, transport, food, and flood-risk tradeoffs.",
+    "actual": "Many cities grew beside rivers because rivers supplied water, fertile floodplains, food, and a route for moving people and goods. They also bring flood risk, so settlement patterns reflect both the benefits of water and the need to manage it.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "County unemployment rates look different after I redraw the district boundaries. Is that a real effect?",
+    "expected": "Identify aggregation and MAUP, request the unit, time period, and source, and suggest comparing plausible geographic units without overstating certainty.",
+    "actual": "It may be an aggregation effect known as the modifiable areal unit problem: summary rates can change when boundaries or grouping rules change. Record the original and revised units, period, source, and population denominator; then compare several defensible zoning schemes before treating the difference as a substantive geographic pattern.",
+    "pass": true
+  }
+]
