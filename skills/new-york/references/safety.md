@@ -66,12 +66,12 @@
 ### Phone Snatching (#1 property crime)
 - Most common at subway doors closing
 - Keep phone in pocket during "transitional" moments
-- Don't use phone while walking near curbs
+- Put phone away while walking near curbs
 
 ### Pickpocketing
 - Tourist areas (Times Square, etc.)
 - Keep bags zipped, in front
-- Don't flash cash
+- Keep cash concealed
 
 ### Package Theft
 - Use Amazon Lockers / UPS Access Points

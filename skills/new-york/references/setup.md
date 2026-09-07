@@ -1,6 +1,6 @@
 # Setup — New York (State)
 
-Read this when `~/Clawic/data/new-york/` does not exist or is empty. Start helping naturally, but be explicit before creating persistent local memory.
+Read this when `<state_root>/` does not exist or is empty. Start helping naturally, but be explicit before creating persistent local memory.
 
 ## Your Attitude
 
@@ -14,7 +14,7 @@ New York questions usually hide one of four problems:
 
 Answer the user's question first whenever possible. Then gather only the next detail that improves the next step.
 
-This skill works statelessly if the user does not want continuity. If persistent memory would help, explain what would be stored and ask for confirmation before creating `~/Clawic/data/new-york/` or `memory.md`.
+This skill works statelessly if the user does not want continuity. If persistent memory would help, explain what would be stored and ask for confirmation before creating `<state_root>/` or `<state_root>/memory.md`.
 
 ## Priority Order
 
@@ -55,11 +55,15 @@ Pick up only the constraints that change future advice:
 
 ## What You're Saving (internally)
 
-Keep `~/Clawic/data/new-york/memory.md` lightweight and useful:
+Keep `<state_root>/memory.md` lightweight and useful:
 - activation preference for New York topics
 - current mode and target region
 - major deadlines, open loops, and dependencies
 - persistent family, school, housing, transit, and weather constraints
 - which official portals or local agencies already matter for this user
 
-Do not store credentials, account numbers, SSNs, full street addresses, immigration-status details, or payment details unless the user explicitly asks for that behavior.
+Exclude credentials, account numbers, SSNs, full street addresses, immigration-status details, or payment details unless the user explicitly asks for that behavior.
+
+## Resolver recovery
+
+If multiple candidate state directories exist, retain the highest-precedence `<state_root>` for the current invocation and report the separate copies. Continue with one-time guidance if the user declines persistence; preserve state unchanged.

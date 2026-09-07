@@ -9,7 +9,7 @@ The right New York family answer usually depends on school district, commute loa
 ## What to Check First
 
 ### 1. District and assignment rules
-- Do not assume a city or town name is enough.
+- Verify the specific school district boundaries rather than relying on city or town names.
 - District boundaries, magnet or selective options, and transportation rules can change the practical answer fast.
 
 ### 2. School calendar and commute stress

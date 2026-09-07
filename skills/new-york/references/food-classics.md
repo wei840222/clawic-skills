@@ -28,7 +28,7 @@
 | **Bo's Bagels** | $3-10 | Harlem, Washington Heights | Za'atar, pumpernickel cranberry. |
 | **Bagel Hole** | $2.50-8 | Park Slope | Small, dense. No toasting allowed! |
 
-**Pro tip:** Get it fresh, don't toast unless necessary. Scallion cream cheese is the move.
+**Pro tip:** Get it fresh, toast only if requested. Scallion cream cheese is the move.
 
 ---
 
@@ -41,7 +41,7 @@
 | **Pastrami Queen** | $27 | UES, UWS, Moynihan | Bourdain favorite. Slightly smoky. |
 
 **Katz's ordering:**
-1. Take ticket at door (DON'T lose it = $50 charge)
+1. Take ticket at door (keep it safe to avoid $50 charge)
 2. Go to counter, tip carver $2-3 BEFORE he slices
 3. Get pastrami on rye, full sour pickles
 

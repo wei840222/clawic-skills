@@ -106,4 +106,4 @@ Many iconic spots are CASH ONLY:
 - **Late night:** Koreatown, East Village open late
 
 ### Outer Boroughs = Better Value
-Queens and Brooklyn have best food-to-price ratio. Don't stay in Manhattan for every meal.
+Queens and Brooklyn have best food-to-price ratio. Explore dining options in Queens and Brooklyn for better value.

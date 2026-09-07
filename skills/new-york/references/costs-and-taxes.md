@@ -4,13 +4,13 @@ Use this file for salary reality, relocation math, tax questions, or total-cost 
 
 ## New York Cost Rule
 
-Do not reduce New York math to "high taxes" or "high salaries." The real answer depends on state tax, local property tax, commuting structure, heating, insurance, and whether the user is paying for access to New York City or avoiding it.
+Evaluate New York math holistically beyond "high taxes" or "high salaries." The real answer depends on state tax, local property tax, commuting structure, heating, insurance, and whether the user is paying for access to New York City or avoiding it.
 
 ## Core Cost Buckets
 
 ### 1. Income and payroll reality
 - New York salary range varies dramatically between NYC finance or tech, suburban professional work, state-government tracks, and smaller upstate markets.
-- A higher salary only wins if the commute, tax, and housing system do not absorb it.
+- A higher salary only wins if the commute, tax, and housing system fail to absorb it.
 
 ### 2. Housing and property-tax reality
 - Some markets look cheaper monthly until property tax, insurance, heating, or necessary car ownership are added back in.
@@ -24,7 +24,7 @@ Do not reduce New York math to "high taxes" or "high salaries." The real answer 
 
 - Is the user optimizing for salary growth, family stability, commute simplicity, or lifestyle?
 - Are they buying or renting?
-- Do they need NYC access every day, sometimes, or almost never?
+- Do they need NYC access every day, sometimes, or rarely?
 - Is winter driving and home maintenance acceptable?
 
 ## Common Mistakes

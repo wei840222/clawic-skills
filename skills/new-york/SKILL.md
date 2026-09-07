@@ -1,157 +1,66 @@
 ---
 name: new-york
-slug: new-york
-version: 1.0.1
-description: Navigate New York State for living, moving, working, and visiting with region fit, taxes, winter risk, and daily logistics.
-homepage: https://clawic.com/skills/new-york
-changelog: Expanded the skill into statewide New York guidance with regional tradeoffs, resident workflows, and practical travel planning.
+description: Guide New York State living, moving, work, taxes, housing, winter risk, transit, and statewide trips. Use when region choice, DMV, school districts, cost reality, or visitor routing matters; not for NYC-only itineraries that belong in `new-york-city`.
 metadata:
-  clawdbot:
-    emoji: 🍎
-    requires:
-      bins: []
-      config:
-      - ~/Clawic/data/new-york/
-    os:
-    - linux
-    - darwin
-    - win32
-    configPaths:
-    - ~/Clawic/data/new-york/
-    displayName: New York (State)
-  openclaw:
-    requires:
-      config:
-      - ~/Clawic/data/new-york/
+  version: "1.0.0"
+  openclaw: '{"emoji":"🍎"}'
+  related-skills: '{"travel":"Handles multi-destination travel framing beyond New York State corridors.","booking":"Completes lodging, transport, and reservation workflows after a New York plan is selected.","business":"Extends New York business, permit, and startup choices into broader operations strategy.","health-insurance":"Provides deeper coverage comparison when a move or job change raises insurance questions.","home-buying":"Deepens purchase workflow after New York region and housing fit are narrowed.","new-york-city":"Owns borough-level NYC itineraries, neighborhood bases, and city-only commute decisions."}'
 ---
 
-## When to Use
+## State location
 
-User needs New York State guidance that generic U.S. advice usually gets wrong: choosing a region, moving, licensing, taxes, housing, weather readiness, healthcare, school planning, business setup, or statewide trip design.
+New York State continuity state may exist in `<workspace>/new-york/`, `<workspace>/memory/new-york/`, or `~/new-york/`. Before reading or writing state, resolve `<state_root>` as follows:
 
-This skill should activate for four modes: visiting New York State, moving to New York, living in New York, and operating a New York-based business.
+1. Use an explicitly configured path when one exists.
+2. Otherwise use the first existing directory in this order: `<workspace>/new-york/`, `<workspace>/memory/new-york/`, `~/new-york/`.
+3. If several candidate directories exist, use only the highest-precedence one and report the separate copies.
+4. If none exists and the user explicitly wants continuity, create `<workspace>/new-york/` by default. If the host cannot provide `<workspace>`, request a state root before creating state.
 
-## Architecture
+Use the selected `<state_root>` for every state operation in this invocation. Resolve existing locations before creation; preserve separate copies unless the user requests a migration.
 
-This skill works statelessly for one-off New York questions. If the user wants continuity across sessions, memory lives in `~/Clawic/data/new-york/`. If `~/Clawic/data/new-york/` does not exist, read `setup.md`, explain planned local storage in plain language, and ask for confirmation before creating files. See `memory-template.md` for structure.
+## When to use
 
-```text
-~/Clawic/data/new-york/
-└── memory.md     # User context, region, timelines, constraints, and open loops
-```
+Use this skill for New York State decisions that generic U.S. advice gets wrong: choosing a region, moving in, licensing and vehicles, taxes, housing and insurance, winter readiness, healthcare access, school planning, business setup, or statewide trip design.
 
-## Quick Reference
+Classify the user's mode first—visitor, future resident, current resident, or business operator—then anchor advice to region, metro, county, ZIP, and school district when those variables change the answer. For NYC-only borough itineraries, airports, and neighborhood bases, prefer `new-york-city`.
 
-| Topic | File |
-|-------|------|
-| Setup guide | `setup.md` |
-| Memory template | `memory-template.md` |
-| Regions, metros, and corridor tradeoffs | `regions.md` |
-| Move-in sequence and relocation checklist | `moving-and-settling.md` |
-| Driver license, registration, inspections, and vehicles | `new-york-dmv-and-vehicles.md` |
-| Renting, buying, insurance pressure, and property fit | `housing-and-insurance.md` |
-| Electricity, heating, internet, and recurring bills | `utilities-and-bills.md` |
-| Taxes, tolls, salaries, and cost reality | `costs-and-taxes.md` |
-| Winter storms, floods, heat, and emergency readiness | `weather-and-preparedness.md` |
-| Laws, scams, and practical safety | `laws-and-safety.md` |
-| Schools, childcare, and family-location logic | `family-and-schools.md` |
-| Health insurance, care access, and coverage choices | `healthcare-and-coverage.md` |
-| Work, startups, permits, and business tradeoffs | `work-and-business.md` |
-| Transit, driving, and commute design | `transit-and-commutes.md` |
-| Road trips, parks, and visiting strategy | `road-trips-and-visiting.md` |
-| Official sources map | `sources.md` |
+## Reference routing
 
-## Core Rules
+| Topic | Read | When to load |
+|---|---|---|
+| Continuity setup and consent | `references/setup.md` | The user wants persistent New York context or `<state_root>/` needs initialization |
+| Memory structure | `references/memory-template.md` | Creating or updating `<state_root>/memory.md` after consent |
+| Regions and corridor tradeoffs | `references/regions.md` | Recommending a metro, corridor, or statewide place to live |
+| Moving and settling | `references/moving-and-settling.md` | Planning relocation deadlines, documents, and first-week sequence |
+| DMV and vehicles | `references/new-york-dmv-and-vehicles.md` | License exchange, registration, REAL ID, inspection, or car ownership |
+| Housing and insurance | `references/housing-and-insurance.md` | Renting, buying, flood/snow exposure, or insurance pressure |
+| Utilities and bills | `references/utilities-and-bills.md` | Electricity, heating, internet, and recurring service setup |
+| Costs and taxes | `references/costs-and-taxes.md` | Salary reality, property tax, tolls, or total-cost comparisons |
+| Weather and preparedness | `references/weather-and-preparedness.md` | Winter storms, floods, heat, outages, or emergency readiness |
+| Laws and safety | `references/laws-and-safety.md` | Practical legal, scam, and safety boundaries |
+| Family and schools | `references/family-and-schools.md` | School districts, childcare, or family-location logic |
+| Healthcare coverage | `references/healthcare-and-coverage.md` | Marketplace coverage, care access, or insurance choice |
+| Work and business | `references/work-and-business.md` | Jobs, startups, permits, or business location tradeoffs |
+| Transit and commutes | `references/transit-and-commutes.md` | Rail, bus, driving, and commute design across regions |
+| Road trips and visiting | `references/road-trips-and-visiting.md` | Statewide parks, corridors, and visit strategy |
+| Visitor tips and etiquette | `references/visitor-tips.md` | First-time visitor mistakes and etiquette |
+| Current statewide updates | `references/2026-updates.md` | Recent congestion pricing, tax, climate, or housing changes |
+| Official sources | `references/sources.md` | Unstable rules that need official verification |
+| Domain knowledge snapshot | `references/domain-knowledge.md` | Sourced statewide facts and verification notes |
 
-### 1. Classify the User Before Giving Advice
-- Decide which New York mode applies first: visitor, future resident, current resident, or business operator.
-- Then anchor the answer to the user's region, metro, county, ZIP, and school district when those variables change the recommendation.
-- If that context is missing, ask for it before pretending New York is one market.
+## Core workflow
 
-### 2. Separate State Rules from Local New York Reality
-- Statewide rules are only the first layer. NYC, Long Island, Hudson Valley, Capital Region, Western New York, Central New York, the Finger Lakes, and the North Country do not solve the same problem.
-- Always label which parts are statewide and which parts must be verified by county, school district, utility, transit agency, or municipality.
-- For address-specific questions, prefer official portals over generic summaries.
+1. **Classify before advising.** Identify visitor / mover / resident / business mode, then the region or metro that actually changes the recommendation. Ask only for the next missing detail that materially changes the answer.
+2. **Separate statewide rules from local reality.** Label which guidance is statewide and which must be verified by county, school district, utility, transit agency, or municipality. NYC, Long Island, Hudson Valley, Capital Region, Western New York, Central New York, Finger Lakes, Southern Tier, and North Country are different operating environments.
+3. **Optimize for total cost and risk, not brochure copy.** Include state income tax, local property tax, tolls, heating, parking, insurance, commute cost, flood/snow exposure, and winter readiness before calling a place cheap or worth it.
+4. **Deliver sequence.** For administrative topics, answer as do-this-today / this-week / later. For relocation and regional questions, show why one corridor fits better than another.
+5. **Verify mutable details.** For DMV, taxes, school boundaries, health-plan options, utility rules, congestion pricing, and seasonal access, read `references/sources.md` and confirm with the official source. If verification is blocked, keep the durable framework and mark the mutable fact as unverified.
+6. **Persist only with consent.** For continuity, read `references/setup.md`, resolve `<state_root>`, explain the intended scope, then use `references/memory-template.md`. Keep credentials, SSNs, payment details, and full street addresses out of `<state_root>/` unless the user explicitly directs otherwise.
 
-### 3. Region Choice Changes the Real Answer
-- A good New York answer usually depends on commute shape, winter exposure, housing stock, school district, car dependence, and tax pressure together.
-- Never compare NYC, Buffalo, Saratoga, Rochester, Syracuse, and the Adirondacks as if only rent changes.
-- Use `regions.md` before recommending a "best place" in New York.
+## Practical guardrails
 
-### 4. Total Cost Beats Headline Rent or Salary
-- Include state income tax, local property tax, tolls, heating cost, parking, insurance, and commute cost.
-- For homeowners and renters, mention flood exposure, snow removal reality, and older-building maintenance risk when relevant.
-- Use `costs-and-taxes.md` before saying a region is "cheap" or "worth it."
-
-### 5. Winter and Infrastructure Risk Change Good Advice
-- Snow, ice, lake effect storms, flooding, summer humidity, and outage risk are not side notes.
-- Adjust moving plans, road trips, home choice, and school or work routines around actual weather and utility exposure.
-- When weather matters, lead with readiness and fallback plans, not scenery.
-
-### 6. Deliver Sequence, Not Brochure Copy
-- New York users often need deadlines, documents, portals, and tradeoffs.
-- For administrative topics, answer in the form "do this today / this week / later" whenever possible.
-- For relocation and regional questions, show why one corridor or metro fits better than another.
-- Before creating or changing local files in `~/Clawic/data/new-york/`, explain the planned write and ask for confirmation.
-
-### 7. Use Official Sources for Unstable Rules
-- DMV steps, tax credits, school boundaries, health-plan options, and utility rules can change.
-- Verify current information from the official state or local source before giving precise compliance steps.
-- If current verification is blocked, say so plainly and avoid false precision.
-
-## Common Traps
-
-- Treating New York like NYC plus "upstate" instead of multiple different housing, weather, and tax environments.
-- Recommending a suburb or city without checking commute corridor, school district, winter driving, and property-tax reality.
-- Comparing salaries without subtracting state tax, heating cost, tolls, parking, and insurance pressure.
-- Ignoring floodplain, shoreline, or snow-belt exposure until after housing is narrowed.
-- Mixing up DMV, Department of Taxation and Finance, NY State of Health, DFS, local assessors, school districts, and county clerks.
-- Planning statewide travel by map distance instead of snow timing, thruway tolls, holiday traffic, and seasonal park access.
-
-## External Endpoints
-
-| Endpoint | Data Sent | Purpose |
-|----------|-----------|---------|
-| https://www.ny.gov | Page requests only unless user explicitly wants form guidance | State services and resident tasks |
-| https://dmv.ny.gov | Page requests only unless user explicitly provides case details | Driver license, REAL ID, registration, title, and inspection workflows |
-| https://www.tax.ny.gov | Page requests only unless user explicitly wants tax-specific guidance | State income tax, sales tax, property-tax benefits, and filing references |
-| https://nystateofhealth.ny.gov | County or ZIP if the user asks for marketplace coverage help | Health insurance marketplace and plan lookup |
-| https://www.dfs.ny.gov | ZIP, county, or region references if the user asks about insurance or financial protection | Insurance, consumer protections, and complaint pathways |
-| https://www.nysed.gov | ZIP, city, district, or school references if the user asks for school matching | Education and school district framework |
-| https://www.businessexpress.ny.gov | Page requests only unless user explicitly wants permit or filing help | Business licensing, permits, and startup workflows |
-| https://www.dhses.ny.gov | County or region references if the user asks for emergency guidance | Preparedness and hazard planning |
-
-No other data is sent externally.
-
-## Security & Privacy
-
-**Data that may leave your machine:**
-- Public page requests to official New York state or local-government websites
-- ZIP, county, district, or region data only when the user asks for location-specific guidance
-
-**Data that stays local:**
-- Region preference, move timeline, family constraints, vehicle notes, and open tasks in `~/Clawic/data/new-york/`
-
-**This skill does NOT:**
-- Submit government forms on the user's behalf without explicit instruction
-- Store credentials, SSNs, or payment information in local memory
-- Assume local rules when the answer depends on a city, county, district, or utility territory
-
-## Trust
-
-By using this skill, location details such as ZIP, county, or district may be checked against official New York or local-government websites when the user asks for precise guidance.
-
-Only install if you trust those public services with that lookup context.
-
-## Related Skills
-More Clawic skills, get them at https://clawic.com/skills/<slug> (install if the user confirms):
-- `travel` — General itinerary design and travel planning structure
-- `booking` — Reservation workflows for flights, hotels, and schedule holds
-- `business` — Broader business operations guidance beyond New York-specific rules
-- `health-insurance` — More detailed plan comparison and terminology support
-- `home-buying` — Deeper purchase workflow support after region and housing fit are narrowed
-
-## Feedback
-
-- If useful, star it: https://clawic.com/skills/new-york
-- Latest version: https://clawic.com/skills/new-york
+- Never treat New York as "NYC plus upstate." Region, commute corridor, school district, winter driving, and property-tax reality usually dominate the answer.
+- Prefer official state or local portals for compliance steps; send ZIP, county, district, or region context only when the user asks for location-specific help.
+- Complete government forms, bookings, or submissions only after explicit user instruction.
+- If weather, floodplain, lake-effect snow, or outage risk matters, lead with readiness and fallback plans rather than scenery.
+- Keep `new-york` for statewide and multi-region decisions; hand NYC-only borough itineraries to `new-york-city`.

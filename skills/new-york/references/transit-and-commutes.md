@@ -14,7 +14,7 @@ In New York, the commute is often the hidden decision-maker. The right answer de
 
 ### 2. Upstate and smaller metros
 - Some cores are reasonably walkable, but many households still need a car for groceries, school, healthcare, and winter resilience.
-- Do not oversell walkability if the routine depends on snow, hills, or sparse service.
+- Evaluate walkability realistically, considering snow, hills, and sparse service.
 
 ### 3. Airport and intercity logic
 - JFK, LaGuardia, Newark, Albany, Buffalo, Rochester, Syracuse, and smaller airports solve different travel patterns.
