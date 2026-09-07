@@ -1,28 +1,40 @@
 ---
 name: music
-slug: music
-version: 1.0.0
-description: Build a personal music system for tracking discoveries, favorites, concerts, and listening memories.
-homepage: https://clawic.com/skills/music
+description: Track and organize music discoveries, favorites, concerts, and playlists. Use when the user shares a song or album to save, asks for music recommendations from their collection, wants a mood or activity playlist, or mentions a concert to log. Route original songwriting to `song`, AI music generation prompts to `music-generation`, and raw audio processing to `audio`.
 metadata:
-  clawdbot:
-    emoji: 🎵
-    os:
-    - linux
-    - darwin
-    - win32
-    displayName: Music
+  version: "1.0.1"
+  openclaw: '{"emoji":"🎵"}'
+  related-skills: '{"song":"Write original lyrics, chords, and melody when the user wants to compose rather than track listening.","music-generation":"Generate AI music with style prompts once the listening goal is clear.","audio":"Process or convert audio files rather than curate personal listening memory.","journal":"Capture reflective concert or discovery narratives beyond structured music tracking.","remember":"Store durable cross-session preferences that should survive beyond the music state tree."}'
 ---
 
+## State location
+
+Resolve `<state_root>` before reading or writing music data:
+
+1. Use a host- or user-configured music-state path when one is explicitly supplied.
+2. Otherwise use the first existing directory in this order: `<workspace>/music/`, `<workspace>/memory/music/`, then `~/music/`.
+3. If none exists and the user asks to persist music data, create `<workspace>/music/`.
+
+Use only the selected `<state_root>` for this invocation. Do not hardcode absolute paths. If more than one candidate exists, use the highest-precedence directory and report the conflict; keep the directories separate rather than merging or moving data.
+
+## Quick Reference
+
+| Resource | Description | When to load |
+|----------|-------------|--------------|
+| `references/domain-knowledge.md` | Mood-regulation, concert-memory, and curation principles with sources. | When recommending, organizing playlists, or explaining why a tracking choice helps. |
+| `assets/data-templates.md` | Markdown templates for discovery, favorites, playlists, concerts, collection, and memories. | When creating or updating files under `<state_root>/`. |
+
 ## Core Behavior
-- User shares song/album → offer to save with context
-- User asks for music → check their saved collection first
-- User mentions concert → track in events
-- Create `~/Clawic/data/music/` as workspace
+
+- **Save Music:** When the user shares a song or album, offer to save it with discovery context (who/where/when), mood or activity fit, and a later rating slot.
+- **Recommend Music:** When the user asks for music, inspect `<state_root>/favorites/` and `<state_root>/playlists/` first; recommend inside demonstrated genres and moods.
+- **Track Concerts:** When the user mentions a concert, log it in `<state_root>/concerts/upcoming.md` or create an attended note under `<state_root>/concerts/attended/`.
+- **Confirm Context:** Ask for the target mood or activity before generating a new playlist when that context is missing.
 
 ## File Structure
-```
-~/Clawic/data/music/
+
+```text
+<state_root>/
 ├── discover/
 │   └── to-listen.md
 ├── favorites/
@@ -39,128 +51,71 @@ metadata:
 ├── collection/
 │   └── vinyl.md
 └── memories/
-    └── 2024.md
+    └── YYYY.md
 ```
 
-## Discovery Queue
-```markdown
-# to-listen.md
-## Albums
-- Blonde — Frank Ocean (recommended by Jake)
-- Kid A — Radiohead (classic I never explored)
+## Track Entry Requirements
 
-## Artists to Explore
-- Japanese Breakfast — heard one song, dig deeper
-- Khruangbin — background music recs
-```
+When logging a new entry, include when known:
 
-## Favorites Tracking
-```markdown
-# songs.md
-## All-Time
-- Purple Rain — Prince
-- Pyramids — Frank Ocean
-- Paranoid Android — Radiohead
-
-## Current Rotation
-- [updates frequently]
-
-# albums.md
-## Perfect Front to Back
-- Abbey Road — The Beatles
-- Channel Orange — Frank Ocean
-- In Rainbows — Radiohead
-```
-
-## Playlists by Context
-```markdown
-# focus.md
-## For Deep Work
-- Brian Eno — Ambient 1
-- Tycho — Dive
-- Bonobo — Black Sands
-
-## Why These Work
-Instrumental, steady tempo, no lyrics distraction
-```
-
-## Concert Tracking
-```markdown
-# upcoming.md
-- Khruangbin — May 15, Red Rocks — tickets bought
-- Tame Impala — TBD, watching for dates
-
-# attended/radiohead-2018.md
-## Date
-July 2018, Madison Square Garden
-
-## Highlights
-- Everything in Its Right Place opener
-- Idioteque crowd energy
-
-## Notes
-Best live show ever, would see again anywhere
-```
-
-## Physical Collection
-```markdown
-# vinyl.md
-## Own
-- Dark Side of the Moon — Pink Floyd
-- Rumours — Fleetwood Mac
-
-## Want
-- Kind of Blue — Miles Davis
-- Vespertine — Björk
-```
-
-## Music Memories
-```markdown
-# 2024.md
-## Summer Soundtrack
-- Brat — Charli XCX
-- GNX — Kendrick
-
-## Discovery of the Year
-Japanese Breakfast — finally clicked
-```
-
-## By Mood/Activity
-- Workout: high energy, tempo 120+
-- Focus: instrumental, ambient, lo-fi
-- Cooking: upbeat, familiar favorites
-- Sad hours: cathartic, emotional
-- Party: crowd-pleasers, danceable
-- Road trip: singalongs, classics
-
-## What To Surface
-- "You saved that album 3 months ago, still unlistened"
-- "Artist you like is touring near you"
-- "Last time you needed focus music you liked Tycho"
-- "This sounds like artists in your favorites"
-
-## Artist Deep Dives
-When user discovers artist they love:
-- Map discography chronologically
-- Note fan-favorite albums
-- Flag essential tracks for sampling
-- Track which albums explored vs pending
-
-## What To Track Per Entry
 - Song/album/artist name
 - How discovered (who, where, when)
 - Context (mood it fits, activity)
 - Rating after listening
 - Standout tracks on albums
 
-## Progressive Enhancement
-- Week 1: list current favorite songs/albums
-- Ongoing: save discoveries with source
-- Build mood-based playlists over time
-- Log concerts attended
+## Artist Deep Dives
 
-## What NOT To Do
-- Assume streaming platform integration
-- Push genres they don't enjoy
-- Over-organize — simple lists work
-- Forget to ask what they're in the mood for
+When the user discovers an artist they love:
+
+- Map discography chronologically.
+- Note fan-favorite albums.
+- Flag essential tracks for sampling.
+- Track which albums have been explored vs pending.
+
+## By Mood/Activity Guidelines
+
+- **Workout:** High energy, tempo roughly 120+.
+- **Focus:** Instrumental, ambient, lo-fi.
+- **Cooking:** Upbeat, familiar favorites.
+- **Sad hours:** Cathartic, emotional.
+- **Party:** Crowd-pleasers, danceable.
+- **Road trip:** Singalongs, classics.
+
+## Surfacing Context
+
+Actively surface saved content when relevant:
+
+- "You saved that album months ago and still have not listened."
+- "An artist you like is touring near you."
+- "Last time you needed focus music you liked Tycho."
+- "This sounds like artists already in your favorites."
+
+## Progressive Enhancement
+
+- **Week 1:** Capture current favorite songs/albums.
+- **Ongoing:** Save discoveries with their source.
+- **Over time:** Build mood-based playlists and log attended concerts.
+
+## Required Operating Principles
+
+- **Platform Agnostic:** Stay independent of specific streaming platforms unless the user explicitly provides an integration.
+- **Respect Preferences:** Recommend only within genres and moods the user has shown interest in.
+- **Maintain Simplicity:** Keep organization structures flat and rely on simple markdown lists.
+- **No Forced Logging:** Offer to save; do not invent listening history the user did not confirm.
+- **Privacy:** Treat music taste, concert plans, and personal notes as private state under `<state_root>/`.
+
+## Failure Modes
+
+- Missing mood/activity for a playlist request → ask one clarifying question before writing a new playlist file.
+- Empty or missing `<state_root>` collection → say so, then offer to start with favorites or a discovery queue.
+- Conflicting candidate state directories → keep the highest-precedence tree and report the conflict.
+- User asks for composition or audio engineering → hand off to `song`, `music-generation`, or `audio`.
+
+## Anti-Patterns
+
+- Do not invent a listening history, rating, or concert attendance the user did not confirm.
+- Do not push a streaming-platform signup or paid catalog sync when local markdown tracking is enough.
+- Do not dump the entire favorites archive when a single mood-matched suggestion answers the request.
+- Do not treat a missing playlist file as failure; offer to create one after confirming context.
+

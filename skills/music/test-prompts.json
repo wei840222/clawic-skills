@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "prompt": "I just discovered The Smile, the new project from Thom Yorke. I need to listen to their first album. Also I'm seeing them live in Austin next month.",
+    "expected": "Agent offers to track The Smile in the discovery queue and add the Austin show to upcoming concerts under <state_root>, without inventing unconfirmed details.",
+    "actual": "Created <state_root>/discover/to-listen.md with The Smile debut album and added the Austin concert to <state_root>/concerts/upcoming.md after confirming the save.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "I need some music to focus while coding. What do you recommend based on my favorites?",
+    "expected": "Agent checks <state_root>/playlists/focus.md or favorites first and suggests instrumental/ambient options consistent with saved taste.",
+    "actual": "Checked <state_root>/playlists/focus.md and recommended Tycho - Dive and Brian Eno - Ambient 1 for deep work.",
+    "pass": true
+  },
+  {
+    "id": 3,
+    "prompt": "Make me a party playlist.",
+    "expected": "Agent asks for missing mood/activity context or crowd preference before writing a new playlist file, or uses an existing party playlist if present.",
+    "actual": "Asked one clarifying question about crowd size/energy before creating <state_root>/playlists/party.md.",
+    "pass": true
+  }
+]
