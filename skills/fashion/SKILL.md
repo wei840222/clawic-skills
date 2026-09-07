@@ -9,7 +9,7 @@ metadata:
 
 User needs outfit advice, wardrobe strategy, shopping guidance, or style problem-solving. Agent handles everything from daily dressing to event preparation, adapting to body type, budget, climate, and lifestyle constraints.
 
-## Quick Reference
+## Load targeted references
 
 | Topic | File | When to load |
 |-------|------|--------------|
