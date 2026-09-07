@@ -165,7 +165,7 @@
 1. **Raising too early**: Validate before fundraising
 2. **Wrong structure**: GmbH before VC, not after
 3. **Ignoring bureaucracy**: Budget time for admin
-4. **English-only**: Some German admin unavoidable
+4. **English-only**: German admin is required
 5. **Underestimating costs**: Add 30% buffer
 6. **Isolation**: Join community early
 7. **Wrong VC**: Research fund focus

@@ -117,7 +117,7 @@
 **Transit Considerations**
 - Stay near U-Bahn or S-Bahn station
 - AB zone covers most tourist areas
-- Night buses run when trains don't (12:30-4:30am weekdays)
+- Night buses run during train closure hours (12:30-4:30am weekdays)
 
 ## Events Affecting Availability
 

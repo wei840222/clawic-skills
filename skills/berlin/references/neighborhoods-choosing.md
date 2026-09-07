@@ -57,7 +57,7 @@
 
 Check your non-negotiables:
 
-| If You Need... | Avoid |
+| If You Need... | Less Ideal Areas |
 |----------------|-------|
 | Quiet nights | Simon-Dach, Oranienstraße, Warschauer |
 | English spoken | Deep Wedding, Marzahn |
@@ -114,6 +114,6 @@ Shared apartments (Wohngemeinschaften) are common in Berlin:
 1. **Month 1-3**: Stay in WG or sublet
 2. **Month 3-6**: Learn the city, find your Kiez
 3. **Month 6+**: Start serious apartment search
-4. **Key**: Don't commit to a neighborhood before you know Berlin
+4. **Key**: Explore Berlin before committing to a neighborhood
 
 Most expats change neighborhoods within 2 years after learning what they actually want.

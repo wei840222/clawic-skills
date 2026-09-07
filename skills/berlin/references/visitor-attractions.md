@@ -4,7 +4,7 @@
 
 ### Brandenburg Gate (Brandenburger Tor)
 - **Why**: Iconic symbol, free to visit, stunning at sunset
-- **When**: Early morning (7-8am) or late evening to avoid crowds
+- **When**: Early morning (7-8am) or late evening to beat the crowds
 - **Time**: 30 minutes
 - **Skip if**: You only have photos in mind — better views from Reichstag
 

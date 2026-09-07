@@ -1,19 +1,8 @@
 ---
 name: berlin
-slug: berlin
-version: 1.0.0
-description: Navigate Berlin as visitor, resident, tech worker, student, or entrepreneur with neighborhoods, transport, costs, visas, and local insights.
-homepage: https://clawic.com/skills/berlin
+description: Guide users on visiting, moving to, or living in Berlin. Provide practical insights on transport, housing, costs, visas, food, and neighborhoods based on the user's context (visitor, expat, tech worker).
 metadata:
-  clawdbot:
-    emoji: 🐻
-    requires:
-      bins: []
-    os:
-    - linux
-    - darwin
-    - win32
-    displayName: Berlin
+  openclaw: '{"emoji":"🐻"}'
 ---
 
 ## When to Use
@@ -22,45 +11,52 @@ User asks about Berlin for any purpose: visiting, moving, working, studying, or 
 
 ## Quick Reference
 
-| Topic | File |
-|-------|------|
-| **Visitors** | |
-| Attractions (must-see vs skip) | `visitor-attractions.md` |
-| Itineraries (1/3/7 days) | `visitor-itineraries.md` |
-| Where to stay | `visitor-lodging.md` |
-| Tips & day trips | `visitor-tips.md` |
-| **Neighborhoods** | |
-| Quick comparison | `neighborhoods-index.md` |
-| Mitte, Prenzlauer Berg | `neighborhoods-central.md` |
-| Kreuzberg, Neukölln | `neighborhoods-east.md` |
-| Charlottenburg, Wilmersdorf | `neighborhoods-west.md` |
-| Friedrichshain, Lichtenberg | `neighborhoods-alt.md` |
-| Wedding, Moabit | `neighborhoods-north.md` |
-| Choosing guide | `neighborhoods-choosing.md` |
-| **Food** | |
-| Overview & food culture | `food-overview.md` |
-| German cuisine (currywurst, döner) | `food-local.md` |
-| International & fine dining | `food-international.md` |
-| Best areas for dining | `food-areas.md` |
-| Dietary, bars, practical | `food-practical.md` |
-| **Practical** | |
-| Moving & settling | `resident.md` |
-| Transport (U-Bahn, S-Bahn, BVG) | `transport.md` |
-| Cost of living | `cost.md` |
-| Safety & laws | `safety.md` |
-| Weather & seasons | `climate.md` |
-| Local services (banking, Anmeldung) | `local.md` |
-| **Career** | |
-| Tech industry & salaries | `tech.md` |
-| Business setup & freelancing | `business.md` |
-| Visas (work, freelance, EU Blue Card) | `visas.md` |
-| Startups & funding | `startup.md` |
-| **Lifestyle** | |
-| Culture & customs | `culture.md` |
-| Healthcare & insurance | `healthcare.md` |
-| Schools & education | `education.md` |
-| Expat lifestyle & social | `lifestyle.md` |
-| Cycling & mobility | `cycling.md` |
+| Topic | File | When to load |
+|---|---|---|
+| **Domain Knowledge** | | |
+| Key Facts, VBB, Blue Card, CanG | `references/domain-knowledge.md` | When discussing key facts, vbb, blue card, cang |
+| **Visitors** | | |
+| Attractions (must-see vs skip) | `references/visitor-attractions.md` | When discussing attractions (must-see vs skip) |
+| Itineraries (1/3/7 days) | `references/visitor-itineraries.md` | When discussing itineraries (1/3/7 days) |
+| Where to stay | `references/visitor-lodging.md` | When discussing where to stay |
+| Tips & day trips | `references/visitor-tips.md` | When discussing tips & day trips |
+| **Neighborhoods** | | |
+| Quick comparison | `references/neighborhoods-index.md` | When discussing quick comparison |
+| Mitte, Prenzlauer Berg | `references/neighborhoods-central.md` | When discussing mitte, prenzlauer berg |
+| Kreuzberg, Neukölln | `references/neighborhoods-east.md` | When discussing kreuzberg, neukölln |
+| Charlottenburg, Wilmersdorf | `references/neighborhoods-west.md` | When discussing charlottenburg, wilmersdorf |
+| Friedrichshain, Lichtenberg | `references/neighborhoods-alt.md` | When discussing friedrichshain, lichtenberg |
+| Wedding, Moabit | `references/neighborhoods-north.md` | When discussing wedding, moabit |
+| Choosing guide | `references/neighborhoods-choosing.md` | When discussing choosing guide |
+| **Food** | | |
+| Overview & food culture | `references/food-overview.md` | When discussing overview & food culture |
+| German cuisine (currywurst, döner) | `references/food-local.md` | When discussing german cuisine (currywurst, döner) |
+| International & fine dining | `references/food-international.md` | When discussing international & fine dining |
+| Best areas for dining | `references/food-areas.md` | When discussing best areas for dining |
+| Dietary, bars, practical | `references/food-practical.md` | When discussing dietary, bars, practical |
+| **Practical** | | |
+| Moving & settling | `references/resident.md` | When discussing moving & settling |
+| Transport (U-Bahn, S-Bahn, BVG) | `references/transport.md` | When discussing transport (u-bahn, s-bahn, bvg) |
+| Cost of living | `references/cost.md` | When discussing cost of living |
+| Safety & laws | `references/safety.md` | When discussing safety & laws |
+| Weather & seasons | `references/climate.md` | When discussing weather & seasons |
+| Local services (banking, Anmeldung) | `references/local.md` | When discussing local services (banking, anmeldung) |
+| **Career** | | |
+| Tech industry & salaries | `references/tech.md` | When discussing tech industry & salaries |
+| Business setup & freelancing | `references/business.md` | When discussing business setup & freelancing |
+| Visas (work, freelance, EU Blue Card) | `references/visas.md` | When discussing visas (work, freelance, eu blue card) |
+| Startups & funding | `references/startup.md` | When discussing startups & funding |
+| **Lifestyle** | | |
+| Culture & customs | `references/culture.md` | When discussing culture & customs |
+| Healthcare & insurance | `references/healthcare.md` | When discussing healthcare & insurance |
+| Schools & education | `references/education.md` | When discussing schools & education |
+| Expat lifestyle & social | `references/lifestyle.md` | When discussing expat lifestyle & social |
+| Cycling & mobility | `references/cycling.md` | When discussing cycling & mobility |
+
+
+## State location
+
+This skill is stateless and does not store any local configuration or user data.
 
 ## Core Rules
 
@@ -83,7 +79,7 @@ Non-EU citizens need proper documentation:
 - **Freelance Visa (Freiberufler)**: Most unique — self-sponsorship possible with client proof
 - **Job Seeker Visa**: 6 months to find employment
 - **Student Visa**: Enrolled in German institution
-See `visas.md` for current requirements (Feb 2026).
+See `references/visas.md` for current requirements (Feb 2026).
 
 ### 4. Weather Reality
 Berlin has distinct seasons:
@@ -91,7 +87,7 @@ Berlin has distinct seasons:
 - **Winter** (Dec-Feb): -5 to 5°C, short days (sunrise 8am, sunset 4pm), grey
 - **Spring/Fall**: Transitional, unpredictable
 - **Key**: Winter affects mental health — light therapy common among expats
-See `climate.md` for monthly breakdown.
+See `references/climate.md` for monthly breakdown.
 
 ### 5. Current Data (Feb 2026)
 
@@ -122,7 +118,7 @@ Berlin has extensive public transit:
 - **Trams**: Mostly east Berlin
 - **Buses**: Extensive night bus network (N-lines)
 - **No barriers**: Honor system — but inspectors fine €60 for fare-dodging
-See `transport.md` for complete guide.
+See `references/transport.md` for complete guide.
 
 ### 8. Neighborhood Matching
 
@@ -145,7 +141,7 @@ Berlin is Germany's most diverse food city:
 - **Bars**: Späti culture (24h corner shops), craft beer scene
 - **Brunch**: Weekend institution, reserve ahead for popular spots
 
-See `food-overview.md` for complete guide.
+See `references/food-overview.md` for complete guide.
 
 ## Berlin-Specific Realities
 
@@ -166,10 +162,10 @@ See `food-overview.md` for complete guide.
 Key laws every visitor/resident must know:
 - **Drugs**: Cannabis legal for adults (2024), other drugs illegal but Berlin is tolerant
 - **Jaywalking**: Technically illegal (€5-10 fine), rarely enforced
-- **Photography**: GDPR strict — can't photograph people without consent
+- **Photography**: GDPR strict — Always obtain consent before photographing people
 - **Employment**: Must have work permit BEFORE starting work
 - **Insurance**: Health insurance mandatory for all residents
 - **Tax**: Must file annual tax return (Steuererklärung)
 - **Rental**: Strong tenant protections, but Mietpreisbremse complex
 
-See `safety.md` for comprehensive legal guidance.
+See `references/safety.md` for comprehensive legal guidance.

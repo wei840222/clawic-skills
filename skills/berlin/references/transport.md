@@ -2,7 +2,7 @@
 
 ## Overview
 
-Berlin has excellent public transit (BVG + S-Bahn). Most residents don't own cars.
+Berlin has excellent public transit (BVG + S-Bahn). Most residents use public transit.
 
 **Zones**:
 - **A**: City center (inside S-Bahn ring)
@@ -52,7 +52,7 @@ Useful for: Prenzlauer Berg, Mitte north
 ## Buses
 
 **Coverage**: Everywhere
-**Night**: N-lines run when trains don't
+**Night**: N-lines run during train closure hours
 **Useful**: M29 (Kreuzberg), 100/200 (tourist routes)
 
 ## Tickets & Fares (Feb 2026)
@@ -106,7 +106,7 @@ Useful for: Prenzlauer Berg, Mitte north
 - Two different lock types
 - Lock frame AND wheel
 - U-lock + chain recommended
-- Don't leave overnight outside
+- Store securely overnight
 
 ## Taxis & Ride-Hailing
 

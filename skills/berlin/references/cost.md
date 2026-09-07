@@ -128,7 +128,7 @@
 | Maintenance | €50-100 |
 | **Total** | **€200-450** |
 
-Most people don't need cars. Consider car-sharing instead.
+Most people can rely entirely on public transit. Consider car-sharing instead.
 
 ## Income & Taxes
 

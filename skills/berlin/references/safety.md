@@ -37,8 +37,8 @@ Almost all of Berlin is safe day and night. No "no-go zones" like media sometime
 - **Broken taxi meter**: Insist on meter or agree price upfront
 - **Apartment scams**: See resident.md
 
-### How to Avoid
-- Don't engage with street approaches
+### Prevention strategies
+- Ignore street approaches
 - Keep valuables in front pockets/bags
 - Be aware in crowded transit
 - Trust your instincts
@@ -50,7 +50,7 @@ Almost all of Berlin is safe day and night. No "no-go zones" like media sometime
 - **Public smoking**: Allowed in some areas, check local rules
 - **Other drugs**: Illegal, but Berlin police often tolerant for personal use
 - **Clubs**: May have stricter no-photo policies, not drug checks
-- **Reality**: Berlin is tolerant, but don't push limits
+- **Reality**: Berlin is tolerant, but stay within legal limits
 
 ### Alcohol
 - **Legal age**: 16 for beer/wine, 18 for spirits
@@ -65,9 +65,9 @@ Almost all of Berlin is safe day and night. No "no-go zones" like media sometime
 - **E-scooters**: Same rules as bikes, illegal on sidewalks
 
 ### Photography
-- **GDPR applies**: Can't photograph people without consent
+- **GDPR applies**: Always obtain consent before photographing people
 - **Street photography**: Gray area, be respectful
-- **Children**: Never photograph other people's children
+- **Children**: Only photograph children with explicit parental consent
 - **Private property**: Ask permission
 
 ### Noise
@@ -127,4 +127,4 @@ Almost all of Berlin is safe day and night. No "no-go zones" like media sometime
 - **Very common**: Berlin has many protests
 - **Usually peaceful**: May block traffic
 - **1 May**: Traditional protest day, Kreuzberg can get rowdy
-- **How to handle**: Check news, avoid if uncomfortable, generally safe to observe
+- **How to handle**: Check news, stay away if uncomfortable, generally safe to observe

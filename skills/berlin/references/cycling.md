@@ -86,7 +86,7 @@ Berlin is a cycling city. Flat terrain, extensive infrastructure, and bike-frien
 1. **Two different locks**: U-lock + chain
 2. **Lock frame AND wheel**
 3. **Lock to fixed object**
-4. **Don't leave overnight outside**
+4. **Store securely overnight**
 5. **Register bike**: Berlin Polizei, Fahrradcodierung
 
 ### Lock Types
