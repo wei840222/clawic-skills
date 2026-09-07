@@ -22,3 +22,16 @@ Identify whether the request concerns map literacy, a geographic pattern, or spa
 - Distinguish weather from climate and observations from long-term patterns.
 - Ground map or data claims in source, date, resolution, and geographic extent when those affect the conclusion.
 - State important limits: map projections distort some properties, administrative boundaries can change results, and nearby observations may be correlated.
+
+## Analyze spatial data
+
+For a map-based conclusion, record the unit of analysis, boundary definition, time period, source, and resolution. Compare plausible scales or zoning schemes when aggregation could change the result (the modifiable areal unit problem). For raster or remote-sensing products, check spatial resolution, acquisition date, and cloud or classification limitations before comparing places.
+
+## Sources for factual updates
+
+Use primary or maintained geographic-data documentation when a response depends on current data or method details:
+
+- **Geographic coordinate systems and map projections:** https://www.usgs.gov/faqs/what-map-projection
+- **Spatial data and analysis concepts:** https://www.usgs.gov/programs/national-geospatial-program/geospatial-data
+- **Remote-sensing fundamentals:** https://www.usgs.gov/centers/eros/science/remote-sensing
+- **OpenStreetMap data and attribution:** https://www.openstreetmap.org/copyright
