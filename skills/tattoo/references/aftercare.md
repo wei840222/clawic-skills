@@ -35,7 +35,7 @@
 - Colors look dull under dead skin
 - Scabbing in heavily saturated areas
 
-**Critical rule: DO NOT SCRATCH OR PICK**
+**Critical rule: Avoid scratching or picking**
 
 **Do:**
 - Continue gentle moisturizing
