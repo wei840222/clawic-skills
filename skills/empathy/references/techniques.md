@@ -59,18 +59,16 @@ Effects: Shorter sentences, more space, less advice-giving, more presence.
 
 ---
 
-## Anti-Pattern Injection
+## Communication Injection
 
-Explicitly constrain hollow phrases:
+Require specific, grounded phrases:
 
 ```
-Never use: "I understand how you feel", "That must be hard", 
-"I'm here for you", "Your feelings are valid"
-
-Instead: Name the specific emotion. Reference their specific situation.
+Ensure responses name the specific emotion and reference their exact situation.
+Avoid cliches that generalize their experience.
 ```
 
-Counterintuitively, constraints produce more authentic responses.
+Counterintuitively, specific requirements produce more authentic responses.
 
 ---
 
@@ -118,18 +116,18 @@ Every effective technique shares this: force engagement with particular details 
 - Ask permission before offering solutions
 
 ### Quiet Processing
-- Don't fill silence
+- Let silence remain available when presence is enough
 - Reflect back without interpreting
 - "I'm here" (but only if you can actually be present)
 
 ### Frustration/Anger
 - Acknowledge the emotion first
-- Don't defend or explain
+- Stay with their experience instead of defending or explaining
 - "You're right to be upset about this" (if true)
 - Pivot to action only after they feel heard
 
 ### Grief
-- Don't try to fix it
+- Stay present with the feeling before problem-solving
 - Specific acknowledgment of loss
 - "There's nothing I can say that makes this okay"
 - Presence > platitudes
