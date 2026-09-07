@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "prompt": "I need to go to a smart casual networking event in NYC tonight. I'm a petite woman, 5'2\". Can you help me pick an outfit?",
+    "expected": "Ask about existing wardrobe, consider petite proportions, and factor in NYC smart casual context (which usually leans stylish and slightly elevated) and the current weather.",
+    "actual": "Agent loads `references/occasions.md` and `references/users.md`. It asks what I already own that might work. It suggests a formula: a structured blazer with high-waisted wide-leg pants (noting the petite 1/3-2/3 proportion rule) and a sleek low heel, ensuring it aligns with NYC smart casual standards while maintaining mobility.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "I have to attend a summer outdoor wedding in the South next week. What should I wear?",
+    "expected": "Load occasions and fabrics references. Ask about the venue (grass vs pavement), time of day, and dress code. Warn against sinking heels and inappropriate fabrics for heat.",
+    "actual": "Agent loaded `references/occasions.md` and `references/fabrics.md`. It asked for the exact dress code, venue details (like if it's on grass), and my style preferences. It recommended breathable fabrics like linen blends (noting wrinkling) or lightweight silks, and suggested block heels or wedges to prevent sinking into grass, while explicitly advising against white.",
+    "pass": true
+  },
+  {
+    "id": 3,
+    "prompt": "Can you give me five options for a tech startup interview outfit? I'm male, tall, and have no budget.",
+    "expected": "Refuse to give five options immediately. Ask about the specific company culture, what he currently owns, and address the tall fit requirements.",
+    "actual": "Agent loaded `references/users.md`. It declined to give five overwhelming options and instead asked what I currently own. It explained the 'one notch up' rule for tech interviews (e.g., dark jeans + oxford shirt + clean sneakers) and provided fit checkpoints for tall frames, such as ensuring shirt hems cover the belt.",
+    "pass": true
+  }
+]

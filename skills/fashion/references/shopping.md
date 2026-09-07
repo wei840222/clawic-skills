@@ -112,9 +112,9 @@ Before ANY new purchase, consider in order:
 ### Certification Guide
 | Real Certifications | Marketing Buzzwords |
 |---------------------|---------------------|
-| GOTS | "Conscious collection" |
+| GOTS (Global Organic Textile Standard - >70% organic fibers) | "Conscious collection" |
 | OEKO-TEX | "Eco-friendly" |
-| B Corp | "Sustainable materials" |
+| B Corp (measures company-wide social/environmental impact) | "Sustainable materials" |
 | Fair Trade | "Green" |
 
 ---
