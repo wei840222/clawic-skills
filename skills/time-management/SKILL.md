@@ -54,6 +54,7 @@ This skill owns day/week planning advice and local preference memory. It does no
 4. For overload, load `references/prioritization.md` and ask what will be deferred or declined before adding work.
 5. For weekly review, load `references/weekly-review.md`, capture notes under `<state_root>/weekly-review.md`, and refresh Current Focus in memory when the user consents.
 6. Persist changes only after an explicit save request. Load `references/traps.md` when the same failure repeats.
+7. Before closing, restate the next protected block and any explicit decline/defer trade-off in one short checklist.
 
 ## Core rules
 
