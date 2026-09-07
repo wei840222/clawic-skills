@@ -111,3 +111,11 @@ Actively surface saved content when relevant:
 - Empty or missing `<state_root>` collection → say so, then offer to start with favorites or a discovery queue.
 - Conflicting candidate state directories → keep the highest-precedence tree and report the conflict.
 - User asks for composition or audio engineering → hand off to `song`, `music-generation`, or `audio`.
+
+## Anti-Patterns
+
+- Do not invent a listening history, rating, or concert attendance the user did not confirm.
+- Do not push a streaming-platform signup or paid catalog sync when local markdown tracking is enough.
+- Do not dump the entire favorites archive when a single mood-matched suggestion answers the request.
+- Do not treat a missing playlist file as failure; offer to create one after confirming context.
+
