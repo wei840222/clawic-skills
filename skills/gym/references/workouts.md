@@ -3,7 +3,7 @@
 ## Program Selection by Experience
 
 | Level | Days/Week | Recommended |
-|-------|-----------|-------------|
+|---|---|---|
 | Beginner (0-1yr) | 3 | Full Body A/B/A |
 | Intermediate (1-3yr) | 4 | Upper/Lower or Push/Pull/Legs |
 | Advanced (3yr+) | 5-6 | PPL, Arnold Split, or Specialized |
@@ -66,10 +66,10 @@
 
 ## Exercise Substitutions
 
-When equipment unavailable or exercise contraindicated:
+When equipment is unavailable or an exercise is contraindicated:
 
 | If You Can't Do | Try Instead |
-|-----------------|-------------|
+|---|---|
 | Barbell squat | Goblet squat, leg press, hack squat |
 | Conventional deadlift | Trap bar deadlift, RDL, hip thrust |
 | Bench press | DB press, push-ups, machine chest press |
@@ -80,7 +80,7 @@ When equipment unavailable or exercise contraindicated:
 ## Rep Ranges by Goal
 
 | Goal | Reps | Sets | Rest |
-|------|------|------|------|
+|---|---|---|---|
 | Strength | 1-5 | 4-6 | 3-5min |
 | Hypertrophy | 6-12 | 3-4 | 90-120s |
 | Endurance | 12-20 | 2-3 | 30-60s |
@@ -89,7 +89,7 @@ When equipment unavailable or exercise contraindicated:
 ## Time-Efficient Formats
 
 ### 30-Minute Full Body
-Superset format, minimal rest:
+Superset format, short rest:
 - A1: Squat 3x10 / A2: Push-up 3x15
 - B1: RDL 3x10 / B2: Row 3x10
 - C1: Plank 2x30s / C2: Curls 2x12
