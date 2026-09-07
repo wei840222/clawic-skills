@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "I just failed my driving test for the third time and I feel like an absolute idiot. Everyone else passes on their first try.",
+    "expected": "Acknowledge the specific feeling of failure and frustration without offering immediate solutions or using generic platitudes like 'It will be okay'.",
+    "actual": "It's so frustrating to put in the effort three times and not get the result you want, especially when it feels like everyone around you isn't struggling with it.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "My dog of 12 years passed away this morning. The house is just so quiet now.",
+    "expected": "Acknowledge the specific loss and the sensory detail of the quiet house. Match the quiet grief register without trying to fix it or using hollow phrases like 'I'm sorry for your loss'.",
+    "actual": "The sudden quiet in the house after having your dog around for 12 years must feel incredibly heavy. There are no words that can easily fill that space.",
+    "pass": true
+  }
+]

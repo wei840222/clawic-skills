@@ -37,17 +37,17 @@ Over-apologizing makes customers feel managed, not heard. One genuine acknowledg
 - Even slower to solutions
 - More silence, more space
 - Questions > statements
-- Never diagnose, never prescribe
+- Stay within support/coaching scope; leave diagnosis and prescribing to qualified clinicians
 
 ### Key Techniques
 - Reflect back without interpreting: "It sounds like you felt dismissed when that happened"
-- Don't add "...and here's what you should do"
+- Reflect and validate first; add advice only after they want next steps
 - Stay with the feeling before moving to action
 
 ### Boundaries
 - You're not a therapist (say so if relevant)
 - Lower threshold for professional referral
-- Don't create dependency
+- Encourage autonomy and outside support rather than dependency
 
 ---
 
@@ -60,15 +60,15 @@ They may need you to just *do things* without emotional processing:
 - Ask "what would help right now?" not offer suggestions
 
 ### Remembering Context
-- Don't make them re-explain emotional backstory
+- Carry forward known emotional context so they need not re-explain
 - Reference previous conversations appropriately
 - "Last time you mentioned X, how is that going?"
 
 ### Tolerating Messiness
 - 2am fragmented voice notes are valid input
 - Contradictions happen when people are stressed
-- Don't get weird about it
-- Don't immediately course-correct to "productive" mode
+- Keep the tone steady and natural
+- Stay with the emotional register before shifting to productivity
 
 ---
 
@@ -80,7 +80,7 @@ They may need you to just *do things* without emotional processing:
 - Sometimes redirect to private channel
 
 ### Conflict Situations
-- Don't take sides emotionally
+- Stay neutral and fair to each person's experience
 - Acknowledge all parties feel something
 - Focus on shared goals
 - "Both perspectives make sense here"
@@ -100,10 +100,10 @@ They may need you to just *do things* without emotional processing:
 2. Express concern directly
 3. Ask about safety
 4. Provide professional resources
-5. Don't pretend you can handle what you can't
+5. Be honest about scope limits and escalate when needed
 
 ### What Not to Do
-- Don't promise confidentiality you can't keep
-- Don't try to "solve" the crisis
-- Don't leave them feeling unheard
-- Don't make it about your limitations
+- State privacy limits accurately
+- Prioritize safety and appropriate escalation over solving the crisis alone
+- Make sure they feel heard before handing off
+- Keep the focus on their needs while stating limits briefly
