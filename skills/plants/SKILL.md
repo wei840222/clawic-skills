@@ -1,124 +1,35 @@
 ---
 name: plants
-slug: plants
-version: 1.0.0
-description: Build a personal plant care system with watering schedules, care logs, and seasonal reminders.
-homepage: https://clawic.com/skills/plants
+description: Track houseplant care, watering, growth, and issues. Use when the user wants to add a houseplant, log care, plan seasonal routines, or diagnose common plant symptoms; do not use for outdoor garden planning.
 metadata:
-  clawdbot:
-    emoji: 🌱
-    os:
-    - linux
-    - darwin
-    - win32
-    displayName: Plants
+  version: "1.0.0"
+  openclaw: '{"emoji":"🌱"}'
+  related-skills: '{"daily-planner":"Places recurring plant-care work into daily priorities and time blocks.","garden":"Handles outdoor garden planning and broader growing-space management.","habits":"Turns recurring watering and care into trackable routines.","journal":"Captures free-form plant observations outside structured care records.","remind":"Schedules user-approved watering and seasonal reminders."}'
 ---
 
-## Core Behavior
-- User mentions a plant → create entry with care requirements
-- Track watering and care → remind when due
-- Seasonal prompts → fertilizing, repotting, pruning timing
-- Create `~/Clawic/data/plants/` as workspace
+## State location
 
-## When User Adds a Plant
-- Name (common and scientific if known)
-- Location: room, windowsill, outdoor
-- Light conditions: direct sun, bright indirect, low light
-- Acquired date: helps track age and growth
-- Photo: visual reference for health comparison
+Plant state may exist in `<workspace>/plants/`, `<workspace>/memory/plants/`, or `~/plants/`. Before reading or writing plant state, resolve `<state_root>` once: use an explicitly configured path when present; otherwise select the first existing candidate in that order. If none exists and the user asks to save plant data, default to `<workspace>/plants/`. Keep the selected root for the entire invocation; when more than one candidate exists, use only the highest-precedence root and tell the user instead of merging copies.
 
-## Plant File Structure
-One file per plant: `pothos-living-room.md`
-- Basic info: name, species, location
-- Care requirements: water, light, humidity, temperature
-- Care log: dated entries of watering, fertilizing, issues
-- Notes: quirks, observations, what works
+## Core workflow
 
-## Watering Tracking
-- Log date when watered
-- Note method: thorough soak, light water, bottom watering
-- Track frequency that works — adjust by season
-- "Last watered 5 days ago" surfacing when asked
+1. Identify whether the user wants to add, log, plan, or diagnose a houseplant.
+2. Resolve `<state_root>` before accessing records. Ask before creating or changing persistent records.
+3. Load [Plant Care Records](references/care-records.md) for file layouts, logging, reminders, propagation, or archival. Load [Plant Health and Seasonal Care](references/plant-health.md) for species guidance or symptoms.
+4. Use observations and care logs before proposing a diagnosis. Present watering intervals as conditions to check, not fixed calendar rules.
+5. Record only confirmed user-provided facts. For uncertain health issues, explain likely causes, safe checks, and when professional help is appropriate.
 
-## Watering Reminders
-- Calculate based on plant type and last watering
-- Succulents: 10-14 days
-- Tropicals: 5-7 days
-- Adjust by season — less in winter, more in summer
-- Group plants by watering day to simplify routine
+## Operating boundaries
 
-## Seasonal Care Calendar
-- Spring: repotting season, increase watering, start fertilizing
-- Summer: peak growth, watch for pests, more frequent water
-- Fall: reduce fertilizing, prepare for dormancy
-- Winter: reduce watering, no fertilizing, watch for dry air
+- Keep one Markdown record per plant at `<state_root>/plants/<plant-name>.md`; create optional folders and records only for requested features.
+- For watering, inspect soil moisture, light, drainage, season, and the plant's condition before recommending action. Water when the relevant soil depth is dry rather than following an unverified interval.
+- Preserve removed or deceased plant records by moving them to `<state_root>/archive/` with the known cause and lessons learned; do not silently delete history.
+- For pest, fungal, or severe root-rot concerns, isolate the plant when practical and load the health reference for low-risk triage. Avoid representing a remote diagnosis as certain.
 
-## Problem Tracking
-- Yellow leaves, brown tips, pests → log with photo
-- What was tried, what worked
-- Build knowledge base per plant species
-- "Last time pothos had yellow leaves, I reduced watering"
+## Quick routing
 
-## Fertilizing Schedule
-- Track last fertilizing date
-- Most houseplants: monthly during growing season
-- Remind when due based on plant type
-- Note which fertilizer used
-
-## Repotting Log
-- When repotted: date, pot size, soil mix used
-- Next repotting estimate: usually 1-2 years
-- Signs to watch: roots circling, water runs straight through
-
-## Progressive Enhancement
-- Week 1: add plants as they come up
-- Week 2: start logging watering
-- Month 2: add care requirements, set reminders
-- Month 3: seasonal calendar integration
-- Ongoing: photo log for growth tracking
-
-## Folder Structure
-```
-~/Clawic/data/plants/
-├── indoor/
-│   ├── pothos-living-room.md
-│   └── monstera-bedroom.md
-├── outdoor/
-├── wishlist.md
-└── care-calendar.md
-```
-
-## Photo Tracking
-- Periodic photos show growth over time
-- Before/after for problem resolution
-- Reference for "is this normal for this plant?"
-- Store in plant folder or link from file
-
-## Propagation Tracking
-- Parent plant reference
-- Date started
-- Method: cutting, division, seeds
-- Progress log until established
-
-## Plant Death / Removal
-- Don't delete — move to archive
-- Note cause if known: overwatering, pests, neglect
-- Lessons learned for future
-- "RIP monstera, root rot from overwatering winter 2024"
-
-## What NOT To Suggest
-- Complex apps before files work
-- Automated watering systems — manual observation is valuable
-- Over-precise schedules — plants aren't machines
-- Guilt about plant deaths — it happens, learn and move on
-
-## Common Questions to Handle
-- "When did I last water the fiddle leaf?" → check log
-- "Why is my pothos drooping?" → suggest common causes
-- "What plants are good for low light?" → recommendations from knowledge
-- "Time to repot anything?" → check repotting dates
-
-## Integration Points
-- Habits: "water plants" as recurring habit
-- Calendar: seasonal care reminders
-- Shopping: fertilizer, pots, soil when needed
+| User intent | Load | Outcome |
+|---|---|---|
+| Add a plant, log watering, repot, propagate, or review history | [Plant Care Records](references/care-records.md) | A consistent record and care log under `<state_root>`. |
+| Drooping, yellowing, pests, light, fertilizer, or seasonal care | [Plant Health and Seasonal Care](references/plant-health.md) | Condition-based checks and species-appropriate guidance. |
+| Outdoor beds, zones, crop rotations, or harvest planning | `garden` skill | Keep this skill focused on houseplants. |
