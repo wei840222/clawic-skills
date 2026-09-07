@@ -14,7 +14,7 @@ User asks about Berlin for any purpose: visiting, moving, working, studying, or 
 | Topic | File | When to load |
 |---|---|---|
 | **Domain Knowledge** | | |
-| Key Facts, VBB, Blue Card, CanG | `references/domain-knowledge.md` | When discussing key facts, vbb, blue card, cang |
+| Current facts, Blue Card, fares, CanG | `references/research-sources.md` | Before quoting time-sensitive legal, visa, registration, or fare facts |
 | **Visitors** | | |
 | Attractions (must-see vs skip) | `references/visitor-attractions.md` | When discussing attractions (must-see vs skip) |
 | Itineraries (1/3/7 days) | `references/visitor-itineraries.md` | When discussing itineraries (1/3/7 days) |
