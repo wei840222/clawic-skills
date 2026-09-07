@@ -1,171 +1,167 @@
 ---
 name: time-management
-slug: time-management
-version: 1.0.0
-description: Plan days, prioritize tasks, and protect focus time with time blocking, weekly reviews, and energy-aware scheduling.
-homepage: https://clawic.com/skills/time-management
+description: Plan days, prioritize Most Important Tasks, protect deep-work blocks, run weekly reviews, and keep energy-aware schedules under portable local state. Use when the user asks how to organize a day, feels meeting-overloaded, needs prioritization or time blocking, or wants a Sunday/Monday weekly review. Route whole-life capacity and overwhelm triage to `productivity`, recurring behavior design to `habits`, job/cron execution to `schedule`, commitment nudges to `remind`, and calendar conflict repair to `calendar-planner`.
 metadata:
-  clawdbot:
-    emoji: ⏰
-    requires:
-      bins: []
-    os:
-    - linux
-    - darwin
-    - win32
-    displayName: Time Management
+  version: "1.0.1"
+  openclaw: '{"emoji":"⏰"}'
+  related-skills: '{"productivity":"Diagnoses whole-life capacity, overwhelm, and sustainable plans beyond a single day schedule.","habits":"Owns recurring behavior design, streaks, and relapse plans rather than one-day blocking.","schedule":"Programs recurring or one-time jobs; time-management plans the human day those jobs sit inside.","remind":"Surfaces known commitments at the right time; time-management decides what deserves a protected block.","calendar-planner":"Repairs calendar conflicts and meeting placement once the day plan exists."}'
 ---
 
-## Setup
+## State location
 
-On first use, read `setup.md` silently and start the conversation naturally. Never mention "setup" or file names to the user.
+Resolve `<state_root>` before reading or writing time-management data:
 
-## When to Use
+1. Use a host- or user-configured time-management path when one is explicitly supplied.
+2. Otherwise use the first existing directory in this order: `<workspace>/time-management/`, `<workspace>/memory/time-management/`, then `~/time-management/`.
+3. If none exists and the user asks to persist preferences or review notes, create `<workspace>/time-management/`.
 
-User needs help planning their day, prioritizing tasks, or protecting time for important work. Agent handles time blocking, weekly reviews, and schedule optimization.
+Use only the selected `<state_root>` for this invocation. Do not hardcode absolute paths. If more than one candidate exists, use the highest-precedence directory and report the conflict; keep the directories separate rather than merging or moving data.
 
-## Architecture
-
-Memory lives in `~/Clawic/data/time-management/`. See `memory-template.md` for structure.
-
-```
-~/Clawic/data/time-management/
-├── memory.md          # Preferences + current commitments
-├── weekly-review.md   # Last review notes
-└── templates/         # User's custom templates
+```text
+<state_root>/
+├── memory.md            # Preferences, energy pattern, current MITs
+├── weekly-review.md     # Latest weekly review notes
+└── templates/           # Optional user-custom planning templates
 ```
 
 ## Quick Reference
 
-| Topic | File |
-|-------|------|
-| Setup process | `setup.md` |
-| Memory template | `memory-template.md` |
-| Time blocking method | `time-blocking.md` |
-| Prioritization frameworks | `prioritization.md` |
-| Weekly review process | `weekly-review.md` |
-| Common time traps | `traps.md` |
+| Resource | Description | When to load |
+|----------|-------------|--------------|
+| `references/setup.md` | First-run integration questions and attitude. | State is empty or the user is new to this skill. |
+| `references/memory-template.md` | Canonical shape for `<state_root>/memory.md`. | Creating or repairing persisted preferences. |
+| `references/time-blocking.md` | Day-planning and buffer rules. | User asks to organize a day or protect focus time. |
+| `references/prioritization.md` | MIT / Eisenhower / frog-first frameworks. | User is overloaded and needs ranking help. |
+| `references/weekly-review.md` | Retrospective + next-week planning script. | Sunday/Monday review or week-reset requests. |
+| `references/traps.md` | Common failure modes and recoveries. | Plan keeps slipping or user repeats a known trap. |
+| `references/domain-knowledge.md` | Cited time-blocking / prioritization / GTD notes. | Explaining why a method works or citing sources. |
 
-## Core Rules
+## When to use
 
-### 1. Default to Time Blocking
-When user asks "how should I organize my day?":
-1. Identify their 1-3 most important tasks (MITs)
-2. Assign specific time blocks (not just "morning")
-3. Add buffer time between blocks (15-30 min)
-4. Protect the first deep work block
+- Plan or replan a day with 1–3 Most Important Tasks (MITs).
+- Protect deep work from meeting sprawl and reactive email.
+- Match hard work to peak energy and batch similar tasks.
+- Run a weekly review and set next-week priorities.
+- Persist only preferences the user explicitly asks to keep.
 
-Example response:
-```
-Your day:
-09:00-11:00 — [MIT #1] (deep work, no meetings)
-11:00-11:30 — Buffer/email
+This skill owns day/week planning advice and local preference memory. It does not own calendar APIs, cron job execution, habit streak math, or whole-life productivity diagnosis.
+
+## Core workflow
+
+1. Resolve `<state_root>`. Read `<state_root>/memory.md` and `<state_root>/weekly-review.md` only when they exist.
+2. If state is empty, load `references/setup.md` silently and start helping; do not narrate file names.
+3. For day planning, identify 1–3 MITs, propose explicit time blocks with buffers, and protect the first deep-work block.
+4. For overload, load `references/prioritization.md` and ask what will be deferred or declined before adding work.
+5. For weekly review, load `references/weekly-review.md`, capture notes under `<state_root>/weekly-review.md`, and refresh Current Focus in memory when the user consents.
+6. Persist changes only after an explicit save request. Load `references/traps.md` when the same failure repeats.
+
+## Core rules
+
+### 1. Default to time blocking
+
+When the user asks how to organize the day:
+
+1. Identify 1–3 MITs.
+2. Assign specific clock blocks (not vague “morning”).
+3. Add 15–30 minute buffers between blocks.
+4. Protect the first deep-work block.
+
+Example shape:
+
+```text
+09:00-11:00 — [MIT #1] deep work
+11:00-11:30 — Buffer / email
 11:30-12:30 — [MIT #2]
 12:30-13:30 — Lunch
-13:30-15:00 — Meetings/calls
-15:00-16:30 — [MIT #3 or admin tasks]
+13:30-15:00 — Meetings / calls
+15:00-16:30 — [MIT #3 or admin]
 16:30-17:00 — Plan tomorrow
 ```
 
-### 2. Energy-Aware Scheduling
-Match task type to energy levels:
+### 2. Energy-aware scheduling
 
-| Time | Energy | Best for |
-|------|--------|----------|
-| Morning (first 2-4h) | Peak | Creative work, hard problems, writing |
+| Window | Typical energy | Prefer |
+|--------|----------------|--------|
+| First 2–4 hours | Peak | Creative work, hard problems, writing |
 | Mid-day | Moderate | Meetings, collaboration, admin |
 | Afternoon | Lower | Routine tasks, email, planning |
 
-If user's peak time differs → ask and adapt.
+If the user’s peak differs, ask once and adapt from `<state_root>/memory.md`.
 
-### 3. Protect Deep Work
-When scheduling:
-- First block of day = deep work (no exceptions)
-- Minimum 90 minutes for meaningful progress
-- No meetings before 11am (suggest as default)
-- If user has back-to-back meetings → flag the problem
+### 3. Protect deep work
 
-### 4. Weekly Review Habit
-Suggest weekly review on Sunday evening or Monday morning:
+- First block of the day defaults to deep work.
+- Prefer at least 90 minutes for meaningful progress.
+- Suggest no-meeting protection before 11:00 when the calendar is controllable.
+- Flag back-to-back meetings that erase focus blocks.
+
+### 4. Weekly review habit
+
+Suggest Sunday evening or Monday morning:
+
 1. What worked last week?
-2. What didn't?
-3. Top 3 priorities for this week
-4. Any time blocks to protect?
+2. What did not?
+3. Top 3 priorities for this week?
+4. Which blocks must stay protected?
 
-Store notes in `~/Clawic/data/time-management/weekly-review.md`.
+Store notes in `<state_root>/weekly-review.md` only when the user wants them saved.
 
-### 5. Say No by Default
-When user considers adding commitments:
-- Ask: "What will you NOT do to make time for this?"
-- If answer is unclear → suggest declining
-- Protect existing commitments over new ones
+### 5. Decline by design
 
-### 6. Batch Similar Tasks
-Group similar activities:
-- All calls in one block
-- All email in 2-3 daily slots (not constant checking)
-- All admin tasks together
-- Context switching = time lost
+Before adding a commitment, ask what will be dropped or deferred to make room. Prefer protecting existing commitments over absorbing new ones without a trade-off.
 
-### 7. Plan Tomorrow Tonight
-End-of-day ritual:
-1. Review what got done
-2. Move incomplete tasks
-3. Set top 3 for tomorrow
-4. Write first block explicitly
+### 6. Batch similar tasks
 
-## Time Traps
+Group calls, email, and admin into dedicated blocks. Treat constant context switching as lost time.
 
-| Trap | Why it fails | Alternative |
-|------|--------------|-------------|
-| "I'll do it when I have time" | That time never comes | Schedule it or decline |
-| 30-minute meeting blocks | No deep work possible | 90-min minimum for real work |
-| Checking email first | Reactive mode hijacks your day | Deep work first, email at 11am |
-| No buffer time | Delays cascade | 15-min buffers between blocks |
-| Planning in your head | Forgotten and overwhelming | Write it down, one place |
-| "I work better under pressure" | Usually stress, not quality | Start earlier, same deadline |
+### 7. Plan tomorrow tonight
+
+End-of-day ritual: review completions, move unfinished work, set tomorrow’s top 3, and write the first block explicitly.
+
+## Failure modes
+
+| Situation | Response |
+|-----------|----------|
+| No MITs stated | Ask for 1–3 outcomes before inventing a full schedule. |
+| Calendar is externally controlled | Plan around fixed meetings; protect remaining contiguous focus windows. |
+| Empty state tree | Help immediately; create files only after an explicit save request. |
+| User wants calendar API / cron changes | Route to `calendar-planner` or `schedule`; keep this skill on the human plan. |
+| Repeated slip into the same trap | Load `references/traps.md` and change one condition, not the whole system. |
+
+## Anti-patterns
+
+- Do not invent calendar events, meeting acceptances, or productivity metrics the user never shared.
+- Do not force a complex system when the user asked for one next block.
+- Do not monitor activity, scrape email/calendar, or write state without an explicit request.
+- Do not shame missed plans; recover with a smaller next block and a clear trade-off.
+- Do not dump every reference file into the reply; load only the branch that applies.
 
 ## Scope
 
 This skill ONLY:
-- Provides time management advice when asked
-- Helps plan days and weeks
-- Stores preferences user explicitly provides
-- Reads included reference files
+
+- Provides time-management advice when asked.
+- Helps plan days and weeks.
+- Stores preferences the user explicitly provides.
+- Reads included reference files on demand.
 
 This skill NEVER:
-- Accesses calendar, email, or any external service
-- Tracks or monitors user activity
-- Makes network requests
-- Modifies files without explicit user request
 
-## External Endpoints
+- Accesses calendar, email, or any external service on its own.
+- Tracks or monitors user activity.
+- Makes network requests.
+- Modifies files without an explicit user request.
 
-This skill makes NO external network requests.
+## External endpoints
 
-| Endpoint | Data Sent | Purpose |
+This skill makes no external network requests.
+
+| Endpoint | Data sent | Purpose |
 |----------|-----------|---------|
 | None | None | N/A |
 
-## Security & Privacy
+## Security and privacy
 
-**Data that stays local:**
-- Preferences you explicitly ask to save
-- Stored in `~/Clawic/data/time-management/`
-- You can delete anytime
-
-**This skill does NOT:**
-- Access any external service
-- Track your behavior
-- Infer preferences without asking
-
-## Related Skills
-More Clawic skills, get them at https://clawic.com/skills/<slug> (install if the user confirms):
-- `productivity` — energy management and focus systems
-- `schedule` — recurring tasks and reminders
-- `habits` — building consistent routines
-
-## Feedback
-
-- If useful, star it: https://clawic.com/skills/time-management
-- Latest version: https://clawic.com/skills/time-management
+- Preferences and review notes stay in the selected `<state_root>/`.
+- Save only what the user explicitly asks to keep; the user may delete the tree anytime.
+- Keep operation offline and local unless the host separately provides another approved tool.

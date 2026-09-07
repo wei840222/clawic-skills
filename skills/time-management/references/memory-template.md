@@ -1,6 +1,6 @@
 # Memory Template — Time Management
 
-Create `~/Clawic/data/time-management/memory.md` with this structure:
+Create `<state_root>/memory.md` with this structure:
 
 ```markdown
 # Time Management Memory
@@ -49,7 +49,7 @@ mit-3:
 |-------|---------|----------|
 | `ongoing` | Still learning | Ask questions when relevant |
 | `complete` | Has enough context | Work normally |
-| `paused` | User said "not now" | Don't ask, work with what you have |
+| `paused` | User said "later" | Respect current preferences and wait for user initiation |
 
 ## Key Principles
 
