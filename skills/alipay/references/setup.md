@@ -1,6 +1,6 @@
 # Setup - Alipay
 
-Read this when `~/Clawic/data/alipay/` is missing or empty.
+Read this when `<state_root>/` is missing or empty.
 Keep setup practical and non-blocking.
 
 ## Operating Priorities
@@ -28,15 +28,15 @@ Keep setup practical and non-blocking.
 - Authorization and capture flow requirements
 - Refund and support expectations
 
-4. If setup context is approved, initialize local workspace:
+4. After resolving `<state_root>` and receiving approval to persist operational notes, initialize only the needed state paths:
 ```bash
-mkdir -p ~/alipay
-touch ~/Clawic/data/alipay/{memory.md,implementations.md,validation-log.md,incidents.md}
-chmod 700 ~/alipay
-chmod 600 ~/Clawic/data/alipay/{memory.md,implementations.md,validation-log.md,incidents.md}
+mkdir -p <state_root>
+touch <state_root>/{memory.md,implementations.md,validation-log.md,incidents.md}
+chmod 700 <state_root>
+chmod 600 <state_root>/{memory.md,implementations.md,validation-log.md,incidents.md}
 ```
 
-5. If `memory.md` is empty, initialize it from `memory-template.md`.
+5. If `<state_root>/memory.md` is empty, initialize it from `references/memory-template.md`.
 
 ## Integration Defaults
 

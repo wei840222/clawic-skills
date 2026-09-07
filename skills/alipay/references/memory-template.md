@@ -1,6 +1,6 @@
 # Memory Template - Alipay
 
-Create `~/Clawic/data/alipay/memory.md` with this structure:
+Create `<state_root>/memory.md` with this structure:
 
 ```markdown
 # Alipay Memory
@@ -54,7 +54,7 @@ launch_state: planning | validating | ready | paused
 
 ## File Templates
 
-Create `~/Clawic/data/alipay/validation-log.md`:
+Create `<state_root>/validation-log.md`:
 
 ```markdown
 # Alipay Validation Log
@@ -68,7 +68,7 @@ Create `~/Clawic/data/alipay/validation-log.md`:
 - Follow-up:
 ```
 
-Create `~/Clawic/data/alipay/incidents.md`:
+Create `<state_root>/incidents.md`:
 
 ```markdown
 # Alipay Incidents

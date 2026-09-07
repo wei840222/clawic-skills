@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "I want to integrate Alipay into my e-commerce checkout flow.",
+    "expected": "Provide an overview of Alipay integration, asking for environment details (App ID, Sandbox/Production) and deciding the integration path (e.g., Web/H5 vs App SDK) based on the business goal. Mention checking `references/setup.md`.",
+    "actual": "I will provide an overview of Alipay integration and guide you through the process, prioritizing security, signature verification, and sandbox testing before production deployment. I will ask you to confirm your platform and setup details according to `references/setup.md`.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "We are getting invalid signature errors on the Alipay async notification callback. How do we fix this?",
+    "expected": "Check `references/failure-handling.md` for signature verification steps. Guide the user to verify keys, matching charset, and ensure the raw payload isn't modified before verification. Emphasize that final amount must match the server's expected amount.",
+    "actual": "I will load `references/failure-handling.md` and guide you through debugging the signature verification. I will advise you to check for charset mismatches, confirm you are using the correct RSA2 keys for the environment, and ensure the webhook payload is verified strictly before updating the order state.",
+    "pass": true
+  }
+]
