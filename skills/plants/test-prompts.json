@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "I bought a pothos for my living room. Help me create a care record.",
+    "expected": "Resolve the state root, ask before creating persistent data, then create one plant record with confirmed facts, a bright-indirect-light note, and a condition-based watering cue.",
+    "actual": "The workflow resolves <state_root>, requests consent before creating the record, and routes the agent to the record template and pothos guidance. It does not invent an acquisition date or enforce a calendar-only watering schedule.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "My snake plant is mushy after I watered it yesterday. What should I do and when was it last watered?",
+    "expected": "Read the existing plant record when available, identify excess moisture and root damage as possibilities rather than a certain diagnosis, provide low-risk checks, and avoid creating a record if none exists without consent.",
+    "actual": "The diagnosis sequence checks the care log, moisture, drainage, and recent changes. It recommends pausing watering and conditionally inspecting roots, while marking an unavailable log as unknown instead of fabricating a last-watered date.",
+    "pass": true
+  }
+]
