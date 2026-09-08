@@ -92,6 +92,10 @@ web_fetch({"url": "https://search.brave.com/search?q=llm+agent+framework"})
 web_fetch({"url": "https://www.bing.com/search?q=site:github.com+fastapi+auth"})
 ```
 
+## Reference
+
+Read `references/sources.md` when validating query operators, date filters, or evidence-quality guidance.
+
 ## Evidence Quality
 
 Treat results as discovery leads, not proof. Repeated syndicated articles count as one evidence trail. For high-impact decisions, add a contradiction query and cite the primary material that resolves it. For rapidly changing topics, state both the source publication date and the event date when they differ.
