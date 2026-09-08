@@ -2,7 +2,7 @@
 
 ## Team Database
 
-Maintain in ~/Clawic/data/agency/config.md:
+Maintain in <state_root>/config.md:
 
 ```markdown
 ### Team Members
@@ -64,8 +64,8 @@ Generate clear briefs:
 ## Reference Materials
 [Links or files]
 
-## Don'ts
-[Things to avoid specifically]
+## Required Constraints
+[Specific boundary constraints and required limitations]
 
 ## Questions?
 [Who to ask, how to reach]

@@ -1,19 +1,9 @@
 ---
 name: agency
-slug: agency
-version: 1.0.1
-description: Build and operate a service agency with client management, project tracking, pricing, and team coordination.
-homepage: https://clawic.com/skills/agency
 metadata:
-  clawdbot:
-    emoji: 🏢
-    requires:
-      bins: []
-    os:
-    - linux
-    - darwin
-    - win32
-    displayName: Agency
+  version: "1.0.1"
+  openclaw: '{"emoji":"🏢"}'
+description: Manage service agency operations including client onboarding, project tracking, proposal pricing, and team coordination. Use when managing, scaling, or structuring an agency business.
 ---
 
 ## When to Use
@@ -22,23 +12,35 @@ User wants to start or scale a service agency: marketing, development, design, c
 
 ## Quick Reference
 
-| Area | File |
-|------|------|
-| Client onboarding | `onboarding.md` |
-| Pricing and proposals | `pricing.md` |
-| Project management | `projects.md` |
-| Client communication | `communication.md` |
-| Deliverables workflow | `deliverables.md` |
-| Team coordination | `team.md` |
-| Agency-type specifics | `by-type.md` |
-| Learning system | `feedback.md` |
+| Area | File | When to load |
+|------|------|--------------|
+| Client onboarding | `references/onboarding.md` | When starting a new client engagement or intake process |
+| Pricing and proposals | `references/pricing.md` | When estimating scope, calculating costs, or generating proposals |
+| Project management | `references/projects.md` | When checking status, updating timelines, or tracking active work |
+| Client communication | `references/communication.md` | When drafting updates, responding to feedback, or addressing issues |
+| Deliverables workflow | `references/deliverables.md` | When producing, reviewing, or delivering final work to a client |
+| Team coordination | `references/team.md` | When assigning tasks, checking capacity, or briefing team members |
+| Agency-type specifics | `references/by-type.md` | When you need metrics or common deliverables for a specific niche |
+| Learning system | `references/feedback.md` | When reviewing completed projects, logging estimates, or updating SOPs |
+
+## State location
+
+Agency state may exist in `<workspace>/agency/`, `<workspace>/memory/agency/`, or `~/agency/`.
+Before reading or writing state, resolve `<state_root>` as follows:
+
+1. Use an explicitly configured path when one exists.
+2. Otherwise use the first existing directory in this order:
+   `<workspace>/agency/`, `<workspace>/memory/agency/`, `~/agency/`.
+3. If none exists and state must be created, default to `<workspace>/agency/`.
+
+Use the selected `<state_root>` for every state operation in this skill.
 
 ## Workspace Structure
 
-Agency data lives in ~/Clawic/data/agency/:
+Agency data lives in `<state_root>/`:
 
 ```
-~/Clawic/data/agency/
+<state_root>/
 ├── clients/           # One file per client
 │   ├── index.md       # Client list with status
 │   └── [name].md      # Client profile, history, preferences
@@ -50,7 +52,7 @@ Agency data lives in ~/Clawic/data/agency/:
 
 ## Core Operations
 
-**Client intake:** Brief arrives (audio, email, doc) → Extract scope, budget, timeline → Generate structured brief → Flag red flags (scope creep, unrealistic deadlines) → Create client folder.
+**Client intake:** Brief arrives (audio, email, doc) → Extract scope, budget, timeline → Generate structured brief → Identify and flag risk factors (e.g., scope creep, unrealistic deadlines) → Create client folder.
 
 **Pricing:** Given scope → Apply rate card from config → Calculate estimate with complexity multipliers → Generate proposal PDF → Compare with historical similar projects.
 
@@ -60,11 +62,11 @@ Agency data lives in ~/Clawic/data/agency/:
 
 ## Critical Rules
 
-- Never send proposals or communicate with clients without human approval
+- Always require explicit human approval before sending proposals or communicating with clients
 - Track time/cost vs estimates — alert when project is losing money
 - Learn from corrections — update templates and knowledge base
 - Maintain client context across sessions — refer to history
 
 ## Config Fields
 
-Create ~/Clawic/data/agency/config.md with rates, team, and margins. See `pricing.md` for format.
+Create `<state_root>/config.md` with rates, team, and margins. See `references/pricing.md` for format.

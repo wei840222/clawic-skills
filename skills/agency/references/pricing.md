@@ -2,7 +2,7 @@
 
 ## Rate Card Structure
 
-Maintain in ~/Clawic/data/agency/config.md:
+Maintain in <state_root>/config.md:
 
 ```markdown
 ### Hourly Rates
@@ -10,16 +10,18 @@ Maintain in ~/Clawic/data/agency/config.md:
 - Execution/Mid: $Y
 - Junior/Support: $Z
 
-### Project Minimums
-- Discovery call: $0 (qualify)
-- Small project: $X minimum
-- Retainer minimum: $Y/month
+### Project Minimums & Margin Targets
+- Discovery call: $0 (qualify only if budget > minimum)
+- Standard Project Minimum: $5,000 (typical 2024 benchmark for mid-market)
+- Retainer Minimum: $2,500/month (ensures sufficient attention)
+- Target Gross Margin: 50-60%
+- Target Net Margin: 15-25%
 
-### Multipliers
-- Rush (<1 week): +50%
-- Complex integration: +25%
-- Enterprise client: +20%
-- Ongoing relationship discount: -10%
+### Multipliers and Risk Adjustments
+- Rush (<2 weeks): +50% to +100%
+- Complex integration/Unknown tech: +30% risk buffer
+- Enterprise client (extra compliance/meetings): +25%
+- Dedicated Retainer Volume Discount: -10% (only if >3 month commitment)
 ```
 
 ## Estimation Process
@@ -44,7 +46,7 @@ Given a scope:
    - Check client type
 
 4. **Compare to historical:**
-   - Search `~/Clawic/data/agency/knowledge/` for similar projects
+   - Search `<state_root>/knowledge/` for similar projects
    - Adjust if past estimates were off
 
 ## Proposal Structure
@@ -79,13 +81,20 @@ Generate PDF with:
    - What we need from them
 ```
 
-## Pricing Traps
+## Pricing Models
 
-- Don't quote before understanding scope — discovery first
-- Don't discount without reducing scope — train clients
-- Don't hide revision limits in fine print — state clearly
-- Don't underestimate client communication time — it's 20-30% of project
-- Don't forget handoff/documentation time
+- **Hourly:** Best for maintenance, ambiguous scopes, and consulting. Limits scale.
+- **Project-based (Fixed):** Best for well-defined deliverables. Requires strict scope management.
+- **Retainer:** Best for ongoing support, SEO, or continuous marketing. Provides predictable MRR.
+- **Value-based:** Best for high-impact projects (e.g., pricing based on % of revenue generated). Highest margin, highest risk.
+
+## Pricing Requirements
+
+- Complete discovery and understand scope fully before providing a quote.
+- Reduce scope proportionally when applying a discount to train clients appropriately.
+- State revision limits clearly and prominently in the proposal.
+- Account for client communication time (typically 20-30% of project hours) in all estimates.
+- Include handoff and documentation time in the final estimate.
 
 ## Version Control
 
@@ -99,7 +108,7 @@ When client requests changes to proposal:
 
 Before finalizing estimate, search:
 ```
-Similar projects in ~/Clawic/data/agency/knowledge/:
+Similar projects in <state_root>/knowledge/:
 - What was estimated vs actual
 - What caused overruns
 - What would we do differently

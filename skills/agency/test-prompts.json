@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "We just got a new lead for a marketing agency project. They want a small 5-page website and 3 months of social media management. How should we price this?",
+    "expected": "The agent should refer to references/pricing.md, establish the $5,000 project minimum and $2,500/month retainer minimum, suggest breaking it into project (website) and retainer (social), and outline a proposal structure without sending anything directly to the client.",
+    "actual": "Based on references/pricing.md, we should break this into two phases: 1) The 5-page website (Project-based), which should meet the $5,000 standard project minimum. 2) The 3-month social media management (Retainer), which should meet the $2,500/month retainer minimum. I recommend setting up a discovery call first to qualify their budget before drafting the proposal structure (Context, Approach, Deliverables, Timeline, Investment, Next Steps). I will not send anything until you approve.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "Client Smith is asking for 2 more revision rounds on the homepage design because they 'want to try a completely different direction.' We already hit our limit. Draft a response.",
+    "expected": "The agent should load references/communication.md and references/by-type.md (Design Agency scope creep), acknowledge the request, explain that this constitutes a scope change/additional rounds, provide options (add budget or defer), and present the draft for human review.",
+    "actual": "Based on references/communication.md and design agency scope creep patterns, here is a draft response for your review:\n\n'Hi Smith,\nThanks for the feedback on the homepage. Exploring a completely different direction would be a shift in scope and require additional revision rounds beyond our agreed limit. \nI can certainly look into this for you. Just to set expectations, adding 2 more rounds would require an additional budget of [Cost]. Would you like me to send over a quick change order for this, or should we proceed with refining the current direction?'\n\nPlease review this draft before sending.",
+    "pass": true
+  }
+]
