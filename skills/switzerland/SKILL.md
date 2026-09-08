@@ -84,7 +84,7 @@ Classic visitor routes are usually better by train and boat. Car value appears w
 Use `references/alps-lakes-and-scenic-trains.md`, `references/winter-ski-and-snow.md`, and `references/weather-and-seasonality.md` before promising panoramic days. Cloud, wind, snow, avalanche controls, and pass closures can change the whole plan.
 
 ### 5. Budget With Real Swiss Friction
-Do not price from hotel headlines alone. Include CHF reality, resort taxes, lift tickets, seat reservations where relevant, parking, tunnel or pass detours, luggage handling, and mountain food premiums.
+Price using comprehensive costs instead of hotel headlines alone. Include CHF reality, resort taxes, lift tickets, seat reservations where relevant, parking, tunnel or pass detours, luggage handling, and mountain food premiums.
 
 ### 6. Protect the User From Border and Sunday Mistakes
 Switzerland sits inside Schengen but outside the EU customs and roaming default that many travelers assume. Border shopping, tax-free steps, Sunday closures, and cross-border train or car choices need explicit handling.
