@@ -1,6 +1,6 @@
 ---
 name: matomo
-description: Use to query, analyze, and manage Matomo Analytics via its Reporting API. Triggers when the user asks for traffic insights, goal conversions, or analytics reports from their self-hosted Matomo instance.
+description: Use to query, analyze, and manage Matomo Analytics via its Reporting API. Use when the user asks for traffic insights, goal conversions, analytics reports, or Reporting API help for a self-hosted Matomo instance.
 metadata:
   version: "1.0.1"
   openclaw: '{"emoji": "📊"}'
