@@ -79,7 +79,7 @@ Most developers only know step 4; steps 1-3 are the actual bugs.
 
 - Only the block axis, only block layout. Flex, grid, inline-block, floats, and BFC roots never collapse.
 - Parent-child bleed-through: a child's `margin-top` escapes the parent when nothing (border, padding, inline content) separates them — the classic "why did the whole container move down". Fix: `display: flow-root` on the parent, or switch to gap-based spacing.
-- Adjacent siblings: the LARGER margin wins, they don't add. One negative: they sum (`24px + -8px = 16px`).
+- Adjacent siblings: the LARGER margin wins, they avoid add. One negative: they sum (`24px + -8px = 16px`).
 - Practical stance: use `gap` and single-direction margins (`margin-block-end` only); collapse then never fires.
 
 ## Overflow Semantics

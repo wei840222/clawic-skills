@@ -1,6 +1,6 @@
 # Memory Template — CSS
 
-Create `~/Clawic/data/css/memory.md` with this structure:
+Create `<state_root>/memory.md` with this structure:
 
 ```markdown
 # CSS Memory
