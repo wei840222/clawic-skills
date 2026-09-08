@@ -50,6 +50,13 @@ Agency data lives in `<state_root>/`:
 └── config.md          # Rates, margins, team structure
 ```
 
+## Operating sequence
+
+1. Identify the agency operation and load the matching reference from Quick Reference.
+2. Resolve `<state_root>` before reading or recording agency data.
+3. Draft the requested plan, proposal, status update, or deliverable using the relevant reference.
+4. Present external client communications and proposals for human approval before sending.
+
 ## Core Operations
 
 **Client intake:** Brief arrives (audio, email, doc) → Extract scope, budget, timeline → Generate structured brief → Identify and flag risk factors (e.g., scope creep, unrealistic deadlines) → Create client folder.
