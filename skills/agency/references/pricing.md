@@ -11,17 +11,17 @@ Maintain in <state_root>/config.md:
 - Junior/Support: $Z
 
 ### Project Minimums & Margin Targets
-- Discovery call: $0 (qualify only if budget > minimum)
-- Standard Project Minimum: $5,000 (typical 2024 benchmark for mid-market)
-- Retainer Minimum: $2,500/month (ensures sufficient attention)
-- Target Gross Margin: 50-60%
-- Target Net Margin: 15-25%
+- Discovery call: $0 or a configured qualification fee
+- Standard Project Minimum: [configured amount]
+- Retainer Minimum: [configured monthly amount]
+- Target Gross Margin: [configured range]
+- Target Net Margin: [configured range]
 
 ### Multipliers and Risk Adjustments
-- Rush (<2 weeks): +50% to +100%
-- Complex integration/Unknown tech: +30% risk buffer
-- Enterprise client (extra compliance/meetings): +25%
-- Dedicated Retainer Volume Discount: -10% (only if >3 month commitment)
+- Rush: [configured uplift based on available capacity]
+- Complex integration or unknown technology: [configured risk buffer]
+- Enterprise client (extra compliance or meetings): [configured uplift]
+- Retainer volume discount: [configured discount tied to a defined commitment]
 ```
 
 ## Estimation Process
@@ -37,7 +37,7 @@ Given a scope:
 
 2. **Estimate hours per phase:**
    - Be specific: "Homepage design: 6h, inner page template: 3h"
-   - Include buffer: 15-20% for scope creep
+   - Apply the configured contingency for uncertainty and approved scope risk
    - Account for client communication time
 
 3. **Apply multipliers:**
@@ -93,7 +93,7 @@ Generate PDF with:
 - Complete discovery and understand scope fully before providing a quote.
 - Reduce scope proportionally when applying a discount to train clients appropriately.
 - State revision limits clearly and prominently in the proposal.
-- Account for client communication time (typically 20-30% of project hours) in all estimates.
+- Account for client communication time using the agency's historical estimate data.
 - Include handoff and documentation time in the final estimate.
 
 ## Version Control

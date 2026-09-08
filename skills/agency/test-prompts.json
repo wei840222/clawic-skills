@@ -2,8 +2,8 @@
   {
     "id": 1,
     "prompt": "We just got a new lead for a marketing agency project. They want a small 5-page website and 3 months of social media management. How should we price this?",
-    "expected": "The agent should refer to references/pricing.md, establish the $5,000 project minimum and $2,500/month retainer minimum, suggest breaking it into project (website) and retainer (social), and outline a proposal structure without sending anything directly to the client.",
-    "actual": "Based on references/pricing.md, we should break this into two phases: 1) The 5-page website (Project-based), which should meet the $5,000 standard project minimum. 2) The 3-month social media management (Retainer), which should meet the $2,500/month retainer minimum. I recommend setting up a discovery call first to qualify their budget before drafting the proposal structure (Context, Approach, Deliverables, Timeline, Investment, Next Steps). I will not send anything until you approve.",
+    "expected": "The agent should refer to references/pricing.md, load the configured project and retainer minimums, suggest breaking it into project (website) and retainer (social), and outline a proposal structure without sending anything directly to the client.",
+    "actual": "Based on references/pricing.md, we should break this into two phases: 1) The 5-page website (Project-based), using the configured project minimum. 2) The 3-month social media management (Retainer), using the configured monthly retainer minimum. I recommend setting up a discovery call first to qualify their budget before drafting the proposal structure (Context, Approach, Deliverables, Timeline, Investment, Next Steps). I will not send anything until you approve.",
     "pass": true
   },
   {
