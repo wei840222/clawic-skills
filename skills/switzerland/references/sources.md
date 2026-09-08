@@ -48,3 +48,8 @@ Last checked: 2026-03-09
 - Jungfrau Region tourism: https://www.jungfrau.ch/en-gb/
 - Matterhorn region tourism: https://www.matterhornparadise.ch/en
 - Grand Train Tour of Switzerland: https://grandtraintour.swiss/en/
+
+## Refactor verification sources
+
+- Swiss Travel Pass validity and coverage: https://www.sbb.ch/en/tickets-offers/tickets/guests-abroad/swiss-travel-pass.html
+- Swiss entry and Schengen guidance: https://www.sem.admin.ch/sem/en/home/themen/einreise/faq.html
