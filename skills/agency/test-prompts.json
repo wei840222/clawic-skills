@@ -12,5 +12,12 @@
     "expected": "The agent should load references/communication.md and references/by-type.md (Design Agency scope creep), acknowledge the request, explain that this constitutes a scope change/additional rounds, provide options (add budget or defer), and present the draft for human review.",
     "actual": "Based on references/communication.md and design agency scope creep patterns, here is a draft response for your review:\n\n'Hi Smith,\nThanks for the feedback on the homepage. Exploring a completely different direction would be a shift in scope and require additional revision rounds beyond our agreed limit. \nI can certainly look into this for you. Just to set expectations, adding 2 more rounds would require an additional budget of [Cost]. Would you like me to send over a quick change order for this, or should we proceed with refining the current direction?'\n\nPlease review this draft before sending.",
     "pass": true
+  },
+  {
+    "id": 3,
+    "prompt": "A delivery is due tomorrow, but the client has not approved the final draft. What should I do?",
+    "expected": "The agent should load references/deliverables.md and references/communication.md, identify the approval dependency and deadline risk, draft a status/escalation message for human approval, and avoid sending it itself.",
+    "actual": "I would check the delivery checklist and project status, flag the missing approval as a deadline risk, and draft a concise client update that explains the dependency and asks for a decision. I would present that draft for your approval rather than send it.",
+    "pass": true
   }
 ]
