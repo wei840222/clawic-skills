@@ -8,6 +8,7 @@ This table is the canonical record of skill refactor pull requests merged into `
 
 | Skill                        | Date       | Darwin Score  |
 | ---------------------------- | ---------- | ------------- | ---- |
+| pricing | 2026-09-09 | 85/100 (#326) |
 | music-generation | 2026-09-09 | 85/100 (#325) |
 | switzerland | 2026-09-08 | 85 | #323 |
 | svelte | 2026-09-08 | 85/100 (#324) |

@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "We are launching a new B2B SaaS product for HR management. Can you help me figure out how to price it? Should we use per-seat or flat rate?",
+    "expected": "The agent should load the core pricing rules, read configuration files or ask about the business model, suggest researching the value metric, and outline the pros and cons of per-seat vs flat rate for an HR tool.",
+    "actual": "I will check `<state_root>/pricing/config.yaml` to see if we have defaults for this project. Since this is a new B2B SaaS HR tool, choosing between per-seat and flat rate depends on your value metric. Per-seat makes sense if value scales with employees managed. I will load `references/core-rules.md` and `references/traps.md` to avoid common pitfalls like underpricing.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "Our competitor just dropped their price by 20%. Our current ACV is $10k. Should we match their price? How should we react without starting a price war?",
+    "expected": "The agent should refer to the 'Matching a competitor's price' trap, avoid recommending a blind price match, suggest focusing on quantified differentiation value, and potentially analyze elasticity instead.",
+    "actual": "Matching a competitor's price blindly is a common trap (see `references/traps.md`). Their price encodes their cost base, not ours. Instead, we should rely on our reference price plus quantified differentiation value. Let's analyze our elasticity before making any moves.",
+    "pass": true
+  }
+]
