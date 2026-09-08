@@ -10,7 +10,7 @@ PROSPECT → PROPOSAL → ACTIVE → DELIVERED → CLOSED
 
 ## Unified Project Board
 
-Maintain in `~/Clawic/data/agency/projects/`:
+Maintain in `<state_root>/projects/`:
 
 ```markdown
 # Active Projects
@@ -70,7 +70,7 @@ When deadline at risk:
 
 ## Resource Allocation
 
-Track in ~/Clawic/data/agency/config.md:
+Track in <state_root>/config.md:
 
 ```markdown
 ### Team Availability
