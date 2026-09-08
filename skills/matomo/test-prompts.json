@@ -3,21 +3,21 @@
     "id": 1,
     "prompt": "Show me a quick traffic dashboard for today using Matomo.",
     "expected": "Agent resolves state, loads references/setup.md if no memory exists, or directly generates the correct API query to fetch VisitsSummary for today and outputs the dashboard metrics.",
-    "actual": "Dry-run: the request maps to VisitsSummary.get after state resolution; missing connection details trigger the setup flow.",
+    "actual": "Darwin dry-run: the request maps to VisitsSummary.get after state resolution; missing connection details trigger the setup flow.",
     "pass": true
   },
   {
     "id": 2,
     "prompt": "What's the conversion rate from Google search this month on Matomo?",
     "expected": "Agent builds a reporting query for Google search traffic and goal conversion data for the current month.",
-    "actual": "Dry-run: the agent uses the reporting reference, a month date range, and a search-referrer segment before presenting conversion metrics.",
+    "actual": "Darwin dry-run: the agent uses the reporting reference, a month date range, and a search-referrer segment before presenting conversion metrics.",
     "pass": true
   },
   {
     "id": 3,
     "prompt": "Give me a weekly summary report for Matomo.",
     "expected": "Agent loads assets/reports.md, compares this week with last week, and presents material deltas.",
-    "actual": "Dry-run: the agent loads the report template, queries both periods, calculates deltas, and highlights changes over 10%.",
+    "actual": "Darwin dry-run: the agent loads the report template, queries both periods, calculates deltas, and highlights changes over 10%.",
     "pass": true
   }
 ]
