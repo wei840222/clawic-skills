@@ -47,7 +47,7 @@ Return at least:
 ## Quick Questions
 
 - What is the true success condition?
-- What must never happen?
+- What strict prevention criteria exist?
 - Which limit is most likely to dominate the decision?
 - What is fixed, and what is still negotiable?
 - What changes at startup, scale, or failure?

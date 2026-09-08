@@ -13,7 +13,7 @@ Break the work into:
 - restart criteria
 - rollback path
 
-Do not hide dependency risk inside a single bullet that says "implement."
+Explicitly detail dependency risks instead of using broad terms like "implement."
 
 ## Critical Path Questions
 
