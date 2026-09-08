@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "How do I convert a simple `export let` property to Svelte 5 runes?",
+    "expected": "Instructions explaining how to use `let { propName } = $props();` instead of `export let propName;`.",
+    "actual": "Use `$props()` rune to declare component properties in Svelte 5. Replace `export let propName;` with `let { propName } = $props();` inside a `<script>` or `<script lang=\"ts\">` tag.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "Why is my SvelteKit form action returning a 403 on POST?",
+    "expected": "Explanation of Kit's CSRF origin check and how to fix it by submitting same-origin or configuring `csrf.checkOrigin`.",
+    "actual": "SvelteKit's CSRF origin check rejects cross-origin POST submissions by default, resulting in a 403 error. To fix this, ensure the form submission is same-origin, or deliberately configure `csrf.checkOrigin` in your `svelte.config.js` if cross-origin is required.",
+    "pass": true
+  }
+]
