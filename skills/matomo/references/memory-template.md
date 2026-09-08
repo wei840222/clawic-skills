@@ -1,6 +1,6 @@
 # Memory Template — Matomo Analytics
 
-Create `~/Clawic/data/matomo/memory.md` with this structure:
+Create `<state_root>/memory.md` with this structure:
 
 ```markdown
 # Matomo Memory
@@ -49,7 +49,7 @@ token_ref: (keychain/env reference, never actual token)
 ## Directory Structure
 
 ```
-~/Clawic/data/matomo/
+<state_root>/
 ├── memory.md         # This file
 ├── reports/          # Saved report templates
 │   └── weekly.md     # Example: weekly summary template
@@ -59,7 +59,7 @@ token_ref: (keychain/env reference, never actual token)
 
 ## Report Template Example
 
-`~/Clawic/data/matomo/reports/weekly.md`:
+`<state_root>/reports/weekly.md`:
 ```markdown
 # Weekly Report Template
 

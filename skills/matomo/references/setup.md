@@ -1,6 +1,6 @@
 # Setup — Matomo Analytics
 
-Read this when `~/Clawic/data/matomo/` doesn't exist or is empty.
+Read this when `<state_root>/` doesn't exist or is empty.
 
 ## Your Attitude
 
@@ -15,7 +15,7 @@ Ask about their Matomo environment:
 - "What metrics matter most to you?" (traffic? conversions? engagement?)
 - "Any specific goals you're tracking?"
 
-Don't ask for technical details yet — understand the business context first.
+Understand the business context first before asking for technical details.
 
 ### 2. Then: Connection Details
 
@@ -24,7 +24,7 @@ When they're ready to actually query data:
 - Guide them to create an API token (Settings → Personal → Security → Auth tokens)
 - Help them store it securely (env var or keychain)
 
-**Token security:** Recommend storing in env var `MATOMO_TOKEN` or system keychain. Never store tokens in plain text files.
+**Token security:** Recommend storing in env var `MATOMO_TOKEN` or system keychain. Ensure tokens are stored outside of plain text files.
 
 ### 3. Finally: Integration
 
@@ -34,7 +34,7 @@ Ask how they want to use the skill:
 
 ## What You're Saving
 
-In `~/Clawic/data/matomo/memory.md`:
+In `<state_root>/memory.md`:
 - Site names and their idSite numbers
 - Which metrics they care about
 - Default site for quick queries
