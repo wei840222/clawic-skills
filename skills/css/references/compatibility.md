@@ -1,6 +1,6 @@
 # Cross-Engine Compatibility
 
-Where the three engines actually differ, how to gate features, and the two hostile environments (forced colors, HTML email). Feature availability checked 2026-07; re-verify anything marked as trailing before relying on it.
+Where the three engines actually differ, how to gate features, and the two hostile environments (forced colors, HTML email). Feature availability checked against MDN Baseline and web-platform documentation on 2026-09-08; re-check browser support data before promoting a trailing feature to a default.
 
 ## Feature Gating
 
@@ -63,3 +63,14 @@ The extreme compatibility case. Rules here are the opposite of everything else i
 - Feature availability answers "can I use it"; your analytics answer "must I". A feature missing from an engine with a fraction of a percent of your traffic and a graceful fallback is not a blocker.
 - Distinguish cosmetic degradation (no blur behind the panel) from functional failure (menu positioned off-screen). Only the second needs a polyfill or a library.
 - Write down the support target with the user's `browser_support` preference so the next decision is not re-litigated per feature.
+
+
+## Authoritative Sources
+
+- MDN CSS reference: https://developer.mozilla.org/en-US/docs/Web/CSS
+- MDN `@supports`: https://developer.mozilla.org/en-US/docs/Web/CSS/@supports
+- MDN CSS anchor positioning: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_anchor_positioning
+- MDN `@starting-style`: https://developer.mozilla.org/en-US/docs/Web/CSS/@starting-style
+- MDN `transition-behavior`: https://developer.mozilla.org/en-US/docs/Web/CSS/transition-behavior
+- MDN web-features Baseline: https://developer.mozilla.org/en-US/docs/Glossary/Baseline/Compatibility
+- web.dev Baseline: https://web.dev/baseline
