@@ -71,6 +71,7 @@ Common methods:
 - `Actions.getPageUrls` — top pages
 - `Referrers.getWebsites` — traffic sources
 - `Goals.get` — conversion data
+- `Events.getCategory` — event categories
 
 ### 3. Understand Date Ranges
 | Period | Date Format | Example |

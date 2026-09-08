@@ -19,6 +19,20 @@ curl -sS --get "https://{matomo_url}/index.php" \
 
 ## Common Methods
 
+### Events (Interactions)
+
+```bash
+# Event categories
+method=Events.getCategory
+
+# Event actions
+method=Events.getAction
+
+# Event names
+method=Events.getName
+```
+
+
 ### Traffic Overview
 
 ```bash
