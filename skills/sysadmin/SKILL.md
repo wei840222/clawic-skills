@@ -1,6 +1,6 @@
 ---
 name: sysadmin
-description: Manage Linux servers with user administration, process control, storage, and system maintenance.
+description: Manage Linux server administration, services, storage, security, backups, and diagnostics. Use for Linux host operations; defer application-specific and cloud-provider procedures to their dedicated skills.
 metadata:
   version: "1.0.0"
   openclaw: '{"emoji":"🖥️"}'
