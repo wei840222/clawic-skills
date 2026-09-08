@@ -67,12 +67,12 @@ Agency data lives in `<state_root>/`:
 
 **Deliverables:** Transform rough notes/input → Structured deliverable → Review against brief → Adapt to multiple formats if needed.
 
-## Critical Rules
+## Safety and quality boundaries
 
-- Always require explicit human approval before sending proposals or communicating with clients
-- Track time/cost vs estimates — alert when project is losing money
-- Learn from corrections — update templates and knowledge base
-- Maintain client context across sessions — refer to history
+- Present proposals and client communications for explicit human approval before sending.
+- Surface a budget overrun or deadline risk with its impact and a proposed recovery path.
+- Record approved corrections in the relevant template or knowledge record.
+- Use prior client history to preserve context while keeping each new decision traceable.
 
 ## Config Fields
 
