@@ -22,11 +22,17 @@ Screenshot project state may exist in `<workspace>/screenshots/`, `<workspace>/m
 
 ## Workflow
 
-1. **Intake.** Confirm target stores, locales, source captures, app icon, brand constraints, and whether the user wants persistent project state. Redact or replace sensitive account, personal, or production data visible in captures before sharing an output.
-2. **Plan.** Read `references/specs.md` for the selected store and `references/templates.md` for the category. Record the chosen sizes, layout, copy, and frame in `<state_root>/{app-slug}/config.md` only after state saving is requested.
-3. **Compose.** Read `references/text-style.md`; build one message per screenshot and adapt overlay placement for each target aspect ratio. Use the source capture at its highest available resolution.
-4. **Verify.** Read `references/workflow.md` and complete its visual, file, and store-readiness checks. When a check fails, correct the affected source/layout and regenerate every affected size before presenting it.
-5. **Approve and export.** Present previews for approval. After approval, preserve the batch as `<state_root>/{app-slug}/v{n}/`, point `latest` to the approved version when symlinks are supported, and package the requested store folders.
+1. **Intake.** Confirm target stores, locales, source captures, app icon, brand constraints, and whether the user wants persistent project state. Remove or replace sensitive account, personal, or production data visible in captures before sharing an output.
+2. **Plan.** Read `references/specs.md` for the selected store and `references/templates.md` for the category. List the selected device classes and locales before composing. Record the chosen sizes, layout, copy, and frame in `<state_root>/{app-slug}/config.md` only after state saving is requested.
+3. **Compose.** Read `references/text-style.md`; build one message per screenshot and adapt overlay placement to each target aspect ratio. Use the source capture at its highest available resolution.
+4. **Verify.** Read `references/workflow.md` and complete its visual, file, and store-readiness checks. When a check fails, correct the affected source or layout and regenerate every affected size before presenting it.
+5. **Approve and export.** Present previews for approval before final delivery. After approval, preserve the batch as `<state_root>/{app-slug}/v{n}/`, point `latest` to the approved version when symlinks are supported, and package the requested store folders.
+
+## Recovery paths
+
+- If raw captures, brand assets, or target-store details are missing, return an intake checklist and wait for the missing inputs rather than fabricating them.
+- If multiple candidate state directories exist, use the highest-precedence one selected in **State location** and report the duplicate copies; keep them separate.
+- If a platform preview or upload rejects an asset, read `references/specs.md`, retain the rejection reason, correct that constraint, and rerun the verification step for the full affected set.
 
 ## Project state
 
