@@ -98,7 +98,7 @@ Read `references/sources.md` when validating query operators, date filters, or e
 
 ## Evidence Quality
 
-Treat results as discovery leads, not proof. Repeated syndicated articles count as one evidence trail. For high-impact decisions, add a contradiction query and cite the primary material that resolves it. For rapidly changing topics, state both the source publication date and the event date when they differ.
+Treat results as discovery leads, then verify them before relying on them. Count repeated syndicated articles as one evidence trail. For high-impact decisions, add a contradiction query and cite the primary material that resolves it. For rapidly changing topics, state both the source publication date and the event date when they differ.
 
 ## External Data
 
