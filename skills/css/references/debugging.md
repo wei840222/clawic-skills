@@ -88,4 +88,4 @@ There is always one concrete culprit; find it before styling.
 
 ## When You Are Truly Stuck
 
-Delete, don't add. Copy the broken component into an empty page with no stylesheet, confirm it works, then re-add your CSS one declaration block at a time — the block that breaks it names the mechanism and the file to open next. Binary-search a large sheet the same way by disabling half its layers.
+Remove declarations instead of adding more. Copy the broken component into an empty page with no stylesheet, confirm it works, then re-add your CSS one declaration block at a time — the block that breaks it names the mechanism and the file to open next. Binary-search a large sheet the same way by disabling half its layers.

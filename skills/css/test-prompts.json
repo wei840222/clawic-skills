@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "How do I fix a sticky header that won't stick?",
+    "expected": "Provide the walk-up procedure for position: sticky, checking parent overflow and height.",
+    "actual": "To fix a `position: sticky` header that won't stick, you need to check its parent containers. The most common cause is a parent element with `overflow: hidden`, `overflow: auto`, or `overflow: scroll`. Any of these properties on an ancestor will create a scroll container and trap the sticky element. Another common issue is that the sticky element's parent does not have enough height for the sticky element to scroll within; it needs a defined height or content that extends beyond the sticky element's height. Use the browser DevTools to walk up the DOM tree and check for these conditions.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "Write CSS for a responsive grid of cards that wraps and scales without media queries.",
+    "expected": "Provide a grid-template-columns setup using auto-fit and minmax.",
+    "actual": "You can achieve a responsive, auto-wrapping grid without media queries using CSS Grid's `auto-fit` and `minmax()` functions. Here is the standard pattern:\n\n```css\n.card-grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));\n  gap: 1.5rem;\n}\n```\n\nThis setup tells the browser to create as many columns as will fit (`auto-fit`) with a minimum width of `250px` and a maximum of `1fr` (stretching to fill available space). The inner `min(250px, 100%)` prevents the cards from overflowing when the viewport is narrower than 250px, ensuring true responsiveness.",
+    "pass": true
+  }
+]
