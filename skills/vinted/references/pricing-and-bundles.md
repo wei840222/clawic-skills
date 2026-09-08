@@ -50,7 +50,7 @@ If the account offers bumps or wardrobe-level visibility tools, use them only wh
 - price is inside the fair range
 - the item has enough margin to justify the spend
 
-Paid visibility cannot fix a weak offer.
+Paid visibility works only after the listing package is already clear and competitive.
 
 ## Decision Template
 

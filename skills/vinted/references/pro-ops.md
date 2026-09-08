@@ -5,7 +5,7 @@ Use this file only when the user sells as a business or has access to Vinted Pro
 ## Activation Rule
 
 Start in Pro mode only when the user explicitly operates as a business.
-Do not assume Pro workflows for casual closet cleanup.
+Verify Pro status before applying business-mode workflows.
 
 ## Operating Standard
 

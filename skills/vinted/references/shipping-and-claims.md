@@ -17,7 +17,7 @@ Proof should be easy to find later, not rebuilt from memory.
 Pack to survive ordinary transit:
 - protect delicate surfaces
 - seal against moisture
-- avoid overstuffing thin mailers
+- use appropriately sized mailers for the item volume
 - match packaging to item shape and value
 
 Good packing is part of trust, not an afterthought.
@@ -51,4 +51,4 @@ Escalate carefully when:
 - the received item allegedly differs from documented details
 - the conversation pushes for off-platform settlement
 
-Never delete proof while an issue is open.
+Retain all proof until the issue is fully closed.

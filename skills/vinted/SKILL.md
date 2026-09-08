@@ -1,35 +1,35 @@
 ---
 name: vinted
-slug: vinted
-version: 1.0.0
-description: Buy and resell on Vinted with listing systems, price discipline, shipping workflows, and trust-first handling for offers, bundles, and disputes.
-homepage: https://clawic.com/skills/vinted
-changelog: Initial release with end-to-end Vinted workflows for buying, selling, shipping, bundles, and account-safe dispute handling.
+description: Buy and resell on Vinted with listing systems, price discipline, shipping workflows, and trust-first handling for offers, bundles, and disputes. Use when sourcing pieces, checking fair price, writing listings, managing offers, packing sold items, or resolving shipping and dispute issues.
 metadata:
-  clawdbot:
-    emoji: 👗
-    requires:
-      bins: []
-      config:
-      - ~/Clawic/data/vinted/
-    os:
-    - darwin
-    - linux
-    - win32
-    displayName: Vinted
+  openclaw: '{"emoji":"👗"}'
+  related-skills: '{"sell":"Cross-platform personal-item selling when the user is not locked to Vinted.","buy":"General purchase research and deal checks outside Vinted sourcing.","pricing":"Margin-safe pricing frameworks when the question leaves marketplace comps.","shipping":"Carrier selection and exception depth beyond Vinted labels.","etsy":"Handmade or vintage listing work on Etsy instead of Vinted.","ebay":"Auction or broader marketplace listing work on eBay.","facebook-marketplace":"Local pickup selling outside Vinted shipping flows.","negotiate":"High-stakes offer negotiation once floor and stop rules exist.","ecommerce":"Full-funnel store operations beyond one resale marketplace."}'
 ---
 
 ## When to Use
 
-User needs practical Vinted help in real time: sourcing pieces, checking whether a price is fair, writing a listing, managing offers, packing sold items, or resolving shipping and dispute issues.
-Use this skill when the output must feel like a fashion resale marketplace operator, not a generic ecommerce assistant.
+Use this skill for practical Vinted help in real time: sourcing pieces, checking whether a price is fair, writing a listing, managing offers, packing sold items, or resolving shipping and dispute issues.
 
-## Architecture
+The output should feel like a fashion resale marketplace operator, not a generic ecommerce assistant.
 
-Memory lives in `~/Clawic/data/vinted/`. If `~/Clawic/data/vinted/` does not exist, run `setup.md`. See `memory-template.md` for baseline structure.
+**Route elsewhere when:**
+- the user is selling across platforms without a Vinted lock-in → `sell`
+- the question is general purchase research → `buy`
+- pricing leaves marketplace comps into SaaS/margin design → `pricing`
+- carrier or customs depth exceeds Vinted labels → `shipping`
+
+## State location
+
+Before reading or writing state, resolve `<state_root>` once:
+
+1. Use an explicitly configured path from the user or host.
+2. Otherwise use the first existing directory among `<workspace>/vinted/`, `<workspace>/memory/vinted/`, and `~/vinted-workspace/`.
+3. If none exists and persistent notes would help, ask permission, create `<workspace>/vinted/`, and use it as `<state_root>`.
+
+Memory lives in `<state_root>/vinted/` (or the resolved root itself when the directory already ends with `vinted`). If the selected path does not exist, run `references/setup.md`. See `references/memory-template.md` for baseline structure.
 
 ```text
-~/Clawic/data/vinted/
+<state_root>/vinted/
 |-- memory.md                # Core profile, goals, and operating preferences
 |-- closet.md                # Active inventory, condition notes, and stale-item status
 |-- sourcing-log.md          # Buyer watchlist, target prices, and buy/no-buy decisions
@@ -39,98 +39,51 @@ Memory lives in `~/Clawic/data/vinted/`. If `~/Clawic/data/vinted/` does not exi
 `-- pro-notes.md             # Business-mode rules, batching, and service standards
 ```
 
-## Quick Reference
+Keep payment details, login secrets, and identity documents out of local files.
 
-Load only the file needed for the current bottleneck.
-
-| Topic | File |
-|-------|------|
-| Setup guide | `setup.md` |
-| Memory structure and status model | `memory-template.md` |
-| Buyer-side search and decision flow | `buyer-flow.md` |
-| Closet cleanup and seller operations | `closet-ops.md` |
-| Listing copy, photos, and conversion diagnostics | `listing-lab.md` |
-| Pricing, offers, bundles, and visibility spend | `pricing-and-bundles.md` |
-| Shipping, parcel proof, and claim handling | `shipping-and-claims.md` |
-| Account safety, authenticity, and scam prevention | `trust-and-safety.md` |
-| Business-mode operating standards | `pro-ops.md` |
-| Daily, weekly, and monthly cadence | `operations-rhythm.md` |
-
-## Operating Coverage
+## Architecture
 
 This skill combines three layers in one execution model:
+
 - buyer layer: search, compare, negotiate, and decide with risk and total-cost awareness
 - seller layer: intake, pricing, listing quality, offers, bundles, shipping, and recovery of stale inventory
 - systems layer: memory, review rhythm, and optional Pro-grade operating standards for repeatable resale work
 
-## Data Storage
+## Quick Reference
 
-Local notes in `~/Clawic/data/vinted/` may include:
-- usage profile, preferred brands, sizing constraints, and budget limits
-- closet inventory, price floors, stale-item rules, and bundle policy
-- sourcing outcomes, failed purchases, and fraud red flags worth reusing
-- parcel proof, issue timelines, and business-mode service standards
+Load only the file needed for the current bottleneck.
 
-## Core Rules
+| Topic | File | When to load |
+|-------|------|--------------|
+| Core Rules | `references/core-rules.md` | When reviewing fundamental principles |
+| Vinted Traps | `references/vinted-traps.md` | When troubleshooting low performance |
+| Setup guide | `references/setup.md` | When initializing the workspace |
+| Memory structure and status model | `references/memory-template.md` | When reading or updating local status |
+| Buyer-side search and decision flow | `references/buyer-flow.md` | When sourcing or deciding to buy |
+| Closet cleanup and seller operations | `references/closet-ops.md` | When auditing active inventory |
+| Listing copy, photos, and conversion diagnostics | `references/listing-lab.md` | When creating or optimizing a listing |
+| Pricing, offers, bundles, and visibility spend | `references/pricing-and-bundles.md` | When setting prices or managing offers |
+| Shipping, parcel proof, and claim handling | `references/shipping-and-claims.md` | When packing items or handling disputes |
+| Account safety, authenticity, and scam prevention | `references/trust-and-safety.md` | When encountering suspicious activity |
+| Business-mode operating standards | `references/pro-ops.md` | When operating as a high-volume seller |
+| Daily, weekly, and monthly cadence | `references/operations-rhythm.md` | When performing regular account reviews |
 
-### 1. Lock the Operating Mode First
-Start each session by identifying the active mode:
-- buyer
-- casual seller
-- pro or high-volume reseller
+## Core workflow
 
-Advice that ignores the mode usually misprices the tradeoff between speed, margin, and effort.
-
-### 2. Price From Sell-Through Reality, Not Wishful Comps
-Use comparable sold or clearly moving listings, item condition, seasonality, and brand demand to set a realistic range.
-Do not anchor on the highest visible listing if it has weak sell-through evidence.
-
-### 3. Upgrade the Listing Package Before Cutting Price
-Fix the full conversion stack before recommending markdowns:
-- cover photo and lighting
-- title clarity and search words
-- condition honesty and measurements
-- bundle logic and shipping readiness
-
-Weak listings make even fair prices look expensive.
-
-### 4. Use Offers, Bundles, and Visibility Tools With Explicit Floors
-Set a floor price, a bundle discount policy, and a stop rule before accepting offers or paying for extra visibility.
-Never use bumps or spotlight-style tools to rescue a listing that still has unclear photos, fit, or condition.
-
-### 5. Treat Shipping Proof as Part of the Product
-For every sold item, preserve the evidence chain:
-- final item photos
-- packaging photos
-- label or drop-off proof
-- timeline notes when anything goes wrong
-
-Good proof turns many disputes from opinion into documentation.
-
-### 6. Keep Money, Shipping, and Messaging Inside Platform Rules
-Reject flows that move payment, labels, or dispute handling off the marketplace when platform protection matters.
-Convenience is not worth fraud exposure or account risk.
-
-### 7. Review Inventory and Incidents on a Rhythm
-Run short daily checks for exceptions and a weekly review for pricing, stale stock, bundle uptake, and dispute patterns.
-Without cadence, closets get noisy and repeated mistakes compound.
-
-## Vinted Traps
-
-- Pricing from dream comps instead of realistic sell-through signals -> items sit, then need deep discounts.
-- Accepting off-platform payment or courier stories -> fraud risk rises immediately.
-- Posting weak photos with premium pricing -> low trust and constant lowball offers.
-- Shipping without timestamped evidence -> weak position when parcels are lost, damaged, or disputed.
-- Paying for extra visibility on low-quality listings -> spend increases while conversion stays weak.
-- Mixing casual-declutter logic with business inventory logic -> inconsistent response times and poor margin control.
+1. **Lock mode** — identify buyer, casual seller, or pro/high-volume reseller before giving advice.
+2. **Diagnose bottleneck** — sourcing, pricing, listing quality, offers/bundles, shipping, or disputes.
+3. **Load one reference** — open only the file that matches the bottleneck.
+4. **Decide with floors** — set price floors, bundle policy, and stop rules before accepting offers or paying for visibility.
+5. **Act with approval** — draft listings, offer replies, packing checklists, and dispute packets freely; get explicit confirmation before irreversible marketplace actions.
 
 ## External Endpoints
 
-Only these endpoints are allowed for this skill; block any non-listed domain unless user explicitly approves it.
+Only these endpoints are allowed for this skill; block any non-listed domain unless the user explicitly approves it.
 
 | Endpoint | Data Sent | Purpose |
 |----------|-----------|---------|
 | https://www.vinted.com | user-approved search queries, listing drafts, offer flows, messages, shipping steps, and issue handling actions | Marketplace buying, selling, bundles, labels, and disputes |
+| https://www.vinted.com/help | user-approved help lookups | Live policy and process verification |
 | https://pro-portal.svc.vinted.com | user-approved catalog and account actions for accounts with Vinted Pro access | Business-mode onboarding and operational workflows |
 
 No other data is sent externally.
@@ -138,40 +91,27 @@ No other data is sent externally.
 ## Security & Privacy
 
 Data that leaves your machine:
+
 - none by default from this instruction set
 - only user-approved Vinted traffic when the user requests live buying, selling, shipping, or Pro operations
 
 Data that stays local:
-- context and operating memory under `~/Clawic/data/vinted/`
+
+- context and operating memory under the resolved `<state_root>`
 - closet notes, sourcing decisions, parcel proof logs, and issue history
 
-This skill does NOT:
-- ask for sign-in details, card data, or identity documents in plain text
-- move payments or shipping flows off platform
-- execute irreversible marketplace actions without explicit confirmation
-- make hidden outbound requests
+Operational boundaries:
+
+- keep money, shipping labels, and dispute handling inside platform-protected flows
+- store proof chains for sold parcels until issues are fully closed
+- label availability, fees, authenticity, and dispute outcomes as unconfirmed until current evidence verifies them
+- request explicit confirmation before irreversible marketplace actions
 
 ## Scope
 
-This skill ONLY:
+This skill:
+
 - structures end-to-end Vinted buying and resale workflows
 - converts ambiguous marketplace tasks into clear next actions, guardrails, and review dates
 - keeps continuity through local memory and focused operating playbooks
-
-This skill NEVER:
-- guarantees sale speed, resale margin, or search exposure
-- invent item condition, brand authenticity, or shipping events
-- recommends policy evasion or off-platform workarounds
-
-## Related Skills
-More Clawic skills, get them at https://clawic.com/skills/<slug> (install if the user confirms):
-- `ecommerce` - Build full-funnel commerce systems beyond one marketplace.
-- `buy` - Improve purchase decisions with practical buyer-side execution patterns.
-- `sell` - Strengthen second-hand selling workflows and negotiation discipline.
-- `pricing` - Run margin-safe pricing, discount, and offer frameworks.
-- `market-research` - Validate demand, price ranges, and competitor positioning before scaling.
-
-## Feedback
-
-- If useful, star it: https://clawic.com/skills/vinted
-- Latest version: https://clawic.com/skills/vinted
+- reports sale speed, margin, exposure, condition, authenticity, and shipping events only from verified inputs

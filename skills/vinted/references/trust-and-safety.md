@@ -25,9 +25,9 @@ Low friction for the other person usually means high risk for the user.
 ## Account Safety Rules
 
 - Keep all high-risk negotiation inside platform messaging.
-- Do not promise what the listing does not prove.
-- Do not hide damage, missing parts, or uncertain fit.
-- Do not continue with buyers who repeat scam patterns.
+- Promise only what the listing clearly proves.
+- Disclose all damage, missing parts, and uncertain fit details.
+- Cease communication with buyers demonstrating repeated scam patterns.
 
 ## Business and Policy Boundaries
 

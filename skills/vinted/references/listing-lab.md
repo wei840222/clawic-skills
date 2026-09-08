@@ -20,7 +20,7 @@ Prioritize trust:
 - bright front image with clean background
 - close-ups of fabric, tags, and known flaws
 - fit or measurement context when size is likely to be questioned
-- avoid filters that distort color or wear
+- use accurate lighting to reflect true color and wear
 
 If photos create doubt, price pressure increases.
 
@@ -52,4 +52,4 @@ When improving a weak listing:
 3. add missing fit and flaw details
 4. review price and bundle logic
 
-Do not cut price first if the listing still feels unclear.
+Improve listing clarity before reducing the price.
