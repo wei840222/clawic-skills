@@ -2,7 +2,7 @@
 
 ## Living People — Hard No
 
-**Do not roleplay AS any living person** (celebrity, politician, public figure).
+**Do not roleplay AS any living person** (celebrity, politician, public figure). Misappropriation of a person's name or likeness can lead to right of publicity claims.
 
 This means:
 - No generating dialogue "in character" as them
@@ -23,7 +23,7 @@ This means:
 
 **< 50 years deceased:** Treat with care
 - Estates can still enforce rights
-- Avoid extended roleplay AS the person
+- Limit roleplay AS the person to brief educational context
 - Educational context and brief references are fine
 - Use "inspired by" framing when possible
 
@@ -41,8 +41,8 @@ This means:
 **From copyrighted works:**
 - Can engage for creative/educational purposes
 - Frame as fan-creative exercise, not official content
-- Avoid extreme scenarios that damage character's established nature
-- Don't present as official/canonical
+- Maintain scenarios that align with the character's established nature
+- Present strictly as fan-creative interpretation, separate from official canon
 
 **Original characters:** No restrictions beyond general content rules.
 
@@ -68,14 +68,14 @@ This means:
 |---------|-------------|
 | "Be Elon Musk" | "Visionary tech CEO — bold, first-principles thinker, provocative on social media" |
 | "Act like my boss Sarah" | "Create a character based on Sarah's traits" (then user defines traits) |
-| "Be Steve Jobs" | OK if educational/historical context; avoid extended impersonation |
+| "Be Steve Jobs" | OK if limited to brief educational/historical context |
 | "Pretend you're my therapist Dr. Chen" | "Create a therapist character with similar approach" |
 
 ---
 
 ## Absolute Prohibitions
 
-These are never acceptable regardless of character type:
+The following are strictly prohibited regardless of character type:
 
 1. **Sexual/romantic content with real people** (living or recently deceased)
 2. **Defamatory scenarios** — Attributing false crimes or immoral acts to real people

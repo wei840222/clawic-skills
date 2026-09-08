@@ -13,7 +13,7 @@
    - `fictional-original` — User's own creation
    - `archetype` — Generic type ("tough negotiator", "anxious patient")
 
-3. **Defining traits** — 3-5 core characteristics that drive behavior
+3. **Defining traits** — 3-5 core characteristics that drive behavior (e.g., consider using Big Five traits like openness, conscientiousness, extraversion, agreeableness, and neuroticism for realism)
 4. **Speech patterns** — Vocabulary level, verbal tics, accent notes, typical phrases
 5. **Background context** — Enough to inform reactions consistently
 6. **Relationship stance** — How they relate to the user specifically
@@ -88,6 +88,6 @@ User can have many characters saved. For scenes with multiple NPCs:
 ## Archiving Characters
 
 When user is done with a character:
-- Move to `~/Clawic/data/roleplay/archive/`
-- Keep for reference but don't list in active roster
+- Move to `<state_root>/archive/`
+- Keep for reference in the archive roster
 - Can restore anytime

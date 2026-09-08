@@ -1,77 +1,45 @@
 ---
 name: roleplay
-slug: roleplay
-version: 1.0.0
-description: Create persistent characters, run practice scenarios, and track progress across roleplay sessions with activation control and structured feedback.
-homepage: https://clawic.com/skills/roleplay
+description: Run persistent fictional-character roleplay and structured practice scenarios with activation, coaching, and feedback. Use when a user asks to create or activate a character, rehearse a professional conversation, replay a scene, or receive roleplay feedback.
 metadata:
-  clawdbot:
-    emoji: 🎭
-    displayName: Roleplay
+  version: "1.0.0"
+  openclaw: '{"emoji":"🎭"}'
 ---
 
-## Workspace
+## State location
 
-Store all roleplay data in ~/Clawic/data/roleplay/:
-- **characters/** — Character profiles (one file per character)
-- **scenarios/** — Saved scenario templates
-- **sessions/** — Session logs and feedback
-- **active** — Currently active character marker (if any)
+Before the first state operation, resolve one `<state_root>`:
 
----
+1. Use an explicitly configured state root when supplied by the user or host.
+2. Otherwise use the first existing directory in this order: `<workspace>/roleplay/`, `<workspace>/memory/roleplay/`, then `~/roleplay/`.
+3. If none exists and the user wants persistent roleplay data, create `<workspace>/roleplay/`.
 
-## Activation Control
+Keep the selected root for the invocation. When more than one candidate exists, use only the highest-precedence directory and tell the user; do not merge or synchronize copies.
 
-**Activate character:** User says "activate [name]" → load character profile → all responses embody this persona until deactivated.
+State under `<state_root>/`:
+- `characters/` — character profiles; create when a character is saved.
+- `scenarios/` — saved scenario templates; create when the user saves one.
+- `sessions/` — session logs and feedback; create when the user asks to retain them.
+- `active` — active-character marker; create only when activation must persist across sessions.
 
-**Deactivate:** User says "deactivate" or "normal mode" → save session notes → return to default agent behavior.
+## Core workflow
 
-**Quick check:** Read the active character file at session start to restore any active persona from previous session.
+1. Confirm the requested character or scenario and whether the user wants state saved.
+2. For a real-person request, load `references/safeguards.md` before creating dialogue or a profile.
+3. Resolve `<state_root>` before reading or writing any saved roleplay data.
+4. Load the applicable reference from the router, then establish the character, scenario stakes, and desired difficulty.
+5. During an active scene, keep the agreed character boundaries and track material turns. On `pause` or `coach me`, give coaching; on `deactivate`, `normal mode`, or an explicit end, return to normal behavior and save only consented notes.
 
----
+## Situation router
 
-## Situation Router
+| When to load | Resource |
+| --- | --- |
+| Create, edit, archive, or activate a character | `references/characters.md` |
+| Practice medical, business, coaching, creative, or game scenarios | `references/scenarios.md` |
+| Pause, replay, drills, difficulty changes, or post-session feedback | `references/practice.md` |
+| Roleplay involving a living, deceased, or fictional real-world identity | `references/safeguards.md` |
+| Review progress, recurring patterns, or workspace hygiene | `references/feedback.md` |
 
-| User Intent | Load Reference |
-|-------------|----------------|
-| Create/edit a character | `characters.md` |
-| Practice professional scenarios (medical, business, therapy) | `scenarios.md` |
-| Get mid-session coaching or feedback | `practice.md` |
-| Questions about real people, names, ethics | `safeguards.md` |
-| Review what's working, track improvement | `feedback.md` |
+## Character profile
 
----
-
-## Character Structure
-
-Minimum character profile:
-
-**Name** — Character name or archetype label
-**Type** — mentor, patient, client, historical, fictional-original, or archetype
-**Core traits** — 3-5 defining characteristics
-**Speech patterns** — vocabulary, phrases, verbal tics
-**Background** — brief context
-**Relationship with user** — how they interact with user specifically
-**Session Memory** — updated after each roleplay session
-
----
-
-## During Active Roleplay
-
-1. **Stay in character** unless user says "pause" or "coach me"
-2. **Track session context** — what happened, emotional beats, user's approach
-3. **Inject curveballs** when appropriate — realistic complications, emotional moments
-4. **On pause:** Step out of character, offer coaching, suggest alternatives
-5. **On end:** Update character's session memory, generate brief feedback
-
----
-
-## Creating New Characters
-
-Ask for:
-1. Character type (archetype, historical, original, based-on-real)
-2. Core traits and speaking style
-3. Relationship dynamic with user
-4. Context/scenario they exist in
-
-For "based on real person" requests → see `safeguards.md` for name/persona rules.
+A saved profile includes a name or archetype, type, 3–5 core traits, speech patterns, background, relationship stance, behavioral tendencies, and session memory. Use `references/characters.md` for the full structure.

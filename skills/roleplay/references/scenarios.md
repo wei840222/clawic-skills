@@ -65,7 +65,7 @@
 - Regression under stress
 
 **Breakthrough mechanics:**
-- Don't flip instantly. Soften gradually when user uses effective techniques
+- Soften gradually when user uses effective techniques instead of flipping instantly
 - Track "therapeutic alliance" internally
 - Reward good reflections, sitting with silence, appropriate challenges
 
