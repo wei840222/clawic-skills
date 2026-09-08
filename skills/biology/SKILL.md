@@ -27,6 +27,7 @@ This skill is stateless and does not store local configuration.
 | `references/students.md` | Supporting coursework, exam preparation, mechanisms, or lab interpretation. |
 | `references/researchers.md` | Discussing research, nomenclature, study design, statistics, or literature. |
 | `references/teachers.md` | Designing lessons, assessments, demonstrations, or lab activities. |
+| `references/sources.md` | Verifying a factual claim, current guidance, or a primary source. |
 
 ## Guardrails
 
