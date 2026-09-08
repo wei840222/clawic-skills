@@ -1,58 +1,30 @@
 ---
 name: writer
-slug: writer
-version: 1.0.2
-description: Fix AI writing patterns that create repetitive and robotic content
-homepage: https://clawic.com/skills/writer
+description: Improve drafted prose by diagnosing robotic AI writing patterns and revising for concrete, natural, audience-appropriate writing. Use when drafting, rewriting, editing, or reviewing emails, articles, reports, product copy, or summaries for clearer human-sounding prose.
 metadata:
-  clawdbot:
-    emoji: ✍️
-    displayName: Writer
+  version: "1.0.2"
+  openclaw: '{"emoji":"✍️"}'
 ---
 
-# AI Writing Pattern Fixes
+# Writer
 
-## Paragraph Opener Trap
-Scan first word of each paragraph - if 3+ start with "This/The/It" = robotic
-Vary with: "Meanwhile", "Consider", "Beyond that", action verbs, specific nouns
-Lead with action: "Marketing increased" not "The marketing team increased"
+Improve a draft without changing its intended facts, audience, or decision. First identify the few patterns that make the text sound generic; then revise and verify the result.
 
-## Rhythm Monotony Trap
-Avoid same sentence length patterns - mix 5-word punches with 20-word flows
-Use strategic fragments. For emphasis. For pace breaks.
-Read aloud test: monotone rhythm = boring
+## Workflow
 
-## Vague Claim Trap
-Replace adjectives with numbers: "significant growth" → "40% growth"
-Swap evaluations for evidence: "impressive results" → "cut response time from 3s to 300ms"
-Delete weasel words: somewhat, fairly, quite, rather, slightly
+1. Identify the audience, purpose, and non-negotiable facts. If any are missing, preserve the draft's stated intent and avoid inventing details.
+2. Read `references/writing-traps.md` before editing. Use its checks to find only the patterns present in the draft.
+3. Revise with concrete subjects and verbs, varied sentence rhythm, and connected prose where relationships matter. Keep terminology consistent with the audience.
+4. Compare the revision with the draft. Preserve claims, numbers, commitments, and the requested format; flag any claim that cannot be substantiated rather than fabricating precision.
+5. Return the revised text followed by a short note naming the material improvements when the user asked for an explanation or review.
 
-## List Overuse Trap
-Use prose when explaining relationships or building arguments
-Use bullets only for instructions, features, options
-Flow test: if bullets feel choppy, try connected sentences
+## Boundaries
 
-## Parallel Structure Breaks
-Match verb forms: "hiking, swimming, reading" not "hiking, swimming, to read"
-Match sentence patterns: "codes fast, debugs thoroughly, ships daily"
-Keep same grammatical structure in lists
+- Preserve the author's voice when it is identifiable; improve clarity and rhythm rather than replacing it with a house style.
+- Keep factual claims supported by the supplied material. Mark unsupported superlatives, metrics, and causal claims for confirmation.
+- Retain useful lists for procedures, options, and scannable requirements. Turn a list into prose only when the relationships between ideas need explanation.
+- Match the requested level of formality and regional spelling unless the user asks for a different style.
 
-## Transition Word Crutches
-Avoid: Furthermore, Moreover, Additionally, In conclusion
-Use echo technique: end paragraph with concept X, start next with concept X
-Pick up last idea and expand naturally
+## References
 
-## Voice Drift in Long Documents
-Tone drift check: mark every 200 words - same person speaking?
-Pick 3-5 key phrases and use consistently throughout
-Don't switch from beginner-friendly to expert jargon mid-document
-
-## Word Economy Traps
-Cut phrases: "in order to" → "to", "due to the fact that" → "because"
-One verb wins: "make improvement" → "improve", "conduct investigation" → "investigate"
-80% rule: can you say it in 80% of words? Do it.
-
-## Nominalization Trap
-Use verbs not nouns: "implementation of" → "implement"
-Action over abstraction: "decision-making process" → "decide"
-Zombie noun test: -tion, -ment, -ness endings often hide better verbs
+- Read `references/writing-traps.md` for diagnostic checks, revision techniques, examples, and a final self-review pass.

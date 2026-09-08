@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "prompt": "Rewrite this project update for an executive audience without changing its facts: 'This is a significant improvement. The team made an improvement to onboarding. Furthermore, the results were impressive.' Facts: activation increased from 42% to 58% after the onboarding flow was simplified.",
+    "expected": "A concise executive update that preserves the 42% to 58% activation result, uses concrete verbs, and avoids generic praise and heavy transitions.",
+    "actual": "Simplifying the onboarding flow raised activation from 42% to 58%. The result gives the team a clearer baseline for the next release.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "Edit this customer email for a warm, direct tone while retaining its commitments: 'We are writing to inform you that we will conduct an investigation. Additionally, a response will be provided by Friday.'",
+    "expected": "A short customer-facing rewrite with active voice, a clear Friday commitment, and no invented details.",
+    "actual": "We're investigating the issue and will update you by Friday.",
+    "pass": true
+  },
+  {
+    "id": 3,
+    "prompt": "Review this release note and flag unsupported claims instead of inventing evidence: 'Our dramatically faster export is the best in the industry.' The only supplied fact is that median export time fell from 30 seconds to 18 seconds.",
+    "expected": "A revision that uses the supplied 30-to-18-second result and flags or removes the unsupported industry-leading claim.",
+    "actual": "Median export time fell from 30 seconds to 18 seconds. The supplied information does not support an industry-leading claim.",
+    "pass": true
+  }
+]
