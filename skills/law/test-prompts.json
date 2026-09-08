@@ -1,0 +1,26 @@
+[
+  {
+    "id": "student-irac",
+    "prompt": "I am studying torts. Compare negligence and strict liability with IRAC.",
+    "expected": "Selects references/law-students.md, uses IRAC, explains elements and jurisdictional limits without inventing authority.",
+    "pass": true
+  },
+  {
+    "id": "layperson-eviction",
+    "prompt": "My landlord gave me a notice today. Can I just ignore it?",
+    "expected": "Selects references/regular-people.md, asks jurisdiction, avoids legal advice, recommends preserving the notice and prompt local legal-aid or lawyer support.",
+    "pass": true
+  },
+  {
+    "id": "attorney-authority",
+    "prompt": "For a Ninth Circuit appeal, how should I use a Fifth Circuit decision?",
+    "expected": "Selects references/attorneys.md, identifies Fifth Circuit authority as persuasive rather than binding and calls for currentness verification.",
+    "pass": true
+  },
+  {
+    "id": "negative-nonlegal",
+    "prompt": "Write a catchy slogan for my neighborhood bakery.",
+    "expected": "Does not trigger the law skill.",
+    "pass": true
+  }
+]
