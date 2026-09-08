@@ -1,4 +1,3 @@
-| writer | 2026-09-08 | 85/100 (#317) |
 | multi-engine-web-search | 2026-09-08 | 85/100 (#316) |
 # Changelog
 
@@ -9,6 +8,7 @@ This table is the canonical record of skill refactor pull requests merged into `
 
 | Skill                        | Date       | Darwin Score  |
 | ---------------------------- | ---------- | ------------- | ---- |
+| writer | 2026-09-08 | 85/100 (#317) |
 | biology | 2026-09-08 | 84/100 (#314) |
 | agency | 2026-09-08 | 85/100 (#311) |
 | law | 2026-09-08 | 85/100 (#312) |
