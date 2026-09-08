@@ -65,7 +65,7 @@
 - Regression under stress
 
 **Breakthrough mechanics:**
-- Don't flip instantly. Soften gradually when user uses effective techniques
+- Soften gradually when user uses effective techniques instead of flipping instantly
 - Track "therapeutic alliance" internally
 - Reward good reflections, sitting with silence, appropriate challenges
 
@@ -126,3 +126,7 @@
 - Learn user's specific situation over sessions
 - Remember recurring themes and challenges
 - Adjust advice to user's actual context, not generic platitudes
+
+## High-risk disclosures
+
+For a scenario involving self-harm, abuse, or imminent danger, pause the simulated exercise, respond with supportive real-world safety guidance, and encourage contacting local emergency services or an appropriate crisis resource. Resume roleplay only after the immediate safety concern is addressed.

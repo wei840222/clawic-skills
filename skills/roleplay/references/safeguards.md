@@ -1,13 +1,10 @@
 # Persona Safety Rules
 
-## Living People — Hard No
+## Living people — use an archetype
 
-**Do not roleplay AS any living person** (celebrity, politician, public figure).
+For a request involving a living person (celebrity, politician, or public figure), create a clearly distinct archetype rather than dialogue in that person's voice or a profile using their identity. This avoids misappropriation, false endorsement, and defamation risk.
 
-This means:
-- No generating dialogue "in character" as them
-- No attributing opinions or actions to them
-- No creating scenarios where they appear to say/do things
+Keep the scene focused on the requested traits rather than attributed opinions or actions.
 
 **What's allowed:**
 - Discussing their public views and known positions
@@ -23,7 +20,7 @@ This means:
 
 **< 50 years deceased:** Treat with care
 - Estates can still enforce rights
-- Avoid extended roleplay AS the person
+- Limit roleplay AS the person to brief educational context
 - Educational context and brief references are fine
 - Use "inspired by" framing when possible
 
@@ -41,8 +38,8 @@ This means:
 **From copyrighted works:**
 - Can engage for creative/educational purposes
 - Frame as fan-creative exercise, not official content
-- Avoid extreme scenarios that damage character's established nature
-- Don't present as official/canonical
+- Maintain scenarios that align with the character's established nature
+- Present strictly as fan-creative interpretation, separate from official canon
 
 **Original characters:** No restrictions beyond general content rules.
 
@@ -68,20 +65,14 @@ This means:
 |---------|-------------|
 | "Be Elon Musk" | "Visionary tech CEO — bold, first-principles thinker, provocative on social media" |
 | "Act like my boss Sarah" | "Create a character based on Sarah's traits" (then user defines traits) |
-| "Be Steve Jobs" | OK if educational/historical context; avoid extended impersonation |
+| "Be Steve Jobs" | OK if limited to brief educational/historical context |
 | "Pretend you're my therapist Dr. Chen" | "Create a therapist character with similar approach" |
 
 ---
 
-## Absolute Prohibitions
+## Safety boundaries
 
-These are never acceptable regardless of character type:
-
-1. **Sexual/romantic content with real people** (living or recently deceased)
-2. **Defamatory scenarios** — Attributing false crimes or immoral acts to real people
-3. **Harassment roleplay** — Scenarios involving stalking/harassing real individuals
-4. **Fraud facilitation** — Impersonation for deception
-5. **False statements as fact** — Presenting fiction as real quotes/events
+Use fictional, consented, and clearly framed scenarios. For real people, use an archetype or a brief educational discussion instead of sexual or romantic scenes, defamatory allegations, harassment, deceptive impersonation, or invented statements presented as fact.
 
 ---
 
@@ -95,3 +86,11 @@ These are never acceptable regardless of character type:
 
 **For "inspired by" characters:**
 > This character is an archetype inspired by public figures, not a direct representation of any individual.
+
+## Research sources
+
+Use these primary sources when a request raises a current policy or safety question:
+
+- Right of publicity overview: https://www.law.cornell.edu/wex/right_of_publicity
+- U.S. Copyright Office, fair use index: https://www.copyright.gov/fair-use/
+- U.S. Copyright Office, publicity and privacy resources: https://www.copyright.gov/help/faq/faq-protect.html

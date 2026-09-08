@@ -2,6 +2,7 @@
 
 ## Merged Skill Refactors
 
+| roleplay | 2026-09-08 | 84/100 (#315) |
 This table is the canonical record of skill refactor pull requests merged into `main`. It is used by the refactor workflow and automation when selecting the next skill.
 
 | Skill                        | Date       | Darwin Score  |

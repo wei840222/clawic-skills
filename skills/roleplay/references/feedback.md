@@ -47,7 +47,7 @@ Over multiple sessions, build understanding of:
 **When user corrects character:**
 1. Accept the correction in-session
 2. Update character file with the correction
-3. Don't repeat the corrected behavior
+3. Adopt the corrected behavior going forward
 
 **When user adjusts scenario:**
 1. Note the adjustment
