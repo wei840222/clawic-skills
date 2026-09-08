@@ -55,7 +55,7 @@ arpeggiated leads, and punchy drums at 128 BPM
 ## Instrument Specification
 
 **Be specific:**
-- ❌ "with guitar"
+- Use specific descriptors: "with guitar" -> "with clean electric guitar arpeggios"
 - ✅ "with clean electric guitar arpeggios"
 - ✅ "with distorted power chords"
 - ✅ "with fingerpicked acoustic guitar"
