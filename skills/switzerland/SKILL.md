@@ -97,15 +97,15 @@ Output should include:
 - Weather downgrade options
 - Safety, payment, and emergency notes
 
-## Common Traps
+## Best Practices for Routing
 
-- Treating Switzerland like a small country that can be "done" in a few rail hops.
-- Mixing Zurich, Lucerne, Jungfrau, Zermatt, St. Moritz, Lake Geneva, and Ticino into one short trip.
-- Booking a car before checking whether SBB plus one local bus or boat solves the route better.
-- Assuming the mountain weather shown in marketing photos is the weather the user will get.
-- Building scenic-train days as if they were quick transfers instead of full-day experiences.
-- Underestimating how hard peak summer and ski-season hotel pricing hits famous alpine bases.
-- Assuming EU roaming, EU customs, and euro pricing rules apply automatically in Switzerland.
+- Ensure reasonable pacing, as Switzerland has high transfer friction.
+- Focus on one or two dominant regions for short trips to avoid excessive transit.
+- Verify if SBB (trains/buses/boats) solves the route better before booking a car.
+- Verify current weather and season conditions, as mountain visibility varies heavily.
+- Schedule scenic trains as full-day experiences rather than quick transfers.
+- Account for severe peak summer and ski-season hotel pricing in famous alpine bases.
+- Apply specific Swiss rules for roaming, customs, and CHF pricing instead of EU defaults.
 
 ## Security & Privacy
 

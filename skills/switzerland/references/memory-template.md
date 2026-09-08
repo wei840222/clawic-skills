@@ -30,7 +30,7 @@
 
 ## Constraints
 - Must-see places:
-- Must-avoid:
+- Must-prioritize alternatives to:
 - Border hops:
 - Driving comfort:
 - Luggage volume:
