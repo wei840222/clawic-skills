@@ -95,3 +95,11 @@ The following are strictly prohibited regardless of character type:
 
 **For "inspired by" characters:**
 > This character is an archetype inspired by public figures, not a direct representation of any individual.
+
+## Research sources
+
+Use these primary sources when a request raises a current policy or safety question:
+
+- Right of publicity overview: https://www.law.cornell.edu/wex/right_of_publicity
+- U.S. Copyright Office, fair use index: https://www.copyright.gov/fair-use/
+- U.S. Copyright Office, publicity and privacy resources: https://www.copyright.gov/help/faq/faq-protect.html
