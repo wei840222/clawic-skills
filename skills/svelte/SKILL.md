@@ -1,34 +1,18 @@
 ---
 name: svelte
-slug: svelte
-version: 1.0.2
-description: 'Builds, debugs, and reviews Svelte and SvelteKit apps: runes, stores, snippets, load functions, form actions, adapters. Use when the UI does not update after a state change, an effect loops forever ("effect_update_depth_exceeded"), props or bindings stop reacting, a Map or class field is not tracked, state leaks between users on the server, "window is not defined" breaks the build, markup mismatches on hydration, data stays stale after a mutation, a form action does nothing or returns 403, scoped CSS is pruned as an unused selector, transitions never fire, or a Node, Vercel, Cloudflare, or static adapter build fails. Also for migrating Svelte 4 to Svelte 5 runes, converting export let to $props, $: to $derived, createEventDispatcher to callback props, slots to snippets and on:click to onclick, typing props and route data in TypeScript, testing components with Vitest or Playwright, and cutting bundle size and rerender cost. Not for Vue or Nuxt, React, or plain browser JavaScript semantics.'
-homepage: https://clawic.com/skills/svelte
-changelog: Display name shown correctly
+description: 'Builds, debugs, and reviews Svelte and SvelteKit apps: runes, stores, load functions, form actions. Use when the UI does not update after a state change, an effect loops forever, props or bindings stop reacting, or state leaks between users on the server. Not for Vue or Nuxt.'
 metadata:
-  clawdbot:
-    emoji: 🔥
-    requires:
-      bins:
-      - node
-    os:
-    - linux
-    - darwin
-    - win32
-    displayName: Svelte
-    configPaths:
-    - ~/Clawic/data/svelte/
-    - ~/svelte/
-    - ~/clawic/svelte/
-  openclaw:
-    requires:
-      config:
-      - ~/Clawic/data/svelte/
-      - ~/svelte/
-      - ~/clawic/svelte/
+  related-skills:
+    - skills/typescript
+    - skills/vite
+    - skills/playwright
+    - skills/tailwindcss
+    - skills/nodejs
+  version: '1.0.2'
+  openclaw: '{"emoji": "🔥", "requires": {"bins": ["node"], "config": ["<state_root>/svelte/"]}}'
 ---
 
-User preferences and memory live in `~/Clawic/data/svelte/` (see `setup.md` on first use, `memory-template.md` for the file format). If you have data at an old location (`~/svelte/` or `~/clawic/svelte/`), move it to `~/Clawic/data/svelte/`, and say in one line that you moved it and from where.
+User preferences and memory live in `<state_root>/svelte/` (see `references/setup.md` on first use, `references/memory-template.md` for the file format). If you have data at an old location (`~/svelte/`, `~/clawic/svelte/`, or `~/Clawic/data/svelte/`), move it to `<state_root>/svelte/`, and say in one line that you moved it and from where.
 
 ## When To Use
 
@@ -43,25 +27,25 @@ User preferences and memory live in `~/Clawic/data/svelte/` (see `setup.md` on f
 
 | Situation | Play |
 |-----------|------|
-| UI does not update after a change | Is the variable `$state`? Destructured? A `Map`/`Set`/class instance? → Reactivity Model table, then `debug.md` |
+| UI does not update after a change | Is the variable `$state`? Destructured? A `Map`/`Set`/class instance? → Reactivity Model table, then `references/debug.md` |
 | `effect_update_depth_exceeded` | An effect writes state it also reads — convert to `$derived`, or `untrack()` the read (rule 2) |
 | Value computed from other state | `$derived` / `$derived.by`; never `$effect` + assignment (rule 2) |
-| Deep dive on `$state`, `$derived`, `$effect`, `$props` | `runes.md` |
-| Shared state across files, context, legacy stores | `stores.md` |
-| Snippets, bindings, callback props, attachments, wrapping an imperative library | `components.md` |
-| Scoped CSS not applying, unused-selector warning, transitions, motion | `styling.md` |
-| Typing props, snippets, route data, `app.d.ts` | `typescript.md` |
-| Symptom-first debugging and the error-code catalog | `debug.md` |
-| Svelte 4 → 5: `export let`, `$:`, slots, `on:click`, `new Component()` | `migration.md` |
-| Routes, layouts, groups, param matchers, navigation, shallow routing | `routing.md` |
-| `load`, `invalidate`, streaming, `depends`, serialization | `data-loading.md` |
-| Form actions, `use:enhance`, validation, uploads, remote functions | `forms.md` |
-| `window is not defined`, hydration mismatch, per-request state, env vars | `ssr.md` |
-| Login, sessions, cookies, route guards, roles, CSRF, XSS, CSP, leaked secrets | `security.md` |
-| Bundle size, slow lists, rerender cost, preloading | `performance.md` |
-| Vitest, component tests, mocking `$app/*`, Playwright, `svelte-check` | `testing.md` |
-| Adapters, prerendering, CSP, service workers, self-hosting | `deployment.md` |
-| Packaging components for npm, custom elements, library API design | `library.md` |
+| Deep dive on `$state`, `$derived`, `$effect`, `$props` | `references/runes.md` |
+| Shared state across files, context, legacy stores | `references/stores.md` |
+| Snippets, bindings, callback props, attachments, wrapping an imperative library | `references/components.md` |
+| Scoped CSS not applying, unused-selector warning, transitions, motion | `references/styling.md` |
+| Typing props, snippets, route data, `app.d.ts` | `references/typescript.md` |
+| Symptom-first debugging and the error-code catalog | `references/debug.md` |
+| Svelte 4 → 5: `export let`, `$:`, slots, `on:click`, `new Component()` | `references/migration.md` |
+| Routes, layouts, groups, param matchers, navigation, shallow routing | `references/routing.md` |
+| `load`, `invalidate`, streaming, `depends`, serialization | `references/data-loading.md` |
+| Form actions, `use:enhance`, validation, uploads, remote functions | `references/forms.md` |
+| `window is not defined`, hydration mismatch, per-request state, env vars | `references/ssr.md` |
+| Login, sessions, cookies, route guards, roles, CSRF, XSS, CSP, leaked secrets | `references/security.md` |
+| Bundle size, slow lists, rerender cost, preloading | `references/performance.md` |
+| Vitest, component tests, mocking `$app/*`, Playwright, `svelte-check` | `references/testing.md` |
+| Adapters, prerendering, CSP, service workers, self-hosting | `references/deployment.md` |
+| Packaging components for npm, custom elements, library API design | `references/library.md` |
 | Anything else | Apply Core Rules; reproduce in a single component with no props before blaming the framework |
 
 ## Core Rules
@@ -129,7 +113,7 @@ Order per request: `handle` hook → server loads (`+layout.server.js`, then `+p
 | `rune_outside_svelte` | A rune used in a `.js`/`.ts` file | Rename the file to `.svelte.js` / `.svelte.ts` |
 | `lifecycle_outside_component` | `onMount`, `setContext`, or `getContext` called after an `await` or inside a callback | Call synchronously during component initialization |
 | `derived_references_self` | A `$derived` reads its own value | Compute from source state, or keep the accumulator in `$state` |
-| `each_key_duplicate` | Two items produced the same key | Key by a unique id; never by index or by a repeated value |
+| `each_key_duplicate` | Two items produced the same key | Key by a unique id; always key by a unique id |
 | `bind_invalid_export` / binding error | `bind:` to a prop the child did not declare bindable | `let { value = $bindable() } = $props()` |
 | `ownership_invalid_mutation` (dev warning) | A child mutated an object owned by its parent | `$bindable()` or a callback prop |
 | `css_unused_selector` (warning) | Selector matches nothing in this component's own markup | `:global(...)`, or move the rule into the child component |
@@ -138,7 +122,7 @@ Order per request: `handle` hook → server loads (`+layout.server.js`, then `+p
 
 ## Configuration
 
-User-dependent variables. Defaults apply until the user states a preference; store them in `~/Clawic/data/svelte/config.yaml`.
+User-dependent variables. Defaults apply until the user states a preference; store them in `<state_root>/svelte/config.yaml`.
 
 | Variable | Type | Default | Effect |
 |---|---|---|---|
@@ -167,14 +151,14 @@ Preference areas to record as the user reveals them:
 
 Before emitting a component or route, verify:
 
-- Every mutable value declared with `$state`; no bare `let` expected to rerender?
+- Every mutable value declared with `$state`; verify mutable values are `$state`
 - Every computed value a `$derived`, with `$effect` reserved for DOM, network, storage, or third-party libraries?
 - Every `{#each}` over reorderable data keyed by a stable id?
 - No secret, database client, or `$env/static/private` import reachable from `+page.svelte` or `+page.js`?
 - Mutations expressed as a form action that still works with JavaScript disabled?
 - Browser APIs only inside `$effect`/`onMount` or behind a `browser` check?
-- Per-request data in `event.locals` or context — never a module-level variable?
-- One syntax mode per file: no `export let` or `$:` in a file that uses runes?
+- Per-request data in `event.locals` or context — always `event.locals` or context?
+- One syntax mode per file: keep syntax mode consistent: use either runes or legacy syntax per file?
 
 ## Traps
 
@@ -203,16 +187,9 @@ Before emitting a component or route, verify:
 - **Validation libraries in form actions.** Hand-rolled checks are fine for one to three fields. Once you need repopulating on failure, nested data, arrays, or multi-step wizards, a schema library plus a form helper stops the per-field boilerplate from drifting out of sync with the server.
 
 ## Related Skills
-More Clawic skills, get them at https://clawic.com/skills/svelte (install if the user confirms):
+More related skills:
 - `typescript` — type-system depth beyond the Svelte-specific typings
 - `vite` — dev server, plugins, and build configuration under SvelteKit
 - `playwright` — end-to-end testing of the running app
 - `tailwindcss` — utility styling inside Svelte components
 - `nodejs` — running and hardening the `adapter-node` server
-
-## Feedback
-
-- If useful, star it: https://clawic.com/skills/svelte
-- Latest version: https://clawic.com/skills/svelte
-
-Part of [Clawic](https://clawic.com), the verified skill library. Get this skill: https://clawic.com/skills/svelte.

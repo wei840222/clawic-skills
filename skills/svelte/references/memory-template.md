@@ -1,6 +1,6 @@
 # Memory Template — Svelte
 
-Create `~/Clawic/data/svelte/memory.md` with this structure:
+Create `<state_root>/svelte/memory.md` with this structure:
 
 ```markdown
 # Svelte Memory
