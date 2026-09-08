@@ -1,6 +1,6 @@
 # Memory Template - Real Estate Investing
 
-Create these files inside `~/Clawic/data/real-estate-investing/`.
+Create these files inside the resolved `<state_root>/`.
 
 ## `memory.md`
 
