@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "prompt": "Create a new service account named 'web-app' that will run a backend process. The account should not be able to log in interactively and should not have a home directory.",
+    "expected": "Uses 'useradd' or 'adduser' with the '--system' flag or equivalent options ('-s /bin/false' and '-M') to create the account as specified in the User Management reference.",
+    "actual": "I will create the system account by running `useradd --system web-app`. This ensures the account is created without a home directory and without a login shell.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "A critical service running under systemd is stuck, and I need to stop it immediately because it's causing data corruption. What commands should I run?",
+    "expected": "Initially attempts 'systemctl stop', then uses SIGTERM first, and only uses SIGKILL (9) as a last resort, according to Process Management rules.",
+    "actual": "First, I will try stopping the service gracefully using `systemctl stop <service>`. If it's completely unresponsive, I will find its PID using `systemctl status <service>` or `pgrep <service>`. Then, I will send a SIGTERM signal: `kill -15 <PID>`. If it still doesn't terminate, I will use SIGKILL as a last resort: `kill -9 <PID>`.",
+    "pass": true
+  },
+  {
+    "id": 3,
+    "prompt": "We need to allow developers to read a log file at /var/log/app/app.log, but only the application should write to it. Currently it's owned by appuser:appuser with 600 permissions.",
+    "expected": "Changes group ownership to a developer group or uses setfacl to grant read access, adhering to Permissions and Security rules without making it world-readable.",
+    "actual": "I will change the group ownership to a group the developers belong to (e.g., 'devs') and adjust permissions to 640 using `chgrp devs /var/log/app/app.log` and `chmod 640 /var/log/app/app.log`. Alternatively, if a specific ACL is needed, I'll use `setfacl -m g:devs:r /var/log/app/app.log`.",
+    "pass": true
+  }
+]
