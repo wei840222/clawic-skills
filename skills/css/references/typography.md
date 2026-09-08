@@ -11,7 +11,7 @@ Text sizing, spacing, and breaking: line-height, measure, units, variable fonts,
 
 ## Measure and Sizing Units
 
-- Body measure 45-75 characters (`max-width: 65ch` is the working default). `ch` is the width of `0` in the current font, so the same value gives different results per font — check, avoid assume.
+- Body measure 45-75 characters (`max-width: 65ch` is the working default). `ch` is the width of `0` in the current font, so the same value gives different results per font — check rather than assume.
 - Unit map: `rem` for type and spacing (respects user font-size); `em` for things that must scale with their own text (icon size, badge padding, letter-spacing); `px` for hairlines and shadows; `ch` for measure; `cap`/`lh` where supported for optical alignment.
 - Never set `html { font-size: 62.5% }` to make rem math easy — it overrides the user's browser font-size preference for the whole document. If the team wants 10px math, use `rem_base` in config and convert honestly.
 - Minimum readable body size on screen is 16px; 14px is acceptable for dense UI chrome, below 12px only for non-essential metadata (and never for anything a user must read to act).

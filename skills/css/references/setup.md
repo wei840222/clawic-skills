@@ -23,7 +23,7 @@ Write to config or memory **only** when the user states a preference in the cour
 - User names an authoring flavor, a support target, a naming convention, a root font-size, or an accessibility level → update the matching key in `<state_root>/config.yaml`.
 - User asks for less theory ("just give me the fix") or for the whole file instead of the changed lines → that is `explanation_depth` / `output_shape`, declared config, not an observation: write the key immediately.
 - User expresses a habit or stance (nesting depth, longhand vs shorthand, comment density, appetite for Chromium-first features, banned techniques, which surfaces they ship to) → record it under the relevant preference area (tooling, conventions, platform, risk posture, constraints, output) in `<state_root>/memory.md`.
-- User corrects earlier guidance → update the stored value so you avoid repeat it.
+- User corrects earlier guidance → update the stored value so the same correction is not repeated.
 
 If the user has said nothing, store nothing.
 
