@@ -1,27 +1,14 @@
 ---
 name: real-estate-investing
-slug: real-estate-investing
-version: 1.0.0
-description: Analyze real estate investments with conservative underwriting, financing stress tests, diligence gates, and exit planning.
-homepage: https://clawic.com/skills/real-estate-investing
-changelog: Initial release with underwriting, market screening, diligence, financing, and portfolio operations playbooks.
+description: Evaluate buy-and-hold, BRRRR, flip, and value-add real estate investments with conservative underwriting, debt stress tests, and diligence gates. Use when choosing or comparing investment properties.
 metadata:
-  clawdbot:
-    emoji: 🏘️
-    requires:
-      bins: []
-    os:
-    - linux
-    - darwin
-    - win32
-    configPaths:
-    - ~/Clawic/data/real-estate-investing/
-    displayName: Real Estate Investing
-  openclaw:
-    requires:
-      config:
-      - ~/Clawic/data/real-estate-investing/
+  openclaw: '{"emoji":"🏘️"}'
+  related-skills: '{"home-buying":"Routes owner-occupant or mixed-use decisions outside an investment-led analysis.","invest":"Compares property returns with broader capital-allocation choices.","property-valuation":"Tests a property’s market value and comp-driven price against the investment thesis.","real-estate-skill":"Handles broader property transactions, including buying, selling, and agent workflows.","rental":"Covers tenant-landlord operations and leasing details outside core investment analysis."}'
 ---
+
+## State location
+
+State may exist in `<workspace>/real-estate-investing/`, `<workspace>/memory/real-estate-investing/`, or `~/real-estate-investing/`. Before any state operation, use an explicitly configured path when available; otherwise select the first existing directory in that order. If none exists and persistent state is needed, create `<workspace>/real-estate-investing/`. Use the selected `<state_root>` consistently for this invocation; if multiple candidates exist, use only the highest-precedence directory and report the conflict.
 
 ## When to Use
 
@@ -31,10 +18,10 @@ Agent handles strategy selection, return targets, deal triage, underwriting, fin
 
 ## Architecture
 
-Memory lives in `~/Clawic/data/real-estate-investing/`. If `~/Clawic/data/real-estate-investing/` does not exist, run `setup.md`. See `memory-template.md` for the baseline structures.
+Memory lives in `<state_root>/`. If `<state_root>/` does not exist, run `references/setup.md`. See `references/memory-template.md` for the baseline structures.
 
 ```text
-~/Clawic/data/real-estate-investing/
+<state_root>/
 ├── memory.md         # Strategy, guardrails, and active priorities
 ├── pipeline.md       # Deals under review with current stage and blockers
 ├── markets.md        # Market notes, rent assumptions, and local risks
@@ -44,17 +31,18 @@ Memory lives in `~/Clawic/data/real-estate-investing/`. If `~/Clawic/data/real-e
 
 ## Quick Reference
 
-| Topic | File | Use it for |
-|-------|------|------------|
-| First-run activation | `setup.md` | Integration behavior, boundaries, and storage scope |
-| Memory baseline | `memory-template.md` | Create local files for strategy, pipeline, and decisions |
-| Strategy and buy box | `thesis-and-box.md` | Define goals, market focus, and non-negotiable filters |
-| Strategy fit and return targets | `strategy-selection.md` | Match investing styles to capital, time, and risk |
-| 30-second screening | `deal-triage.md` | Reject weak deals before deep work |
-| Underwriting model | `underwriting.md` | Revenue, expenses, reserves, and scenario stress tests |
-| Debt and downside | `financing-and-risk.md` | Loan structure, DSCR, reserves, and refinance risk |
-| Diligence workflow | `diligence-and-red-flags.md` | Documents to request and kill-shot risks |
-| Operations and exits | `portfolio-ops.md` | Management, capex planning, and sell-or-hold triggers |
+| Topic | File | Use it for | When to load |
+|-------|------|------------|--------------|
+| Execution rules, loops, and traps | `references/execution-rules.md` | Core rules, deal loops, and traps to avoid | When executing a deal analysis |
+| First-run activation | `references/setup.md` | Consent-aware activation and state setup | When the user wants recurring deal tracking |
+| Memory baseline | `references/memory-template.md` | Initialize state files and data semantics | When creating persistent state |
+| Strategy and buy box | `references/thesis-and-box.md` | Define goals, market focus, and non-negotiable filters | During specific task execution |
+| Strategy fit and return targets | `references/strategy-selection.md` | Match investing styles to capital, time, and risk | During specific task execution |
+| 30-second screening | `references/deal-triage.md` | Reject weak deals before deep work | During specific task execution |
+| Underwriting model | `references/underwriting.md` | Revenue, expenses, reserves, and scenario stress tests | During specific task execution |
+| Debt and downside | `references/financing-and-risk.md` | Loan structure, DSCR, reserves, and refinance risk | During specific task execution |
+| Diligence workflow | `references/diligence-and-red-flags.md` | Documents to request and kill-shot risks | During specific task execution |
+| Operations and exits | `references/portfolio-ops.md` | Management, capex planning, and sell-or-hold triggers | During specific task execution |
 
 ## Requirements
 
@@ -67,75 +55,12 @@ Memory lives in `~/Clawic/data/real-estate-investing/`. If `~/Clawic/data/real-e
 This skill is for investment decisions, not broad real-estate generalism.
 
 - Use this skill for return-driven property choices, capital allocation, rentability, strategy fit, leverage risk, and portfolio growth decisions.
-- Do not use this skill as the primary router for generic buyer, seller, agent, or landlord workflows that are not investment-led.
+- Route requests for generic buyer, seller, agent, or landlord workflows that are not investment-led.
 - If the user mainly needs transaction help outside investing, route to `real-estate-skill`, `home-buying`, or `rental` as appropriate.
-
-## Deal Loop
-
-Use this order unless the user explicitly wants a narrower question answered:
-
-1. Lock thesis and buy box.
-2. Match the strategy to capital, time, and operational reality.
-3. Run 30-second triage.
-4. Underwrite with conservative assumptions.
-5. Stress debt, timeline, vacancy, and capex.
-6. Sequence diligence around the biggest ways the deal can die.
-7. Check operational fit and exit routes before recommending action.
-
-## Core Rules
-
-### 1. Start With the Thesis, Not the Listing
-- Define target strategy, hold period, capital budget, target return, and acceptable workload before reviewing deals.
-- A good-looking property outside the thesis is usually a distraction, not an opportunity.
-
-### 2. Choose the Right Strategy Before Chasing Yield
-- Match the deal shape to the real strategy: buy-and-hold, value-add, BRRRR, flip, house hack, or short-term rental.
-- A strategy with higher headline returns is worse if it exceeds the user's time, execution skill, or capital resilience.
-
-### 3. Kill Weak Deals Early
-- Use `deal-triage.md` before any full underwriting pass.
-- Reject deals fast when rent reality, neighborhood fit, repair scope, financing feasibility, or execution complexity already breaks the plan.
-
-### 4. Underwrite to Reality, Not Broker Story
-- Use in-place rent, market rent, vacancy, repairs, management, taxes, insurance, utilities, turnover, and capital reserves explicitly.
-- Every optimistic assumption needs a downside case beside it.
-
-### 5. Read the Full Return Stack
-- Judge rentability and profitability through NOI, cap rate, cash-on-cash, DSCR, break-even occupancy, equity creation, and exit optionality together.
-- A deal is not "profitable" just because one metric looks great.
-
-### 6. Stress the Debt Before Trusting the Return
-- Test break-even occupancy, DSCR, rate shocks, delayed refinance, slower lease-up, and higher rehab cost.
-- If the deal only works under easy debt, it does not really work.
-
-### 7. Match Strategy to Operations
-- Favor strategies the user can actually operate: tenant quality, contractor depth, management bandwidth, market distance, and legal complexity matter as much as purchase price.
-- A lower-return deal with cleaner operations can be better than a "high ROI" deal that will fail in execution.
-
-### 8. Treat Diligence as Risk Pricing
-- Convert every unknown into one of four outcomes: verify, renegotiate, reserve for it, or walk.
-- Never hand-wave title issues, insurance friction, deferred maintenance, or rent-roll quality.
-
-### 9. Decide With a Written Kill-Switch
-- Before recommending "buy," state what would make the answer become "no."
-- Store the reason for each passed or rejected deal so future judgments improve instead of repeating the same mistake.
-
-## Real-Estate-Investing Traps
-
-| Trap | Why It Fails | Better Move |
-|------|--------------|-------------|
-| Using pro forma rents as fact | Return targets look safe when they are not | Anchor to proven in-place rent and verified market comps |
-| Underestimating capex | Cash flow looks healthy until the first major repair | Separate maintenance, turnover, and true capital expense reserves |
-| Calling any positive cash flow "rentable" | Thin margins hide vacancy, delinquency, and management drag | Test DSCR, break-even occupancy, and reserves before calling a rental healthy |
-| Treating cash-on-cash as the only metric | Leverage can fake a great return on a weak asset | Read DSCR, break-even occupancy, debt terms, and exit risk together |
-| Buying outside operational competence | Distance and vendor weakness destroy execution | Match asset type and market to actual operating capacity |
-| Assuming refinance is guaranteed | BRRRR math breaks when rates, value, or DSCR move | Model delayed or failed refinance before acquisition |
-| Ignoring taxes, insurance, and regulation drift | "Stable" deals can reprice overnight | Track reassessment risk, insurance availability, and local restrictions |
-| Falling in love with one deal | Emotion overrides guardrails and exceptions stack up | Compare every deal against the thesis and recent rejects |
 
 ## Data Storage
 
-Local state lives in `~/Clawic/data/real-estate-investing/`:
+Local state lives in `<state_root>/`:
 
 - the local strategy memory file for buy box and recurring guardrails
 - the local pipeline file for active deals and blockers
@@ -146,12 +71,12 @@ Local state lives in `~/Clawic/data/real-estate-investing/`:
 ## Security & Privacy
 
 **Data that stays local:**
-- strategy preferences, underwriting assumptions, market notes, and decision logs in `~/Clawic/data/real-estate-investing/`
+- strategy preferences, underwriting assumptions, market notes, and decision logs in `<state_root>/`
 
 **Data that leaves your machine:**
-- none by default
+- None by default. Always ask for explicit permission before sending data out.
 
-**This skill does NOT:**
+**Restricted actions (route elsewhere):**
 - place offers, sign contracts, or move money
 - claim jurisdiction-specific legal or tax certainty without source material
 - submit lender or insurance applications automatically
@@ -166,22 +91,8 @@ This skill ONLY:
 - keeps local memory about strategy, markets, and deal outcomes
 - improves decisions through explicit assumptions, stress tests, and post-mortems
 
-This skill NEVER:
+Restricted actions (route elsewhere):
 - act as a generic buyer, seller, or agent assistant
 - guarantee returns
 - replace licensed legal, tax, insurance, or lending advice
 - recommend a deal without stating key assumptions and failure points
-
-## Related Skills
-More Clawic skills, get them at https://clawic.com/skills/<slug> (install if the user confirms):
-
-- `property-valuation` - Estimate market value and compare comp-driven pricing against the investment thesis.
-- `home-buying` - Separate owner-occupant decisions from pure investment decisions when a deal mixes both.
-- `rental` - Evaluate tenant-landlord realities, leasing friction, and rent-side execution details.
-- `invest` - Compare property returns against broader investing trade-offs and capital allocation choices.
-- `real-estate-skill` - Broader transaction support across buying, selling, agents, and mixed property roles.
-
-## Feedback
-
-- If useful, star it: https://clawic.com/skills/real-estate-investing
-- Latest version: https://clawic.com/skills/real-estate-investing
