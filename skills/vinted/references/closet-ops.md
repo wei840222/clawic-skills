@@ -10,7 +10,7 @@ Before listing, normalize the item:
 3. decide if the item should be sold, bundled, or skipped
 4. set an ask range and a floor before publishing
 
-If the item fails honesty or margin checks, do not list it.
+If the item fails honesty or margin checks, discard or donate it instead of listing.
 
 ## Draft in Batches
 
@@ -26,7 +26,7 @@ Mixed batching creates inconsistent quality and missed defects.
 
 Reply with the same standard every time:
 - answer fit and condition questions directly
-- avoid emotional price defense
+- apply objective price adjustments based on market data
 - confirm what is included in the parcel
 - move weak leads to a clear yes or no quickly
 
@@ -40,7 +40,7 @@ Once sold:
 3. pack cleanly and save proof
 4. log shipment state and watch for exceptions
 
-Do not improvise after the item is sold.
+Follow the established shipping procedure immediately after the item is sold.
 
 ## Stale Inventory Recovery
 

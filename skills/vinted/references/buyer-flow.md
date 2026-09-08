@@ -1,6 +1,6 @@
 # Buyer Flow - Vinted
 
-Use this workflow when the user wants to buy on Vinted without overpaying or walking into avoidable risk.
+Use this workflow when the user wants to buy on Vinted while ensuring fair pricing and identifying safe transactions.
 
 ## 1. Lock the Buy Screen
 
@@ -18,7 +18,7 @@ Filter aggressively:
 - honest condition wording and visible flaws
 - seller profile that does not feel inconsistent with the item
 
-Do not compare ten weak listings. Reduce to three solid finalists.
+Filter the selection to a maximum of three solid finalists for comparison.
 
 ## 3. Check Total Cost, Not Ask Price
 
@@ -37,7 +37,7 @@ Use three lanes:
 - send offer if the listing is good but leaves margin to negotiate
 - watch if the listing is acceptable but incomplete or overpriced
 
-Avoid automatic lowballing. Tie the offer to real condition or market logic.
+Base offers on demonstrable condition flaws or clear market logic.
 
 ## 5. Bundle Only When Fit and Condition Are Aligned
 
@@ -47,7 +47,7 @@ Bundle buying works best when:
 - same category or use case
 - photos and condition quality are consistent across pieces
 
-Do not force bundles just to chase small savings.
+Create bundles only when items genuinely complement each other and provide clear value.
 
 ## Output Template
 

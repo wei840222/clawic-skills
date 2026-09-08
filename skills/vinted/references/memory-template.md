@@ -1,6 +1,6 @@
 # Memory Template - Vinted
 
-Create `~/Clawic/data/vinted/memory.md` with this structure:
+Create `<state_root>/vinted/memory.md` (or `<state_root>/memory.md` when the root already ends with `vinted`) with this structure:
 
 ```markdown
 # Vinted Memory
@@ -36,7 +36,7 @@ integration: pending | done | declined
 
 ## closet.md Template
 
-Create `~/Clawic/data/vinted/closet.md`:
+Create `<state_root>/vinted/closet.md`:
 
 ```markdown
 # Closet
@@ -58,7 +58,7 @@ Create `~/Clawic/data/vinted/closet.md`:
 
 ## sourcing-log.md Template
 
-Create `~/Clawic/data/vinted/sourcing-log.md`:
+Create `<state_root>/vinted/sourcing-log.md`:
 
 ```markdown
 # Sourcing Log
@@ -74,7 +74,7 @@ reason:
 
 ## shipping-log.md Template
 
-Create `~/Clawic/data/vinted/shipping-log.md`:
+Create `<state_root>/vinted/shipping-log.md`:
 
 ```markdown
 # Shipping Log
@@ -94,4 +94,4 @@ next_step:
 | `ongoing` | Default state | Keep learning stable marketplace context |
 | `complete` | Context is stable | Reuse defaults unless the user changes direction |
 | `paused` | User wants lower overhead | Save only critical updates |
-| `never_ask` | User opted out of persistence | Operate statelessly |
+| `skip_asking` | User opted out of persistence | Operate statelessly |

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "closet-setup",
+    "prompt": "I want to start selling my old clothes on Vinted. What should I do first?",
+    "expected": "Lock seller mode, resolve portable state_root, load references/setup.md, ask permission before creating memory files, and start with profile plus bottleneck capture.",
+    "actual": "dry-run: workflow identifies casual-seller mode, resolves <state_root>, loads setup guidance, requests persistence consent, and captures category/size/shipping constraints before listing advice. Structural Darwin dry-run: pass.",
+    "pass": true
+  },
+  {
+    "id": "dispute-proof-chain",
+    "prompt": "A buyer claimed the t-shirt I sent them was damaged and opened a dispute. I know it was perfect when I sent it.",
+    "expected": "Load shipping-and-claims.md and trust-and-safety.md, require proof chain (final item, packaging, drop-off), keep the case on-platform, and draft a support packet without off-platform settlement.",
+    "actual": "dry-run: dispute branch loads shipping and trust references, requests final-item and packaging proof, keeps messaging inside Vinted, and drafts an evidence packet pending user confirmation. Structural Darwin dry-run: pass.",
+    "pass": true
+  },
+  {
+    "id": "price-before-markdown",
+    "prompt": "My jacket has sat for three weeks. Should I just drop the price a lot?",
+    "expected": "Load core-rules and listing-lab or pricing-and-bundles, upgrade listing package before deep markdown, set floor/stop rules, and avoid dream-comp anchoring.",
+    "actual": "dry-run: workflow checks photos/title/condition first, then sets a realistic floor from sell-through comps before any visibility spend or steep cut. Structural Darwin dry-run: pass.",
+    "pass": true
+  }
+]

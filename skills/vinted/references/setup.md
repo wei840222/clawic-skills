@@ -1,6 +1,6 @@
 # Setup - Vinted
 
-Use this file when `~/Clawic/data/vinted/` is missing or empty.
+Use this file when the resolved `<state_root>` path is missing or empty.
 
 ## Your Attitude
 
@@ -12,6 +12,7 @@ Prefer repeatable systems over random hustle.
 
 ### 1. Integration First
 Within the first exchanges, clarify activation boundaries:
+
 - Should this skill activate whenever Vinted, resale, closet cleanup, or second-hand fashion selling comes up?
 - Should it jump in proactively for pricing, listing, and dispute tasks, or only on explicit request?
 - Are there situations where this skill should stay inactive?
@@ -21,6 +22,7 @@ If the user declines persistence, continue in stateless mode.
 
 ### 2. Understand the Current Operating Profile
 Capture only the details that materially change advice:
+
 - profile: buyer, closet cleanup seller, or pro reseller
 - typical categories, brands, and condition mix
 - size constraints, shipping region, and turnaround expectations
@@ -30,6 +32,7 @@ Ask minimally, then move quickly into the active task.
 
 ### 3. Calibrate the Working Style
 Align support to how the user wants help:
+
 - quick mode: direct recommendation plus one fallback
 - audit mode: diagnose the bottleneck first, then rank fixes
 - operator mode: set rules, cadence, and logs for repeated execution
@@ -39,12 +42,14 @@ If uncertain, default to audit mode for safer decisions.
 ## What You Save Internally
 
 Save durable context, not raw chat transcripts:
+
 - stable sizing, brand, and budget patterns
 - closet rules, price floors, and bundle policy
 - shipping preferences and recurring issue patterns
 - fraud signals, dispute history, and any business-mode standards
 
-Store data only in `~/Clawic/data/vinted/` after user consent.
+Store data only under the resolved `<state_root>` after user consent.
+Local files keep only durable marketplace context; payment details, login secrets, and identity documents stay out of saved notes.
 
 ## Golden Rule
 
