@@ -1,205 +1,105 @@
 ---
 name: multi-engine-web-search
-slug: multi-engine-web-search
-version: 1.0.0
-description: Search Google, Bing, DuckDuckGo, Brave, Startpage, Yahoo, Yandex, Baidu, Sogou, Qwant, Ecosia, Mojeek, and WolframAlpha from one skill.
-homepage: https://clawic.com/skills/multi-engine-web-search
-changelog: Expanded engine coverage, added shortcut matrix, and improved operator examples for faster cross-check workflows.
+description: Search across global, regional, privacy-focused, and specialist engines to cross-check current facts, investigate conflicting claims, or find site-specific, time-filtered, academic, and developer sources. Use when one search index is insufficient or a decision needs independent evidence.
 metadata:
-  clawdbot:
-    emoji: W
-    requires:
-      bins: []
-    os:
-    - darwin
-    - linux
-    - win32
-    displayName: Multi-Engine Web Search
+  version: "1.0.0"
+  openclaw: '{"emoji":"W"}'
+  related-skills: '{"analysis":"Turn search findings into clear conclusions.","compare":"Compare options and trade-offs side by side.","web":"Inspect a selected page after discovery.","in-depth-research":"Expand discovery into a structured investigation.","elasticsearch":"Design or operate a custom search backend."}'
 ---
 
 ## Setup
 
-On first use, read `setup.md` to define activation behavior and preferred engine order, then store the preference profile.
+For a repeatable search profile, read `references/setup.md` on first use. Store only the selected activation mode, engine order, blocked engines, and output style in `<state_root>/memory.md`; use a user-approved local state directory such as `~/.local/share/multi-engine-web-search/`. Read `references/memory-template.md` when creating or updating that file.
 
-## When to Use
+## Workflow
 
-Use this when one engine is not enough and you need broader coverage, faster cross-checking, and cleaner verification.
+1. Read saved preferences when they exist; otherwise use a balanced three-engine pass.
+2. Form the primary query, then run it through one mainstream engine, one privacy-focused or alternate index, and one domain-appropriate specialist engine.
+3. For material claims, run a contradiction query that seeks corrections, limitations, or disagreement.
+4. Open the strongest primary or first-party sources, verify their publication and event dates, and separate confirmed facts from unresolved differences.
+5. Return a concise answer with the recommendation, direct evidence links, date context, and confidence.
 
-## Architecture
-
-Store minimal preferences in `~/Clawic/data/multi-engine-web-search/`. See `memory-template.md`.
-
-```text
-~/Clawic/data/multi-engine-web-search/
-`-- memory.md   # activation mode, engine priority, blocked engines, and output style
-```
-
-## Quick Reference
-
-| Topic | File |
-|-------|------|
-| Setup flow and activation policy | `setup.md` |
-| Minimal memory schema | `memory-template.md` |
+If an engine blocks automation, returns a challenge page, or has no useful result, record the limitation and substitute another engine from the same category. If results conflict, prioritize original documentation, direct announcements, primary datasets, or peer-reviewed work; explain the remaining conflict rather than treating repeated rewrites as independent confirmation.
 
 ## Search Engines
 
-### Global Engines (12)
-- **Google**: `https://www.google.com/search?q={keyword}`
-- **Google HK**: `https://www.google.com.hk/search?q={keyword}`
-- **Bing**: `https://www.bing.com/search?q={keyword}`
-- **Yahoo**: `https://search.yahoo.com/search?p={keyword}`
-- **DuckDuckGo**: `https://duckduckgo.com/html/?q={keyword}`
-- **Brave**: `https://search.brave.com/search?q={keyword}`
-- **Startpage**: `https://www.startpage.com/sp/search?query={keyword}`
-- **Qwant**: `https://www.qwant.com/?q={keyword}`
-- **Ecosia**: `https://www.ecosia.org/search?q={keyword}`
-- **Mojeek**: `https://www.mojeek.com/search?q={keyword}`
-- **Swisscows**: `https://swisscows.com/web?query={keyword}`
-- **AOL Search**: `https://search.aol.com/aol/search?q={keyword}`
+Use an engine appropriate to the query and the user's region. Replace `{keyword}` with URL-encoded query text.
 
-### Regional Engines (9)
-- **Baidu**: `https://www.baidu.com/s?wd={keyword}`
-- **Bing CN**: `https://cn.bing.com/search?q={keyword}&ensearch=0`
-- **Bing INT (CN endpoint)**: `https://cn.bing.com/search?q={keyword}&ensearch=1`
-- **Sogou**: `https://www.sogou.com/web?query={keyword}`
-- **360 Search**: `https://www.so.com/s?q={keyword}`
-- **Yandex**: `https://yandex.com/search/?text={keyword}`
-- **Naver**: `https://search.naver.com/search.naver?query={keyword}`
-- **Seznam**: `https://search.seznam.cz/?q={keyword}`
-- **CocCoc**: `https://coccoc.com/search?query={keyword}`
+### Global and privacy-focused engines
 
-### Knowledge and Developer Engines (6)
-- **WolframAlpha**: `https://www.wolframalpha.com/input?i={keyword}`
-- **Wikipedia**: `https://en.wikipedia.org/w/index.php?search={keyword}`
-- **GitHub Search**: `https://github.com/search?q={keyword}`
-- **Stack Overflow Search**: `https://stackoverflow.com/search?q={keyword}`
-- **Semantic Scholar**: `https://www.semanticscholar.org/search?q={keyword}`
-- **PubMed**: `https://pubmed.ncbi.nlm.nih.gov/?term={keyword}`
+| Engine | URL |
+|---|---|
+| Google | `https://www.google.com/search?q={keyword}` |
+| Google HK | `https://www.google.com.hk/search?q={keyword}` |
+| Bing | `https://www.bing.com/search?q={keyword}` |
+| Yahoo | `https://search.yahoo.com/search?p={keyword}` |
+| DuckDuckGo | `https://duckduckgo.com/html/?q={keyword}` |
+| Brave | `https://search.brave.com/search?q={keyword}` |
+| Startpage | `https://www.startpage.com/sp/search?query={keyword}` |
+| Qwant | `https://www.qwant.com/?q={keyword}` |
+| Ecosia | `https://www.ecosia.org/search?q={keyword}` |
+| Mojeek | `https://www.mojeek.com/search?q={keyword}` |
+| Swisscows | `https://swisscows.com/web?query={keyword}` |
+| AOL Search | `https://search.aol.com/aol/search?q={keyword}` |
 
-## Engine Shortcuts
+### Regional engines
 
-| Shortcut | Engine |
-|----------|--------|
-| `!g` | Google |
-| `!ghk` | Google HK |
-| `!b` | Bing |
-| `!y` | Yahoo |
-| `!ddg` | DuckDuckGo |
-| `!br` | Brave |
-| `!sp` | Startpage |
-| `!qw` | Qwant |
-| `!eco` | Ecosia |
-| `!mj` | Mojeek |
-| `!sw` | Swisscows |
-| `!aol` | AOL Search |
-| `!ba` | Baidu |
-| `!bcn` | Bing CN |
-| `!sg` | Sogou |
-| `!360` | 360 Search |
-| `!ydx` | Yandex |
-| `!nav` | Naver |
-| `!sz` | Seznam |
-| `!cc` | CocCoc |
-| `!wa` | WolframAlpha |
-| `!w` | Wikipedia |
-| `!gh` | GitHub Search |
-| `!so` | Stack Overflow |
-| `!ss` | Semantic Scholar |
-| `!pm` | PubMed |
+| Engine | URL |
+|---|---|
+| Baidu | `https://www.baidu.com/s?wd={keyword}` |
+| Bing CN | `https://cn.bing.com/search?q={keyword}&ensearch=0` |
+| Bing INT (CN endpoint) | `https://cn.bing.com/search?q={keyword}&ensearch=1` |
+| Sogou | `https://www.sogou.com/web?query={keyword}` |
+| 360 Search | `https://www.so.com/s?q={keyword}` |
+| Yandex | `https://yandex.com/search/?text={keyword}` |
+| Naver | `https://search.naver.com/search.naver?query={keyword}` |
+| Seznam | `https://search.seznam.cz/?q={keyword}` |
+| CocCoc | `https://coccoc.com/search?query={keyword}` |
 
-## Quick Examples
+### Knowledge and developer engines
+
+| Engine | URL |
+|---|---|
+| WolframAlpha | `https://www.wolframalpha.com/input?i={keyword}` |
+| Wikipedia | `https://en.wikipedia.org/w/index.php?search={keyword}` |
+| GitHub Search | `https://github.com/search?q={keyword}` |
+| Stack Overflow Search | `https://stackoverflow.com/search?q={keyword}` |
+| Semantic Scholar | `https://www.semanticscholar.org/search?q={keyword}` |
+| PubMed | `https://pubmed.ncbi.nlm.nih.gov/?term={keyword}` |
+
+## Query Patterns
+
+| Need | Pattern |
+|---|---|
+| Limit to one domain | `site:arxiv.org agentic ai` |
+| Find a format | `filetype:pdf model card` |
+| Match an exact phrase | `"context window"` |
+| Exclude a noisy term | `python -snake` |
+| Compare alternatives | `llama OR mistral` |
+| Search titles or URLs | `intitle:benchmark llm`, `inurl:docs authentication` |
+| Bound a date range | `ai act after:2025-01-01 before:2026-03-01` |
+| Google recent window | `tbs=qdr:h`, `tbs=qdr:d`, or `tbs=qdr:w` |
+
+## Examples
 
 ```javascript
-// 1) Basic multi-engine pass
+// Compare independent indexes for a current topic.
 web_fetch({"url": "https://www.google.com/search?q=llm+agent+framework"})
 web_fetch({"url": "https://duckduckgo.com/html/?q=llm+agent+framework"})
 web_fetch({"url": "https://search.brave.com/search?q=llm+agent+framework"})
 
-// 2) Site-specific verification
+// Verify a technical claim from its primary documentation.
 web_fetch({"url": "https://www.bing.com/search?q=site:github.com+fastapi+auth"})
-
-// 3) Filetype query
-web_fetch({"url": "https://www.google.com/search?q=rag+evaluation+filetype:pdf"})
-
-// 4) Recency-focused query
-web_fetch({"url": "https://www.google.com/search?q=ai+policy+2026&tbs=qdr:m"})
-
-// 5) Knowledge query
-web_fetch({"url": "https://www.wolframalpha.com/input?i=150+USD+to+EUR"})
 ```
 
-## Advanced Operators
+## Reference
 
-| Operator | Example | Purpose |
-|----------|---------|---------|
-| `site:` | `site:arxiv.org agentic ai` | Limit to one domain |
-| `filetype:` | `filetype:pdf model card` | Find specific formats |
-| `""` | `"context window"` | Exact phrase |
-| `-` | `python -snake` | Exclude noisy term |
-| `OR` | `llama OR mistral` | Alternative terms |
-| `intitle:` | `intitle:benchmark llm` | Keyword in page title |
-| `inurl:` | `inurl:docs authentication` | Keyword in URL |
+Read `references/sources.md` when validating query operators, date filters, or evidence-quality guidance.
 
-## Time Filters
+## Evidence Quality
 
-| Pattern | Example | Purpose |
-|---------|---------|---------|
-| `tbs=qdr:h` | Google past hour | Breaking updates |
-| `tbs=qdr:d` | Google past day | Daily changes |
-| `tbs=qdr:w` | Google past week | Weekly updates |
-| `before:` | `ai act before:2026-03-01` | Upper date bound |
-| `after:` | `ai act after:2025-01-01` | Lower date bound |
+Treat results as discovery leads, then verify them before relying on them. Count repeated syndicated articles as one evidence trail. For high-impact decisions, add a contradiction query and cite the primary material that resolves it. For rapidly changing topics, state both the source publication date and the event date when they differ.
 
-## Core Rules
+## External Data
 
-### 1. Check Preferences First
-Before searching, read memory preferences:
-- activation mode (always, on-request, or mixed)
-- preferred engine order
-- blocked engines
-- output style (fast summary or evidence-heavy)
-
-### 2. Always Use Multi-Engine Batches
-Run at least 3 engines per request: one mainstream, one privacy engine, and one alternate index.
-
-### 3. Add a Contradiction Query
-For every important claim, run one query that looks for disagreement, failures, or corrections.
-
-### 4. Prefer Primary Sources
-If sources conflict, prioritize original docs, direct announcements, and first-party datasets.
-
-### 5. Verify Date Context
-For current topics, verify publication date and event date before final conclusions.
-
-### 6. Return Evidence First
-Output must include direct answer, best links, and confidence in one concise block.
-
-## Common Traps
-
-- Using only one engine and assuming top results are correct.
-- Forgetting contradiction queries on high-impact decisions.
-- Treating copied news rewrites as independent confirmation.
-- Ignoring date filters for rapidly changing topics.
-- Returning link dumps without a clear recommendation.
-
-## External Endpoints
-
-| Endpoint Family | Data Sent | Purpose |
-|-----------------|-----------|---------|
-| Public search engines listed above | query text | Multi-engine retrieval and cross-checking |
-| Knowledge and developer engines listed above | query text | Technical, scientific, and code verification |
-
-No other data is sent externally.
-
-## Related Skills
-More Clawic skills, get them at https://clawic.com/skills/<slug> (install if the user confirms):
-- `analysis` - Turn search findings into clear conclusions
-- `compare` - Compare options side by side with tradeoffs
-- `web` - Inspect pages deeply after initial retrieval
-- `in-depth-research` - Expand into long-form investigations
-- `elasticsearch` - Build custom search backends when needed
-
-## Feedback
-
-- If useful, star it: https://clawic.com/skills/multi-engine-web-search
-- Latest version: https://clawic.com/skills/multi-engine-web-search
+Queries are sent to the selected public search engine or specialist endpoint. Use the minimum query text needed for the research task, and keep credentials, personal data, and private identifiers out of queries.

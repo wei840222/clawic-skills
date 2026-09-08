@@ -1,0 +1,4 @@
+[
+  {"id":1,"prompt":"Find current primary sources and independent reporting about the EU AI Act timeline.","expected":"Uses multiple indexes, prioritizes official EU sources, checks dates, and returns cited evidence with confidence.","actual":"Dry-run: the workflow selects mainstream, alternate, and official-source queries, verifies dates, and labels confidence.","pass":true},
+  {"id":2,"prompt":"Investigate competing claims about whether a four-day workweek improves productivity.","expected":"Runs a contradiction query, distinguishes independent evidence from rewrites, and explains unresolved disagreement.","actual":"Dry-run: the workflow includes a contradiction branch and evidence-quality rule before giving a conclusion.","pass":true}
+]
