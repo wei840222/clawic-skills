@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "Create an App Store screenshot plan for a fitness app. I have four raw iPhone captures, an app icon, and brand color #FF5733; save the project preferences.",
+    "expected": "The agent confirms target device classes and locales, resolves state before persistence, loads store specifications and a fitness template, then requests any missing assets or store details.",
+    "actual": "The agent resolves the screenshots state root before saving, reads references/specs.md and references/templates.md, identifies the selected App Store device classes and locales as required inputs, records the supplied brand color in config.md, and requests the raw captures plus any missing localization or App Store version details.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "Play Console rejected our tablet screenshots after we localized them into German. Keep the approved phone set unchanged and prepare the recovery plan.",
+    "expected": "The agent preserves the approved phone batch, reads the Google Play requirements, asks for the rejection message and target device class, then repairs and rechecks only the affected tablet assets.",
+    "actual": "The agent keeps the approved phone version intact, reads references/specs.md and references/text-style.md, asks for the Play Console rejection message and tablet target, checks German copy expansion and safe margins, then regenerates and validates only the tablet-localized set before a new approval/export version.",
+    "pass": true
+  }
+]
