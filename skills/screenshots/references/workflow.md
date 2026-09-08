@@ -4,8 +4,8 @@
 
 ### Create Project Folder
 ```
-mkdir -p ~/Clawic/data/screenshots/{app-slug}/raw
-cd ~/Clawic/data/screenshots/{app-slug}
+mkdir -p <state_root>/{app-slug}/raw
+cd <state_root>/{app-slug}
 ```
 
 ### Create Config
@@ -60,14 +60,14 @@ Write `config.md`:
 
 ### Process
 1. Start with highest resolution raw capture
-2. For each target size (per `specs.md`):
+2. For each target size (per `references/specs.md`):
    - Scale proportionally
    - Handle aspect ratio difference (letterbox or crop)
    - Verify text remains readable
 
 ### Output Structure
 ```
-~/Clawic/data/screenshots/{app-slug}/v1/
+<state_root>/{app-slug}/v1/
 ├── ios/
 │   ├── 6.7/
 │   │   ├── en/
@@ -86,13 +86,13 @@ Write `config.md`:
 ## Phase 4: Visual Polish
 
 ### Apply Template
-1. Select template from `templates.md` based on app category
+1. Select template from `references/templates.md` based on app category
 2. Create background using brand colors
 3. Add device frame if specified in config
 4. Position text overlays
 
 ### Add Marketing Elements
-1. Write headlines per `text-style.md`
+1. Write headlines per `references/text-style.md`
 2. Position in safe zones
 3. Ensure thumbnail readability
 

@@ -25,7 +25,7 @@ When user overrides agent judgment:
 
 ## Storage Format
 
-Update `~/Clawic/data/screenshots/learnings.md`:
+Update `<state_root>/learnings.md`:
 
 ```markdown
 # Screenshot Learnings
@@ -49,8 +49,8 @@ Update `~/Clawic/data/screenshots/learnings.md`:
 - User {name} prefers minimal/subtle backgrounds
 
 ## Device Frames
-- 2024+ use iPhone 15 Pro frames (no notch visible)
-- Frameless trending for productivity apps
+- Use a current frame that matches the selected store-device target.
+- Record approved frame choices by app category.
 
 ## Per-User Notes
 ### {user-name}
@@ -104,7 +104,7 @@ App store screenshot styles evolve:
 When patterns shift:
 1. Note new trend in learnings
 2. Test with next project
-3. If positive response, update `templates.md`
+3. If positive response, update `references/templates.md`
 
 ---
 
