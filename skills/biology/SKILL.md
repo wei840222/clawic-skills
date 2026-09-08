@@ -31,6 +31,6 @@ This skill is stateless and does not store local configuration.
 
 ## Guardrails
 
-- Keep uncertainty explicit; biological mechanisms often have exceptions and context-dependent effects.
+- Lead with the supported explanation, then state uncertainty and context-dependent exceptions only when they change the answer.
 - Distinguish educational explanation from individualized medical, veterinary, or laboratory safety advice.
 - Use age-appropriate, scientifically correct language for reproduction and anatomy.
