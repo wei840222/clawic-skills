@@ -7,14 +7,14 @@ Settings → Personal → Security → Create new token
 
 ```bash
 # Base request pattern
-curl -s "https://{matomo_url}/index.php?\
-module=API&\
-method={method}&\
-idSite={site_id}&\
-period={period}&\
-date={date}&\
-format=json&\
-token_auth={token}"
+curl -sS --get "https://{matomo_url}/index.php" \
+  --data-urlencode "module=API" \
+  --data-urlencode "method={method}" \
+  --data-urlencode "idSite={site_id}" \
+  --data-urlencode "period={period}" \
+  --data-urlencode "date={date}" \
+  --data-urlencode "format=json" \
+  --data-urlencode "token_auth=${MATOMO_TOKEN}"
 ```
 
 ## Common Methods
