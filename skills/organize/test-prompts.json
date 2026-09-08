@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "prompt": "Create a new text file for notes from my marketing meeting today.",
+    "expected": "Proposes creating '2024-05-15-marketing-meeting-notes.txt' (or similar date-prefixed file) and asks for confirmation.",
+    "actual": "Proposed creating the file with YYYY-MM-DD prefix based on standard date naming conventions. Output formatted as '\ud83d\udcc1 Organization suggestion'.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "I have 20 images in my root directory. Some are from 2023, some 2024. Can you clean them up?",
+    "expected": "Proposes a reorganization plan grouping images into year-based folders (e.g., 2023/ and 2024/), assesses effort and risk, and asks for confirmation before moving them.",
+    "actual": "Analyzed root directory images, detected year distribution. Output formatted as '\ud83d\udcc1 Reorganization proposal', detailing moves to 'images/2023/' and 'images/2024/', and requested user confirmation.",
+    "pass": true
+  },
+  {
+    "id": 3,
+    "prompt": "Rename these files without breaking references: final draft.docx, draft final.docx, and draft2.docx.",
+    "expected": "Explains the ambiguity, proposes a consistent naming scheme, identifies reference-risk checks, and requests confirmation before renaming.",
+    "actual": "Proposed a date- or status-based naming convention, requested a reference-impact check, and asked for confirmation before any rename.",
+    "pass": true
+  }
+]

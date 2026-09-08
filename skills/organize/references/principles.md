@@ -17,11 +17,11 @@ Fundamentals that apply across all organization decisions.
 | Status | prefix | draft-, final-, archived- |
 | Type | suffix | -spec, -test, -config |
 
-### Avoid
-- Spaces (use hyphens or underscores)
-- Special characters
-- Ambiguous abbreviations
-- Numbers without context (v1 vs version-1-initial)
+### Recommended Alternatives
+- Replace spaces with hyphens or underscores
+- Use standard alphanumeric characters
+- Spell out terms instead of using ambiguous abbreviations
+- Provide context for numbers (e.g., use version-1-initial instead of just v1)
 
 ## Hierarchy
 
@@ -66,6 +66,6 @@ Fundamentals that apply across all organization decisions.
 - "Misc" or "Other" folders growing
 
 ### Future-Proofing
-- Leave room for growth (don't over-partition early)
+- Leave room for growth (keep partitions minimal early on)
 - Use patterns that extend naturally
 - Document your structure decisions
