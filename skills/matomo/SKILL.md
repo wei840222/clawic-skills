@@ -126,6 +126,8 @@ Common segment dimensions:
 
 ## Matomo Traps
 
+Use these checks to keep reporting requests accurate:
+
 - **Wrong idSite** → querying wrong property, misleading data. Always confirm site first.
 - **Missing token_auth** → 403 or empty response. Token required for all non-public methods.
 - **date vs period mismatch** → confusing results. `period=range` requires `date=start,end` format.
