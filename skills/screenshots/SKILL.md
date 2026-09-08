@@ -1,89 +1,45 @@
 ---
 name: screenshots
-slug: screenshots
-version: 1.0.1
-description: Create professional App Store and Google Play screenshots with automatic sizing, device frames, marketing copy, and iterative visual learning.
-homepage: https://clawic.com/skills/screenshots
-changelog: Preferences now persist across skill updates
+description: Create App Store and Google Play screenshot sets from raw captures, brand assets, and approved copy. Use when preparing, resizing, localizing, reviewing, or exporting mobile-store screenshots; use a general image-editing workflow for unrelated graphics.
 metadata:
-  clawdbot:
-    emoji: 📱
-    requires:
-      bins: []
-    os:
-    - linux
-    - darwin
-    - win32
-    displayName: Screenshots
+  version: "1.0.1"
+  openclaw: '{"emoji":"📱"}'
 ---
 
-## Quick Reference
+## State location
 
-| Context | File |
-|---------|------|
-| Store dimensions and specs | `specs.md` |
-| Marketing text overlays | `text-style.md` |
-| Visual templates by category | `templates.md` |
-| Full creation workflow | `workflow.md` |
-| Learning from feedback | `feedback.md` |
+Screenshot project state may exist in `<workspace>/screenshots/`, `<workspace>/memory/screenshots/`, or `~/screenshots/`. Before a state operation, resolve `<state_root>` once: use an explicitly configured path when present; otherwise use the first existing directory in that order. If multiple locations exist, use only the highest-precedence location and tell the user that separate copies exist. If none exists and the user asks to save project state, create `<workspace>/screenshots/`; when `<workspace>` is unavailable, ask for a state root rather than guessing from the current directory. Keep every state operation in the selected `<state_root>`.
 
-## Memory Storage
+## Load the right reference
 
-User preferences stored at `~/Clawic/data/screenshots/memory.md`. Read on activation.
+| Task | Read |
+| --- | --- |
+| Plan required assets, dimensions, or pre-upload checks | `references/specs.md` |
+| Choose a layout, frame, palette, or category treatment | `references/templates.md` |
+| Write or place localized marketing copy | `references/text-style.md` |
+| Run a project from intake through export or recover from a failed check | `references/workflow.md` |
+| Record approval feedback or reuse a prior visual decision | `references/feedback.md` |
 
-**Format:**
-```markdown
-# Screenshots Memory
+## Workflow
 
-## Style Preferences
-- style: dominant-color | gradient | minimal | dark | light
-- fonts: preferred headline fonts
-- frames: with-frame | frameless | floating
-- tone: punchy | descriptive | minimal
+1. **Intake.** Confirm target stores, locales, source captures, app icon, brand constraints, and whether the user wants persistent project state. Redact or replace sensitive account, personal, or production data visible in captures before sharing an output.
+2. **Plan.** Read `references/specs.md` for the selected store and `references/templates.md` for the category. Record the chosen sizes, layout, copy, and frame in `<state_root>/{app-slug}/config.md` only after state saving is requested.
+3. **Compose.** Read `references/text-style.md`; build one message per screenshot and adapt overlay placement for each target aspect ratio. Use the source capture at its highest available resolution.
+4. **Verify.** Read `references/workflow.md` and complete its visual, file, and store-readiness checks. When a check fails, correct the affected source/layout and regenerate every affected size before presenting it.
+5. **Approve and export.** Present previews for approval. After approval, preserve the batch as `<state_root>/{app-slug}/v{n}/`, point `latest` to the approved version when symlinks are supported, and package the requested store folders.
 
-## Learned Patterns
-- templates that converted well
-- font/size combinations that worked
+## Project state
+
+After `<state_root>` is resolved, create only the state needed for the requested project:
+
+```text
+<state_root>/
+├── memory.md                  # optional cross-project preferences; create after user requests persistence
+└── {app-slug}/                # create for an active project
+    ├── config.md              # approved brand and export decisions
+    ├── raw/                   # provided source captures
+    ├── v{n}/                  # immutable exported batches
+    └── latest -> v{n}/        # current approved batch, when supported
 ```
 
-Create folder on first use: `mkdir -p ~/screenshots`
-
-## Workspace Structure
-
-```
-~/Clawic/data/screenshots/
-├── memory.md              # Style preferences (persistent)
-├── {app-slug}/
-│   ├── config.md          # Brand: colors, fonts, style
-│   ├── raw/               # Raw simulator/device captures
-│   ├── v1/, v2/           # Version exports
-│   └── latest -> v2/      # Symlink to current
-└── templates/             # Reusable visual templates
-```
-
-## Core Workflow
-
-1. **Intake** — Get raw screenshots + app icon + brand colors
-2. **Size** — Generate all required dimensions per `specs.md`
-3. **Style** — Apply backgrounds, device frames, text overlays
-4. **Review** — Use vision to verify quality before sending
-5. **Iterate** — Adjust based on user feedback
-6. **Export** — Organize by store/device/language
-
-## Quality Checklist
-
-Use vision model to verify EVERY screenshot set:
-- [ ] Text readable at thumbnail size?
-- [ ] No text in unsafe zones (corners, notch area)?
-- [ ] Consistent style across all screenshots?
-- [ ] Device frames match the target size?
-- [ ] Colors harmonious with app branding?
-
-**If ANY check fails** → fix before presenting to user.
-
-## Versioning Rules
-
-- **Never overwrite** — each batch goes in `v{n}/`
-- **Symlink `latest`** to current approved version
-- **config.md** stores brand decisions for regeneration
-- **Compare versions** when user says "go back to the old style"
+Read `<state_root>/memory.md` before reusing saved preferences. Keep prior approved batches intact; use a new version directory for each export. `references/` is part of the installed skill, not project state.
