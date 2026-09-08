@@ -48,8 +48,8 @@ Update this file as you learn user's organization preferences.
 
 ---
 
-## Never Do
-<!-- Patterns explicitly rejected -->
+## Rejected Patterns
+<!-- Document structures the user explicitly requested to avoid -->
 
 ---
 
