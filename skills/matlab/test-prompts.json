@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "I am trying to compute the square of each element in my vector A = [1 2 3], but A^2 gives me an error. What should I do?",
+    "expected": "Use `.^2` for element-wise power instead of matrix power `^2`.",
+    "actual": "To square each element in your vector `A = [1 2 3]`, you should use the element-wise power operator `.^` instead of the matrix power operator `^`. Your code should be `A.^2`.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "How can I check if a matrix contains NaN values in MATLAB? Also, how do I preallocate a 100x100 matrix?",
+    "expected": "Use `isnan()` to check for NaN values and `zeros(100, 100)` to preallocate the matrix.",
+    "actual": "To check for NaN values, you should use the `isnan()` function rather than `== NaN` because `NaN ~= NaN` is true. To preallocate a 100x100 matrix, you should use the `zeros` function like this: `A = zeros(100, 100)`.",
+    "pass": true
+  }
+]
