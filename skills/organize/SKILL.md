@@ -19,7 +19,7 @@ Use the selected `<state_root>` for every preference read or write. Store learne
 
 Organization isn't a separate task—it happens while you work. Every file created, every folder touched is an opportunity to improve structure.
 
-For organization fundamentals, load `references/principles.md`. Before proposing a structure, read `<state_root>/patterns.md` when a resolved state root contains saved preferences; otherwise use `references/patterns.md` as the starting convention.
+For organization fundamentals, load `references/principles.md`; for cross-platform naming or repository-size constraints, load `references/organization-research.md`. Before proposing a structure, read `<state_root>/patterns.md` when a resolved state root contains saved preferences; otherwise use `references/patterns.md` as the starting convention.
 
 ## Proactive Triggers
 
