@@ -1,6 +1,6 @@
 ---
 name: matlab
-description: Resolve common MATLAB mistakes involving indexing, matrix versus element-wise operations, vector shapes, preallocation, NaN values, cell arrays, functions, and debugging. Use when writing or fixing MATLAB code with array dimensions or vectorization issues.
+description: Diagnose, write, and review MATLAB code involving array indexing, matrix versus element-wise operations, vector shapes, preallocation, NaN values, cell arrays, functions, and debugging. Use when a MATLAB result has unexpected dimensions, a vectorized expression fails, or code needs a safe, efficient correction.
 metadata:
   version: "1.0.0"
   openclaw: '{"emoji":"📐","requires":{"bins":["matlab"]}}'
