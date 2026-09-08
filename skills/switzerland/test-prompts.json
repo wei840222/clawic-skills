@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "I am traveling to Switzerland for 7 days in late June. What is a good itinerary focused on scenic trains?",
+    "expected": "A 7-day itinerary focusing on regions with scenic trains, considering June conditions, including transport and base recommendations.",
+    "actual": "Provides a 7-day scenic train itinerary using Zurich or Lucerne as a starting point, recommending the Glacier Express or Bernina Express, and emphasizes rail pass economics.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "I'm flying into Geneva in November and renting a car. We want to visit Jungfraujoch and Zermatt.",
+    "expected": "Corrects the car rental assumption by noting train efficiency vs car issues in Zermatt (car-free), highlights November weather/seasonality risks (many lifts closed, poor visibility).",
+    "actual": "Advises against driving to Zermatt as it is car-free (requires parking in Täsch), warns that November is shoulder season with closures for Jungfraujoch and Zermatt lifts, and suggests rail as a better alternative.",
+    "pass": true
+  }
+]

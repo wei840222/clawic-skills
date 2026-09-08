@@ -21,5 +21,5 @@
 ## Watch-Outs
 
 - Hotel prices are high relative to how much time many users actually spend in the room.
-- It is easy to overfill the schedule with day trips and never see the city properly.
+- It is easy to overfill the schedule with day trips and miss seeing the city properly.
 - Rental cars add little value here.
