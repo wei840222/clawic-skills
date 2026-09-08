@@ -115,4 +115,3 @@ Output should include:
 
 **Memory rule:** Keep local trip notes only when the user is doing ongoing Switzerland planning or clearly wants continuity across sessions. For one-off answers, help without creating extra trip memory.
 
-
