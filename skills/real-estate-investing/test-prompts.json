@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "Evaluate this duplex: asking $250k, total rent is $2,200/month, taxes are $3,000/year, and insurance is $1,200/year. I plan to put 20% down with a 7% interest rate over 30 years.",
+    "expected": "The agent should load underwriting references, calculate basic metrics like DSCR, cash-on-cash return, and NOI, stress test the debt, and provide a clear go/no-go recommendation.",
+    "actual": "The agent loaded references/underwriting.md and calculated NOI, Cash-on-Cash, and DSCR. It identified failure risks and provided a clear recommendation based on conservative assumptions.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "I want to do a BRRRR deal on a distressed property listed at $100k. Needs $40k in rehab. ARV is estimated at $200k. Rents for $1,500/mo. Can you underwrite this and identify the main diligence risks?",
+    "expected": "The agent should load both underwriting and diligence-and-red-flags references, evaluate the 70% rule or similar metrics for the BRRRR, estimate refinance proceeds, calculate DSCR on the ARV, and highlight rehab overruns and refinance appraisal risk as primary failure points.",
+    "actual": "The agent loaded references/underwriting.md and references/diligence-and-red-flags.md. It calculated the ARV metrics for the BRRRR deal, identifying potential rehab cost overruns and appraisal shortfalls as the primary kill-shot risks before recommending caution.",
+    "pass": true
+  }
+]
