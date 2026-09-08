@@ -29,4 +29,3 @@ Load exactly the reference matching the user's role and task before giving detai
 | `references/sources.md` | You need the official-source starting points and verification rules used by this skill. |
 
 If the user's role is unclear, ask before selecting a role-specific workflow. Read only the selected role reference and `references/sources.md` when a current legal claim, citation, rule, or deadline must be verified; do not load unrelated role guides. For urgent safety, criminal, custody, eviction, immigration, high-value, deadline, or rights-waiver matters, give only immediate harm-minimizing information and advise prompt local professional help.
-
