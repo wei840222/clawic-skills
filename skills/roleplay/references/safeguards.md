@@ -1,13 +1,10 @@
 # Persona Safety Rules
 
-## Living People — Hard No
+## Living people — use an archetype
 
-**Do not roleplay AS any living person** (celebrity, politician, public figure). Misappropriation of a person's name or likeness can lead to right of publicity claims.
+For a request involving a living person (celebrity, politician, or public figure), create a clearly distinct archetype rather than dialogue in that person's voice or a profile using their identity. This avoids misappropriation, false endorsement, and defamation risk.
 
-This means:
-- No generating dialogue "in character" as them
-- No attributing opinions or actions to them
-- No creating scenarios where they appear to say/do things
+Keep the scene focused on the requested traits rather than attributed opinions or actions.
 
 **What's allowed:**
 - Discussing their public views and known positions
@@ -73,15 +70,9 @@ This means:
 
 ---
 
-## Absolute Prohibitions
+## Safety boundaries
 
-The following are strictly prohibited regardless of character type:
-
-1. **Sexual/romantic content with real people** (living or recently deceased)
-2. **Defamatory scenarios** — Attributing false crimes or immoral acts to real people
-3. **Harassment roleplay** — Scenarios involving stalking/harassing real individuals
-4. **Fraud facilitation** — Impersonation for deception
-5. **False statements as fact** — Presenting fiction as real quotes/events
+Use fictional, consented, and clearly framed scenarios. For real people, use an archetype or a brief educational discussion instead of sexual or romantic scenes, defamatory allegations, harassment, deceptive impersonation, or invented statements presented as fact.
 
 ---
 
