@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "Explain photosynthesis to a 5-year-old.",
+    "expected": "Uses a simple, accurate analogy, links sunlight, water, and air to plant food, and avoids unnecessary jargon.",
+    "actual": "Plants use sunlight, water, and carbon dioxide to make sugar; an age-appropriate explanation can call them tiny solar-powered cooks while preserving that core idea.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "I study apoptosis. Compare intrinsic and extrinsic pathways by their initiator caspases.",
+    "expected": "Separates mitochondrial apoptosome activation of caspase-9 from death-receptor DISC activation of caspase-8 and, in humans, caspase-10; notes convergence on executioner caspases.",
+    "actual": "The intrinsic pathway activates caspase-9 through the apoptosome after mitochondrial outer-membrane permeabilization. The extrinsic pathway activates caspase-8, and sometimes caspase-10 in humans, at the death-inducing signaling complex; both can activate executioner caspases such as caspase-3.",
+    "pass": true
+  }
+]

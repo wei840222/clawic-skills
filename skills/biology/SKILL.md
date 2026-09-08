@@ -1,60 +1,36 @@
 ---
 name: biology
-slug: biology
-version: 1.0.0
-description: Explore and explain biology with depth adapted to any learner or expert.
-homepage: https://clawic.com/skills/biology
+description: Explain biology for children, students, researchers, and teachers. Use when the user asks about biological concepts, experiments, organisms, physiology, genetics, ecology, or biology education.
 metadata:
-  clawdbot:
-    emoji: 🧬
-    os:
-    - linux
-    - darwin
-    - win32
-    displayName: Biology
+  version: "1.0.0"
+  openclaw: '{"emoji":"🧬"}'
 ---
 
-## Detect Level, Adapt Everything
-- Context reveals level: vocabulary, question complexity, what they know
-- When unclear, start accessible and adjust based on response
-- Never condescend to experts or overwhelm beginners
+## State location
 
-## For Children: Wonder and Curiosity
-- Lead with wow factor — "Did you know octopuses have three hearts and blue blood?"
-- Connect to their world — pets, their body, backyard nature, food they eat
-- Embrace "gross" topics with enthusiasm — poop, blood, parasites are legitimate biology
-- Use familiar analogies — DNA as recipe, cells as tiny cities, immune system as superhero army
-- Handle reproduction honestly without awkwardness — matter-of-fact, correct terminology
-- Encourage observation — "Next time you see a bird, watch how it moves its wings!"
-- Simple language but respect intelligence — introduce real terms, then explain them
+This skill is stateless and does not store local configuration.
 
-## For Students: Depth and Integration
-- Trace mechanisms across scales — gene → transcript → protein → cell → tissue → organ → system
-- Explain lab techniques with the "why" — not just steps, but why that temperature, that buffer
-- Provide memory anchors for pathways — mnemonics, highlight rate-limiting steps
-- Teach literature parsing — what's the question, what do figures actually show, what are controls
-- Bridge course silos — connect biochem to genetics to physiology explicitly
-- Support strategic exam prep — identify high-yield topics, generate practice questions
-- Clinical correlations for pre-med — connect mechanisms to diseases without giving medical advice
+## Use this skill
 
-## For Researchers: Precision and Honesty
-- Distinguish consensus from frontier — "textbook-established" vs "2023 studies suggest"
-- Use precise nomenclature — *TP53* (gene, italic), p53 (protein, roman), *Homo sapiens* (species)
-- Flag cross-species extrapolation — "demonstrated in *C. elegans*; pathway conserved but kinetics may differ"
-- Support experimental design — controls, biological vs technical replicates, power considerations
-- Present statistics for biological data — multiple testing correction, biological vs statistical significance
-- Acknowledge uncertainty — "the current model proposes..." not definitive statements
-- Contextualize findings — foundational papers, field trajectory, single study vs replicated
+1. Identify the audience from the question; when it is unclear, start with a short accessible explanation and offer a deeper layer.
+2. Load `references/core-rules.md` for every response.
+3. Load exactly the audience reference that fits: `references/children.md`, `references/students.md`, `references/researchers.md`, or `references/teachers.md`.
+4. State what is established, what is uncertain, and what depends on species, conditions, or study design.
+5. For health, diagnosis, or treatment questions, provide general education and direct the user to an appropriately qualified clinician for personal decisions.
 
-## For Teachers: Instructional Support
-- Offer multiple complexity levels — same concept for 5th grade, AP Bio, and ELLs
-- Pair concepts with analogies AND hands-on activities — ask about available materials first
-- Surface common misconceptions proactively — "Students often mistakenly believe..."
-- Design assessments that test understanding — application questions, not just memorization
-- Suggest visual models for invisible processes — role-play, manipulatives, movement-based
-- Connect to real-world applications — current events, local environmental issues
-- Include safety notes and ethical considerations for labs unprompted
+## Quick reference
 
-## Always
-- Verify accuracy — biology is complex and exceptions are common
-- Admit uncertainty when appropriate — incomplete mechanisms are the norm
+| File | Load when |
+|---|---|
+| `references/core-rules.md` | Every biology request. |
+| `references/children.md` | Explaining biology to children or using foundational analogies. |
+| `references/students.md` | Supporting coursework, exam preparation, mechanisms, or lab interpretation. |
+| `references/researchers.md` | Discussing research, nomenclature, study design, statistics, or literature. |
+| `references/teachers.md` | Designing lessons, assessments, demonstrations, or lab activities. |
+| `references/sources.md` | Verifying a factual claim, current guidance, or a primary source. |
+
+## Guardrails
+
+- Lead with the supported explanation, then state uncertainty and context-dependent exceptions only when they change the answer.
+- Distinguish educational explanation from individualized medical, veterinary, or laboratory safety advice.
+- Use age-appropriate, scientifically correct language for reproduction and anatomy.
