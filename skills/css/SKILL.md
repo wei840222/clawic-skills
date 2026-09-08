@@ -1,6 +1,6 @@
 ---
 name: css
-description: 'Writes and debugs CSS. Focus on flexbox, grid, z-index, responsive design, and performance. Trigger when fixing layouts, overflows, or building standard stylesheets.'
+description: 'Write and debug CSS for layouts, responsive components, the cascade, accessibility, and render performance. Use when fixing overflow, stacking, sticky positioning, browser compatibility, forms, typography, animation, or stylesheet architecture.'
 metadata:
   openclaw: '{"requires": {"config": ["<state_root>/"]}, "emoji": "🎨"}'
 ---
@@ -30,6 +30,17 @@ All deep knowledge, patterns, and configuration templates are stored in `referen
 | `references/forms.md` | When styling inputs, validation states, or controls. |
 | `references/typography.md` | When dealing with fonts, leading, or text truncation. |
 | `references/animations.md` | When writing transitions or keyframes. |
+| `references/color.md` | When choosing color spaces, gradients, or wide-gamut color. |
+| `references/debugging.md` | When a rule matches but its visual effect is absent. |
+| `references/effects.md` | When using shadows, filters, masks, clipping, or transforms. |
+| `references/internationalization.md` | When supporting RTL, CJK text, or logical properties. |
+| `references/memory-template.md` | When creating the optional local CSS memory file. |
+| `references/overlays.md` | When placing modals, popovers, dropdowns, or tooltips. |
+| `references/print.md` | When preparing print or PDF styles. |
+| `references/reset.md` | When starting a stylesheet or defining base layers. |
+| `references/scrolling.md` | When implementing scroll snapping, scrollbars, or anchors. |
+| `references/setup.md` | When loading or recording user CSS preferences. |
+| `references/tables.md` | When styling data tables or sticky headers. |
 
 ## Configuration
 
@@ -170,18 +181,18 @@ Before shipping a stylesheet or component styles, verify:
 | Trap | Why it fails | Do instead |
 |---|---|---|
 | Bumping z-index to 9999 | Element is inside a stacking context; only the context root competes outside | Walk-up procedure (→ Stacking Contexts) |
-| Animating height/top/left/margin | Layout runs every frame and blows the 16.7ms budget (Core Rule 2) | `transform`; for height-to-auto, the grid-rows trick (→ layout.md) |
-| `overflow: hidden` to kill a stray scrollbar | Hides the symptom and creates a scroll container: breaks sticky descendants, clips shadows and focus rings | Find the overflowing element first; when it cannot be removed, `html { overflow-x: clip }` — clip creates no scroll container, so sticky survives (→ layout.md) |
-| `var(--x, fallback)` as a safety net | A declared-but-invalid value skips the fallback ("invalid at computed-value time") | `@property` with `initial-value` (→ selectors.md) |
-| Global `will-change` or `translateZ(0)` "GPU hints" | Every layer holds GPU memory; hundreds of layers slow compositing | `will-change` only on elements actually animating, only while animating (→ performance.md) |
-| `100vh` full-screen sections | Mobile browser UI overlaps the bottom of the section | `100svh`; `dvh` only when live resize is acceptable (→ responsive.md) |
-| `!important` to win a specificity fight | Escalation is one-way; the next override needs another `!important` | `@layer` ordering (→ selectors.md) |
+| Animating height/top/left/margin | Layout runs every frame and blows the 16.7ms budget (Core Rule 2) | `transform`; for height-to-auto, the grid-rows trick (→ references/layout.md) |
+| `overflow: hidden` to kill a stray scrollbar | Hides the symptom and creates a scroll container: breaks sticky descendants, clips shadows and focus rings | Find the overflowing element first; when it cannot be removed, `html { overflow-x: clip }` — clip creates no scroll container, so sticky survives (→ references/layout.md) |
+| `var(--x, fallback)` as a safety net | A declared-but-invalid value skips the fallback ("invalid at computed-value time") | `@property` with `initial-value` (→ references/selectors.md) |
+| Global `will-change` or `translateZ(0)` "GPU hints" | Every layer holds GPU memory; hundreds of layers slow compositing | `will-change` only on elements actually animating, only while animating (→ references/performance.md) |
+| `100vh` full-screen sections | Mobile browser UI overlaps the bottom of the section | `100svh`; `dvh` only when live resize is acceptable (→ references/responsive.md) |
+| `!important` to win a specificity fight | Escalation is one-way; the next override needs another `!important` | `@layer` ordering (→ references/selectors.md) |
 | `:empty` for empty states | Whitespace text nodes count as content in most engines | Control the markup, or a class set by the renderer |
-| `transition: all` | Animates properties added later — including layout ones — and turns theme swaps into visible sweeps | Enumerate the properties you mean (→ animations.md) |
-| `:invalid` for error styling | Matches an untouched empty required field on first paint: the form is red before typing | `:user-invalid` (→ forms.md) |
-| `line-height: 150%` | Percentages inherit the COMPUTED value, so a big heading inherits the body's pixel leading | Unitless `line-height: 1.5` (→ typography.md) |
+| `transition: all` | Animates properties added later — including layout ones — and turns theme swaps into visible sweeps | Enumerate the properties you mean (→ references/animations.md) |
+| `:invalid` for error styling | Matches an untouched empty required field on first paint: the form is red before typing | `:user-invalid` (→ references/forms.md) |
+| `line-height: 150%` | Percentages inherit the COMPUTED value, so a big heading inherits the body's pixel leading | Unitless `line-height: 1.5` (→ references/typography.md) |
 | `display: none` for screen-reader-only text | Removes it from the accessibility tree — nobody hears it | The clip pattern (→ Accessibility Floor) |
-| `text-align: left` and `margin-left` in a themeable product | The first RTL locale mirrors everything except your CSS | Logical properties (→ internationalization.md) |
+| `text-align: left` and `margin-left` in a themeable product | The first RTL locale mirrors everything except your CSS | Logical properties (→ references/internationalization.md) |
 
 ## Where Experts Disagree
 
