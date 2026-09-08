@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "Create an upbeat 120 BPM electronic dance track with driving synth bass and punchy drums for a YouTube intro.",
+    "expected": "The skill should recognize the genre, tempo, instruments, and mood. It should recommend a tool like Stable Audio, MusicGen, or Mubert for instrumentals, and outline the setup or load the correct reference file.",
+    "actual": "I will recommend Stable Audio, MusicGen, or Mubert for this upbeat 120 BPM electronic dance track. I will load the `references/stable-audio.md` or `references/mubert.md` file to guide you on how to generate the audio, emphasizing the driving synth bass and punchy drums at 120 BPM.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "I want to produce a full pop song with female vocals about summer, starting with a short intro and ending with a fade out. Can we make it sound like 90s pop?",
+    "expected": "The skill should identify the request for full vocals and structure, recommending Suno or Udio, and then provide prompt advice with custom lyrics structure.",
+    "actual": "For a full pop song with female vocals, I recommend using Suno or Udio. I will load `references/suno.md` and `references/udio.md`. To get a 90s pop feel, I will guide you to formulate a prompt like '90s pop song with female vocals about summer' and structure your custom lyrics with an [Intro] and [Outro] section for the fade-out.",
+    "pass": true
+  }
+]

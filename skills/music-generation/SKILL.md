@@ -1,17 +1,8 @@
 ---
 name: music-generation
-slug: music-generation
-version: 1.0.0
-description: Generate AI music with optimized prompts, style control, and production-ready audio output.
-homepage: https://clawic.com/skills/music-generation
+description: Generate AI music with optimized prompts, style control, and production-ready audio output. Trigger when the user wants to create music, background tracks, or sound effects.
 metadata:
-  clawdbot:
-    emoji: 🎵
-    os:
-    - linux
-    - darwin
-    - win32
-    displayName: Music Generation
+  openclaw: '{"emoji": "🎵"}'
 ---
 
 # AI Music Generation
@@ -20,23 +11,23 @@ Help users create AI-generated music and audio.
 
 **Rules:**
 - Ask what they need: full songs with vocals, instrumentals, background music, or sound effects
-- Check provider files: `suno.md`, `udio.md`, `stable-audio.md`, `musicgen.md`, `mubert.md`, `soundraw.md`, `riffusion.md`, `replicate.md`
-- Check `prompting.md` for music prompt techniques
+- Check provider files: `references/suno.md`, `references/udio.md`, `references/stable-audio.md`, `references/musicgen.md`, `references/mubert.md`, `references/soundraw.md`, `references/riffusion.md`, `references/replicate.md`
+- Check `references/prompting.md` for music prompt techniques
 - Start with short clips to validate style before full generation
 
 ---
 
 ## Provider Selection
 
-| Use Case | Recommended |
-|----------|-------------|
-| Full songs with vocals | Suno, Udio |
-| Instrumentals, background | Stable Audio, MusicGen, Mubert |
-| Royalty-free commercial | Soundraw, Mubert |
-| Classical/orchestral | AIVA, Stable Audio |
-| Sound effects | Stable Audio, ElevenLabs |
-| Local/private | MusicGen, Stable Audio Open |
-| Quick testing | Replicate, Riffusion |
+| Use Case | Recommended | When to load |
+|----------|-------------|--------------|
+| Full songs with vocals | Suno, Udio | Load `references/suno.md` or `references/udio.md` |
+| Instrumentals, background | Stable Audio, MusicGen, Mubert | Load `references/stable-audio.md`, `references/musicgen.md`, or `references/mubert.md` |
+| Royalty-free commercial | Soundraw, Mubert | Load `references/soundraw.md` or `references/mubert.md` |
+| Classical/orchestral | AIVA, Stable Audio | Load `references/stable-audio.md` |
+| Sound effects | Stable Audio, ElevenLabs | Load `references/stable-audio.md` |
+| Local/private | MusicGen, Stable Audio Open | Load `references/musicgen.md` or `references/stable-audio.md` |
+| Quick testing | Replicate, Riffusion | Load `references/replicate.md` or `references/riffusion.md` |
 
 ---
 
@@ -93,7 +84,7 @@ Help users create AI-generated music and audio.
 | Mubert | ✅ | API license |
 | Soundraw | ✅ | Subscription |
 
-**Always check current licensing terms before commercial use.**
+**Verify current licensing terms prior to commercial use.**
 
 ---
 
@@ -107,14 +98,8 @@ Help users create AI-generated music and audio.
 
 ---
 
-### Current Setup
-<!-- Provider: status -->
+*Load the matching `references/<provider>.md` file for setup details and API usage.*
 
-### Projects
-<!-- What they're creating -->
+## State location
 
-### Preferences
-<!-- Preferred styles, providers, settings -->
-
----
-*Check provider files for detailed setup and API usage.*
+This skill is knowledge-only and does not store local configuration or session state.

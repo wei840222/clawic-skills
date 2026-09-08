@@ -100,5 +100,5 @@ More lyrics
 - Detailed prompts get better results
 - Regenerate multiple times — quality varies
 - Use custom lyrics for specific content
-- Instrumental mode avoids vocal generation issues
+- Use Instrumental mode for purely musical output without vocals
 - Extend songs by using "Continue" feature
