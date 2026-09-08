@@ -114,4 +114,3 @@ Output should include:
 **This skill does NOT:** Access files outside `<state_root>/` or make network requests.
 
 **Memory rule:** Keep local trip notes only when the user is doing ongoing Switzerland planning or clearly wants continuity across sessions. For one-off answers, help without creating extra trip memory.
-
