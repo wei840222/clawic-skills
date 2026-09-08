@@ -86,9 +86,9 @@ Ask after completion:
 - "Any style adjustments for next time?"
 - "Which screenshot(s) do you think will convert best?"
 
-Don't ask:
-- Generic "how did I do?"
-- Too many questions (keep it short)
+Keep feedback focused:
+- Ask one or two questions tied to a specific layout or message decision.
+- Record an explicit approval, correction, or unresolved concern.
 
 ---
 

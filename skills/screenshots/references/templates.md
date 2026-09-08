@@ -128,11 +128,9 @@ Based on industry patterns:
 4. **Consistent visual story** — feels like one brand
 5. **Hero screenshot = make or break** — spend extra time here
 
-## Anti-Patterns
+## Composition constraints
 
-Avoid:
-- Stock photo backgrounds (looks cheap)
-- Too much text (people don't read)
-- Inconsistent styles between screenshots
-- Outdated device frames (iPhone X in 2026)
-- Competitor mentions (against store policies)
+- Use app UI, approved illustrations, or intentional brand artwork as the visual focus.
+- Keep each screenshot to one concise message and maintain one visual system across the set.
+- Match each frame to the selected store-device target.
+- Describe the app's own value; preserve store-policy and legal-review requirements for comparative claims.

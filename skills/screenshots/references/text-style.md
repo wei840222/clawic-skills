@@ -34,10 +34,12 @@
 - **Overlay:** Text on top of screenshot (needs contrast)
 
 ### Safe Zones
-Never place text:
-- Within 44px of top edge (status bar)
-- Within 34px of bottom (home indicator)
-- In corners (rounded display clips)
+Keep text outside:
+- The top status-bar area
+- The bottom home-indicator area
+- Rounded display corners
+
+Use the selected platform's current safe-area guidance from `references/specs.md` when finalizing target dimensions.
 
 ### Readability at Thumbnail Size
 Test: Can you read the headline when screenshot is 150px wide?
@@ -52,7 +54,7 @@ Test: Can you read the headline when screenshot is 150px wide?
 ### Font Pairing
 - **Headline:** Bold sans-serif (SF Pro Display, Inter, Poppins)
 - **Subheadline:** Regular weight, smaller size
-- **Avoid:** More than 2 fonts per screenshot set
+- **Limit:** Use at most 2 fonts per screenshot set
 
 ### Minimum Sizes
 - Headlines: 60px minimum (for thumbnail readability)
@@ -62,7 +64,7 @@ Test: Can you read the headline when screenshot is 150px wide?
 ### Contrast Requirements
 - Light text on dark: Use white or very light
 - Dark text on light: Use black or very dark
-- Never: Gray text, low contrast combinations
+- Maintain high contrast between text and its background
 
 ---
 
