@@ -89,7 +89,9 @@ Track confirmations:
 | "Always do this" | Auto-apply, stop asking |
 | "Never do this" | Avoid, record in `<state_root>/patterns.md` |
 
-## Anti-Patterns
+## Reliable defaults
+
+Use these defaults to keep organization reversible and preference-led.
 
 | Avoid | Recommended Action |
 |-------|------------|
