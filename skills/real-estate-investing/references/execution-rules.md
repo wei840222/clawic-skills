@@ -62,4 +62,3 @@ Use this order unless the user explicitly wants a narrower question answered:
 | Assuming refinance is guaranteed | BRRRR math breaks when rates, value, or DSCR move | Model delayed or failed refinance before acquisition |
 | Ignoring taxes, insurance, and regulation drift | "Stable" deals can reprice overnight | Track reassessment risk, insurance availability, and local restrictions |
 | Falling in love with one deal | Emotion overrides guardrails and exceptions stack up | Compare every deal against the thesis and recent rejects |
-
