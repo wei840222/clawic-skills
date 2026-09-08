@@ -30,6 +30,3 @@ Load exactly the reference matching the user's role and task before giving detai
 
 If the user's role is unclear, ask before selecting a role-specific workflow. For urgent safety, criminal, custody, eviction, immigration, high-value, deadline, or rights-waiver matters, give only immediate harm-minimizing information and advise prompt local professional help.
 
-## State location
-
-This skill is stateless and does not store local configuration or persistent user state.
