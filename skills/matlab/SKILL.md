@@ -1,75 +1,31 @@
 ---
 name: matlab
-slug: matlab
-version: 1.0.0
-description: Avoid common MATLAB mistakes — indexing traps, matrix vs element-wise ops, and vectorization pitfalls.
-homepage: https://clawic.com/skills/matlab
+description: Resolve common MATLAB mistakes involving indexing, matrix versus element-wise operations, vector shapes, preallocation, NaN values, cell arrays, functions, and debugging. Use when writing or fixing MATLAB code with array dimensions or vectorization issues.
 metadata:
-  clawdbot:
-    emoji: 📐
-    requires:
-      bins:
-      - matlab
-    os:
-    - linux
-    - darwin
-    - win32
-    displayName: MATLAB
+  version: "1.0.0"
+  openclaw: '{"emoji":"📐","requires":{"bins":["matlab"]}}'
 ---
 
-## Indexing
-- 1-based indexing — first element is `A(1)`, not `A(0)`
-- `end` keyword for last index — `A(end)`, `A(end-1)`, works in any dimension
-- Linear indexing on matrices — `A(5)` accesses 5th element column-major order
-- Logical indexing returns vector — `A(A > 0)` gives 1D result regardless of A's shape
+## MATLAB troubleshooting workflow
 
-## Matrix vs Element-wise
-- `*` is matrix multiplication — `.*` for element-wise
-- `/` solves `A*x = B` — `./` for element-wise division
-- `^` is matrix power — `.^` for element-wise power
-- Forgetting the dot is silent bug — dimensions might accidentally match
+1. Identify the expression's operand sizes with `size`, and decide whether the operation is matrix algebra or element-wise.
+2. Reproduce the smallest failing expression. For numerical anomalies, inspect values with `isnan`, `isinf`, and `whos` before changing the algorithm.
+3. Apply the narrow correction, then state the expected output shape and MATLAB release assumptions.
+4. For loops that build arrays, preallocate the final size. When the final size is unknown, collect data with an appropriate container and convert once.
+5. If the failure remains opaque, use `dbstop if error` and inspect the stopped workspace; avoid `clear` while diagnosing because it destroys evidence.
 
-## Vector Shape Matters
-- Row vector: `[1 2 3]` or `[1, 2, 3]` — shape is 1×3
-- Column vector: `[1; 2; 3]` — shape is 3×1
-- Transpose with `'` (conjugate) or `.'` (non-conjugate) — for complex, they differ
-- `*` between row and column gives scalar or matrix — depending on order
+Load the smallest reference needed for the current issue:
 
-## Array Preallocation
-- Growing arrays in loops is slow — preallocate: `A = zeros(1000, 1)`
-- `zeros`, `ones`, `nan` for preallocation — specify size upfront
-- Cell arrays: `cell(n, m)` — preallocate cells too
+| Topic | Reference | Load when |
+| --- | --- | --- |
+| Indexing and dimensions | [references/indexing.md](references/indexing.md) | Resolving indices, linear indexing, logical indexing, or row/column shape mismatches. |
+| Operators | [references/matrix_ops.md](references/matrix_ops.md) | Choosing matrix versus element-wise arithmetic or solving linear systems. |
+| Allocation and expansion | [references/preallocation.md](references/preallocation.md) | Optimizing loops, sizing arrays, or supporting pre-R2016b code. |
+| Missing values | [references/broadcasting_nan.md](references/broadcasting_nan.md) | Handling implicit expansion, `NaN`, or omitted missing values. |
+| Containers and text | [references/cell_arrays.md](references/cell_arrays.md) | Selecting cell indexing, strings, or character vectors. |
+| Functions and debugging | [references/functions_debugging.md](references/functions_debugging.md) | Defining functions, validating inputs, or using the debugger. |
+| Source notes | [references/source-notes.md](references/source-notes.md) | Confirming MathWorks documentation and release-sensitive behavior. |
 
-## Broadcasting
-- Implicit expansion since R2016b — `A + b` works if dimensions compatible
-- Singleton dimensions expand — `[1;2;3] + [10 20]` gives 3×2
-- Before R2016b needed `bsxfun` — legacy code may still use it
+## Output expectations
 
-## NaN Handling
-- `NaN ~= NaN` is true — use `isnan()` to check
-- Most operations propagate NaN — `sum([1 NaN 3])` is NaN
-- Use `'omitnan'` flag — `sum(A, 'omitnan')`, `mean(A, 'omitnan')`
-
-## Cell Arrays vs Matrices
-- `{}` for cell arrays — hold mixed types, different sizes
-- `()` indexing returns cell — `C(1)` is 1×1 cell
-- `{}` indexing extracts content — `C{1}` is the actual value
-- Comma-separated list from `C{:}` — useful for function arguments
-
-## Common Mistakes
-- `=` for assignment, `==` for comparison — `if x = 5` is error in MATLAB
-- Semicolon suppresses output — forget it and flood command window
-- `clear` removes all variables — use `clearvars` for selective, `close all` for figures
-- `i` and `j` are imaginary unit — don't use as loop variables, or reassign explicitly
-- String vs char: `"text"` vs `'text'` — double quotes are string arrays (R2017a+)
-
-## Functions
-- Anonymous functions: `f = @(x) x^2` — quick inline functions
-- Multiple outputs: `[a, b] = func()` — must capture or use `~` to ignore
-- `nargin`/`nargout` for optional args — check how many inputs/outputs provided
-- `varargin`/`varargout` for variable args — cell array of extra arguments
-
-## Debugging
-- `dbstop if error` — breakpoint on any error
-- `keyboard` in code pauses execution — enter debug mode at that line
-- `whos` shows variable sizes — `size(A)` for specific variable
+Give the corrected MATLAB snippet first. Then explain the operator or shape rule that caused the issue, name any version constraint, and include one quick check such as `size(result)` or an assertion when it reduces recurrence.
