@@ -1,6 +1,6 @@
 # Memory Template - Engineer
 
-Create `~/Clawic/data/engineer/memory.md` with this structure only if the user wants persistence:
+Create `<state_root>/engineer/memory.md` with this structure only if the user wants persistence:
 
 ```markdown
 # Engineer Memory
@@ -9,7 +9,7 @@ Create `~/Clawic/data/engineer/memory.md` with this structure only if the user w
 status: ongoing
 version: 1.0.0
 last: YYYY-MM-DD
-integration: pending | done | paused | never_ask
+integration: pending | done | paused | session_only
 
 ## Context
 - Default activation moments for engineering judgment
@@ -33,11 +33,11 @@ Updated: YYYY-MM-DD
 | `ongoing` | Still learning | Capture reusable patterns gradually |
 | `complete` | Enough context exists | Use stored defaults without extra setup |
 | `paused` | User wants minimal persistence | Avoid asking for more memory unless needed |
-| `never_ask` | User does not want persistence | Keep all future work session-only |
+| `session_only` | User prefers no persistence | Keep all future work session-only |
 
 ## Key Principles
 
 - Store reusable engineering preferences, not confidential project payloads.
 - Keep local notes focused on activation, risk posture, and preferred output shape.
-- Do not store credentials, proprietary files, or regulated data.
-- If the user declines persistence, do not create or update `~/Clawic/data/engineer/`.
+- Exclude credentials, proprietary files, and regulated data from storage.
+- Keep operations session-only when persistence is declined, bypassing `<state_root>/engineer/` modifications.

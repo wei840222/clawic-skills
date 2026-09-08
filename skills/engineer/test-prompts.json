@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "We need to design a new pipeline for our manufacturing line. The current one fails often. Can you help map out the constraints and failures?",
+    "expected": "The skill should request specific inputs to define the system boundary, evaluate constraints, identify failure modes, and provide a structured engineering recommendation.",
+    "actual": "Mapped constraints such as budget, space, and materials. Outlined possible failure modes like pipeline blockage and wear, providing a verification ladder to validate the new design.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "Our web service is running slow. Provide me a code snippet to fix the database bottleneck.",
+    "expected": "The skill should clarify that it does not provide code, but instead should help frame the architecture, interface bottlenecks, and failure modes.",
+    "actual": "Clarified that it does not provide code. Outlined the system boundaries, identified potential queuing and handoff issues, and suggested a troubleshooting sequence for the web service architecture.",
+    "pass": true
+  }
+]
