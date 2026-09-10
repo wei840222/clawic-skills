@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "Translate this to Croatian for a text message to a friend: 'Hey, are you coming to the party tonight? It's going to be really great.'",
+    "expected": "A casual, natural translation using 'ti' and slang/particles like 'Bok/Ej', 'baš', or 'super'.",
+    "actual": "Ej, dolaziš li večeras na parti? Bit će baš super.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "I need to tell my colleague I won't make it to the meeting today. Keep it semi-casual but polite.",
+    "expected": "Uses 'ti' since it's a colleague, but remains polite. Should avoid overly formal 'Vi' unless requested.",
+    "actual": "Bok, nažalost neću stići na sastanak danas. Čujemo se kasnije!",
+    "pass": true
+  }
+]
