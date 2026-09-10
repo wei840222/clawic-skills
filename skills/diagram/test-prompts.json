@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "Draw a flowchart for a simple user login process.",
+    "expected": "A Mermaid flowchart representing a user login process including start, decision point (valid credentials), and end.",
+    "actual": "```mermaid\nflowchart LR\n    A[Start] --> B{Valid Credentials?}\n    B -->|Yes| C[Login Successful]\n    B -->|No| D[Show Error]\n    C --> E[End]\n    D --> E\n```",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "Show the architecture of a typical 3-tier web app using Mermaid.",
+    "expected": "A Mermaid flowchart or C4 diagram containing subgraphs or distinct nodes for Client, Web Server/App Server, and Database.",
+    "actual": "```mermaid\nflowchart TB\n    subgraph Client Tier\n        A[Web Browser]\n    end\n    subgraph Application Tier\n        B[Web Server]\n        C[Application Server]\n    end\n    subgraph Data Tier\n        D[(Database)]\n    end\n    A --> B\n    B --> C\n    C --> D\n```",
+    "pass": true
+  }
+]
