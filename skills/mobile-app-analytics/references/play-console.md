@@ -33,7 +33,7 @@ Store listing visitors → Installers → Buyers
 
 With breakdown by:
 - Country
-- Language  
+- Language
 - UTM source
 - Play Store placement
 ```

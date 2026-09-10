@@ -38,7 +38,7 @@ Create `<state_root>/apps/{app-name}.md` for each app:
 
 ## Overview
 platforms: iOS | Android | both
-store_ids: 
+store_ids:
   ios: 123456789
   android: com.company.app
 analytics_stack: Firebase, Mixpanel, Amplitude
@@ -64,7 +64,7 @@ analytics_stack: Firebase, Mixpanel, Amplitude
 | Metric | Current | Target | Status |
 |--------|---------|--------|--------|
 | D1 retention | 35% | 40% | 🟡 |
-| D7 retention | 18% | 25% | 🔴 |
+| D7 retention | 18% | 25% | ⚠️ Needs Action |
 | Trial-to-paid | 8% | 12% | 🟡 |
 
 ## Recent Insights

@@ -62,14 +62,14 @@ ORDER BY 1 DESC
 ```sql
 -- D1 retention by install date
 WITH installs AS (
-  SELECT 
+  SELECT
     user_pseudo_id,
     DATE(TIMESTAMP_MICROS(event_timestamp)) as install_date
   FROM `project.analytics_*.events_*`
   WHERE event_name = 'first_open'
 ),
 returns AS (
-  SELECT 
+  SELECT
     user_pseudo_id,
     DATE(TIMESTAMP_MICROS(event_timestamp)) as return_date
   FROM `project.analytics_*.events_*`
@@ -96,7 +96,7 @@ SELECT
   SUM(revenue) as total_revenue,
   ROUND(SUM(revenue) / COUNT(DISTINCT user_pseudo_id), 2) as arpu
 FROM (
-  SELECT 
+  SELECT
     user_pseudo_id,
     MIN(DATE(TIMESTAMP_MICROS(event_timestamp))) as install_date,
     SUM((SELECT value.double_value FROM UNNEST(event_params) WHERE key = 'value')) as revenue

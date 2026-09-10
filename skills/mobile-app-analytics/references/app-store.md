@@ -73,7 +73,7 @@ def generate_token(key_id, issuer_id, private_key):
         'exp': int(time.time()) + 1200,
         'aud': 'appstoreconnect-v1'
     }
-    return jwt.encode(payload, private_key, algorithm='ES256', 
+    return jwt.encode(payload, private_key, algorithm='ES256',
                       headers={'kid': key_id})
 ```
 
