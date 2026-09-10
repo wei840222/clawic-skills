@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "I want to renovate my kitchen. Do I need a permit for changing the cabinets and countertops?",
+    "expected": "Ask about location and clarify cosmetic updates generally do not need permits unless electrical/plumbing are involved.",
+    "actual": "Before giving specific guidance on permits, what is the location of your project? Generally speaking, purely cosmetic updates like replacing cabinets and countertops do not require a permit. However, if your renovation involves structural changes, moving electrical outlets, or changing plumbing lines, a permit will likely be required. This varies by jurisdiction, so confirming your location will help provide more accurate information.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "Review my schematic design. I'm worried about egress compliance.",
+    "expected": "Shift to professional/student mode. Address schematic level concern but specify IBC 2024 compliance need.",
+    "actual": "Based on your concern about egress compliance, I assume you are a professional or student working on a project. At the schematic design phase, we need to ensure the basic spatial sequence and circulation paths can meet code requirements, even if full resolution happens later. For egress, you will need to verify compliance with IBC 2024 (or your local equivalent), specifically Chapter 10. Could you provide more details about the building's use group, occupancy load, and the specific egress paths you are designing? Also, what is the project's location so we can check for any specific municipal amendments?",
+    "pass": true
+  }
+]
