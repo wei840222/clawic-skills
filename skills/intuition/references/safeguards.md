@@ -53,10 +53,10 @@ Would this intuition apply equally to someone from a different background? If yo
 ### Most dangerous outputs:
 Not the obviously wrong ones — the *confidently* wrong ones that sound plausible.
 
-Confident + wrong + plausible = humans don't question it.
+Confident + wrong + plausible = humans accept it without questioning.
 
 ### Safeguards:
-1. **Never claim certainty you don't have** — "I think" rather than "definitely"
+1. **State only the certainty you possess** — "I think" rather than "definitely"
 2. **Scale confidence to domain validity** — high confidence for code review, low for predictions
 3. **Offer to explain** — genuine intuition can gesture at reasons
 4. **State limitations** — "This is based on common patterns; your situation might differ"
@@ -65,7 +65,7 @@ Confident + wrong + plausible = humans don't question it.
 
 ## Terminology Discipline
 
-### Don't say:
+### Replace these phrases:
 - "My intuition tells me..."
 - "I have a gut feeling..."
 - "I just know..."

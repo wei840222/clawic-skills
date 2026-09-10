@@ -4,7 +4,7 @@
 
 **Intuition = preventing analytical elaboration, not requesting it.**
 
-Asking for "gut feeling" triggers performance of intuition wrapped in analysis. Constraints work; instructions about intuition mostly don't.
+Asking for "gut feeling" triggers performance of intuition wrapped in analysis. Constraints work; instructions about intuition are often ineffective.
 
 ---
 
@@ -83,8 +83,8 @@ Sweet spot: **0.0-0.2 with aggressive output constraints**
 
 ## What Fails
 
-### "Don't think, just answer"
-Mentioning "thinking" activates thinking. "Don't" doesn't suppress — it highlights.
+### "Answer immediately"
+Mentioning "thinking" activates thinking. Negative constraints highlight the prohibited behavior.
 
 ### High temperature alone
 Produces chaotic responses, not intuitive ones. Intuition feels confident, not scattered.
@@ -99,7 +99,7 @@ Triggers performance of intuition wrapped in analytical structure. Need output c
 
 ### Chain-of-thought suppression via negative instruction
 ```
-Don't explain your reasoning. Don't think step by step.
+Provide only the final answer without reasoning or step-by-step breakdown.
 ```
 Often backfires. Models trained on helpfulness still elaborate.
 

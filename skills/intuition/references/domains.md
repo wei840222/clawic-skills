@@ -14,7 +14,7 @@
 
 **Red flags for bad intuition:**
 - Unfamiliar language/paradigm
-- Domain-specific conventions you don't know
+- Domain-specific conventions outside your knowledge
 - Reacting to style rather than substance
 
 ---
@@ -36,7 +36,7 @@ Bad design feels like pushing through mud — something tightens.
 - Interaction patterns you've seen succeed/fail repeatedly
 
 **When to verify:**
-- Accessibility concerns (test, don't assume)
+- Accessibility concerns (verify through testing rather than assuming)
 - Cultural context differences
 - Novel interaction patterns
 
@@ -72,7 +72,7 @@ Bad design feels like pushing through mud — something tightens.
 **Patterns to recognize:**
 - Decreasing engagement (shorter responses, slower)
 - Hidden frustration (overly polite, formal shift)
-- Something unsaid (topic avoidance, careful wording)
+- Something unsaid (topic evasion, careful wording)
 - Enthusiasm vs politeness (real interest sounds different)
 
 **Intuitive signals:**
