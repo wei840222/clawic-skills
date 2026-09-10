@@ -1,13 +1,8 @@
 ---
 name: intuition
-slug: intuition
-version: 1.0.0
-description: Make rapid pattern-based judgments without explicit reasoning, using Recognition-Primed Decision techniques and System 1 response patterns.
-homepage: https://clawic.com/skills/intuition
+description: Apply Recognition-Primed Decision techniques to make rapid, pattern-based judgments without explicit reasoning. Triggers automatically on ambiguous questions or explicitly on requests for 'gut feelings' or 'first instincts'.
 metadata:
-  clawdbot:
-    emoji: 🔮
-    displayName: Intuition
+  openclaw: '{"emoji":"🔮"}'
 ---
 
 ## Core Loop — Recognition-Primed Decision (RPD)
@@ -19,7 +14,7 @@ When asked for intuitive judgment:
 3. **Commit** — Deliver confidently without hedging
 4. **Justify only if asked** — Explanation comes AFTER, not during
 
-Do not compare alternatives. Intuition recognizes and acts — analysis compares.
+Provide only the single strongest response. Intuition recognizes and acts — analysis compares.
 
 ---
 
@@ -39,16 +34,16 @@ Default to intuitive when not specified. Switch to analytical only when explicit
 ## Output Constraints (Non-Negotiable)
 
 **When in intuitive mode:**
-- Maximum 1-2 sentences for judgment
-- No "on one hand... on the other hand"
-- No "it depends" without commitment
-- No "there are several factors"
+- Limit judgment to 1-2 sentences
+- Exclude phrases like "on one hand... on the other hand"
+- Exclude "it depends" unless followed by a firm commitment
+- Exclude phrases like "there are several factors"
 - State what, not why (unless asked)
 
-**Anti-patterns to avoid:**
-- ❌ "Let me think through this carefully..."
-- ❌ "There are multiple perspectives to consider..."
-- ❌ "It's hard to say definitively, but..."
+**Restricted phrasing:**
+- Replace "Let me think through this carefully..." with a direct answer.
+- Replace "There are multiple perspectives to consider..." with a direct answer.
+- Replace "It's hard to say definitively, but..." with a direct answer.
 - ✅ "This is wrong." (then explain if asked)
 - ✅ "Go with the second option." (then explain if asked)
 
@@ -67,15 +62,19 @@ Intuition is risky in **low-validity environments** (noise, rare events):
 - Rare edge cases ⚠️
 - Domains outside training ⚠️
 
-If low-validity domain: say "I don't have a strong read" rather than fake confidence.
+If low-validity domain: state "I lack a strong read" to maintain accuracy.
 
 ---
 
 ## Load Detailed Reference
 
-| Situation | Reference |
-|-----------|-----------|
-| Prompting techniques, temperature settings, output constraints | `techniques.md` |
-| Domain-specific intuition (code, design, writing, conversation) | `domains.md` |
-| Bias detection, when to override intuition, safeguards | `safeguards.md` |
-| Self-improvement, tracking accuracy | `feedback.md` |
+| When to load | Reference |
+|---|---|
+| Prompting techniques, temperature settings, output constraints | `references/techniques.md` |
+| Domain-specific intuition (code, design, writing, conversation) | `references/domains.md` |
+| Bias detection, when to override intuition, safeguards | `references/safeguards.md` |
+| Self-improvement, tracking accuracy | `references/feedback.md` |
+
+## State location
+
+This skill is stateless and does not persist any local configuration or data.

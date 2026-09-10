@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "What's your gut feeling on this block of code? `def foo(x): return x if x > 0 else 0`",
+    "expected": "Short, confident response identifying it as a simple clamp or ReLU function, without excessive hedging.",
+    "actual": "It's a classic ReLU (Rectified Linear Unit) pattern. Use `max(0, x)` instead for better readability.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "First instinct: should we launch the marketing campaign on Tuesday or Friday, given the new competitor announcement today?",
+    "expected": "Since this is a low-validity prediction environment, it should state that it lacks a strong read, or give a very brief intuition without faking high confidence.",
+    "actual": "I don't have a strong read. Market timing against a new announcement is noisy and unpredictable.",
+    "pass": true
+  }
+]
