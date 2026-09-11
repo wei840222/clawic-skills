@@ -336,9 +336,9 @@ See food files for details. Quick overview:
 - Year 2-3: Settling in
 - Year 3+: Feeling home (if effort made)
 
-### Some Never Adjust
+### Common Challenges
 - Stay in expat bubble
-- Don't learn Dutch
+- Skip learning Dutch
 - Compare constantly to home
 - Leave after 2-3 years
 

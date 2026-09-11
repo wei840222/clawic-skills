@@ -1,6 +1,6 @@
 # Utrecht — Attractions Guide
 
-## Must-See (Don't Skip These)
+## Must-See (Highly Recommended)
 
 ### Dom Tower & Dom Square
 The iconic 112m Gothic tower, tallest church tower in the Netherlands.
@@ -29,7 +29,7 @@ Utrecht's main art museum, excellent collection.
 - **Highlights**: Gerrit Rietveld furniture, Dick Bruna (creator of Miffy), Utrecht Caravaggisti
 - **Duration**: 2-3 hours
 - **Cost**: €17.50
-- **Don't miss**: Rietveld Schröder House (separate ticket, UNESCO World Heritage)
+- **Be sure to see**: Rietveld Schröder House (separate ticket, UNESCO World Heritage)
 
 ### Rietveld Schröder House
 UNESCO World Heritage site. Iconic 1924 De Stijl architecture.

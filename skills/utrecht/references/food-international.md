@@ -280,7 +280,7 @@ Wine adds €20-40 typically.
 ## Tips for Finding Good Food
 
 1. **Check Google reviews** — Reliable in Netherlands
-2. **Avoid tourist traps** — Center has many
+2. **Select local-approved restaurants** — Center has many
 3. **Local neighborhoods** — Better value
 4. **Indonesian is safe bet** — Always good
 5. **Ask locals** — Dutch have favorites

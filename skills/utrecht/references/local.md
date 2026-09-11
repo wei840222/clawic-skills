@@ -24,7 +24,7 @@ The Dutch equivalent of social security number. You need it for everything.
 - Phone contracts (sometimes)
 
 ### How to Get
-1. Register at gemeente (see `resident.md`)
+1. Register at gemeente (see `resident.md` in this folder)
 2. Receive BSN in registration letter
 3. Arrives 1-2 weeks after registration
 
@@ -133,7 +133,7 @@ Tax benefit for skilled migrants:
 - Significant savings
 - Requires application via employer
 - Max 5 years (recent rules)
-- See `visas.md` for details
+- See `visas.md` in this folder for details
 
 ### Subsidies (Toeslagen)
 

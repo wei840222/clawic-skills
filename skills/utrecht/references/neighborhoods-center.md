@@ -77,12 +77,12 @@ Eastern edge of center, residential transition.
 ✅ Cultural events constantly
 
 ### Cons
-❌ Most expensive area
-❌ Noise (weekends, terraces, students)
-❌ Tourist crowds (peak season)
-❌ Small apartments for price
-❌ Parking nearly impossible
-❌ Old buildings (issues with heating, stairs)
+- Most expensive area
+- Noise (weekends, terraces, students)
+- Tourist crowds (peak season)
+- Small apartments for price
+- Parking nearly impossible
+- Old buildings (issues with heating, stairs)
 
 ## Who Should Live Here
 

@@ -83,7 +83,7 @@ The universal transit card for all Dutch public transport.
 - Blunt feedback is normal, not rude
 - "How are you?" answered honestly
 - Small talk less common than US/UK
-- Saves time, don't take offense
+- Focuses on efficiency, interpret as cultural norm
 
 ### Punctuality
 - Dutch are extremely punctual
@@ -94,8 +94,8 @@ The universal transit card for all Dutch public transport.
 ### Cycling Etiquette
 - Stay RIGHT on bike paths
 - Signal turns with your arm
-- Don't stop suddenly
-- Don't walk in bike lanes (ever)
+- Maintain consistent pace
+- Stay strictly on pedestrian sidewalks
 - Locals cycle fast and expect you to know rules
 
 ### Tipping
@@ -169,7 +169,7 @@ The universal transit card for all Dutch public transport.
 - **Le Guess Who? (Nov)**: Alternative music festival
 - **Nederlands Film Festival (Sep)**: Dutch film premieres
 
-### Special Events to Avoid
+### Plan Around Special Events
 - **King's Day**: Unless you want the chaos
 - **Student week (Aug)**: Housing impossible
 - **University graduation**: Hotels scarce

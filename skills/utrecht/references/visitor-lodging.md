@@ -168,9 +168,9 @@ If Utrecht is sold out or expensive, consider:
 | Houten | 12 min | Modern, family area |
 | Zeist | 20 min bus | Green, estates |
 
-These work if you don't mind commuting and want lower prices.
+These work if you are comfortable with commuting and want lower prices.
 
-## Neighborhoods to Avoid
+## Neighborhoods to Skip
 
 - **Overvecht** (north): Not dangerous but far, no tourist interest
 - **Kanaleneiland**: Fine for living, no tourist infrastructure

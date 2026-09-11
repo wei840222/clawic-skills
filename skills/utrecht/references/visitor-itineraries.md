@@ -113,7 +113,7 @@ Follow 3-day itinerary.
 
 **Culture Day**
 - Morning: 's-Hertogenbosch day trip (Bosch art, stunning cathedral)
-- Return via Amersfoort (quick stop)
+- Return via Amersfoort (quick break)
 
 **Active Day**
 - Cycle to Wijk bij Duurstede (30km, beautiful route)
@@ -212,7 +212,7 @@ Choose one full-day experience:
 - Generic shopping streets
 - Long museum visits if not interested
 
-### Don't Underestimate
+### Key Considerations
 - Walking distances (compact but hilly in parts)
 - Coffee/terrace time (essential Dutch experience)
 - Weather changes (always have layers)

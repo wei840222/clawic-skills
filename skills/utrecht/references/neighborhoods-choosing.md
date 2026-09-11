@@ -27,7 +27,7 @@ Rate importance (1-5):
 2. **Lombok** — Trendy, diverse, still central
 3. **Wittevrouwen** — Quieter but close to action
 
-**Avoid:** Overvecht (isolated), Leidsche Rijn (suburban)
+**Skip:** Overvecht (isolated), Leidsche Rijn (suburban)
 
 ### Couple (No Kids)
 **Top choices:**
@@ -35,7 +35,7 @@ Rate importance (1-5):
 2. **Lombok** — Food scene, character
 3. **Center** — If prioritizing walkability
 
-**Avoid:** Very suburban areas unless planning family
+**Skip:** Very suburban areas unless planning family
 
 ### Family (Young Children)
 **Top choices:**
@@ -43,7 +43,7 @@ Rate importance (1-5):
 2. **Leidsche Rijn** — Modern, space, schools
 3. **Vleuten-De Meern** — Established village
 
-**Avoid:** Center (no space, noise), Overvecht (schools)
+**Skip:** Center (no space, noise), Overvecht (schools)
 
 ### Student
 **Top choices:**
@@ -51,7 +51,7 @@ Rate importance (1-5):
 2. **Lombok** — Interesting, decent value
 3. **Center** — If sharing/budget allows
 
-**Avoid:** Suburbs (isolated from student life)
+**Skip:** Suburbs (isolated from student life)
 
 ### Academic/Researcher
 **Top choices:**
@@ -79,7 +79,7 @@ Rate importance (1-5):
 2. **Vleuten-De Meern** — Easy parking
 3. **Suburbs** — Any
 
-**Avoid:** Center (impossible parking)
+**Skip:** Center (impossible parking)
 
 ---
 
@@ -169,7 +169,7 @@ Before signing, check:
 
 **Location**
 - [ ] Walk the neighborhood at night
-- [ ] Check transit stops (distance, frequency)
+- [ ] Verify transit stations (distance, frequency)
 - [ ] Find nearest supermarket
 - [ ] Note noise sources (bars, construction, highways)
 
@@ -239,7 +239,7 @@ Before signing, check:
 - Size (you'll adapt)
 - "Perfect" kitchen (renovate later)
 
-**Don't compromise on:**
+**Require the following:**
 - Registration possibility (need for BSN)
 - Basic safety
 - Reasonable commute

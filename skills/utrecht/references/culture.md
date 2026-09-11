@@ -24,7 +24,7 @@ The Dutch are direct, egalitarian, and pragmatic. What may seem rude is usually 
 
 ### Examples
 
-| Dutch Says | Dutch Means | Don't Take It As |
+| Dutch Says | Dutch Means | Interpret As |
 |------------|-------------|------------------|
 | "That's not good" | Needs improvement | Personal attack |
 | "Why?" | Genuine question | Challenge |
@@ -32,7 +32,7 @@ The Dutch are direct, egalitarian, and pragmatic. What may seem rude is usually 
 | "That won't work" | Practical assessment | Negativity |
 
 ### How to Adapt
-- Don't take offense
+- Treat Dutch directness as cultural norm, not personal hostility
 - Be direct back (they respect it)
 - State your opinion clearly
 - Skip excessive pleasantries
@@ -78,7 +78,7 @@ Untranslatable word meaning cozy, convivial, pleasant.
 - **Name use**: First names quickly, even in business
 
 ### Visiting Homes
-- Always invited (don't drop by)
+- Always invited (schedule visits in advance)
 - Bring something (flowers, wine, chocolate)
 - Take shoes off (often but not always)
 - Leave when energy winds down
@@ -253,7 +253,7 @@ New Year tradition:
 - Modern Dutch: International
 - Eating out: Social occasion
 - Home cooking: Practical
-- See `food-local.md` for details
+- See `food-local.md` in this folder for details
 
 ### Borrel
 After-work drinks tradition:
@@ -273,19 +273,19 @@ After-work drinks tradition:
 ## Cycling Culture
 
 Beyond transport, it's identity:
-- Rain doesn't stop cycling
+- Cycling continues during rain
 - Children learn at 2-3
 - Politicians cycle
 - Suits on bikes normal
 - Social equalizer
 
-See `cycling.md` for practical details.
+See `cycling.md` in this folder for practical details.
 
 ## Privacy & Boundaries
 
 ### Home Privacy
 - Homes are private spaces
-- Large windows, but don't stare
+- Large windows, but look away politely
 - Invited guests only
 - Boundaries respected
 
@@ -346,5 +346,5 @@ See `cycling.md` for practical details.
 6. **Embrace cycling** — It's the way
 7. **Accept the weather** — Complaining helps
 8. **Participate in holidays** — King's Day especially
-9. **Don't take offense** — They don't mean harm
+9. **Treat Dutch directness as cultural norm, not personal hostility** — Their intent is informational
 10. **Give it time** — Integration is a process

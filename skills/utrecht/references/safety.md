@@ -6,7 +6,7 @@ Utrecht is one of the safest cities in Europe. Violent crime is rare. Most issue
 
 | Risk | Level | Notes |
 |------|-------|-------|
-| Violent crime | Very low | Rare, avoid late-night conflicts |
+| Violent crime | Very low | Rare, de-escalate late-night conflicts |
 | Pickpocketing | Low-medium | Tourist areas, station |
 | Bike theft | High | Two locks essential |
 | Scams | Low | Housing scams exist |
@@ -59,7 +59,7 @@ The main crime you'll encounter.
 
 **Prevention:**
 - Two locks (one through frame)
-- Never leave unlocked, even briefly
+- Lock securely at all times, even briefly
 - Use designated bike parking
 - Cheap bike = less target
 - Register at fietsregistratie.nl
@@ -78,7 +78,7 @@ Mostly at:
 **Prevention:**
 - Front pockets for valuables
 - Bag zipped and in front
-- Don't flash expensive items
+- Keep valuables concealed
 - Be aware in crowds
 
 ### Housing Scams
@@ -95,7 +95,7 @@ Common trap for newcomers.
 **Safety:**
 - Always view in person
 - Verify ownership (Kadaster)
-- Never pay before contract
+- Verify contract before payment
 - Use known platforms
 
 ## Laws You Must Know
@@ -104,7 +104,7 @@ Common trap for newcomers.
 - Must carry ID if 14+ years old
 - Passport or EU ID card
 - Copy on phone not accepted
-- Fine: €95 if unable to identify
+- Fine: €110 if unable to identify
 
 ### Drugs
 
@@ -131,10 +131,10 @@ Common trap for newcomers.
 
 | Violation | Fine |
 |-----------|------|
-| No lights | €55 |
-| Phone use | €140 |
+| No lights | €70 |
+| Phone use | €150 |
 | Red light | €110 |
-| Wrong way | €95 |
+| Wrong way | €110 |
 | No bell | €40 |
 | Drunk cycling | €100+ |
 
@@ -169,14 +169,14 @@ All Utrecht neighborhoods are safe by day. Some variation at night:
 
 ### Late Night Tips
 - Stick to lit streets
-- Avoid confrontations
-- Don't engage with aggressive behavior
+- De-escalate situations
+- Walk away from aggressive behavior
 - Use well-traveled routes
 
 ## Traffic Safety
 
 ### As a Cyclist
-- Assume cars don't see you
+- Ride defensively; assume drivers may not see you
 - Use lights at night (mandatory)
 - Signal turns with hand
 - Watch for car doors
@@ -185,8 +185,8 @@ All Utrecht neighborhoods are safe by day. Some variation at night:
 
 ### As a Pedestrian
 - Look for bikes first, then cars
-- Don't walk in bike lanes
-- Cyclists won't stop for you
+- Stay strictly on pedestrian sidewalks
+- Yield to cyclists; they often will not stop
 - Cross at designated areas
 
 ### As a Driver
@@ -226,7 +226,7 @@ All Utrecht neighborhoods are safe by day. Some variation at night:
 
 ## Legal Rights
 
-### If Stopped by Police
+### When Approached by Police
 - Must show ID
 - Can remain silent on other questions
 - Right to lawyer if arrested
@@ -236,7 +236,7 @@ All Utrecht neighborhoods are safe by day. Some variation at night:
 ### If Arrested
 - Call embassy
 - Request lawyer
-- Don't sign what you don't understand
+- Require translated documents before signing
 - You have rights — use them
 
 ### Tenant Rights
@@ -257,7 +257,7 @@ All Utrecht neighborhoods are safe by day. Some variation at night:
 
 ### Protection
 - If it's too good: It's fake
-- Never pay upfront for housing
+- Secure housing contract before transferring funds
 - Verify before sending money
 - Meet in public for marketplace deals
 - Trust your instincts
@@ -292,12 +292,12 @@ Netherlands was first country to legalize same-sex marriage. Utrecht is very acc
 ### Digital Security
 - Public WiFi: Use VPN
 - Banking: Strong authentication
-- Documents: Don't carry unnecessarily
+- Documents: Leave unnecessary documents secure
 - Copies: Keep digital copies of ID
 
 ## Key Takeaways
 
-1. **Utrecht is safe** — Don't be paranoid
+1. **Utrecht is safe** — Maintain standard awareness
 2. **Lock your bike properly** — Main theft risk
 3. **Carry ID** — It's the law
 4. **Know cycling rules** — Fines are real

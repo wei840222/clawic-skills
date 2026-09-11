@@ -55,11 +55,11 @@ Western edge, transitional.
 ✅ More affordable than center
 
 **Cons**
-❌ Less "pretty" than center
-❌ Can feel gritty
-❌ Some streets noisy
-❌ Parking difficult
-❌ Gentrifying fast (changing character)
+- Less "pretty" than center
+- Can feel gritty
+- Some streets noisy
+- Parking difficult
+- Gentrifying fast (changing character)
 
 ### Who Should Live Here
 
@@ -136,11 +136,11 @@ Close to Utrecht Science Park (Uithof):
 ✅ Less tourist traffic
 
 **Cons**
-❌ Less happening than center/Lombok
-❌ Fewer restaurants/bars
-❌ Student turnover (transient feel)
-❌ Match days noisy (near stadium)
-❌ Feels suburban in parts
+- Less happening than center/Lombok
+- Fewer restaurants/bars
+- Student turnover (transient feel)
+- Match days noisy (near stadium)
+- Feels suburban in parts
 
 ### Who Should Live Here
 

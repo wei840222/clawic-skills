@@ -112,7 +112,7 @@ Coffee is essential to Dutch life:
 ### Drinking Culture
 - Borrel (after-work drinks): Very Dutch
 - Proost! = Cheers
-- Pace yourself (Dutch don't appreciate excess)
+- Pace yourself (Dutch prefer moderation)
 - Bitterballen mandatory with beer
 - Jenever (Dutch gin) for adventurous
 
@@ -228,7 +228,7 @@ Coffee is essential to Dutch life:
 - Cash: Leave on table
 - Card: Add to total or give separately
 - "Klopt zo" = keep the change
-- Don't over-tip (creates awkwardness)
+- Keep tips around 5-10%; larger tips can feel awkward
 
 ## Reservations
 
@@ -351,7 +351,7 @@ Coffee is essential to Dutch life:
 - Water not automatic (ask and pay)
 - Bread not automatic (may cost)
 - Pace is leisurely
-- Don't rush the staff
+- Expect a leisurely dining pace
 
 ### General
 - "Eet smakelijk" = Enjoy your meal
