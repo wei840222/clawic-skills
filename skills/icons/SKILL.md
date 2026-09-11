@@ -1,166 +1,63 @@
 ---
 name: icons
-slug: icons
-version: 1.0.0
-description: Implement accessible icons with proper sizing, color inheritance, and performance.
-homepage: https://clawic.com/skills/icons
+description: Implement accessible UI icons with correct sizing, currentColor inheritance, SVG performance, and screen-reader patterns. Use when adding or modifying icons in web, HTML, or React interfaces.
 metadata:
-  clawdbot:
-    emoji: 🔣
-    requires: {}
-    os:
-    - linux
-    - darwin
-    - win32
-    displayName: Icons
+  version: "1.0.0"
+  openclaw: '{"emoji":"🔣"}'
 ---
 
-## SVG vs Icon Fonts
+# Icons
 
-SVG is the modern standard:
-- Better accessibility (native ARIA support)
+## State location
+
+This skill is stateless and does not store local configuration.
+
+## Core guidance
+
+SVG is the modern standard over icon fonts:
+
+- Native ARIA support and multicolor paths
 - No flash of invisible/wrong icon (FOIT)
-- Multicolor support
 - Smaller bundles with tree-shaking
+- Prefer icon fonts only for legacy IE11 support
 
-Only consider icon fonts for legacy IE11 support.
+## Progressive disclosure
 
-## Accessibility Patterns
+Load the matching reference before implementing:
 
-**Decorative icons (next to visible text):**
-```html
-<button>
-  <svg aria-hidden="true" focusable="false">...</svg>
-  Save
-</button>
-```
+| Need | Reference |
+|------|-----------|
+| Decorative vs informative labeling, `aria-hidden`, `focusable`, SVG `<title>` | [Accessibility Patterns](references/accessibility.md) |
+| `currentColor`, stroke weight, grid sizes, touch targets, text scaling | [Styling and Sizing](references/styling-sizing.md) |
+| Symbol sprites, external sprites, bundle size | [Performance and Sprites](references/performance-sprites.md) |
+| One icon set, stroke/font weight match, naming | [Consistency Rules](references/consistency.md) |
 
-**Informative icons (standalone, no label):**
-```html
-<button aria-label="Save document">
-  <svg aria-hidden="true" focusable="false">...</svg>
-</button>
+## Operating rules
 
-<!-- Or with visually hidden text -->
-<button>
-  <svg aria-hidden="true">...</svg>
-  <span class="sr-only">Save document</span>
-</button>
-```
+1. Prefer inline or tree-shaken SVG components over whole icon-font libraries.
+2. Match accessibility mode to intent: decorative icons hide from AT; informative/icon-only controls expose an accessible name.
+3. Use `currentColor` (fill or stroke) so theme and hover states inherit from CSS `color`.
+4. Keep stroke weight proportional to icon size; default grids are 16 / 20 / 24 / 32px.
+5. Guarantee at least a 44×44 CSS-pixel touch target for tappable icon controls (padding is fine).
+6. Stick to one icon set and one style family per surface; name icons by appearance (`stopwatch`), not overloaded meaning (`speed`).
 
-**SVG with accessible name:**
-```html
-<svg role="img" aria-labelledby="icon-title">
-  <title id="icon-title">Warning: system error</title>
-  <!-- paths -->
-</svg>
-```
+## Common mistakes
 
-Key rules:
-- `aria-hidden="true"` on SVGs that duplicate visible text
-- `focusable="false"` prevents unwanted tab stops in IE/Edge
-- `<title>` must be first child inside `<svg>` for screen reader support
-- IDs must be unique if multiple SVGs are inline
+- Missing `aria-hidden` on decorative icons — screen readers announce path gibberish
+- Icon-only buttons without `aria-label` or visually hidden text
+- Mixing rounded and sharp icon styles in the same interface
+- Shipping giant icon libraries for a handful of glyphs
+- Hardcoded fills that block theme switching
+- 16px icons with 2px strokes that look heavy
+- Optical misalignment (treating mathematical center as visual center)
 
-## Color Inheritance
+## Sources
 
-```svg
-<svg fill="currentColor">
-  <path d="..."/>
-</svg>
-```
+Authoritative references used for this skill package:
 
-`currentColor` inherits from CSS `color` property. The icon changes color with hover states automatically:
-
-```css
-.button { color: blue; }
-.button:hover { color: red; } /* icon turns red too */
-```
-
-Remove hardcoded `fill="#000"` from SVGs before using currentColor.
-
-For stroke-based icons, use `stroke="currentColor"` instead.
-
-## Sizing
-
-Standard grid sizes: 16, 20, 24, 32px
-
-Match stroke weight to size:
-| Size | Stroke | Use case |
-|------|--------|----------|
-| 16px | 1px | Dense layouts, small text |
-| 20px | 1.25px | Default UI |
-| 24px | 1.5px | Buttons, primary actions |
-| 32px | 2px | Headers, navigation |
-
-Touch targets need 44x44px minimum—icon can be smaller if tappable area is larger via padding.
-
-```css
-.icon-button {
-  width: 24px;
-  height: 24px;
-  padding: 10px; /* Creates 44x44 touch target */
-}
-```
-
-## Scaling with Text
-
-```css
-.icon {
-  width: 1em;
-  height: 1em;
-}
-```
-
-Icon scales with surrounding text size automatically.
-
-## Symbol Sprites
-
-For many repeated icons, reduce DOM nodes with sprites:
-
-```html
-<!-- Define once, hidden -->
-<svg style="display:none">
-  <symbol id="icon-search" viewBox="0 0 24 24">
-    <path d="..."/>
-  </symbol>
-  <symbol id="icon-menu" viewBox="0 0 24 24">
-    <path d="..."/>
-  </symbol>
-</svg>
-
-<!-- Use anywhere -->
-<svg aria-hidden="true"><use href="#icon-search"/></svg>
-```
-
-External sprites (`<use href="/icons.svg#search"/>`) don't work in older Safari without polyfill.
-
-## Performance
-
-Benchmark (1000 icons):
-- `<img>` with data URI: 67ms (fastest)
-- Inline SVG optimized: 75ms
-- Symbol sprite: 99ms
-- `<img>` external: 76ms
-
-Recommendations:
-- Tree-shake icon libraries (Lucide, Heroicons support this)
-- Don't import entire Font Awesome (1MB+)—use subset or switch to SVG
-- Inline critical icons, lazy-load sprite for non-critical
-
-## Consistency
-
-- Stick to one icon set—mixing styles looks unprofessional
-- Match icon stroke weight to your font weight (regular text = 1.5px stroke)
-- Pick one style per context: outlined for inactive, filled for active
-- Optical alignment differs from mathematical—circles reach edges, squares don't
-- Name icons by appearance, not meaning: `stopwatch` not `speed`
-
-## Common Mistakes
-
-- Missing `aria-hidden` on decorative icons—screen readers announce gibberish
-- Mixing rounded and sharp icon styles in same interface
-- Giant icon libraries for 10 icons—massive bundle bloat
-- Icon-only buttons without accessible name—impossible to use with screen readers
-- Hardcoded colors preventing theme switching
-- Stroke width not scaling with icon size—16px icon with 2px stroke looks heavy
+- MDN — [SVG accessibility: Ideal image](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/img_role)
+- MDN — [`aria-hidden`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden)
+- MDN — [CSS `color` / `currentColor`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#currentcolor_keyword)
+- WAI — [Images Tutorial (decorative & functional)](https://www.w3.org/WAI/tutorials/images/)
+- WAI — [Target Size (Minimum) Understanding WCAG 2.2 SC 2.5.8](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html)
+- MDN — [SVG `<use>` / external resource references](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/use)
