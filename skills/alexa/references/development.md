@@ -44,7 +44,7 @@ User speaks → Alexa cloud (NLU) → Your skill (intent + slots) → Lambda/End
 **Sample utterances:**
 - Minimum 10-20 per intent for good recognition
 - Include variations: formal/casual, with/without slots
-- Test with real users — they say things you don't expect
+- Test with real users — they use unpredictable phrasing
 
 ### Required Intents (Certification)
 
@@ -157,7 +157,7 @@ Before submitting:
 - [ ] No trademark issues in skill name
 
 **Common rejection reasons:**
-- Example phrases don't work exactly as written
+- Example phrases fail to execute exactly as written
 - Help intent is generic ("I can help you")
 - Skill name conflicts with existing skill or trademark
 - Missing privacy policy for data collection

@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "How do I group my living room lights in Alexa?",
+    "expected": "Instructions on creating a group in the Alexa app and adding devices to it for room-based commands.",
+    "actual": "To group your living room lights in Alexa, you should use the Alexa app to create a Group. Go to Devices -> + -> Add Group. Assign your living room lights to this group, which allows you to use room-based commands like 'Turn on living room lights'.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "I am building a custom Alexa skill, but it fails certification because of a generic help intent. What should I do?",
+    "expected": "Reference development.md to explain that custom skills require specific intents like AMAZON.HelpIntent and to provide examples instead of a generic response.",
+    "actual": "Based on the skill development guidelines (see `references/development.md`), certification blockers include having a generic help intent. You must implement the required AMAZON.HelpIntent with a response that gives users specific examples of what they can say, tailored to your custom skill's functionality.",
+    "pass": true
+  }
+]
