@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "Translate this to Dutch: 'Do you want to grab a beer later? It would be nice.'",
+    "expected": "Uses casual tone, 'je', diminutives (biertje), and natural flow (gezellig).",
+    "actual": "Wil je later nog even een biertje doen? Lijkt me gezellig hoor.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "Translate to Dutch for a quick text to a friend: 'No, that is really awkward. I am just chilling now.'",
+    "expected": "Mixes English naturally (awkward, chillen), uses casual filler words.",
+    "actual": "Nee joh, dat is echt super awkward. Ik ben nu gewoon lekker aan het chillen.",
+    "pass": true
+  }
+]
