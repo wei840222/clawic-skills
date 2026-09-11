@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "I want to start lifting weights 3 days a week. What should I do?",
+    "expected": "A full-body strength plan focused on progression and movement patterns, applying default guidelines.",
+    "actual": "Here is a 3-day full-body strength program.\n\n**Days per week:** 3\n**Format:** Full-body (allows for frequency while fitting into 3 days).\n\n**Workout A**\n- Squat (Legs/Quads): 3 sets x 8-10 reps (RIR 2), Rest 3 min\n- Bench Press (Horizontal Push): 3 sets x 8-10 reps (RIR 2), Rest 3 min\n- Barbell Row (Horizontal Pull): 3 sets x 8-10 reps (RIR 2), Rest 3 min\n- Tricep Extensions (Isolation): 2 sets x 10-15 reps (RIR 1-2), Rest 1.5 min\n\n**Workout B**\n- Deadlift (Hinge): 3 sets x 6-8 reps (RIR 2), Rest 3-5 min\n- Overhead Press (Vertical Push): 3 sets x 8-10 reps (RIR 2), Rest 3 min\n- Pull-ups / Lat Pulldown (Vertical Pull): 3 sets x 8-12 reps (RIR 2), Rest 3 min\n- Bicep Curls (Isolation): 2 sets x 10-15 reps (RIR 1-2), Rest 1.5 min\n\n**Progression:** For the first ~6 months, try to add 2.5 kg (upper body) or 5 kg (lower body) to each lift each session.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "I missed two weeks of training because I was on vacation. My last bench press was 80 kg for 3x8. How should I resume?",
+    "expected": "Application of the layoff discount rule for a two-week gap.",
+    "actual": "Since you missed two full weeks, we need to apply the layoff discount to avoid injury and excessive soreness.\n\n**The Rule:** Subtract 10% of load per week missed.\n**Your Missed Time:** 2 weeks = 20% discount.\n**Your Target:** 80 kg - 20% = 64 kg.\n\n**Your Next Session:** Resume your bench press at 3 sets of 8 reps with 64 kg.",
+    "pass": true
+  }
+]

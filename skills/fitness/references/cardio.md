@@ -44,7 +44,7 @@ Interference (Hickson): high-volume endurance work in the same muscles blunts st
 
 - Priority order: whatever `primary_goal` is trains first and fresh; the other fits around it (placement rules canonical in SKILL.md, Program Design Defaults).
 - Same-day: separate by 6+ hours when schedule allows; otherwise lift first, cardio after, and keep the cardio Zone 2.
-- Never hard intervals the day before the heaviest lower-body session.
+- Schedule hard intervals at least 48 hours away from the heaviest lower-body session.
 - Endurance `primary_goal`: lifting drops to maintenance — 2 full-body sessions, compounds at 3-6 reps, well short of failure; strength preserved cheaply.
 
 ## Cardio Plateaus

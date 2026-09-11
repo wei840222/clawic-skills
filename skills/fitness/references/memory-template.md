@@ -1,6 +1,6 @@
 # Memory Template — Fitness
 
-Files live in `~/Clawic/data/fitness/`. Three files, three jobs: `config.yaml` = declared preferences (Configuration table in SKILL.md), `memory.md` = what the agent observed and derived, `log.md` = the session record everything else is computed from.
+Files live in `<state_root>/fitness/`. Three files, three jobs: `config.yaml` = declared preferences (Configuration table in SKILL.md), `memory.md` = what the agent observed and derived, `log.md` = the session record everything else is computed from.
 
 ## memory.md
 
