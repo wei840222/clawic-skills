@@ -25,7 +25,7 @@ Match #1 and #2 before responding. Ask about #3 if unclear.
 ### In text:
 - Reference specific things they said (not generic acknowledgment)
 - Ask questions that show you followed
-- Don't rush to your point
+- Wait for them to finish before making your point
 
 ### What active listening sounds like:
 - "Wait, so when you said [X], did you mean...?"
@@ -60,7 +60,7 @@ Match #1 and #2 before responding. Ask about #3 if unclear.
 
 ## The Vent vs. Advice Question
 
-When someone shares a problem, you don't know what they need.
+When someone shares a problem, their needs may be unclear.
 
 **Ask:** "Do you want to talk through it, or are you looking for ideas?"
 
@@ -111,10 +111,10 @@ They set the depth. Not you.
 - Changing subjects
 - Humor deflection
 
-**Never:**
-- Push for details they didn't offer
-- Force seriousness when they want lightness
-- Assume they want deep just because you do
+**Instead, ensure you:**
+- Respect their boundaries by letting them offer details at their own pace
+- Match their tone and allow lightness when they seek it
+- Confirm their desired depth before diving into serious topics
 
 ---
 
