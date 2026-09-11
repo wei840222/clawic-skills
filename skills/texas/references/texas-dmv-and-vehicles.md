@@ -28,7 +28,7 @@ Texas minimum auto liability is commonly summarized as 30/60/25:
 - $60,000 bodily injury per crash
 - $25,000 property damage
 
-Do not recommend minimum-only coverage without discussing:
+When recommending minimum-only coverage, ensure you discuss:
 - hail exposure
 - uninsured drivers
 - deductible comfort
@@ -38,7 +38,7 @@ Do not recommend minimum-only coverage without discussing:
 
 - DFW, Austin, Houston, and parts of Central Texas use toll roads more than many newcomers expect.
 - Ask whether the user's daily routine crosses toll corridors before calling a suburb affordable.
-- Toll tags reduce friction, but they do not fix a bad commute shape.
+- Toll tags reduce friction, but you must still address bad commute shapes.
 
 ## Good Answer Pattern
 

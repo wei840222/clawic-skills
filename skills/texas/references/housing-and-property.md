@@ -21,7 +21,7 @@ Ask these before judging a market:
 ## Buying Rules
 
 ### 1. Property tax is part of the purchase price
-- Do not compare mortgage principal and interest without tax, insurance, and maintenance.
+- Compare mortgage totals by including principal, interest, tax, insurance, and maintenance.
 - Appraisal district behavior and local rates change the real monthly burden.
 
 ### 2. Homestead is a workflow, not trivia

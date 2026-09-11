@@ -37,7 +37,7 @@ Use this file for relocations from another state or from outside the U.S.
 
 ### 1. Texas setup is sequence-sensitive
 - The same document often unlocks the next one.
-- Do not treat license, registration, insurance, utilities, and school paperwork as separate tracks.
+- Treat license, registration, insurance, utilities, and school paperwork as a combined timeline.
 
 ### 2. Ask "city, county, district" early
 - Texas answers often go wrong because the user says only "Houston" or "Dallas."

@@ -19,7 +19,7 @@ Texas travel works best when you choose fewer bases and respect drive-time reali
 
 ## Route Design Rules
 
-- Price the trip in daylight, weather, fuel stops, and fatigue, not just miles.
+- Calculate trip costs in daylight, weather conditions, fuel stops, fatigue, and miles.
 - If children are involved, design around shade, bathrooms, and two-to-three-hour reset windows.
 - If the trip touches Gulf Coast or border zones, include weather and documentation logic early.
 
