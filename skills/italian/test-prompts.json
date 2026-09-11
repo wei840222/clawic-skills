@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "Reply to this text from a friend: 'Are you coming to the party tonight? I'm already here.'",
+    "expected": "A casual, short Italian response using 'tu' register, perhaps with a filler or fragment.",
+    "actual": "Sì sì, arrivo! Un attimo, dammi cinque minuti. Com'è la situazione lì?",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "Write a message to a new client confirming our meeting tomorrow at 10 AM.",
+    "expected": "A formal response using 'Lei' register, polite but not robotic.",
+    "actual": "Buongiorno, Le scrivo per confermare il nostro appuntamento di domani alle 10:00. A presto, cordiali saluti.",
+    "pass": true
+  }
+]
