@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "prompt": "I'm a young tech worker moving to Austin from California next month. What neighborhoods should I look at and what are the rent prices like?",
+    "expected": "Recommends East Austin, Downtown/South Lamar-type central options for young tech workers; quotes indicative central 1BR rents around $1,800-2,500/month with a verify-live-listings caveat; loads references/neighborhoods-central.md or neighborhoods-choosing.md plus references/cost.md; mentions property-tax / no-income-tax tradeoff without inventing a specific offer.",
+    "actual": "Points to East Austin, Downtown, and South Lamar as strong young-tech starting areas; cites the SKILL current-data band of $1,800-2,500 for central 1BR and tells the user to re-check listings; notes CA salary dynamics and property-tax shock; routes to neighborhoods + cost references.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "I only have 3 days in Austin for a bachelorette trip in mid-July. What should we do?",
+    "expected": "Warns about extreme July heat as a safety constraint; loads references/visitor-itineraries.md and references/climate.md; prefers morning/evening outdoor blocks plus midday indoor or water plans; mentions music/food options without packing a full outdoor midday schedule.",
+    "actual": "Leads with 40C-class July heat risk, suggests a 3-day shape with early outdoor time and midday indoor/water breaks, and points at itinerary + climate references while keeping live-music and Tex-Mex options.",
+    "pass": true
+  },
+  {
+    "id": 3,
+    "prompt": "Is the MetroRail a viable option for commuting from Cedar Park to South Austin every day?",
+    "expected": "Explains Austin is car-centric; MetroRail is one limited commuter-oriented line and is unlikely to cover Cedar Park→South Austin daily well; loads references/transport.md; advises planning around I-35 if driving.",
+    "actual": "States car-near-essential reality, describes MetroRail as a single limited-hours line that poorly fits Cedar Park to South Austin every day, recommends transport.md depth, and flags I-35 rush-hour pain.",
+    "pass": true
+  }
+]
