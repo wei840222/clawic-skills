@@ -26,7 +26,7 @@ Recomp (gaining muscle and losing fat at once) is realistic for beginners, retur
 
 ## Reading the Scale
 
-- Daily weigh-in under consistent conditions (morning, post-bathroom), compared as **weekly averages**. Day-to-day swings of 1-2% bodyweight are water, glycogen, and gut content — never adjust anything on a single day.
+- Daily weigh-in under consistent conditions (morning, post-bathroom), compared as **weekly averages**. Day-to-day swings of 1-2% bodyweight are water, glycogen, and gut content — base adjustments strictly on multi-day trends.
 - New deficit week 1 overstates loss (glycogen water); first surplus week overstates gain. Judge from week 2.
 - Adjustment trigger: two consecutive weekly averages flat against the phase target → adjust intake (route to `calories`) or activity, one lever at a time. The lift log arbitrates which: lifts strong + scale flat in a cut = intake lever; lifts fading = recovery problem first.
 - Complementary cheap metrics: waist measurement weekly, same conditions; progress photos monthly. Bodyweight + waist + e1RM trend together beat any body-fat-percentage gadget reading.

@@ -11,7 +11,7 @@ Turning raw numbers into programming decisions — and knowing when a number is 
 
 ## Trend Windows (the anti-noise table)
 
-| Metric | Compare | Never react to |
+| Metric | Compare | Exclude from programming |
 |---|---|---|
 | e1RM per lift | 3-4 week trend of best sets | One good or bad day |
 | Bodyweight | Weekly average vs prior week | Any single weigh-in (1-2% daily water swings) |
@@ -28,8 +28,8 @@ The decision thresholds these feed are canonical elsewhere: RHR 5+ bpm for 3+ mo
 | Resting HR | High | The workhorse: deload triggers, illness early warning (RHR often rises 1-2 days before symptoms) |
 | Sleep duration | Decent | Readiness check input; stall diagnosis (under-7h average, canonical) |
 | Sleep stages | Low | Ignore for programming; deep/REM estimates from wrist devices are unreliable |
-| HRV | Medium, personal-baseline only | 7-day rolling average vs the user's own baseline; single-day HRV is noise; never compare across people or devices |
-| Calorie burn | Low | Never program intake from it; deficit math routes to `calories` on intake-side numbers |
+| HRV | Medium, personal-baseline only | 7-day rolling average vs the user's own baseline; single-day HRV is noise; limit comparison to the user's own baseline |
+| Calorie burn | Low | Ignore for intake programming; deficit math routes to `calories` on intake-side numbers |
 | Readiness/strain scores | Low | Proprietary blends (canonical trap): decompose to RHR + sleep hours + log before acting |
 
 ## When the Data Lies

@@ -18,7 +18,7 @@ Attendance rule (canonical in SKILL.md Traps): program to logged attendance + ma
 
 Weekly sets per muscle (Rule 4 corridor: 10-20) ÷ sessions touching that muscle = sets per session. Example: 12 weekly chest sets on 3 full-body days = 4 chest sets per session — one exercise, done well. If the math forces more than ~8 hard sets for one muscle in one session, spread across more days or cut volume: late sets degrade (SKILL.md frequency rule).
 
-Session time check: a hard compound set with Rule 8 rest costs ~4-5 min, isolation ~2.5 min. A 60-min session holds roughly 8-10 compound sets plus 4-6 isolation sets after warm-up. If the plan exceeds `session_minutes`, cut isolation first, never rest.
+Session time check: a hard compound set with Rule 8 rest costs ~4-5 min, isolation ~2.5 min. A 60-min session holds roughly 8-10 compound sets plus 4-6 isolation sets after warm-up. If the plan exceeds `session_minutes`, cut isolation first, keeping rest periods fixed.
 
 ## Template Skeletons
 
@@ -39,7 +39,7 @@ Goal adjustments on any skeleton: strength → first compound at 3-6 reps, 80-90
 - Pick the variant the user can load progressively with their `equipment` and perform pain-free — pattern coverage beats exercise identity. A goblet squat that progresses beats a barbell squat that hurts.
 - Big-return defaults per pattern: squat (back/front/goblet squat, leg press) · hinge (deadlift, RDL, hip thrust) · horizontal push (bench, dumbbell press, push-up) · horizontal pull (barbell/dumbbell/cable row) · vertical push (overhead press) · vertical pull (pull-up, lat pulldown).
 - Stability spectrum: machines allow the most load with the least skill; barbells the most progression headroom; unilateral free-weight work the most balance demand. Beginners and returners start toward the stable end.
-- An exclusion (config preference area) removes the exercise, never the pattern — substitute within the row below.
+- An exclusion (config preference area) removes the exercise, retaining the fundamental movement pattern — substitute within the row below.
 
 ## Substitution Table (by equipment)
 
@@ -57,7 +57,7 @@ When reps outgrow the movement, add difficulty instead of load: tempo, longer ra
 ## Conditioning Placement
 
 - Lifting and cardio same day: lift first when strength or muscle is `primary_goal`; separate by 6+ hours when schedule allows (interference logic, SKILL.md Where Experts Disagree).
-- Hard intervals never the day before the heaviest lower session; Zone 2 goes anywhere.
+- Schedule hard intervals at least 48 hours away from the heaviest lower session; Zone 2 goes anywhere.
 - 2-3 lifting days + ACSM cardio floor fits in: cardio on off days, or 20-30 min Zone 2 appended after lifting.
 
 ## Populations

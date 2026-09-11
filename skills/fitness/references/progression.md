@@ -11,12 +11,12 @@ When to use which progression scheme, and symptom-first chains for when progress
 | Advanced | Block: 3-5 weeks accumulation (volume up, RIR 2-3) → 1-3 weeks intensification (volume down, load up, RIR 1-2) → deload | — |
 | Peaking for a dated event | Intensification block ending ~1 week out, deload into the date, 1RM attempts only here (Rule 2) | — |
 
-Complexity is a cost: move down this table only when the simpler model demonstrably stopped working (SKILL.md, Where Experts Disagree). Block lengths stay inside the Rule 7 cap of 4-8 hard weeks.
+Complexity is a cost: move down this table only when the simpler model demonstrably ceased to produce adaptation (SKILL.md, Where Experts Disagree). Block lengths stay inside the Rule 7 cap of 4-8 hard weeks.
 
 ## Autoregulation Within a Session
 
-- Daily readiness moves loads ±5%, never the plan. First work set feels like RIR 1 when RIR 3 was prescribed → drop 5% for today, log it, keep the program.
-- The reverse too: prescribed load feels like RIR 4+ → finish as prescribed, log the extra reps; double progression converts them next session. Never jump load mid-session on a good day — that steals next week's progression.
+- Daily readiness moves loads ±5%, leaving the plan intact. First work set feels like RIR 1 when RIR 3 was prescribed → drop 5% for today, log it, keep the program.
+- The reverse too: prescribed load feels like RIR 4+ → finish as prescribed, log the extra reps; double progression converts them next session. Log extra reps but maintain current load to preserve next week's progression window.
 - Readiness check itself (HR/sleep/appetite) is canonical in SKILL.md Recovery and Readiness.
 
 ## Plateau Playbooks (symptom → cause)
@@ -37,7 +37,7 @@ Run SKILL.md's diagnostic order first (log audit → inputs → deload+90% → o
 
 **Reps falling at loads that used to be routine**
 
-- Performance regressing, not plateauing: acute fatigue or an unlogged gap. Check `log.md` for missed sessions (Rule 6 applies), then resting HR trend (Rule 7 trigger), then illness onset. Never chase falling reps with added load.
+- Performance regressing, not plateauing: acute fatigue or an unlogged gap. Check `log.md` for missed sessions (Rule 6 applies), then resting HR trend (Rule 7 trigger), then illness onset. Address fatigue factors before increasing load.
 
 **Endurance pace stalled**
 
@@ -51,6 +51,6 @@ When double progression at 8-12 stalls twice (post-deload), shift the range, kee
 
 ## Progression Hygiene
 
-- One change at a time (canonical, SKILL.md) — microload OR range shift OR variant, never bundled, or the working change is unidentifiable.
+- One change at a time (canonical, SKILL.md) — microload OR range shift OR variant, isolating variables to ensure the effective change remains identifiable.
 - Every model change gets a log annotation with date and reason; unannotated changes make later diagnosis archaeology.
 - PRs are lagging indicators: judge a change after 3 weeks of trend, not one good day.

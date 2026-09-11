@@ -6,7 +6,7 @@ Re-entry prescriptions after every kind of interruption. The layoff discount mat
 
 | Gap | Lifting prescription | Cardio prescription |
 |---|---|---|
-| < 1 week | Skip missed sessions, resume as planned; never stack two into one | Resume as planned |
+| < 1 week | Skip missed sessions, resume as planned; keep the schedule linear without stacking | Resume as planned |
 | 1-2 weeks | Last logged loads, no jump; normal progression resumes next session | Last weekly minutes, no hard sessions the first week |
 | 2-4 weeks | −10% load per week missed; rebuild ~10% per week | Resume at the same discount on weekly minutes; Zone 2 only for week one |
 | 1-3 months | Floor case: 50% of last logged loads, full-body 3x/week regardless of prior split; rebuild ~10% per week | Restart at ~50% of prior minutes, then +10% weekly |

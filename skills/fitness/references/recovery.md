@@ -39,7 +39,7 @@ The ladder is climbed by ignoring the previous rung, not by any single session. 
 ## Stress-Adjusted Training
 
 - High life stress (work crunch, new baby, exam period): cut volume ~30-50%, keep frequency and intensity. Three short sessions that happen beat one perfect plan that doesn't; the habit is the asset being protected.
-- Never stack a planned hard block on top of a foreseeable life crunch — move the accumulation block, don't fight the calendar.
+- Shift a planned hard block away from on top of a foreseeable life crunch — move the accumulation block, aligning training blocks with life events.
 
 ## Sleep
 
@@ -51,4 +51,4 @@ The ladder is climbed by ignoring the previous rung, not by any single session. 
 - Load-bearing: sleep, food (protein per SKILL.md defaults), and dosage control. Nothing below substitutes for them.
 - Cheap and fine: walking, Zone 1 spins, light mobility on off days — they cost nothing and help subjective soreness.
 - Cold plunges after lifting: post-exercise cold water immersion blunts hypertrophy signaling (Roberts) — keep cold exposure away from the hours after resistance work if muscle is the goal; fine after pure cardio.
-- Massage guns, compression, saunas: comfort tools; use them for feel, never count them as recovery capacity in programming decisions.
+- Massage guns, compression, saunas: comfort tools; use them for feel, excluding them from objective recovery metrics in programming decisions.

@@ -1,6 +1,6 @@
 # Assessment — Baselines, Testing, Starting Loads
 
-What to establish before prescribing, and how to re-test without burning training time. Collect inside normal work — from the log, from what the user volunteers — never as a questionnaire.
+What to establish before prescribing, and how to re-test without burning training time. Collect inside normal work — from the log, from what the user volunteers — collect implicitly through conversation.
 
 ## Minimum Baseline Set
 
@@ -14,10 +14,10 @@ What to establish before prescribing, and how to re-test without burning trainin
 
 ## Starting Loads With No Log
 
-Never guess a working weight from bodyweight or demographics. Find it live:
+Find working weight live using real sets rather than bodyweight math:
 
 1. Ramp: empty bar or light dumbbell x 10, then add load in 3-4 jumps of decreasing size, 3-5 reps each.
-2. Stop at the first load where 8 reps would end at RIR 3 by the user's report. That is the working weight.
+2. Pause at the first load where 8 reps would end at RIR 3 by the user's report. That is the working weight.
 3. Log it. Next session runs beginner progression (+2.5 kg upper / +5 kg lower, SKILL.md Progression) — the first weeks self-correct any misjudgment, so err low: a start 10% too light costs one week; 10% too heavy costs form and confidence.
 4. Technique gate: if form breaks before RIR 3, the working weight is the last clean load, regardless of effort.
 
@@ -44,7 +44,7 @@ Read it both ways. To prescribe a load, a rep target maps to %e1RM — all rows 
 ## Re-Testing Cadence
 
 - e1RM: recompute continuously from logged top sets — free, no test day needed. Planned true-1RM attempts only in a peak week (Rule 2).
-- Bodyweight: daily if the user weighs anyway, compared as weekly averages; never react to one day.
+- Bodyweight: daily if the user weighs anyway, compared as weekly averages; require multiple days before acting.
 - Resting HR baseline: rolling; re-anchor after illness or a time-zone change, both inflate it for days.
 - Movement screen: re-run only after injury or a 4+ week layoff.
 
