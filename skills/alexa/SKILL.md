@@ -1,18 +1,17 @@
 ---
 name: alexa
-slug: alexa
-version: 1.0.0
-description: Control devices, run automations, and help users get more from Alexa with smart home, routines, and skill development guidance.
-homepage: https://clawic.com/skills/alexa
+description: Control Alexa smart home devices, automate routines, and guide custom
+  voice skill development. Use for device naming, rooms/groups, routines, privacy
+  controls, troubleshooting, and Alexa Skills Kit certification basics.
 metadata:
-  clawdbot:
-    emoji: 🔊
-    displayName: Alexa
+  version: "1.0.0"
+  openclaw: '{"emoji":"🔊"}'
+  related-skills: '{"smart-home": "Ecosystem-agnostic protocol, hub, security, and automation guidance beyond Alexa-only workflows.", "amazon": "Broader Amazon buyer/seller workflows outside Alexa device and skill operations.", "iot": "Broader IoT device and connectivity patterns when the question is not Alexa-specific."}'
 ---
 
 ## Device Control
 
-**Naming for reliable control:** Location + device type. "Kitchen light", "Bedroom fan". Avoid model numbers.
+**Naming for reliable control:** Location + device type. "Kitchen light", "Bedroom fan". Use descriptive names instead of model numbers.
 
 **Room-based commands:**
 - "Turn off the bedroom" (all devices in room)
@@ -66,9 +65,9 @@ metadata:
 - Required intents: AMAZON.HelpIntent, AMAZON.StopIntent, AMAZON.CancelIntent, AMAZON.FallbackIntent
 - Test in simulator AND on physical device (simulator misses edge cases)
 - 10-20 sample utterances per intent minimum
-- Voice-first: users don't see a screen
+- Voice-first: design for auditory interactions rather than visual screens
 
-**Certification blockers:** Example phrases that don't work exactly as written, generic help intent, missing privacy policy.
+**Certification blockers:** Example phrases that fail to execute exactly as written, generic help intent, missing privacy policy.
 
 ## Troubleshooting
 
@@ -90,10 +89,16 @@ metadata:
 
 ---
 
+
+## State location
+
+This skill is stateless. It does not store local configuration or state.
+
 ## When to Load More
 
-| Situation | Reference |
-|-----------|-----------|
-| Full command list by category | `commands.md` |
-| Smart home protocols, setup, troubleshooting | `smart-home.md` |
-| Building custom skills, Lambda, certification | `development.md` |
+| Situation | When to load | Reference |
+|-----------|--------------|-----------|
+| Full command list by category | User asks for specific Alexa voice commands | `references/commands.md` |
+| Smart home protocols, setup, troubleshooting | User needs help connecting devices or debugging smart home | `references/smart-home.md` |
+| Building custom skills, Lambda, certification | User is developing a custom Alexa voice skill | `references/development.md` |
+| Official product and developer sources | Need current Alexa Help or ASK certification URLs | `references/sources.md` |
