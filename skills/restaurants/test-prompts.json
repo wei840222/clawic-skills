@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "I just tried a new sushi place called Sushi Nakazawa in the West Village, and it was amazing. Definitely $$$$, need reservations. We had omakase.",
+    "expected": "The agent should create a visited entry or favorite entry for Sushi Nakazawa with the details provided, stored in `<state_root>/restaurants/`.",
+    "actual": "Created a new file at `<state_root>/restaurants/visited/2026/sushi-nakazawa.md` containing the provided details like location, price, and cuisine.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "Where should we eat tonight? It's our anniversary.",
+    "expected": "The agent should check saved places first and suggest highly rated places for an anniversary or special occasion from my data before giving general recommendations.",
+    "actual": "The agent suggested La Mercerie based on my previously saved entry for 'Anniversary dinner'.",
+    "pass": true
+  }
+]
