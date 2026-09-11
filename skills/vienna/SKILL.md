@@ -13,6 +13,10 @@ metadata:
 
 This is a stateless knowledge skill. It does not create, read, or modify local configuration or persistent state files.
 
+## When to Use
+
+User asks about Vienna for visiting, moving, working, studying, or starting a business. Establish role, timeline, budget, and district constraints first, then load only the needed reference files.
+
 ## When to Load References
 
 Determine the user's role (tourist, resident, tech worker, student, entrepreneur) and load the appropriate reference files:
