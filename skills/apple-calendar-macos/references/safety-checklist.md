@@ -16,7 +16,7 @@ Apply this checklist before any create, update, or delete operation.
 1. Re-read the exact target window.
 2. Verify title, start/end, calendar, and recurrence fields.
 3. Report success only after read-back matches requested change.
-4. If mismatch occurs, stop and present rollback options.
+4. If mismatch occurs, pause execution and present rollback options.
 
 ## Bulk Operation Guardrails
 

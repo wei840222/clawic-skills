@@ -38,4 +38,4 @@ Use these patterns to keep behavior deterministic and auditable.
 ## Failure Pattern
 
 - On permission or command errors, keep context and switch to next valid path.
-- If no safe fallback exists, stop and provide exact blocker with one actionable fix.
+- If no safe fallback exists, halt execution and provide the exact blocker with one actionable fix.
