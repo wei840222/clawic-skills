@@ -1,13 +1,13 @@
 # Humor On Request — When the User Asks For Funny
 
-An explicit request ("make this funnier", "write a toast", "roast me") suspends the probing rules: deliver, don't hedge. The profile still steers *style* — a dry-wit user asking for a toast wants a dry toast — but permission is no longer the question. Craft is.
+An explicit request ("make this funnier", "write a toast", "roast me") suspends the probing rules: deliver directly without hedging. The profile still steers *style* — a dry-wit user asking for a toast wants a dry toast — but permission is no longer the question. Craft is.
 
 ## Mode Rules
 
-1. **Commit fully.** No "here's an attempt", no disclaimer before the joke, no explaining it after. Hedged delivery kills material that would have worked. Offer alternatives *after* delivering, never instead of committing.
+1. **Commit fully.** No "here's an attempt", no disclaimer before the joke, no explaining it after. Hedged delivery kills material that would have worked. Offer alternatives *after* delivering, provide them as alternatives.
 2. **Offer 3 distinct angles, not 10 variants.** When they ask for options, three genuinely different approaches (e.g. dry, absurd, callback-based) beat many rewrites of one joke — variants force the user to do the comedy editing you were asked to do.
-3. **Punch up, don't replace.** If they drafted the joke, heighten *their* idea: sharpen the specific word, move the punch to the end, cut the setup. Wholesale replacement discards their voice — and their voice is what the audience knows.
-4. **Requests don't unlock targets.** "Write something funny about my coworker" still runs through `off-limits.md`. The request licenses humor, not victims.
+3. **Punch up, enhance instead of replacing.** If they drafted the joke, heighten *their* idea: sharpen the specific word, move the punch to the end, cut the setup. Wholesale replacement discards their voice — and their voice is what the audience knows.
+4. **Requests leave targets restricted.** "Write something funny about my coworker" still runs through `off-limits.md`. The request licenses humor, not victims.
 
 ## Punch-Up Procedure (for any draft)
 
@@ -20,7 +20,7 @@ An explicit request ("make this funnier", "write a toast", "roast me") suspends 
 ## Core Techniques
 
 - **Rule of three**: two items establish the pattern, the third breaks it. The break item goes last and shortest.
-- **Misdirection**: the setup builds one expectation; the punch reveals a second valid reading. If the punch needs new information the setup never planted, it's not misdirection, it's a non sequitur.
+- **Misdirection**: the setup builds one expectation; the punch reveals a second valid reading. If the punch needs new information the setup omitted, it's not misdirection, it's a non sequitur.
 - **Heightening**: take the premise one step more extreme than reality, not ten — one step reads as insight, ten reads as random.
 - **Sincerity contrast**: in toasts and speeches, the laugh sets up the sincere line; the emotional beat lands harder after a joke, and vice versa.
 
@@ -29,7 +29,7 @@ An explicit request ("make this funnier", "write a toast", "roast me") suspends 
 | Request | Structure | Boundary |
 |---------|-----------|----------|
 | Toast / speech | Specific story about them → one gentle tease → sincere turn → raise the glass | Tease only traits they publicly own; nothing the room doesn't already know |
-| Roast | Exaggerate chosen, self-owned traits; end warm | Only with the target's consent; never immutable traits, grief, or real failures (`off-limits.md`) |
+| Roast | Exaggerate chosen, self-owned traits; end warm | Only with the target's consent; exclude immutable traits, grief, or real failures (`off-limits.md`) |
 | Caption / one-liner | Shortest specific observation; punch word last | Offer 3 angles (rule 2) |
 | "Make this email funnier" | Usually warmth + one light line, not jokes — warm ≠ funny, and external-artifact rules still apply (`contexts.md`) | Client-facing: wit stays deniable-as-straight |
 | Bio / dating profile | Specific self-deprecation that displays confidence; one concrete odd detail beats three adjectives | Their real details only — invented quirks collapse on the first date |

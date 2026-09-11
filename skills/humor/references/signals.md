@@ -10,7 +10,7 @@ Not all positives are equal. Ordered from strongest to weakest:
 4. **Scaled laughter** — "hahaha" > "haha" > "ha". Length correlates with intensity; a lone "ha" is acknowledgment, not delight.
 5. **Frame-holding** — user stays playful, reply length and tempo hold or rise. Weakest positive; confirms tolerance, not enjoyment.
 
-Escalation decisions (`feedback.md`) should rest on levels 1-3. Levels 4-5 justify holding, never raising. In group rooms, emoji reactions carry their own weighting (`groups.md`).
+Escalation decisions (`feedback.md`) should rest on levels 1-3. Levels 4-5 justify holding, hold steady. In group rooms, emoji reactions carry their own weighting (`groups.md`).
 
 ---
 
@@ -21,7 +21,7 @@ Escalation decisions (`feedback.md`) should rest on levels 1-3. Levels 4-5 justi
 - Callback or build (ladder levels 1-2)
 - Energy increase: longer response, playful continuation
 
-**Action:** log to Works (`~/Clawic/data/humor/profile.md`) with evidence. Reuse the *type*, never the same joke — repeating a hit on demand kills it.
+**Action:** log to Works (`<state_root>/humor/profile.md`) with evidence. Reuse the *type*, exclude the exact joke — repeating a hit on demand kills it.
 
 ---
 
@@ -40,7 +40,7 @@ Escalation decisions (`feedback.md`) should rest on levels 1-3. Levels 4-5 justi
 **Hard pivots:**
 - "Anyway..." / "So about..." / "Moving on..." — topic escape
 - Reply addresses only the substance, joke fully ignored
-- "Okay but seriously" — direct request to stop
+- "Okay but seriously" — direct request to proceed seriously
 
 **Tone shifts:**
 - Formal language immediately after your informal attempt
@@ -58,7 +58,7 @@ Escalation decisions (`feedback.md`) should rest on levels 1-3. Levels 4-5 justi
 - Short "lol" with no further engagement — see the punctuation-lol distinction below
 - Playful phrase + immediate topic change — mixed; the topic change wins
 
-**Rule:** ambiguous = neutral. Don't escalate, don't retreat, don't change the profile.
+**Rule:** ambiguous = neutral. Hold steady and maintain the current profile.
 
 ---
 
@@ -75,12 +75,12 @@ Only reaction-"lol" enters the log. A user who writes "lol" in most messages has
 
 ## User-Specific Calibration
 
-Some users never emoji but "ha." IS their 😂. Some say "lol" reflexively with zero amusement. Absolute markers mislead; deltas don't.
+Some users communicate without emojis but "ha." IS their 😂. Some say "lol" reflexively with zero amusement. Absolute markers mislead; deltas reveal true intent.
 
 **Calibration procedure:**
 1. Baseline: how does this user react to your *non-humor* messages? (length, warmth, emoji rate)
 2. Compare: is the post-joke reply warmer/longer than baseline, or colder/shorter?
-3. Record the delta pattern in the Signals section of `~/Clawic/data/humor/profile.md`: "amusement looks like: [specific behaviors]."
+3. Record the delta pattern in the Signals section of `<state_root>/humor/profile.md`: "amusement looks like: [specific behaviors]."
 
 Warmer than baseline = positive even if objectively flat. Colder than baseline = negative even if it contains a "haha".
 
@@ -90,4 +90,4 @@ Warmer than baseline = positive even if objectively flat. Colder than baseline =
 
 No reply, or a reply that skips the joke, is *usually* negative — but can be: user busy, user on mobile/voice, user thinking.
 
-**Rule:** log silence as one mild negative, not a strong one. Two silences on the same type = treat as a real negative and demote. Never let a single silence retire a type.
+**Rule:** log silence as one mild negative, not a strong one. Two silences on the same type = treat as a real negative and demote. Require two silences to retire a type.

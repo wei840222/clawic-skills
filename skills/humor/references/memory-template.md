@@ -1,6 +1,6 @@
 # Memory Templates — Humor
 
-File formats for `~/Clawic/data/humor/`. Create each file on its first real entry, not preemptively.
+File formats for `<state_root>/humor/`. Create each file on its first real entry, not preemptively.
 
 ## profile.md — the learned taste
 
@@ -50,8 +50,8 @@ One line per humor event, newest last. Trim to the last 30 entries; fold any pat
 - "the staging server survived" — born 2026-07-20 (1:1); uses: 2; last: 2026-07-21; status: alive
 ```
 
-Track the room it was born in (callbacks don't cross rooms, `groups.md`), use count, and status. Retire after two flat reactions (`types.md`).
+Track the room it was born in (callbacks stay within their original rooms, `groups.md`), use count, and status. Retire after two flat reactions (`types.md`).
 
 ## wins.md — verbatim hits
 
-The exact wording of jokes that drew ladder-level 1-3 reactions, for pattern study — reuse the *pattern*, never the joke (`signals.md`).
+The exact wording of jokes that drew ladder-level 1-3 reactions, for pattern study — reuse the *pattern*, exclude the exact joke (`signals.md`).

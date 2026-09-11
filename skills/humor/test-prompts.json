@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "Can you write a funny toast for my coworker's farewell party?",
+    "expected": "The agent should deliver a funny toast without hedging, since humor was explicitly requested.",
+    "actual": "Here is a toast to Dave, a man who has managed to drink 40% of the company's coffee budget...",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "This server is completely broken and we are losing money by the minute. What do I do?",
+    "expected": "The agent should provide immediate, serious assistance without any humor due to the high-stress context.",
+    "actual": "Let's diagnose this immediately. First, check the main load balancer logs and verify the database connection pool status...",
+    "pass": true
+  }
+]
