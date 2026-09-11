@@ -1,28 +1,23 @@
 ---
 name: restaurants
-slug: restaurants
-version: 1.0.0
-description: Build a personal restaurant system for tracking places to try, favorites, and dining memories.
-homepage: https://clawic.com/skills/restaurants
+description: Track restaurants to try, log dining experiences, and surface personalized recommendations from saved places. Use when the user mentions a restaurant, asks where to eat, or wants to record a meal.
 metadata:
-  clawdbot:
-    emoji: 🍽️
-    os:
-    - linux
-    - darwin
-    - win32
-    displayName: Restaurants
+  version: "1.0.0"
+  openclaw: '{"emoji": "🍽️"}'
 ---
 
 ## Core Behavior
 - User mentions restaurant → offer to save with notes
 - User asks for recommendation → check their saved places first
 - User returns from meal → help document experience
-- Create `~/Clawic/data/restaurants/` as workspace
+- Create `<state_root>/restaurants/` as workspace
+
+## State location
+This skill stores state at `<state_root>/restaurants/`. Use this path for storing restaurant entries. Examples: `~/.local/state/restaurants/`, `C:\Users\User\AppData\Local\restaurants\`.
 
 ## File Structure
 ```
-~/Clawic/data/restaurants/
+<state_root>/restaurants/
 ├── to-try/
 ├── favorites/
 ├── visited/
@@ -87,7 +82,7 @@ Simple lists linking to favorites:
 # date-night.md
 - La Mercerie — beautiful space
 - Via Carota — classic Village
-- Carbone — never fails
+- Carbone — always reliable
 ```
 
 ## What To Track
@@ -114,7 +109,7 @@ When user asks "where should we eat":
 - After meals: quick entry with verdict
 - Build cuisine and occasion lists over time
 
-## What NOT To Do
-- Recommend unsaved places without asking
-- Forget dietary restrictions
-- Over-organize — simple notes work
+## Important Constraints
+- Prioritize user's saved places before suggesting new external options
+- Always account for the user's documented dietary restrictions
+- Maintain a lightweight structure; simple notes are preferred over heavy categorization
