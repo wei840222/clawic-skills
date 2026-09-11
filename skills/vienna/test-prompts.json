@@ -12,5 +12,12 @@
     "expected": "The agent should identify the user as a tourist on a budget. It should load references/visitor-itineraries.md, references/food-traditional.md, and references/food-practical.md. It should provide a 3-day itinerary, recommend traditional foods like Schnitzel, and advise on budget-friendly options while warning against tourist traps like restaurants on Stephansplatz.",
     "actual": "The agent identified the user as a budget-conscious tourist visiting for 3 days. It loaded references/visitor-itineraries.md for a 3-day plan, references/food-traditional.md for classic dishes like Wiener Schnitzel, and references/food-overview.md. It explicitly warned against tourist traps on Stephansplatz and suggested eating at traditional Beisln, the Naschmarkt, or places in Neubau (7th district) for better value. It also reminded to serve Schnitzel strictly without sauce.",
     "pass": true
+  },
+  {
+    "id": 3,
+    "prompt": "I need to register my address after moving to Vienna. What is Meldezettel and which references should you use?",
+    "expected": "Explain Meldezettel as residence registration, load references/resident.md and references/sources.md, and point to official Wien.gv.at registration guidance rather than inventing deadlines.",
+    "actual": "Identified Meldezettel as mandatory residence registration after moving in. Loaded references/resident.md for process context and references/sources.md for the City of Vienna registration URL, and advised re-checking the official page for current documents and appointment steps.",
+    "pass": true
   }
 ]
