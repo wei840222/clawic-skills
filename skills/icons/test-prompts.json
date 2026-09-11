@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "prompt": "Add a decorative save icon next to the Save button text.",
+    "expected": "Use an SVG with aria-hidden='true' and focusable='false' beside the visible Save label.",
+    "actual": "Added an inline SVG inside the button with aria-hidden='true' and focusable='false', leaving the visible Save text as the accessible name.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "Create a standalone icon-only button for search.",
+    "expected": "Provide an accessible name via aria-label or visually hidden text; keep the SVG aria-hidden.",
+    "actual": "Created a button with aria-label='Search' and an inner SVG marked aria-hidden='true' focusable='false'.",
+    "pass": true
+  },
+  {
+    "id": 3,
+    "prompt": "Make toolbar icons follow the button text color on hover without editing each SVG fill.",
+    "expected": "Use fill='currentColor' or stroke='currentColor' so CSS color drives icon color.",
+    "actual": "Switched icon paths to currentColor and set button color/hover color in CSS; icons inherit automatically.",
+    "pass": true
+  }
+]
