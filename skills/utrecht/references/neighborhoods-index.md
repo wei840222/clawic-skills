@@ -92,7 +92,7 @@ West│  Lombok │ CENTER │ Oost│ East
 - Diverse, working-class
 - Less picturesque
 - Good transit connections
-- ⭐ Best for: Budget priority, don't need charm
+- ⭐ Best for: Budget priority, prioritize budget
 
 ### Lunetten
 **The quiet southeast**
@@ -156,7 +156,7 @@ West│  Lombok │ CENTER │ Oost│ East
 - Finding housing: 2-6 months of searching
 - Viewings: Mass viewings, quick decisions needed
 - Documents needed: Employer letter, payslips, ID
-- Scams: Common — never pay before seeing property
+- Scams: Common — verify property in person before payment
 
 ### Strategy
 1. Start before moving
@@ -165,4 +165,4 @@ West│  Lombok │ CENTER │ Oost│ East
 4. Consider surrounding towns first
 5. Temporary housing while searching (hostels, short-stay)
 
-See `cost.md` for detailed rental prices and `resident.md` for housing search guide.
+See `cost.md` and `resident.md` in this folder for rental prices and housing-search guidance.

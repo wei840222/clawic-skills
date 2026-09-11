@@ -375,7 +375,7 @@ Government help with insurance costs.
 1. **Register with GP immediately** — Before you're sick
 2. **Get insurance within 4 months** — Or face penalties
 3. **Understand the deductible** — First €385 is yours
-4. **GP is first stop** — Always
+4. **Consult GP first** — Always
 5. **Be direct about symptoms** — Dutch appreciate clarity
 6. **Mental health waits** — Start process early if needed
 7. **Dental insurance** — Calculate if worth it for you

@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "I'm a young professional moving to Utrecht with a budget of 1600 euros per month. What neighborhoods should I look at and what are the transport options?",
+    "expected": "Mentions Lombok, Wittevrouwen, or City Center. Explains cycling is the main transport and gives an overview of bike options or U-OV.",
+    "actual": "For a young professional with a \u20ac1600 budget, you should consider Lombok or Wittevrouwen. Transport is primarily cycling (60%+ of trips) with world-class bike lanes. You can rent a bike (OV-fiets) or buy a used one.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "I'm a tech worker planning to move my family. How do I navigate the housing market, get a BSN, and what are the schools like?",
+    "expected": "Describes tight housing market and advises searching before moving. Explains catch-22 of BSN registration. Mentions international schools and family-friendly areas like Tuindorp or Leidsche Rijn.",
+    "actual": "For a tech worker with a family, consider Tuindorp, Leidsche Rijn, or Vleuten. The housing market is tight; start searching before moving. You need registered housing to get a BSN, which is required for many services. International schools cost \u20ac15,000-\u20ac25,000/year.",
+    "pass": true
+  }
+]

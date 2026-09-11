@@ -17,7 +17,7 @@ You **cannot** register without a valid address. No registration = no BSN = no b
 ### Required for Registration
 - Rental contract with your name
 - Landlord permission (verhuurder verklaring)
-- Property must allow registration (some rooms don't)
+- Property must allow registration (verify registration is permitted)
 
 ### Warning Signs
 - "No registration possible" = illegal sublet or anti-squat

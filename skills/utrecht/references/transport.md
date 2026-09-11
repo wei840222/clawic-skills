@@ -9,7 +9,7 @@ Utrecht is a cycling city. Within the city, bikes are fastest. For regional trav
 | Bicycle | Everything within Utrecht |
 | Train (NS) | Other cities, Schiphol |
 | Tram/Bus (U-OV) | Suburbs, bad weather |
-| Car | Never (mostly) |
+| Car | Rarely |
 
 ## OV-Chipkaart (Essential)
 
@@ -73,8 +73,8 @@ The Netherlands' busiest station. Your hub for:
 | Subscription | Monthly | Benefit |
 |--------------|---------|---------|
 | NS Flex | €0-10 | Pay-per-use, small discount |
-| Dal Vrij | €119 | Free off-peak travel |
-| Altijd Vrij | €359 | Unlimited all trains |
+| Dal Vrij | €119.95 | Free off-peak travel |
+| Altijd Vrij | €353.80 | Unlimited all trains |
 | Traject Vrij | Varies | Fixed route free |
 
 **Off-peak (Dal)**: Before 6:30, 9:00-16:00, after 18:30, weekends.
@@ -115,12 +115,12 @@ Limited night service on weekends. Plan ahead or use bike/taxi.
 
 ### Tips
 - Check in front door, out any door
-- Drivers don't sell tickets — use OV-chipkaart
+- Purchase tickets before boarding — use OV-chipkaart
 - Real-time info: u-ov.info app
 
 ## Cycling (Primary Transport)
 
-See `cycling.md` for comprehensive guide.
+See `cycling.md` in this folder for the full guide.
 
 ### Quick Facts
 - 60%+ of trips by bike
@@ -279,4 +279,4 @@ NS rental bikes at stations. Excellent for last-mile.
 4. **Weekend deals** check ns.nl/weekendvoordeel
 5. **OV-fiets** instead of taxi for station-to-destination
 6. **9292.nl** to find cheapest routes
-7. **Avoid single tickets** — OV-chipkaart always cheaper
+7. **Skip single tickets** — OV-chipkaart always cheaper

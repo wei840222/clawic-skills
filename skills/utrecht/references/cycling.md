@@ -95,17 +95,17 @@ For station-to-station trips:
 ### Traffic Rules
 - **Right has priority** at unmarked crossings
 - **Sharks teeth** (white triangles) = you yield
-- **Red light** = stop (fine: €110)
+- **Red light** = halt completely (fine: €110)
 - **Phone use** = €140 fine
 - **Wrong way** on bike lane = €95
 
 ### Unwritten Rules
 - **Signal with hand** when turning
 - **Look before entering roundabout**
-- **Don't stop in bike lane**
+- **Pull over before halting**
 - **Ring bell** when passing
 - **Keep right** when slow
-- **Never brake suddenly** without warning
+- **Signal before braking** so others can react
 
 ### Alcohol
 - Legal limit exists (lower than car)
@@ -149,7 +149,7 @@ For station-to-station trips:
 - 12,500 spaces
 - Free for first 24 hours
 - Underground, secure
-- Never full
+- Usually has space
 
 ### Street Parking
 - Designated racks everywhere
@@ -187,14 +187,14 @@ Always use two locks:
 ### Locking Strategy
 - Lock through frame, not just wheel
 - Lock to something fixed (can't be lifted)
-- Don't leave in same spot too long
+- Rotate parking locations regularly
 - Inside overnight if possible
 
 ## Bike Theft
 
 ### Reality
 - Happens constantly
-- Police don't investigate small theft
+- Police deprioritize small theft
 - Report for insurance purposes
 - Cheap bikes = less target
 
@@ -202,7 +202,7 @@ Always use two locks:
 - Two good locks
 - Indoor parking when possible
 - Register at fietsregistratie.nl
-- Don't leave valuable bikes outside overnight
+- Store valuable bikes indoors overnight
 - Cheap ugly bike = best protection
 
 ### If Stolen
@@ -243,7 +243,7 @@ Always use two locks:
 ## Cycling in Weather
 
 ### Rain
-- Dutch don't stop for rain
+- Dutch continue cycling in rain
 - Rain pants (regenbroek)
 - Rain jacket with hood
 - Waterproof bags

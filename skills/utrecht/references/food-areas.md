@@ -45,7 +45,7 @@ Utrecht's food scene spreads across neighborhoods, each with distinct character.
 | Various cafés | Light | €10-18 |
 | Broodjeszaken | Dutch lunch | €5-10 |
 
-### Avoid
+### Skip
 - Generic "tourist menu" places
 - Overcrowded terrace spots with poor reviews
 - Anything with pictures on outdoor menu
@@ -391,11 +391,11 @@ Utrecht's food scene spreads across neighborhoods, each with distinct character.
 
 1. **Walk around first** — See menus, crowds
 2. **Check reviews** — Google reliable here
-3. **Avoid obvious tourist traps** — Center has many
+3. **Skip obvious tourist traps** — Center has many
 4. **Neighborhoods have value** — Explore beyond center
 5. **Reserve for weekends** — Especially popular spots
 6. **Lunch vs dinner** — Same place, different vibe
 7. **Ask locals** — They know hidden spots
 8. **Seasonal menus** — Quality places change regularly
-9. **Don't rush** — Dutch dining is leisurely
+9. **Dine at a leisurely pace** — Dutch dining is leisurely
 10. **Cash for small spots** — Some still cash-preferred

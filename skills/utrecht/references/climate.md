@@ -161,7 +161,7 @@ Seasonal Affective Disorder common. Strategies:
 
 | Event | Frequency | Impact |
 |-------|-----------|--------|
-| Snow | 1-3x/year | City stops briefly |
+| Snow | 1-3x/year | City pauses briefly |
 | Ice (Elfstedentocht-level) | Very rare | Skating on natural ice |
 | Heat wave (35°C+) | 1-2 weeks/year | No AC, suffer |
 | Storms | Several/year | Transport disruption |
@@ -199,11 +199,11 @@ Seasonal Affective Disorder common. Strategies:
 ## Dutch Weather Coping
 
 ### Attitude
-Dutch don't cancel for weather:
+Dutch proceed regardless of weather:
 - Rain = still bike
 - Wind = still bike
 - Cold = add layers, still bike
-- Only ice stops cycling
+- Ice is the main reason to halt cycling
 
 **"Er is geen slecht weer, alleen slechte kleding"**
 (There's no bad weather, only bad clothing)
@@ -312,5 +312,5 @@ Check before leaving:
 5. **Get a light therapy lamp** — Winter darkness is real
 6. **Vitamin D** — Supplement in winter
 7. **Stay active** — Exercise combats seasonal blues
-8. **Plan indoor activities** — Don't let weather stop you
+8. **Plan indoor activities** — Adapt plans to include indoor activities
 9. **Celebrate good days** — When sun appears, drop everything for terraces

@@ -176,7 +176,7 @@ Craft beer scene:
 | Brunch | Center, Wittevrouwen |
 | Craft beer | Center |
 
-## What to Avoid
+## What to Bypass
 
 ### Tourist Traps
 - Restaurants with picture menus on street

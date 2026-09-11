@@ -256,7 +256,7 @@ Utrecht has strong healthcare connections:
 
 ## Visa & Work Permits
 
-See `visas.md` for full details.
+See `visas.md` in this folder for full details.
 
 ### Quick Summary
 - **EU citizens**: No permit needed

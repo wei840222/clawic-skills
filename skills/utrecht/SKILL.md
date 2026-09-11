@@ -1,19 +1,15 @@
 ---
 name: utrecht
-slug: utrecht
-version: 1.0.0
-description: Navigate Utrecht as visitor, resident, tech worker, student, or entrepreneur with neighborhoods, transport, costs, visas, and local insights.
-homepage: https://clawic.com/skills/utrecht
+description: Navigate Utrecht as a visitor, resident, or professional. Trigger when
+  the user asks about Utrecht neighborhoods, transport, costs, visas, or local insights
+  to provide practical guidance.
 metadata:
-  clawdbot:
-    emoji: 🏰
-    requires:
-      bins: []
-    os:
-    - linux
-    - darwin
-    - win32
-    displayName: Utrecht
+  version: 1.0.0
+  openclaw: '{"emoji": "🏰"}'
+  related-skills: '{"dutch": "Dutch language learning and practice.", "travel": "Travel
+    planning and trip organization.", "career": "Career development and job search.",
+    "freelance": "Freelancing guidance and contracts.", "plan": "General planning
+    and goal setting."}'
 ---
 
 ## When to Use
@@ -25,41 +21,42 @@ User asks about Utrecht for any purpose: visiting, moving, working, studying, or
 | Topic | File |
 |-------|------|
 | **Visitors** | |
-| Attractions (must-see vs skip) | `visitor-attractions.md` |
-| Itineraries (1/3/7 days) | `visitor-itineraries.md` |
-| Where to stay | `visitor-lodging.md` |
-| Tips & day trips | `visitor-tips.md` |
+| Attractions (must-see vs skip) | `references/visitor-attractions.md` |
+| Itineraries (1/3/7 days) | `references/visitor-itineraries.md` |
+| Where to stay | `references/visitor-lodging.md` |
+| Tips & day trips | `references/visitor-tips.md` |
 | **Neighborhoods** | |
-| Quick comparison | `neighborhoods-index.md` |
-| City Center & Oudegracht | `neighborhoods-center.md` |
-| Lombok & Oost | `neighborhoods-multicultural.md` |
-| Leidsche Rijn & Vleuten | `neighborhoods-new.md` |
-| Tuindorp & Overvecht | `neighborhoods-residential.md` |
-| Choosing guide | `neighborhoods-choosing.md` |
+| Quick comparison | `references/neighborhoods-index.md` |
+| City Center & Oudegracht | `references/neighborhoods-center.md` |
+| Lombok & Oost | `references/neighborhoods-multicultural.md` |
+| Leidsche Rijn & Vleuten | `references/neighborhoods-new.md` |
+| Tuindorp & Overvecht | `references/neighborhoods-residential.md` |
+| Choosing guide | `references/neighborhoods-choosing.md` |
 | **Food** | |
-| Overview & dining scene | `food-overview.md` |
-| Local & Dutch | `food-local.md` |
-| International & fine dining | `food-international.md` |
-| Best areas for dining | `food-areas.md` |
-| Dietary, coffee, bars | `food-practical.md` |
+| Overview & dining scene | `references/food-overview.md` |
+| Local & Dutch | `references/food-local.md` |
+| International & fine dining | `references/food-international.md` |
+| Best areas for dining | `references/food-areas.md` |
+| Dietary, coffee, bars | `references/food-practical.md` |
 | **Practical** | |
-| Moving & settling | `resident.md` |
-| Transport (trains, trams, bikes) | `transport.md` |
-| Cost of living | `cost.md` |
-| Safety & laws | `safety.md` |
-| Weather & survival tips | `climate.md` |
-| Local services (banking, BSN) | `local.md` |
+| Moving & settling | `references/resident.md` |
+| Transport (trains, trams, bikes) | `references/transport.md` |
+| Cost of living | `references/cost.md` |
+| Safety & laws | `references/safety.md` |
+| Weather & survival tips | `references/climate.md` |
+| Local services (banking, BSN) | `references/local.md` |
 | **Career** | |
-| Tech industry & salaries | `tech.md` |
-| Business setup & startups | `business.md` |
-| Visas (work, HSM, EU Blue Card) | `visas.md` |
-| Startups & funding | `startup.md` |
+| Tech industry & salaries | `references/tech.md` |
+| Business setup & startups | `references/business.md` |
+| Visas (work, HSM, EU Blue Card) | `references/visas.md` |
+| Startups & funding | `references/startup.md` |
 | **Lifestyle** | |
-| Culture & customs | `culture.md` |
-| Healthcare & insurance | `healthcare.md` |
-| Schools & education | `education.md` |
-| Expat lifestyle & social | `lifestyle.md` |
-| Cycling & transport | `cycling.md` |
+| Culture & customs | `references/culture.md` |
+| Healthcare & insurance | `references/healthcare.md` |
+| Schools & education | `references/education.md` |
+| Expat lifestyle & social | `references/lifestyle.md` |
+| Cycling & transport | `references/cycling.md` |
+| Official source map | `references/sources.md` |
 
 ## Core Rules
 
@@ -81,7 +78,7 @@ Utrecht has one of the tightest housing markets in Europe:
 - **Private market**: Extremely competitive, high prices for Dutch standards
 - **Expat strategy**: Start searching before moving, consider surrounding towns
 - **Budget minimum**: €1,200-1,800/month for studio or small apartment
-See `cost.md` for detailed housing breakdown.
+See `references/cost.md` for detailed housing breakdown.
 
 ### 4. Cycling Culture
 Utrecht is a cycling city first:
@@ -89,7 +86,7 @@ Utrecht is a cycling city first:
 - **Daily transport**: 60%+ of trips by bicycle
 - **Bike rental**: OV-fiets at stations, Donkey Republic app
 - **Rules**: Mandatory lights, yield to the right, stick to bike lanes
-See `cycling.md` for complete guide.
+See `references/cycling.md` for complete guide.
 
 ### 5. Current Data (Feb 2026)
 
@@ -108,7 +105,7 @@ High taxes, high services:
 - **30% ruling**: Expat tax benefit for skilled migrants (30% income tax-free)
 - **BTW (VAT)**: 21% standard, 9% reduced (food, hotels)
 - **Healthcare mandatory**: Basic insurance ~€130/month + eigen risico (€385 deductible)
-See `local.md` for tax details.
+See `references/local.md` for tax details.
 
 ### 7. Transit Excellence
 Utrecht Central is the Netherlands' busiest train station:
@@ -141,11 +138,11 @@ The student population shapes the city's culture: vibrant nightlife, affordable 
 
 ## Dutch-Specific Traps
 
-- **Housing desperation** — Don't transfer money before seeing the property in person. Scams common.
+- **Housing desperation** — View the property in person before transferring money. Housing scams are common.
 - **Registration required** — You cannot get a BSN (citizen service number) without registered housing.
 - **Catch-22** — Many services need BSN, but BSN needs registered address. Plan in advance.
-- **Cycling rules** — No lights = €55 fine. Wrong way on bike lane = accident risk.
-- **Direct communication** — Dutch directness isn't rude, it's cultural. Don't take offense.
+- **Cycling rules** — No lights = €70 fine. Wrong way on bike lane = accident risk.
+- **Direct communication** — Dutch directness is cultural, not rude; treat it as informational, not hostile.
 - **Agenda culture** — Dutch plan everything weeks ahead. Spontaneous visits are rare.
 - **Store hours** — Many shops closed Sundays and Mondays. Supermarkets more flexible.
 - **Tipping minimal** — 5-10% is generous. Rounding up is common and acceptable.
@@ -158,23 +155,11 @@ Key laws visitors/residents must know:
 - **Soft drugs**: Cannabis technically illegal but tolerated in licensed coffeeshops (not common in Utrecht compared to Amsterdam)
 - **Hard drugs**: Zero tolerance. Possession/sale is criminal offense.
 - **Alcohol**: Legal at 18. No public intoxication.
-- **Cycling infractions**: Fines for no lights (€55), wrong way (€95), phone use (€140)
-- **ID requirement**: Must carry ID if 14+. €95 fine if unable to identify.
+- **Cycling infractions**: Fines for no lights (€70), wrong way (€110), phone use (€150)
+- **ID requirement**: Must carry ID if 14+. €110 fine if unable to identify.
 - **Noise regulations**: Strict, especially in residential areas. Neighbors will complain.
 - **Tenant rights**: Strong protections, but landlord disputes common for expats.
 
-See `safety.md` for comprehensive legal guidance.
+See `references/safety.md` for comprehensive legal guidance.
 
-## Related Skills
-More Clawic skills, get them at https://clawic.com/skills/<slug> (install if the user confirms):
 
-- `dutch` — Dutch language learning and practice
-- `travel` — Travel planning and trip organization
-- `career` — Career development and job search
-- `freelance` — Freelancing guidance and contracts
-- `plan` — General planning and goal setting
-
-## Feedback
-
-- If useful, star it: https://clawic.com/skills/utrecht
-- Latest version: https://clawic.com/skills/utrecht

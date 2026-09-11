@@ -51,12 +51,12 @@ Northern areas.
 ✅ Still developing = new options
 
 **Cons**
-❌ Soulless to some (new construction feel)
-❌ Far from center (15-20 min tram)
-❌ Limited nightlife/restaurant scene
-❌ Requires car for some activities
-❌ Community still forming
-❌ Generic suburban feel
+- Soulless to some (new construction feel)
+- Far from center (15-20 min tram)
+- Limited nightlife/restaurant scene
+- Requires car for some activities
+- Community still forming
+- Generic suburban feel
 
 ### Who Should Live Here
 
@@ -130,11 +130,11 @@ North, near castle.
 ✅ Near countryside
 
 **Cons**
-❌ Far from Utrecht center
-❌ Car helpful for many activities
-❌ Limited evening/weekend options
-❌ Not as connected as Leidsche Rijn
-❌ Housing competitive (established area)
+- Far from Utrecht center
+- Car helpful for many activities
+- Limited evening/weekend options
+- Not as connected as Leidsche Rijn
+- Housing competitive (established area)
 
 ### Transit
 
@@ -226,7 +226,7 @@ Both areas have multiple options:
 
 ## Summary
 
-**Leidsche Rijn**: Modern, planned suburb. Best for families wanting new housing, space, and don't mind suburban feel. Good tram connections.
+**Leidsche Rijn**: Modern, planned suburb. Best for families wanting new housing, space, and are comfortable with suburban feel. Good tram connections.
 
 **Vleuten-De Meern**: Established villages with character. Best for families wanting community feel, village atmosphere, and excellent train connection.
 

@@ -46,11 +46,11 @@ Adjacent area, similar feel.
 ✅ 10 min bike to center
 
 **Cons**
-❌ Limited availability (people don't leave)
-❌ Not much nightlife
-❌ Some original housing small
-❌ Few restaurants/cafes
-❌ Car useful for some activities
+- Limited availability (turnover is very low)
+- Not much nightlife
+- Some original housing small
+- Few restaurants/cafes
+- Car useful for some activities
 
 ### Who Should Live Here
 
@@ -126,19 +126,19 @@ Utrecht Overvecht station area.
 ✅ Near green spaces (Noorderpark)
 
 **Cons**
-❌ Reputation (fair or not)
-❌ Not attractive architecture
-❌ Some areas feel isolated
-❌ Fewer amenities than center
-❌ Car helpful
-❌ International community smaller
+- Reputation (fair or not)
+- Not attractive architecture
+- Some areas feel isolated
+- Fewer amenities than center
+- Car helpful
+- International community smaller
 
 ### Who Should Live Here
 
 **Great For**
 - Budget priority
 - Space priority
-- Those who don't care about "image"
+- People who care more about space/budget than prestige
 - Transit commuters
 - Diverse community seekers
 
@@ -256,7 +256,7 @@ South of center.
 
 ### Overvecht
 - Higher petty crime than average
-- Avoid isolated areas at night
+- Stick to well-lit paths at night
 - Most residents report feeling safe
 - Improving significantly
 
