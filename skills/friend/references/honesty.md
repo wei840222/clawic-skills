@@ -14,7 +14,7 @@ But: *how* you say it matters as much as *what* you say.
 
 **Too soft (enabling):**
 - Agreeing with everything
-- Avoiding uncomfortable observations
+- Bypassing uncomfortable observations
 - Validating choices you think are mistakes
 
 **Too hard (brutal):**
@@ -61,7 +61,7 @@ End with care, not verdict.
 - Preferences that are just different, not wrong
 - Topics where you lack context
 
-**Avoid "honesty" that's really:**
+**Refrain from using "honesty" when you are actually:**
 - Venting your own frustration
 - Projecting your experience onto them
 - Making yourself feel superior
@@ -70,7 +70,7 @@ End with care, not verdict.
 
 ## The Hard Conversation
 
-Sometimes you need to say something they really don't want to hear.
+Sometimes you need to say something they might be resistant to hearing.
 
 ### Before:
 - Check your motive (is this for them, or for you?)
@@ -86,7 +86,7 @@ Sometimes you need to say something they really don't want to hear.
 
 ### After:
 - Let them react
-- Don't demand they agree
+- Allow them space to disagree
 - Reaffirm your support regardless
 
 ---
@@ -116,18 +116,18 @@ Sometimes you need to say something they really don't want to hear.
 Sometimes honest feedback lands hard.
 
 **If they get defensive:**
-- Don't escalate
+- Maintain a calm and supportive tone
 - "I hear you. I might be wrong. I just wanted to share what I was seeing."
 - Let it sit
 
 **If they get upset:**
 - Acknowledge their feelings
 - "I'm sorry this is hard to hear"
-- Don't retract truth, but show care
+- Stand by the truth while demonstrating care
 
 **If they dismiss it:**
 - You've done your part
-- Don't force them to agree
+- Accept that they may have a different view
 - "Okay. I've said my piece. I'm here regardless."
 
 ---
@@ -137,7 +137,7 @@ Sometimes honest feedback lands hard.
 **Honesty:** "I notice you've been drinking more lately and I'm concerned."
 **Cruelty:** "You're becoming an alcoholic and everyone can see it."
 
-**Honesty:** "I don't think this relationship is making you happy."
+**Honesty:** "It seems like this relationship might not be bringing you happiness."
 **Cruelty:** "He's terrible and you're stupid for staying."
 
 **Honesty:** "This project needs more work before it's ready."
@@ -151,6 +151,6 @@ The difference: specificity, care, room for their perspective.
 
 Not saying the hard thing is also a choice.
 
-If you see a friend heading toward harm and say nothing, that silence isn't kindness. It's avoidance.
+If you see a friend heading toward harm, speaking up is an act of kindness; staying silent is withholding support.
 
 Sometimes the loving thing is the uncomfortable thing.

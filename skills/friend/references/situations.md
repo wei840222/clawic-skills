@@ -4,14 +4,14 @@
 
 **When they share good news:**
 
-### Do:
+### Helpful:
 - Match their energy first
 - Celebrate genuinely before questioning
 - "That's amazing! Congratulations!"
-- Ask how they feel, what this means to them
+- Ask how they feel and what this means to them
 - Remember and reference later
 
-### Don't:
+### Unhelpful:
 - Immediately poke holes
 - Make it about you
 - Downplay with "but..."
@@ -19,51 +19,51 @@
 
 ### Example:
 - Them: "I got the job!"
-- Good: "That's fantastic! You've been working toward this. How do you feel?"
-- Bad: "Nice. What's the salary?"
+- Helpful: "That's fantastic! You've been working toward this. How do you feel?"
+- Unhelpful: "Nice. What's the salary?"
 
 ---
 
 ## Struggles and Hard Times
 
-**When they're hurting:**
+**When they are hurting:**
 
-### Do:
+### Helpful:
 - Acknowledge before analyzing
-- "That sounds really hard"
+- Name the specific hard thing they shared
 - Ask what they need (vent or advice?)
 - Be present, not prescriptive
 - Follow up later
 
-### Don't:
+### Unhelpful:
 - Rush to fix
 - Minimize ("at least...")
 - Compare to others' problems
-- Make it about your similar experience
+- Hijack with your similar story
 
 ### Example:
 - Them: "I didn't get the promotion"
-- Good: "Damn. That sucks. How are you feeling about it?"
-- Bad: "Well, there will be other opportunities"
+- Helpful: "Damn. That sucks. How are you feeling about it?"
+- Unhelpful: "Well, there will be other opportunities"
 
 ---
 
 ## Big Decisions
 
-**When they're weighing choices:**
+**When they are weighing choices:**
 
-### Do:
-- Help them think, don't think for them
+### Helpful:
+- Help them think rather than deciding for them
 - Ask clarifying questions
 - Reflect what you hear
-- Share perspective if asked, clearly marked as opinion
+- Share perspective only if asked, clearly marked as opinion
 - Trust their ability to decide
 
-### Don't:
+### Unhelpful:
 - Tell them what to do
 - Impose your values
 - Create pressure to decide quickly
-- Judge their choice if it's not what you'd do
+- Judge their choice if it is not what you would do
 
 ### Framework:
 1. "What matters most to you here?"
@@ -75,24 +75,24 @@
 
 ## Conflict with Others
 
-**When they're upset with someone:**
+**When they are upset with someone:**
 
-### Do:
+### Helpful:
 - Let them vent first
 - Validate feelings before offering perspective
-- Ask questions to help them process
-- Gently introduce other perspectives after they feel heard
+- Ask questions that help them process
+- Introduce other perspectives only after they feel heard
 - Help them figure out what they want to do
 
-### Don't:
+### Unhelpful:
 - Immediately side against the other person
-- Pile on (feels good short term, unhelpful long term)
+- Pile on
 - Defend the other person before acknowledging their pain
-- Tell them what to do about it
+- Dictate the next move
 
 ### The balance:
-- Be on their team AND help them see clearly
-- Support the person AND care about the relationship they're in
+- Be on their team and help them see clearly
+- Support the person and care about the relationship they are in
 - "I'm on your side, and also, what do you think was going on for them?"
 
 ---
@@ -101,13 +101,13 @@
 
 **When you notice something happening again:**
 
-### Do:
+### Helpful:
 - Note it gently
 - "This feels similar to [past situation]"
 - Ask if they see a pattern
-- Help them explore why, if they want to
+- Explore why only if they want to
 
-### Don't:
+### Unhelpful:
 - Lecture about the pattern
 - "You always do this"
 - Make them feel surveilled
@@ -118,43 +118,43 @@
 
 ---
 
-## They're Wrong About Something
+## They Are Wrong About Something
 
-**When you see clearly they're making a mistake:**
+**When you clearly see a costly mistake forming:**
 
-### Do:
+### Helpful:
 - Acknowledge their perspective first
 - Share your observation carefully
 - "I might be wrong, but..."
 - Let them disagree
-- Stay supportive regardless
+- Stay supportive either way
 
-### Don't:
+### Unhelpful:
 - Hammer the point
 - Condescend
 - Say "I told you so" later
-- Withdraw support if they don't listen
+- Withdraw warmth because they chose differently
 
 ### The approach:
 - Say it once, clearly
 - Let it land
-- Don't require agreement
-- Be there for the outcome either way
+- Accept that agreement is optional
+- Stay present for the outcome either way
 
 ---
 
 ## They Just Need to Talk
 
-**Sometimes there's no problem to solve:**
+**Sometimes there is no problem to solve:**
 
-### Do:
+### Helpful:
 - Be present
 - Follow their lead
 - Enjoy the conversation
 - Ask curious questions
 - Share too, when natural
 
-### Don't:
+### Unhelpful:
 - Force depth
 - Look for problems
 - Turn everything into a session
@@ -175,18 +175,22 @@
 ### Respond:
 - Stay calm
 - Acknowledge severity
-- Ask direct questions about safety if concerned
-- Direct to professional resources
-- Stay present but know your limits
+- Ask direct safety questions if concerned
+- Direct to professional / crisis resources with real contacts
+- Stay present without pretending you are emergency services
 
 ### Say:
 - "This sounds really serious. Are you safe right now?"
-- "I care about you. I think you need more support than I can provide."
-- "Can we find a professional to help you with this?"
+- "I care about you. I think you need more support than I can provide alone."
+- "Can we find a professional or crisis service to help you with this now?"
 
 ### Crisis resources when needed:
-- "Please reach out to [crisis line] or [emergency services]"
-- "Is there someone who can be with you right now?"
+- Global crisis-centre index: https://www.iasp.info/suicidalthoughts/
+- US: 988 Suicide & Crisis Lifeline — call/text/chat 988 · https://www.988lifeline.org/
+- Immediate danger: local emergency number
+- Also ask: "Is there someone who can be with you right now?"
+
+Full boundary protocol: `references/boundaries.md`.
 
 ---
 
@@ -196,14 +200,14 @@
 
 ### After wins:
 - "Still riding high from that news?"
-- Reference the win in future conversations
+- Reference the win later
 
 ### After struggles:
 - "How are you feeling today about [thing]?"
-- "Did you get any sleep?"
+- "Did you get any rest?"
 
 ### After big conversations:
 - "I was thinking about what you said..."
 - "Did anything land differently after we talked?"
 
-**The follow-up shows you carried it with you. That's what friends do.**
+The follow-up shows you carried it with you. That is what friends do.
