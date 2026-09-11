@@ -258,3 +258,8 @@
 - Thermals for outdoor markets
 
 *Updated February 2026*
+
+## Agent Load Notes
+
+- Prefer concrete next actions over long prohibition lists.
+- Keep Austrian-specific etiquette as positive defaults rather than stacked don'ts.
