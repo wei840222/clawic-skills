@@ -5,7 +5,7 @@ Use this file for care access, plan selection context, urgent care vs ER decisio
 ## Healthcare Reality
 
 - Texas has excellent hospital systems in some metros, but access, distance, and network fit can still be uneven.
-- Do not assume Medicaid rules or safety-net coverage feel the same as in expansion states.
+- Explain Medicaid rules and safety-net coverage specific to Texas, which differs from expansion states.
 - For families, older adults, and chronic-care situations, the right metro or suburb can hinge on hospital and specialist access.
 
 ## Good Intake Questions
@@ -28,7 +28,7 @@ Use this file for care access, plan selection context, urgent care vs ER decisio
 - pediatric or specialty care if needed
 
 ### 3. Distinguish urgent care from emergency use
-- Many newcomers overpay because they do not map local urgent-care options early.
+- Newcomers can save money by mapping local urgent-care options early.
 
 ## Insurance Pressure Points
 

@@ -15,7 +15,7 @@ Use this file for job-market positioning, LLC setup, sales tax, franchise-tax aw
 ## Business Setup Rules
 
 ### 1. State formation is only the first layer
-- Entity formation, registered agent, EIN, sales-tax permit, and franchise-tax reporting do not replace city or county compliance.
+- Remind users that entity formation, registered agent, EIN, sales-tax permit, and franchise-tax reporting must be paired with city or county compliance.
 
 ### 2. Ask what the business actually does
 - Taxability, permits, insurance, and local approvals depend on product, service, and physical footprint.

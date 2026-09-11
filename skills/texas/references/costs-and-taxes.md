@@ -12,7 +12,7 @@ Use this file for budget comparisons, tax framing, and hidden recurring costs.
 
 - Texas state sales and use tax is 6.25%.
 - Local additions can raise the combined rate up to 8.25%.
-- Do not quote a single number without noting local variation.
+- Quote numbers along with local variation ranges.
 
 ## Business and Self-Employment Reality
 

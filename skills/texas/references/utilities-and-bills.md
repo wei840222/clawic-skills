@@ -4,7 +4,7 @@ Use this file for electricity, water, internet, gas, trash, and recurring househ
 
 ## Electricity Is Not One Texas Story
 
-- Much of Texas has retail electric choice, but municipal utilities and co-ops do not.
+- Much of Texas has retail electric choice, whereas municipal utilities and co-ops have fixed providers.
 - Before comparing plans, identify whether the address is in a deregulated territory, city utility, or co-op.
 - In competitive areas, use official plan-comparison tools instead of trusting teaser rates.
 

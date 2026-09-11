@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "I'm moving to Texas next month. I want to buy a house in a suburb of Houston. What should I be aware of regarding property taxes and insurance?",
+    "expected": "Mentions high property taxes (no state income tax offset), need for wind/hail coverage, and checks for flood zones due to Houston's specific risks.",
+    "actual": "Welcome to Texas! When buying in a Houston suburb, here are the key cost drivers beyond the mortgage:\n\n1. Property Taxes: Texas has no state income tax, so property taxes are high. Houston-area taxes can range from 2.5% to over 3% depending on the specific MUD (Municipal Utility District) and school district. Check the local appraisal district for exact rates.\n\n2. Wind & Hail Insurance: Standard homeowners insurance often excludes or has separate, higher deductibles for wind and hail (hurricane risk). You will likely need specific coverage for this.\n\n3. Flood Insurance: Standard policies do NOT cover flooding. Given Houston's history (e.g., Harvey), check the FEMA flood map for the specific address. Even if it's not in a required zone, strongly consider a separate flood policy.\n\nLoad `references/housing-and-property.md` and `references/costs-and-taxes.md` for more details.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "I need to drive from El Paso to Beaumont tomorrow. What should I prepare?",
+    "expected": "Reframes the request emphasizing the extreme distance (over 12 hours/800 miles driving), advises against a same-day trip, and suggests breaking it up or flying.",
+    "actual": "Driving from El Paso to Beaumont in a single day is a major logistical challenge and generally not recommended. Here's the reality of that route:\n\n1. Extreme Distance: The drive is over 800 miles and will take 12-14 hours of pure driving time, not including stops, traffic (especially going through Houston or San Antonio), or weather.\n\n2. Fatigue & Safety: Attempting this in one day leads to severe driver fatigue. \n\n3. Route Reality: You will be crossing the entire state on I-10. West Texas has long stretches between fuel and services.\n\nRecommendation: \n- Break the trip up: Plan an overnight stop in a place like San Antonio or Junction.\n- Alternative: Consider flying if the timeline is strict.\n\nIf you must drive it, start before dawn and share the driving. See `references/road-trips-and-visiting.md` for more trip planning realities.",
+    "pass": true
+  }
+]

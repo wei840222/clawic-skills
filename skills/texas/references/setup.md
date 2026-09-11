@@ -1,6 +1,6 @@
 # Setup — Texas
 
-Read this when `~/Clawic/data/texas/` does not exist or is empty. Start helping naturally, but be explicit before creating persistent local memory.
+Read this when `<state_root>/texas/` does not exist or is empty. Start helping naturally, but be explicit before creating persistent local memory.
 
 ## Your Attitude
 
@@ -14,14 +14,14 @@ Texas questions usually hide one of four problems:
 
 Answer the user's question first whenever possible. Then gather only the next detail that improves the next step.
 
-This skill works statelessly if the user does not want continuity. If persistent memory would help, explain what would be stored and ask for confirmation before creating `~/Clawic/data/texas/` or `memory.md`.
+This skill works statelessly if the user does not want continuity. If persistent memory would help, explain what would be stored and ask for confirmation before creating `<state_root>/texas/` or `memory.md`.
 
 ## Priority Order
 
 ### 1. First: Integration
 
 Early in the conversation, learn when this skill should activate:
-- whenever the user mentions Texas at all
+- whenever the user mentions Texas contexts directly
 - only for relocation and resident topics
 - only for travel and road trips
 - only when laws, weather, taxes, or local logistics matter
@@ -55,11 +55,11 @@ Pick up only the constraints that change future advice:
 
 ## What You're Saving (internally)
 
-Keep `~/Clawic/data/texas/memory.md` lightweight and useful:
+Keep `<state_root>/texas/memory.md` lightweight and useful:
 - activation preference for Texas topics
 - current mode and target region
 - major deadlines, open loops, and dependencies
 - persistent family, school, housing, vehicle, and weather constraints
 - which official portals or local agencies already matter for this user
 
-Do not store credentials, account numbers, SSNs, full street addresses, immigration-status details, or payment details unless the user explicitly asks for that behavior.
+Exclude credentials, account numbers, SSNs, full street addresses, immigration-status details, and payment details from storage unless the user explicitly asks for that behavior.

@@ -1,28 +1,17 @@
 ---
 name: texas
-slug: texas
-version: 1.0.0
-description: Navigate Texas for living, moving, working, and road trips with region fit, state rules, weather risk, and daily logistics.
-homepage: https://clawic.com/skills/texas
-changelog: Initial release with resident-first Texas guidance, regional tradeoffs, and practical state-level logistics.
+description: Navigate Texas for living, moving, working, and road trips with region
+  fit, state rules, weather risk, and daily logistics.
 metadata:
-  clawdbot:
-    emoji: 🤠
-    requires:
-      bins: []
-      config:
-      - ~/Clawic/data/texas/
-    os:
-    - linux
-    - darwin
-    - win32
-    configPaths:
-    - ~/Clawic/data/texas/
-    displayName: Texas
-  openclaw:
-    requires:
-      config:
-      - ~/Clawic/data/texas/
+  openclaw: "{\"emoji\": \"\U0001F920\", \"requires\": {\"bins\": null, \"config\"\
+    : [\"<state_root>/texas/\"]}}"
+  related-skills:
+    skills/travel: General itinerary design and travel planning structure
+    skills/car-rental: Rental car, pickup, and handoff decisions for Texas trips
+    skills/booking: Reservation workflows for flights, hotels, and schedule holds
+    skills/business: Broader business operations guidance beyond Texas-specific rules
+    skills/health-insurance: Deeper insurance-plan comparison and terminology support
+
 ---
 
 ## When to Use
@@ -33,32 +22,42 @@ This skill should activate for four modes: visiting, moving to Texas, living in 
 
 ## Architecture
 
-This skill works statelessly for one-off Texas questions. If the user wants continuity across sessions, memory lives in `~/Clawic/data/texas/`. If `~/Clawic/data/texas/` does not exist, read `setup.md`, explain planned local storage in plain language, and ask for confirmation before creating files. See `memory-template.md` for structure.
+This skill works statelessly for one-off Texas questions. If the user wants continuity across sessions, memory lives in `<state_root>/texas/`. If `<state_root>/texas/` does not exist, read `references/setup.md`, explain planned local storage in plain language, and ask for confirmation before creating files. See `references/memory-template.md` for structure.
 
 ```text
-~/Clawic/data/texas/
+<state_root>/texas/
 └── memory.md     # User context, region, timelines, constraints, and open loops
 ```
 
+## State location
+This skill requires a persistent state directory to store memory and context.
+
+State directory candidate order:
+1. `<state_root>/texas/` (Preferred: if `<state_root>` is defined by the environment)
+2. `~/.local/share/agentskills/texas/` (Linux/macOS fallback)
+3. `%APPDATA%\agentskills\texas\` (Windows fallback)
+
+If the state directory does not exist, explain the planned local storage location and ask for confirmation before creating files.
+
 ## Quick Reference
 
-| Topic | File |
-|-------|------|
-| Setup guide | `setup.md` |
-| Memory template | `memory-template.md` |
-| Region fit and metro tradeoffs | `regions.md` |
-| Move-in sequence and admin checklist | `moving-and-settling.md` |
-| License, registration, tolls, and vehicles | `texas-dmv-and-vehicles.md` |
-| Renting, buying, property tax, and flood risk | `housing-and-property.md` |
-| Power, water, internet, and recurring bills | `utilities-and-bills.md` |
-| Taxes, insurance pressure, and cost reality | `costs-and-taxes.md` |
-| Heat, storms, freezes, outages, and prep | `weather-and-emergencies.md` |
-| Laws, scams, and practical safety | `laws-and-safety.md` |
-| Schools, childcare, and family planning | `family-and-schools.md` |
-| Health insurance, urgent care, and care access | `healthcare-and-insurance.md` |
-| Jobs, LLC setup, sales tax, and compliance | `work-and-business.md` |
-| Road trips, visiting, and city-hopping | `road-trips-and-visiting.md` |
-| Official sources map | `sources.md` |
+| Topic | When to load | File |
+|-------|--------------|------|
+| Setup guide | Core configuration | `references/setup.md` |
+| Memory template | Updating user context | `references/memory-template.md` |
+| Region fit and metro tradeoffs | Choosing a city | `references/regions.md` |
+| Move-in sequence and admin checklist | Moving planning | `references/moving-and-settling.md` |
+| License, registration, tolls, and vehicles | Driving rules | `references/texas-dmv-and-vehicles.md` |
+| Renting, buying, property tax, and flood risk | Housing | `references/housing-and-property.md` |
+| Power, water, internet, and recurring bills | Utilities | `references/utilities-and-bills.md` |
+| Taxes, insurance pressure, and cost reality | Costs | `references/costs-and-taxes.md` |
+| Heat, storms, freezes, outages, and prep | Weather risks | `references/weather-and-emergencies.md` |
+| Laws, scams, and practical safety | Safety / Laws | `references/laws-and-safety.md` |
+| Schools, childcare, and family planning | Family context | `references/family-and-schools.md` |
+| Health insurance, urgent care, and care access | Healthcare | `references/healthcare-and-insurance.md` |
+| Jobs, LLC setup, sales tax, and compliance | Business | `references/work-and-business.md` |
+| Road trips, visiting, and city-hopping | Travel | `references/road-trips-and-visiting.md` |
+| Official sources map | Finding links | `references/sources.md` |
 
 ## Core Rules
 
@@ -75,12 +74,12 @@ This skill works statelessly for one-off Texas questions. If the user wants cont
 ### 3. Distances and Drive Time Beat Map Intuition
 - Texas plans fail when users underestimate distance, tolls, fatigue, weather, and event traffic.
 - For both relocation and travel, convert geography into realistic drive-time, airport, and corridor tradeoffs.
-- Never recommend same-day overstuffed plans just because destinations look close on a map.
+- Recommend realistic multi-day plans when destinations are far, rather than overstuffing a single day.
 
 ### 4. Texas Cost Reality Is Broader Than "No State Income Tax"
 - Include housing, property tax pressure, insurance, toll roads, summer power bills, car dependence, and weather-driven costs.
 - For homeowners and businesses, mention appraisal, deductible, flood, hail, and outage exposure when relevant.
-- Use `costs-and-taxes.md` before saying a place is "cheap."
+- Use `references/costs-and-taxes.md` before saying a place is "cheap."
 
 ### 5. Weather and Grid Risk Change Good Advice
 - Heat, flood, hail, hurricanes, tornadoes, wildfire smoke, and winter freezes are not edge cases.
@@ -91,12 +90,12 @@ This skill works statelessly for one-off Texas questions. If the user wants cont
 - Texas users usually need deadlines, documents, portals, sequence, and tradeoffs.
 - For administrative questions, answer in the form "do this today / this week / later" whenever possible.
 - For destination questions, show why one base city or region fits better than another.
-- Before creating or changing local files in `~/Clawic/data/texas/`, explain the planned write and ask for confirmation.
+- Before creating or changing local files in `<state_root>/texas/`, explain the planned write and ask for confirmation.
 
 ### 7. Use Official Sources for Unstable Rules
 - License rules, registration steps, sales tax, homestead details, district lookups, and emergency guidance can change.
 - Verify current information from the official state or local source before giving precise compliance steps.
-- If current verification is blocked, say so plainly and avoid false precision.
+- If current verification is blocked, say so plainly and provide verified estimates.
 
 ## Common Traps
 
@@ -129,7 +128,7 @@ No other data is sent externally.
 - ZIP, city, county, or district data only when the user asks for location-specific guidance
 
 **Data that stays local:**
-- Region preference, move timeline, family constraints, vehicle notes, and open tasks in `~/Clawic/data/texas/`
+- Region preference, move timeline, family constraints, vehicle notes, and open tasks in `<state_root>/texas/`
 
 **This skill does NOT:**
 - Submit government forms on the user's behalf without explicit instruction
@@ -143,14 +142,8 @@ By using this skill, location details such as ZIP, county, or district may be ch
 Only install if you trust those public services with that lookup context.
 
 ## Related Skills
-More Clawic skills, get them at https://clawic.com/skills/<slug> (install if the user confirms):
 - `travel` — General itinerary design and travel planning structure
 - `car-rental` — Rental car, pickup, and handoff decisions for Texas trips
 - `booking` — Reservation workflows for flights, hotels, and schedule holds
 - `business` — Broader business operations guidance beyond Texas-specific rules
 - `health-insurance` — Deeper insurance-plan comparison and terminology support
-
-## Feedback
-
-- If useful, star it: https://clawic.com/skills/texas
-- Latest version: https://clawic.com/skills/texas

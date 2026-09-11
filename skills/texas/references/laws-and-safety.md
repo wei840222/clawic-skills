@@ -6,7 +6,7 @@ Use this file for practical legal awareness, scams, daily safety, and risk frami
 
 - Cannabis remains illegal under Texas state law even though hemp and city enforcement patterns can confuse users.
 - Firearm and carry rules are more permissive than in many states, but location-specific restrictions still matter.
-- DWI risk is serious and should be treated as a hard stop, not a gray area.
+- DWI risk is serious and must be treated as a strict legal boundary.
 - Housing and employment advice should assume Texas is generally more landlord-friendly and employer-friendly than some other states.
 
 ## Safety Framing
@@ -28,7 +28,7 @@ Texas safety questions often need one of these lenses:
 ## Good Answer Pattern
 
 1. Identify whether the issue is statewide law, local ordinance, or practical safety.
-2. Use plain English and avoid acting like local rumors are law.
+2. Use plain English and stick to verified legal statutes.
 3. If a user wants a precise legal answer, point them to the official authority and say what still needs verification.
 
 ## Common Mistakes
