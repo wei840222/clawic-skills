@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "Write a short message to a friend in Hindi asking how their new job is going.",
+    "expected": "A casual, warm message in Hinglish, using 'तुम' or 'तू' instead of 'आप', and avoiding overly formal vocabulary.",
+    "actual": "हे यार! कैसी चल रही है तुम्हारी नई job? सब बढ़िया ना? Let me know कैसा experience है अब तक!",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "Draft an email to a peer colleague in Delhi in Hindi about a project delay.",
+    "expected": "A slightly professional yet casual Hinglish message, using Delhi slang if applicable (e.g., 'यार', 'scene'), blending English terms like 'project', 'delay', 'timeline'.",
+    "actual": "Hi rahul, यार project में थोड़ा delay हो गया है। कुछ issues आ गए थे, तो timeline थोड़ा push करना पड़ेगा। बता देना कब discuss कर सकते हैं।",
+    "pass": true
+  }
+]
