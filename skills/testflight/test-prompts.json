@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "How do I upload a build to TestFlight using Fastlane and an API key?",
+    "expected": "Provide instructions for using App Store Connect API keys with Fastlane, including where to put the keys securely and a Fastlane script.",
+    "actual": "To upload a build using Fastlane and an API key, follow these steps:\n\n1.  **Generate an App Store Connect API Key** with 'App Manager' access.\n2.  **Download the `.p8` file**.\n3.  **Create a `fastlane/api_key.json` file** like so:\n    ```json\n    {\n      \"key_id\": \"YOUR_KEY_ID\",\n      \"issuer_id\": \"YOUR_ISSUER_ID\",\n      \"key\": \"-----BEGIN PRIVATE KEY-----\\n...\\n-----END PRIVATE KEY-----\",\n      \"in_house\": false\n    }\n    ```\n4.  **Add a Fastlane beta lane** in your `Fastfile`:\n    ```ruby\n    lane :beta do\n      build_app(scheme: \"MyApp\")\n      upload_to_testflight(\n        api_key_path: \"fastlane/api_key.json\",\n        skip_waiting_for_build_processing: true\n      )\n    end\n    ```",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "I'm setting up a TestFlight deployment on GitHub Actions but it says 'missing compliance information'. How do I fix it without adding manual steps?",
+    "expected": "Explain that ITSAppUsesNonExemptEncryption must be set to false in Info.plist to avoid missing export compliance on the TestFlight processing step.",
+    "actual": "To fix the 'missing compliance information' error in automated pipelines without manual intervention in App Store Connect, you need to add an export compliance declaration to your app's `Info.plist` file.\n\nAdd the following keys to your `Info.plist`:\n\n```xml\n<key>ITSAppUsesNonExemptEncryption</key>\n<false/>\n```\n\n*(If your app actually uses non-exempt encryption, you will need to set it to `<true/>` and provide your `ITSEncryptionExportComplianceCode` string).* \nThis prevents the build from getting stuck in \"Processing\" and needing a manual declaration.",
+    "pass": true
+  }
+]
