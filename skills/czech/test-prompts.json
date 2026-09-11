@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "Translate this to Czech: 'Hello, I don't know what to do next. It's really bad.'",
+    "expected": "A casual translation using obecná čeština, e.g., 'Ahoj, nevím, co dál. Je to fakt hrozný.'",
+    "actual": "Ahoj, no já nevím, co dál. Je to fakt na hovno.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "Write a quick message to a friend inviting them for a coffee because you have some free time.",
+    "expected": "A warm, informal message using diminutives, e.g., 'Hele, mám chvilku, nezajdeme na kafíčko?'",
+    "actual": "Hele, mám chvilku, nezajdeme na kafíčko? Fakt bych potřeboval pauzu.",
+    "pass": true
+  }
+]
