@@ -74,7 +74,7 @@ Vienna has excellent high-end options:
 
 ### 1st District — Tourist + High-End
 - Famous coffeehouses (Sacher, Central)
-- Tourist trap restaurants (avoid Stephansplatz)
+- Tourist trap restaurants (seek dining away from Stephansplatz)
 - Fine dining
 - Expensive
 
@@ -120,7 +120,7 @@ Vienna has excellent high-end options:
 - 5-10% for good service
 - Round up for small bills
 - Leave on table or hand to server
-- Don't split bills into tiny amounts (considered cheap)
+- Pay standard portions to be courteous (considered cheap)
 
 ### Paying
 - "Zahlen, bitte" — bill please
@@ -209,7 +209,7 @@ Vienna has caught up:
 - **Zum Schwarzen Kameel** — Standing at bar for sandwiches
 - **Café Rüdigerhof** — Real Viennese café, no tourists
 
-### Avoid
+### Places to Reconsider
 - Any restaurant ON Stephansplatz
 - Naschmarkt sit-down restaurants (stalls are better)
 - Mozart-themed tourist traps

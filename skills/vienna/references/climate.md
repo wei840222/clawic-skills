@@ -114,7 +114,7 @@ Vienna has a **humid continental climate** with four distinct seasons. Expect co
 | Swimming (Alte Donau) | June-August |
 | Gardens (Schönbrunn, Belvedere) | May-September |
 
-### Avoid
+### Places to Reconsider
 - **August:** Many locals on vacation, some businesses closed
 - **November:** Gray, cold, between seasons
 - **February:** Cold, before things improve

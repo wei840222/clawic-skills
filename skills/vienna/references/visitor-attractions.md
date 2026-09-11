@@ -13,7 +13,7 @@
 
 - **Gardens:** FREE and magnificent
 - **Booking:** imperialtickets.com — fixed time slots required
-- **Best time:** 9am weekdays, avoid summer weekends
+- **Best time:** 9am weekdays, choose other times than summer weekends
 
 ### St. Stephen's Cathedral (Stephansdom)
 **Gothic masterpiece in Vienna's heart**

@@ -10,7 +10,7 @@
 - Pork version = Schweinsschnitzel (cheaper, also good)
 - Breading should "wave" slightly off the meat
 - Served with potato salad or parsley potatoes
-- Never with sauce (that's German, not Austrian)
+- Serve strictly without sauce (that's German, not Austrian)
 
 **Best Places:**
 | Restaurant | Price | Notes |
@@ -38,7 +38,7 @@
 
 **Price:** €28-42 per person
 
-**Note:** This is a multi-course experience. Don't rush it.
+**Note:** This is a multi-course experience. Take your time.
 
 ---
 
@@ -187,7 +187,7 @@ Austrian portions are generous. One main is usually enough.
 
 ## Common Mistakes
 
-1. **Asking for sauce on Schnitzel** — Never done
+1. **Asking for sauce on Schnitzel** — Considered improper
 2. **Ordering Schnitzel with rice** — Austrians cringe
 3. **Rushing Tafelspitz** — It's a ceremony
 4. **Expecting fast service** — Traditional restaurants take time

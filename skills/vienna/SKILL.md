@@ -1,59 +1,55 @@
 ---
 name: vienna
-slug: vienna
-version: 1.0.0
-description: Navigate Vienna as visitor, resident, tech worker, student, or entrepreneur with neighborhoods, transport, costs, safety, and local insights.
-homepage: https://clawic.com/skills/vienna
+description: Provide practical guidance for visiting, moving to, working in, or studying
+  in Vienna. Trigger for questions about Viennese neighborhoods, transport, local
+  costs, food, safety, and culture.
 metadata:
-  clawdbot:
-    emoji: 🏛️
-    requires:
-      bins: []
-    os:
-    - linux
-    - darwin
-    - win32
-    displayName: Vienna
+  version: "1.0.0"
+  openclaw: '{"emoji": "🏛️"}'
+  related-skills: '{"travel": "Multi-destination travel framing beyond Vienna-specific routing.", "austria": "Austria-wide trip and alpine routing when Vienna is one stop.", "german": "Austrian German wording and natural phrasing.", "europe": "Cross-border EU mobility context beyond Vienna.", "career": "Broader career decisions after Vienna tech or job context is set.", "startup": "Founder stage routing after Vienna startup landscape is scoped.", "food": "Deeper food system workflows beyond Viennese dining guidance.", "plan": "General planning structure when the Vienna decision is only one input.", "booking": "Lodging and reservation execution after a Vienna base is chosen."}'
 ---
 
-## When to Use
+## State location
 
-User asks about Vienna for any purpose: visiting, moving, working, studying, or starting a business. Agent provides practical guidance with current data.
+This is a stateless knowledge skill. It does not create, read, or modify local configuration or persistent state files.
 
-## Quick Reference
+## When to Load References
 
-| Topic | File |
-|-------|------|
-| **Visitors** | |
-| Attractions (must-see vs skip) | `visitor-attractions.md` |
-| Itineraries (1/3/7 days) | `visitor-itineraries.md` |
-| Where to stay | `visitor-lodging.md` |
-| Tips & day trips | `visitor-tips.md` |
-| **Neighborhoods** | |
-| Quick comparison | `neighborhoods-index.md` |
-| Inner city (1st district) | `neighborhoods-central.md` |
-| Inner belt (2nd-9th) | `neighborhoods-inner.md` |
-| Southern districts (10th-12th) | `neighborhoods-south.md` |
-| Western districts (13th-17th) | `neighborhoods-west.md` |
-| Outer suburbs (18th-23rd) | `neighborhoods-outer.md` |
-| Choosing guide | `neighborhoods-choosing.md` |
-| **Food** | |
-| Overview & restaurants | `food-overview.md` |
-| Traditional Viennese | `food-traditional.md` |
-| Coffee houses | `food-coffee.md` |
-| Markets & Heurigen | `food-markets.md` |
-| Dietary & tips | `food-practical.md` |
-| **Practical** | |
-| Moving & settling | `resident.md` |
-| Transport | `transport.md` |
-| Cost of living | `cost.md` |
-| Safety | `safety.md` |
-| Weather | `climate.md` |
-| Local services | `local.md` |
-| **Career** | |
-| Tech industry | `tech.md` |
-| Students | `student.md` |
-| Startups | `startup.md` |
+Determine the user's role (tourist, resident, tech worker, student, entrepreneur) and load the appropriate reference files:
+
+| Topic | File | When to load |
+|-------|------|--------------|
+| **Visitors** | | |
+| Attractions | `references/visitor-attractions.md` | Planning sightseeing, must-see lists, and what to skip |
+| Itineraries | `references/visitor-itineraries.md` | Creating 1, 3, or 7-day trip plans |
+| Where to stay | `references/visitor-lodging.md` | Choosing a hotel or short-term accommodation area |
+| Tips & day trips | `references/visitor-tips.md` | General tourist advice, excursions outside the city |
+| **Neighborhoods** | | |
+| Quick comparison | `references/neighborhoods-index.md` | Comparing districts at a high level |
+| Inner city (1st) | `references/neighborhoods-central.md` | Living in or visiting the historic center |
+| Inner belt (2nd-9th) | `references/neighborhoods-inner.md` | Popular residential areas near the center |
+| Southern (10th-12th) | `references/neighborhoods-south.md` | Budget-conscious or diverse residential areas |
+| Western (13th-17th) | `references/neighborhoods-west.md` | Family-friendly or suburban areas near nature |
+| Outer suburbs (18th-23rd) | `references/neighborhoods-outer.md` | Living further out for space or lower rent |
+| Choosing guide | `references/neighborhoods-choosing.md` | Helping users decide where to live based on their needs |
+| **Food** | | |
+| Overview | `references/food-overview.md` | General dining scene and restaurant types |
+| Traditional | `references/food-traditional.md` | Viennese classics (Schnitzel, Tafelspitz) |
+| Coffee houses | `references/food-coffee.md` | Coffeehouse culture, ordering, and etiquette |
+| Markets & Heurigen | `references/food-markets.md` | Naschmarkt, Brunnenmarkt, and wine taverns |
+| Dietary & tips | `references/food-practical.md` | Vegan options, tipping, booking, and dining etiquette |
+| **Practical** | | |
+| Moving & settling | `references/resident.md` | Expat registration (Meldezettel), banking, and bureaucracy |
+| Transport | `references/transport.md` | Public transit (U-Bahn, trams), tickets, and cycling |
+| Cost of living | `references/cost.md` | Rent, groceries, and daily expenses |
+| Safety | `references/safety.md` | Crime rates, safe areas, and common scams |
+| Weather | `references/climate.md` | Seasonal weather and packing advice |
+| Local services | `references/local.md` | Gyms, haircuts, doctors, and practical daily life |
+| **Career & Study** | | |
+| Tech industry | `references/tech.md` | Software engineering jobs, salaries, and major companies |
+| Students | `references/student.md` | University life, student housing, and student budgets |
+| Startups | `references/startup.md` | Entrepreneurship, coworking spaces, and funding |
+| Official source map | `references/sources.md` | Before quoting official fees, registration, transit, or visa facts |
 
 ## Core Rules
 
@@ -68,7 +64,7 @@ Vienna is one of the world's safest major cities, consistently ranking #1 for qu
 - Some pickpocketing at tourist spots (Stephansplatz, metro stations)
 - Occasional phone snatching on U-Bahn
 - Safe to walk alone at night in most areas
-See `safety.md` for area-specific guidance.
+See `references/safety.md` for area-specific guidance.
 
 ### 3. Weather Expectations
 - Continental climate — cold winters, warm summers
@@ -94,7 +90,7 @@ See `safety.md` for area-specific guidance.
 Vienna has distinct characteristics that differ from other German-speaking cities:
 - **Coffeehouses are institutions** — staying hours with one coffee is expected and welcome
 - **Grüß Gott** — standard greeting (not "Hallo")
-- **Austrians ≠ Germans** — cultural differences are significant, never conflate them
+- **Austrians ≠ Germans** — cultural differences are significant, treat them as distinct
 - **Indirect communication** — Viennese are more indirect than Germans
 - **Title usage** — academic titles matter (Herr Doktor, Frau Magister)
 - **Sunday closures** — most shops closed, restaurants and cafés open

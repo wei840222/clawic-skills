@@ -87,7 +87,7 @@ Vienna has one of the world's largest tram networks — **28 lines**.
 - Great for sightseeing (ride lines 1/2 around Ring)
 - Older trams have character
 - Buy ticket before boarding (validators inside)
-- Ring your stop (button)
+- Press the request button for your stop
 
 ---
 
@@ -181,7 +181,7 @@ Vienna has one of the world's largest tram networks — **28 lines**.
 - Apps show available cars
 
 ### Recommendation
-**Don't drive in Vienna** unless necessary. Public transport is:
+**Use public transport instead of driving** unless necessary. Public transport is:
 - Faster (no parking search)
 - Cheaper (no parking fees)
 - Less stressful

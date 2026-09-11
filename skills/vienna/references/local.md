@@ -63,7 +63,7 @@ See `resident.md` for detailed provider comparison.
 - **Amazon locker:** Available at various spots
 
 ### Tips
-- Doorbells often don't work — packages left with neighbors or at pickup points
+- Doorbells are frequently inactive — packages left with neighbors or at pickup points
 - Register with building if doorbells are tricky
 - Evening/weekend delivery available (extra fee)
 

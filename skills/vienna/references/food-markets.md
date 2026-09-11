@@ -143,7 +143,7 @@ A "Heuriger" is where a winemaker sells their own wine (the term means "this yea
 
 ### Heuriger Tips
 1. **Check if open** — Many rotate schedules, check websites
-2. **Bring cash** — Many don't take cards
+2. **Bring cash** — Many accept cash only
 3. **Go for sunset** — Best atmosphere
 4. **Try Sturm** (Aug-Oct) — Cloudy, sweet, deceptively strong
 5. **Take a hike first** — Combine with vineyard walk

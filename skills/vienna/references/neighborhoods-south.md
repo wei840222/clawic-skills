@@ -52,14 +52,14 @@ Vienna's most populous and most diverse district. Working class roots, now Vienn
 ❌ Not attractive for short visits
 
 ### Who Should Consider
-- **Yes:** Budget-conscious, don't mind rough edges, want authentic diversity
+- **Yes:** Budget-conscious, accept a raw urban environment, want authentic diversity
 - **No:** Safety-conscious, want polish, need nightlife
 
 ### Insider Tips
 1. **Viktor-Adler-Markt** — Best prices on produce, authentic
 2. **Sonnwendviertel** — Look here for modern affordable flats
 3. **Oberlaa** — Quieter suburban feel, near spa
-4. **Avoid:** Late nights around Reumannplatz
+4. **Caution:** Late nights around Reumannplatz
 
 ---
 
@@ -107,13 +107,13 @@ Vienna's most industrial district. Cemetery culture (Zentralfriedhof), industria
 ❌ Not recommended for newcomers
 
 ### Who Should Consider
-- **Yes:** Extremely budget-conscious, don't need social life
+- **Yes:** Extremely budget-conscious, prioritize quiet over social venues
 - **No:** Everyone else, especially newcomers
 
 ### Insider Tips
 1. **Zentralfriedhof** — Actually beautiful, worth a visit
 2. **Gasometer** — Unique architecture, some apartments available
-3. Most expats never set foot here — and that's okay
+3. Expats usually settle elsewhere — and that's okay
 
 ---
 
@@ -183,6 +183,6 @@ Residential working class district between center and suburbs. More pleasant tha
 
 ### Recommendation
 
-For most newcomers and expats, **avoid 10th and 11th** unless on extremely tight budget. **12th is acceptable** for families prioritizing value over excitement.
+For most newcomers and expats, **consider alternatives to 10th and 11th** unless on extremely tight budget. **12th is acceptable** for families prioritizing value over excitement.
 
 If you can stretch budget slightly, the 5th or parts of the 2nd offer better quality of life for only €2-4/m² more.

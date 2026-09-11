@@ -7,7 +7,7 @@
 - **Cards:** Widely accepted, but carry some cash
 - **Cash needed:** Stephansdom tickets, some markets, small shops
 - **Tipping:** 5-10% at restaurants, round up at cafés, €1-2 for coat check
-- **ATMs:** Use bank ATMs, avoid Euronet (high fees)
+- **ATMs:** Use bank ATMs, use bank ATMs exclusively (to avoid high fees)
 
 ### Language
 - **Official:** German (Austrian variant)
@@ -109,7 +109,7 @@
 - Wait to be seated at restaurants
 - Say "Grüß Gott" when entering smaller places
 - "Mahlzeit" = enjoy your meal (also used as greeting at lunchtime)
-- Don't split bills into tiny amounts — Austrians think it's cheap
+- Pay standard portions to be courteous — Austrians think it's cheap
 - Tip 5-10%, round up for small bills
 
 ### Coffeehouse
@@ -121,7 +121,7 @@
 
 ### Public Transport
 - Give up seats for elderly, pregnant women
-- Don't eat smelly food
+- Eat only odorless food
 - Queue properly at bus/tram doors
 - Have ticket before boarding (inspectors are strict)
 
@@ -169,7 +169,7 @@
 7. **Ignoring free museum days** — Missing easy savings
 8. **Taking CAT train** — S7 is 60% cheaper
 9. **Missing Heurigen** — Unique Vienna experience
-10. **Overtipping** — 5-10% is plenty, Austrians don't overtip
+10. **Overtipping** — 5-10% is plenty, Austrians tip moderately
 
 ---
 

@@ -38,11 +38,11 @@
 - Keep valuables in front pockets or secure bags
 - Use bags with zippers
 - Be aware in crowds
-- Don't flash expensive items
+- Keep expensive items concealed
 - Backpack in front on crowded transit
 
 ### Reality Check
-Pickpocketing exists but is **far less** common than Barcelona, Paris, or Rome. Most residents never experience it.
+Pickpocketing exists but is **far less** common than Barcelona, Paris, or Rome. Most residents remain completely unaffected.
 
 ---
 
@@ -81,7 +81,7 @@ Pickpocketing exists but is **far less** common than Barcelona, Paris, or Rome. 
 - Vienna is safe at night in most areas
 - Walking home alone generally fine
 - Use well-lit streets
-- Avoid parks after dark (not dangerous, just deserted)
+- Opt for well-lit streets after dark (not dangerous, just deserted)
 - U-Bahn safe at all hours
 
 ### Public Transport
@@ -93,17 +93,17 @@ Pickpocketing exists but is **far less** common than Barcelona, Paris, or Rome. 
 
 ### ATMs
 - Use bank ATMs (inside or attached to banks)
-- Avoid standalone machines (potential skimmers)
+- Use bank-affiliated ATMs instead of standalone machines (potential skimmers)
 - Cover PIN when entering
 
 ### Scams to Watch
 | Scam | How It Works | Prevention |
 |------|--------------|------------|
-| Apartment fraud | Fake landlord requests deposit | Never pay before viewing |
+| Apartment fraud | Fake landlord requests deposit | Pay only after a verified viewing |
 | Fake concert tickets | Mozart hawkers oversell | Book direct from venues |
-| Petition/distraction | Sign petition, pickpocket | Don't engage |
+| Petition/distraction | Sign petition, pickpocket | Ignore and walk away |
 | "Gold ring" | Found ring, asks for money | Ignore |
-| Fake police | Ask for passport/wallet | Real police don't do this |
+| Fake police | Ask for passport/wallet | Real police follow strict verification protocols |
 
 ---
 
@@ -212,7 +212,7 @@ Overt discrimination or violence is rare. Vienna Pride is well-attended and main
 ### Daily Life
 - [ ] Keep valuables secure in crowds
 - [ ] Lock bike with quality lock
-- [ ] Don't leave belongings unattended
+- [ ] Keep belongings secure at all times
 - [ ] Use ATMs at banks
 - [ ] Verify apartment listings before paying
 

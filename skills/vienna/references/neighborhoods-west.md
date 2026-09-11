@@ -243,4 +243,4 @@ Quiet residential district climbing toward Vienna Woods. Traditional, Austrian, 
 - **Nature lovers:** 13th or 14th (with car)
 - **Budget + convenience:** 15th (if comfortable with roughness)
 - **Adventurous creatives:** 16th (Yppenplatz area)
-- **Avoiding:** 17th (unless you specifically want quiet Austrian suburbs)
+- **Skipping:** 17th (unless you specifically want quiet Austrian suburbs)

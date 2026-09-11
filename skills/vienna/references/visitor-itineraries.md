@@ -203,7 +203,7 @@ Same as 3-day itinerary above
 
 ### Cheap Eats
 - Billa/Spar supermarket meals
-- Naschmarkt stall food (avoid sit-down restaurants)
+- Naschmarkt stall food (skip sit-down restaurants)
 - Würstelstand (sausage stands) — iconic and cheap
 - University Mensas (student cafeterias)
 
@@ -242,7 +242,7 @@ Same as 3-day itinerary above
 ### Christmas Markets
 - Late November to December 23
 - Best: Rathaus (City Hall), Schönbrunn, Spittelberg
-- Avoid weekends in December (packed)
+- Plan visits on weekdays in December (packed)
 
 ---
 
@@ -254,7 +254,7 @@ Same as 3-day itinerary above
 4. **Not bringing cash** — Some places (Stephansdom) cash only
 5. **Underestimating walking distances** — Vienna is bigger than it looks
 6. **Visiting only tourist restaurants** — Best food in neighborhoods
-7. **Skipping Heurigen** — Unique Vienna experience, don't miss it
+7. **Skipping Heurigen** — Unique Vienna experience, be sure to include it
 8. **Not checking free days** — First Sunday/Thursday save money
 
 ---

@@ -153,7 +153,7 @@
 
 ## Red Flags When Viewing
 
-⚠️ **Avoid:**
+⚠️ **Reconsider:**
 - Asking for money before viewing
 - "Abroad landlord" scam (keys mailed)
 - Extremely below-market prices

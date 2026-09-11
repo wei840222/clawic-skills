@@ -124,7 +124,7 @@ Less common than some cities:
 - Card tips: Often ask "How much total?"
 
 ### Note
-Austrians don't overtip. 5-10% is normal and appreciated. 20% would be excessive.
+Austrians tip moderately. 5-10% is normal and appreciated. 20% would be excessive.
 
 ---
 

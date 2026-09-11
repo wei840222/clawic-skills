@@ -238,7 +238,7 @@ Vienna is expensive by global standards but affordable compared to London, Paris
 ### Housing
 - Look at 10th, 12th, 5th for value
 - Consider outer 2nd district
-- Avoid broker fees (provisionsfrei)
+- Seek properties without broker fees (provisionsfrei)
 
 ### Food
 - Shop at Hofer, Lidl for basics
