@@ -1,25 +1,43 @@
 ---
 name: excel-xlsx
-slug: excel-xlsx
-version: 1.0.2
-description: Create, inspect, and edit Microsoft Excel workbooks and XLSX files with reliable formulas, dates, types, formatting, recalculation, and template preservation. Use when (1) the task is about Excel, `.xlsx`, `.xlsm`, `.xls`, `.csv`, or `.tsv`; (2) formulas, formatting, workbook structure, or compatibility matter; (3) the file must stay reliable after edits.
-homepage: https://clawic.com/skills/excel-xlsx
-changelog: Tightened formula anchoring, recalculation, and model traceability after a stricter external spreadsheet audit.
+description: Create, inspect, and edit Excel workbooks (XLSX, XLSM) with openpyxl or pandas while preserving formulas, formats, and structure. Use when the task needs robust spreadsheet generation, complex workbook reads, formula-safe edits, or native Excel layouts instead of plain CSV.
 metadata:
-  clawdbot:
-    emoji: 📗
-    requires:
-      bins: []
-    os:
-    - linux
-    - darwin
-    - win32
-    displayName: Excel / XLSX
+  version: "1.0.2"
+  openclaw: '{"emoji":"📗"}'
+  related-skills: '["csv","data","data-analysis"]'
 ---
+
+## State location
+
+Optional preferences live under `<state_root>/excel-xlsx/`.
+
+Resolve `<state_root>` once per invocation:
+
+1. Prefer an existing host-provided skill state root when the runtime already defines one.
+2. Else use `<workspace>/` when a workspace is available.
+3. Else, only after the user authorizes durable preferences, create and use a local workspace-owned root.
+
+If no durable preferences are authorized, stay fully in-session and do not invent a memory file.
+
+```text
+<state_root>/excel-xlsx/
+├── memory.md    # activation preference, libraries, date/ID defaults, pain points
+```
+
+## Progressive disclosure
+
+Load the matching reference before acting:
+
+| Need | Reference |
+| --- | --- |
+| First-use activation questions and preference capture | [Setup](references/setup.md) |
+| Durable memory shape for spreadsheet preferences | [Memory template](references/memory-template.md) |
 
 ## When to Use
 
 Use when the main artifact is a Microsoft Excel workbook or spreadsheet file, especially when formulas, dates, formatting, merged cells, workbook structure, or cross-platform behavior matter.
+
+Route plain delimiter exchange (CSV/TSV cleanup without workbook features) to `csv`. Route broad analytics framing without native workbook constraints to `data` / `data-analysis`.
 
 ## Core Rules
 
@@ -41,9 +59,9 @@ Use when the main artifact is a Microsoft Excel workbook or spreadsheet file, es
 
 - Write formulas into cells instead of hardcoding derived results from Python.
 - Use references to assumption cells instead of magic numbers inside formulas.
-- Cached formula values can be stale, so do not trust them blindly after edits.
+- Cached formula values can be stale; always evaluate formulas fresh after edits.
 - Check copied formulas for wrong ranges, wrong sheets, and silent off-by-one drift before delivery.
-- Absolute and relative references are part of the logic, so copied formulas can be wrong even when they still "work".
+- Absolute and relative references are part of the logic, so copied formulas can be wrong even when they still appear to work.
 - Test new formulas on a few representative cells before filling them across a whole block.
 - Verify denominators, named ranges, and precedent cells before shipping formulas that depend on them.
 - A workbook should ship with zero formula errors, not with known `#REF!`, `#DIV/0!`, `#VALUE!`, `#NAME?`, or circular-reference fallout left for the user to fix.
@@ -52,7 +70,7 @@ Use when the main artifact is a Microsoft Excel workbook or spreadsheet file, es
 ### 4. Protect data types before Excel mangles them
 
 - Long identifiers, phone numbers, ZIP codes, and leading-zero values should usually be stored as text.
-- Excel silently truncates numeric precision past 15 digits.
+- Excel silently truncates numeric precision past 15 digits (IEEE 754 limitation). The maximum grid size is 1,048,576 rows by 16,384 columns per sheet.
 - Mixed text-number columns need explicit handling on read and on write.
 - Scientific notation, auto-parsed dates, and stripped leading zeros are common corruption, not cosmetic issues.
 
@@ -65,7 +83,7 @@ Use when the main artifact is a Microsoft Excel workbook or spreadsheet file, es
 - Match styles for newly filled cells instead of quietly introducing a new visual system.
 - If the workbook is a template, preserve sheet order, widths, freezes, filters, print settings, validations, and visual conventions unless the task explicitly changes them.
 - Conditional formatting, filters, print areas, and data validation often carry business meaning even when users only mention the numbers.
-- If there is no existing style guide and the file is a model, keep editable inputs visually distinguishable from formulas, but never override an established template to force a generic house style.
+- If there is no existing style guide and the file is a model, keep editable inputs visually distinguishable from formulas, and preserve an established template instead of forcing a generic house style.
 
 ### 6. Recalculate and review before delivery
 
@@ -80,7 +98,7 @@ Use when the main artifact is a Microsoft Excel workbook or spreadsheet file, es
 
 - Large workbooks can fail for boring reasons: memory spikes, padded empty rows, and slow full-sheet reads.
 - Use streaming or chunked reads when the file is big enough that loading everything at once becomes fragile.
-- Large-file workflows also need narrower reads, explicit dtypes, and sheet targeting to avoid accidental damage.
+- Large-file workflows also need narrower reads, explicit dtypes, and sheet targeting to prevent accidental damage.
 
 ## Common Traps
 
@@ -98,15 +116,4 @@ Use when the main artifact is a Microsoft Excel workbook or spreadsheet file, es
 - Copying formulas without checking relative references can push one bad range across an entire block.
 - Hidden sheets, named ranges, validations, and merged areas often keep business logic that is invisible in a quick skim.
 - A workbook can appear numerically correct while still failing because filters, conditional formats, print settings, or data validation were stripped.
-- A workbook can be numerically correct and still fail visually because wrapped text, clipped labels, or narrow columns were never reviewed.
-
-## Related Skills
-More Clawic skills, get them at https://clawic.com/skills/<slug> (install if the user confirms):
-- `csv` — Plain-text tabular import and export workflows.
-- `data` — General data handling patterns before spreadsheet output.
-- `data-analysis` — Higher-level analysis that can feed workbook deliverables.
-
-## Feedback
-
-- If useful, star it: https://clawic.com/skills/excel-xlsx
-- Latest version: https://clawic.com/skills/excel-xlsx
+- A workbook can be numerically correct and still fail visually because wrapped text, clipped labels, or narrow columns were missed during visual review.

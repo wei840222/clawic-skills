@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "Create an Excel file named 'budget.xlsx' using Python openpyxl. It should have a 'Summary' sheet with 'Total' in A1 and a formula '=SUM(B1:B10)' in B1. Add some sample numbers in B2:B5.",
+    "expected": "A python script is written and executed using openpyxl that creates 'budget.xlsx' with the specified values and formula in the correct cells.",
+    "actual": "Created budget.xlsx successfully with openpyxl. The file contains the 'Summary' sheet, the 'Total' label in A1, sample numbers in B2:B5, and the formula =SUM(B1:B10) in B1.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "Read the file 'budget.xlsx' and safely output the formula in B1 without evaluating it, using openpyxl.",
+    "expected": "The script loads the workbook without `data_only=True` to retrieve the formula string '=SUM(B1:B10)' from cell B1 and prints it.",
+    "actual": "Script executed correctly. Used openpyxl.load_workbook('budget.xlsx') and printed sheet['B1'].value which successfully output =SUM(B1:B10).",
+    "pass": true
+  }
+]
