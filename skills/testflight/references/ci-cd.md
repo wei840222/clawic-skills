@@ -13,7 +13,7 @@
 ### 2. Store Securely
 
 ```bash
-# Store in CI secrets, NOT in repo
+# Store securely in CI secrets
 APPSTORE_API_KEY_ID="XXXXXXXXXX"
 APPSTORE_API_ISSUER_ID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 APPSTORE_API_KEY_CONTENT="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----"

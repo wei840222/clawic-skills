@@ -1,28 +1,25 @@
 ---
 name: testflight
-slug: testflight
-version: 1.0.0
-description: Distribute iOS and macOS beta builds with TestFlight, tester management, and CI/CD automation.
-homepage: https://clawic.com/skills/testflight
+description: Distribute iOS and macOS beta builds via TestFlight. Handles App Store Connect API keys, tester management, provisioning profiles, and automated Fastlane/Xcode CI/CD uploads.
 metadata:
-  clawdbot:
-    emoji: 🛫
-    requires:
-      bins: []
-    os:
-    - darwin
-    displayName: TestFlight
+  version: "1.0.0"
+  openclaw: '{"emoji":"🛫"}'
+  related-skills: '{"ios":"Native iOS app build, entitlements, and App Store submission patterns that feed TestFlight uploads.","xcode":"Xcode archive, signing, and IDE upload workflows used before TestFlight distribution.","flutter":"Cross-platform mobile build pipelines that still ship iOS betas through TestFlight."}'
 ---
+## State location
+
+This is a stateless skill. It does not store or require local configuration files on the host machine.
+
 
 ## When to Use
 
 User needs to distribute beta builds via TestFlight. Agent handles App Store Connect setup, tester groups, build uploads, and CI/CD integration.
 
-## Quick Reference
+## Reference
 
-| Topic | File |
-|-------|------|
-| CI/CD automation | `ci-cd.md` |
+| Topic | File | When to load |
+|-------|------|--------------|
+| CI/CD automation | `references/ci-cd.md` | When setting up GitHub Actions, Fastlane, or xcrun altool uploads. |
 
 ## Core Rules
 
@@ -62,7 +59,7 @@ TestFlight builds expire after 90 days. Plan releases accordingly.
 
 ## TestFlight Traps
 
-- **Build number not incremented** - rejected immediately, must bump and rebuild
+- **Build number requirement** - Apple rejects duplicate build numbers; increment build number before every upload
 - **Missing export compliance** - stuck in "Processing" until answered in App Store Connect
 - **External testers on first build** - requires full beta review, use internal first
 - **Expired provisioning profile** - upload fails silently, check before archiving
@@ -108,19 +105,20 @@ xcrun altool --upload-app \
 
 **Data that stays local:**
 - API keys and certificates (keep in Keychain)
-- Source code (not uploaded)
+- Source code
 
-**This skill does NOT:**
-- Store Apple credentials in plain text
-- Share builds outside Apple's infrastructure
+**Data Handling Rules:**
+- Use Keychain for Apple credentials
+- Distribute builds exclusively via Apple's infrastructure
+
+## Sources
+
+- Apple Developer — [TestFlight](https://developer.apple.com/testflight/) (internal/external tester limits, 90-day build expiration)
+- Apple Developer — [App Store Connect API](https://developer.apple.com/documentation/appstoreconnectapi) (API key auth for uploads)
+- Fastlane docs — [upload_to_testflight](https://docs.fastlane.tools/actions/upload_to_testflight/) (lane options and API key JSON)
+- Apple Support — [Export compliance](https://developer.apple.com/documentation/security/complying-with-encryption-export-regulations) (ITSAppUsesNonExemptEncryption)
 
 ## Related Skills
-More Clawic skills, get them at https://clawic.com/skills/<slug> (install if the user confirms):
 - `ios` — iOS development patterns
 - `xcode` — Xcode workflows
 - `flutter` — cross-platform builds
-
-## Feedback
-
-- If useful, star it: https://clawic.com/skills/testflight
-- Latest version: https://clawic.com/skills/testflight
