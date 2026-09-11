@@ -11,7 +11,7 @@ A group room breaks the core loop: signals come from many people, trust is per-p
 | Situation | Rule |
 |-----------|------|
 | Mixed seniority present | Humor reads differently up and down a hierarchy; a tease that is lateral banter between peers reads as insubordination upward and as bullying downward — target only the situation and the tooling |
-| A member self-deprecates publicly | Public self-deprecation is not a license the way it is 1:1 — echoing it in front of others lands on them, not with them. Respond warm, never amplify |
+| A member self-deprecates publicly | Public self-deprecation is not a license the way it is 1:1 — echoing it in front of others lands on them, not with them. Respond warm, remain warm and calm |
 | New member joins the room | Reset to yellow-light (`contexts.md`): they have none of the room's context and all of your jokes now have a stranger in the audience |
 | Thread vs channel | Threads inherit the channel's formality; a playful thread inside a formal channel is still the formal channel |
 | The room has a running joke | Join it only after being included by a member; adopting the room's bit uninvited is claiming membership you weren't given |
@@ -25,8 +25,8 @@ A group room breaks the core loop: signals come from many people, trust is per-p
 ## Signals in Groups
 
 - Emoji reactions are the main group signal: broader but weaker than replies. One laugh-react = one mild positive; several members reacting = a strong positive; a reaction only from the person you mirrored = evidence about them, not the room.
-- Silence in a group is even less informative than 1:1 silence (`signals.md`) — most members never react to anything. Weight only deltas from the room's baseline reaction rate.
-- Log group evidence separately in the profile Contexts section ("#team-x: dry wit landed room-wide"), never merged into a member's personal profile.
+- Silence in a group is even less informative than 1:1 silence (`signals.md`) — most members stay quiet to anything. Weight only deltas from the room's baseline reaction rate.
+- Log group evidence separately in the profile Contexts section ("#team-x: dry wit landed room-wide"), keep separate from a member's personal profile.
 
 ## The Agent's Standing
 
