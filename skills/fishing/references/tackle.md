@@ -14,8 +14,8 @@
 | Type | Stretch | Visibility | Best Use |
 |------|---------|------------|----------|
 | Mono | High | Moderate | Topwater, general |
-| Fluoro | Low | Low | Clear water, leaders |
-| Braid | None | High | Heavy cover, sensitivity |
+| Fluoro | Low | Low (near invisible) | Clear water, line-shy fish, leaders |
+| Braid | None | High | Heavy cover, sensitivity. Use with fluoro leader for stealth. |
 
 ### Line Weight by Species
 - Panfish: 4-6 lb
