@@ -12,5 +12,12 @@
     "expected": "Reframes the request emphasizing the extreme distance (over 12 hours/800 miles driving), advises against a same-day trip, and suggests breaking it up or flying.",
     "actual": "Driving from El Paso to Beaumont in a single day is a major logistical challenge and generally not recommended. Here's the reality of that route:\n\n1. Extreme Distance: The drive is over 800 miles and will take 12-14 hours of pure driving time, not including stops, traffic (especially going through Houston or San Antonio), or weather.\n\n2. Fatigue & Safety: Attempting this in one day leads to severe driver fatigue. \n\n3. Route Reality: You will be crossing the entire state on I-10. West Texas has long stretches between fuel and services.\n\nRecommendation: \n- Break the trip up: Plan an overnight stop in a place like San Antonio or Junction.\n- Alternative: Consider flying if the timeline is strict.\n\nIf you must drive it, start before dawn and share the driving. See `references/road-trips-and-visiting.md` for more trip planning realities.",
     "pass": true
+  },
+  {
+    "id": 3,
+    "prompt": "I want to form an LLC in Austin and sell packaged snacks online and at weekend markets. What should I set up first?",
+    "expected": "Separates entity formation from local compliance; mentions registered agent/EIN, Texas sales-tax permit, franchise-tax awareness, and city/county market or food rules; points to work-and-business and official Comptroller sources rather than treating formation as enough.",
+    "actual": "Formation is only the first layer. Sequence it like this:\n\n1. Today: decide member-managed vs manager-managed LLC, registered agent, and formation path; get an EIN after formation.\n2. This week: check Texas sales-and-use tax permit needs for packaged snacks and marketplace sales via the Comptroller, and calendar franchise-tax reporting expectations.\n3. Before first market day: confirm Austin/county temporary-event or cottage-food style rules for the specific product and venue, plus basic insurance.\n\nDo not treat entity formation as a substitute for sales-tax or local market compliance. Load `references/work-and-business.md` and verify current steps from `references/sources.md` (Comptroller + local portals).",
+    "pass": true
   }
 ]
