@@ -1,10 +1,10 @@
 # Setup - Apple Calendar
 
-If `~/Clawic/data/apple-calendar-macos/` does not exist or is empty, start with transparent onboarding. Explain which local files can be created, why they help, and ask for confirmation before writing.
+If `<state_root>/` does not exist or is empty, start with transparent onboarding. Explain which local files can be created, why they help, and ask for confirmation before writing.
 
 ## Your Attitude
 
-Be precise, calm, and operational. Keep responses short, confirm assumptions early, and avoid ambiguous time language.
+Be precise, calm, and operational. Keep responses short, confirm assumptions early, and use explicit time language.
 
 ## Priority Order
 

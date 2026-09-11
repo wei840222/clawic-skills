@@ -29,7 +29,7 @@ command -v osascript
 ## Unified Calendar Scope
 
 - All paths should target calendars visible in Calendar.app, including synced Google, Exchange, iCloud, and CalDAV calendars.
-- Never claim provider-specific write support without verifying that the target calendar is present in local Calendar.app.
+- Claim provider-specific write support only after verifying that the target calendar is present in the local Calendar.app.
 
 ## Write Policy by Path
 

@@ -1,37 +1,9 @@
 ---
 name: apple-calendar-macos
-slug: apple-calendar-macos
-version: 1.0.0
-description: Use local CLI to manage Apple, Google, iCloud, Outlook, CalDAV, and other calendars synced in macOS Calendar, without API keys or OAuth.
-homepage: https://clawic.com/skills/apple-calendar-macos
-changelog: Initial release with unified macOS Calendar operations, deterministic command fallback, and safety-first write verification.
+description: Manage macOS Calendar events locally (iCloud, Google, Exchange, CalDAV) via CLI. Triggers on requests to lookup, create, update, or delete calendar events on macOS without requiring external API keys.
 metadata:
-  clawdbot:
-    emoji: 📅
-    requires:
-      bins: []
-      anyBins:
-      - apple-calendar-cli
-      - icalBuddy
-      - shortcuts
-      - osascript
-      config:
-      - ~/Clawic/data/apple-calendar-macos/
-    os:
-    - darwin
-    configPaths:
-    - ~/Clawic/data/apple-calendar-macos/
-    displayName: Apple Calendar (MacOS)
-  openclaw:
-    requires:
-      config:
-      - ~/Clawic/data/apple-calendar-macos/
+  openclaw: '{"emoji": "📅"}'
 ---
-
-## Setup
-
-On first use, follow `setup.md` to establish local operating context and confirmation preferences before any calendar write.
-
 ## When to Use
 
 User wants to manage events from the macOS Calendar stack where Google, iCloud, Exchange, and CalDAV accounts are already synced locally.
@@ -46,94 +18,37 @@ Agent handles lookup, create, update, delete, conflict checks, and post-write ve
 
 ## Architecture
 
-Memory lives in `~/Clawic/data/apple-calendar-macos/`. See `memory-template.md` for structure.
+To reduce working memory load, read specific reference documents only when their context is needed:
 
-```text
-~/Clawic/data/apple-calendar-macos/
-├── memory.md                  # Status, defaults, and confirmation behavior
-├── command-paths.md           # Detected CLI path and fallback status
-├── timezone-defaults.md       # Preferred timezone and date style
-└── safety-log.md              # Deletions, bulk edits, and rollback notes
-```
-
-## Quick Reference
-
-| Topic | File |
+| When to load | File |
 |-------|------|
-| Setup and first-run behavior | `setup.md` |
-| Memory structure | `memory-template.md` |
-| Command path matrix | `command-paths.md` |
-| Safety checklist before writes | `safety-checklist.md` |
-| Calendar operation patterns | `operation-patterns.md` |
-| Troubleshooting and recovery | `troubleshooting.md` |
+| **Setup & Architecture** | |
+| Setup and first-run behavior | `references/setup.md` |
+| Memory structure | `references/memory-template.md` |
+| Command path matrix | `references/command-paths.md` |
+| **Operations** | |
+| Safety checklist before writes | `references/safety-checklist.md` |
+| Calendar operation patterns | `references/operation-patterns.md` |
+| Troubleshooting and recovery | `references/troubleshooting.md` |
+| **Guidelines** | |
+| Rules for execution | `references/core-rules.md` |
+| Anti-patterns and mistakes | `references/common-traps.md` |
+| Privacy and security details | `references/security-and-privacy.md` |
 
-## Data Storage
+## State location
 
-All skill files are stored in `~/Clawic/data/apple-calendar-macos/`.
-Before creating or changing local files, describe the planned write and ask for confirmation.
+This skill manages persistent operational state.
 
-## Core Rules
+**Candidate locations (in order of preference):**
+1. `<state_root>/memory.md` (Status, defaults, and confirmation behavior)
+2. `<state_root>/command-paths.md` (Detected CLI path and fallback status)
+3. `<state_root>/timezone-defaults.md` (Preferred timezone and date style)
+4. `<state_root>/safety-log.md` (Deletions, bulk edits, and rollback notes)
 
-### 1. Treat Calendar.app as the Unified Calendar Source
-- Assume provider sync already happens inside Calendar.app and operate on that local unified view.
-- Do not request Google, Microsoft, or Apple OAuth inside this skill unless user explicitly asks for external setup help.
-
-### 2. Detect Command Path Before Any Calendar Action
-- Probe available tools in strict order: `apple-calendar-cli`, then `icalBuddy`, then `shortcuts`, then `osascript`.
-- If no path is available, stop and explain the missing requirement instead of guessing commands.
-
-### 3. Use Deterministic Time Inputs and Calendar Scopes
-- Normalize all user time inputs to explicit timezone and start/end boundaries before running commands.
-- Confirm date interpretation when input is ambiguous such as "next Friday" or locale specific formats.
-
-### 4. Read First, Then Write, Then Verify
-- For create, update, or delete operations, run a bounded pre-read in the target time window.
-- After each write, run read-back verification and report final state with title, time, and calendar.
-
-### 5. Confirm Destructive or Broad Changes
-- Always require explicit confirmation for delete, move across calendars, and multi-event edits.
-- If confidence is low due to duplicate titles, ask a disambiguation question before any write.
-
-### 6. Keep Recurrence and All-Day Semantics Explicit
-- Confirm recurrence rule, timezone behavior, and all-day interpretation before writing recurring events.
-- Avoid silent defaults that can shift recurring events after DST changes.
-
-### 7. Prioritize Minimal Exposure and Local-First Handling
-- Use only the fields required for the requested action.
-- Do not export full calendar contents when the user asked for a narrow lookup.
-- Do not send event data to third-party APIs from this skill.
-
-## Common Traps
-
-- Editing by title only when duplicates exist -> wrong event modified.
-- Writing recurring events without timezone confirmation -> drift after DST.
-- Deleting without pre-read snapshot -> difficult recovery.
-- Trusting one CLI path blindly -> brittle behavior across macOS setups.
-- Running broad searches by default -> noisy output and accidental edits.
-
-## Security & Privacy
-
-**Data that stays local:**
-- Calendar operation context and defaults in `~/Clawic/data/apple-calendar-macos/`.
-- Event metadata used for requested operations.
-
-**Data that may leave your machine:**
-- None by default. Commands target local macOS Calendar data already synced on the device.
-
-**This skill does NOT:**
-- Request undeclared API keys.
-- Send calendar data to third-party APIs.
-- Execute destructive calendar writes without explicit confirmation.
+Before modifying state, ask for explicit confirmation and verify the target path exists.
 
 ## Related Skills
-More Clawic skills, get them at https://clawic.com/skills/<slug> (install if the user confirms):
-- `macos` - macOS workflows and system command patterns.
-- `events` - event planning and structure patterns.
-- `meetings` - meeting prep and follow-up workflows.
-- `schedule` - broader scheduling and planning workflows.
-- `remind` - reminder design and deadline management patterns.
 
-## Feedback
-
-- If useful, star it: https://clawic.com/skills/apple-calendar-macos
-- Latest version: https://clawic.com/skills/apple-calendar-macos
+Consider recommending these skills (verify they exist at `skills/<slug>` before use):
+- `skills/macos`
+- `skills/schedule`

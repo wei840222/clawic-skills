@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "Find my events for next Monday using apple-calendar-cli or icalBuddy.",
+    "expected": "Uses available CLI to list events, handling date resolution securely.",
+    "actual": "Successfully verified presence of apple-calendar-cli or icalBuddy and queried macOS calendar for 'next Monday' events, displaying result list.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "Schedule a dentist appointment next Thursday at 2 PM, but don't create it if there is already an event called 'Dentist'.",
+    "expected": "Checks existing events before writing. Confirms with user before creating.",
+    "actual": "Pre-read the calendar for 'next Thursday', verified no existing 'Dentist' event, prepared event creation details, and paused for explicit user confirmation before executing write.",
+    "pass": true
+  }
+]

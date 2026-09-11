@@ -1,6 +1,6 @@
 # Memory Template - Apple Calendar
 
-Create `~/Clawic/data/apple-calendar-macos/memory.md` with this structure:
+Create `<state_root>/memory.md` with this structure:
 
 ```markdown
 # Apple Calendar Memory
@@ -41,12 +41,12 @@ integration: pending
 |-------|---------|----------|
 | `ongoing` | Context still evolving | Keep learning while operating |
 | `complete` | Defaults are stable | Operate using known preferences |
-| `paused` | User wants minimal setup | Avoid extra discovery questions |
-| `never_ask` | User asked to stop setup prompts | Use only explicit instructions |
+| `paused` | User wants minimal setup | Proceed with current defaults without extra discovery questions |
+| `never_ask` | User requested setup halt | Use only explicit instructions |
 
 ## Rules
 
-- Keep notes in natural language and avoid exposed config-key style outside status fields.
+- Write notes in natural language (use config-key style only inside status fields).
 - Update `last` whenever defaults or command reliability changes.
 - Record destructive-operation confirmations as safety evidence.
-- Never remove prior notes without explicit user instruction.
+- Preserve all prior notes unless the user explicitly instructs their removal.
