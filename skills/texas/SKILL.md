@@ -1,110 +1,100 @@
 ---
 name: texas
 description: Navigate Texas for living, moving, working, and road trips with region
-  fit, state rules, weather risk, and daily logistics.
+  fit, state rules, weather risk, and daily logistics. Trigger for Texas metro choice,
+  relocation checklists, DPS/TxDMV, property tax, flood/heat prep, small-business setup,
+  or long-drive planning.
 metadata:
-  openclaw: "{\"emoji\": \"\U0001F920\", \"requires\": {\"bins\": null, \"config\"\
-    : [\"<state_root>/texas/\"]}}"
-  related-skills:
-    skills/travel: General itinerary design and travel planning structure
-    skills/car-rental: Rental car, pickup, and handoff decisions for Texas trips
-    skills/booking: Reservation workflows for flights, hotels, and schedule holds
-    skills/business: Broader business operations guidance beyond Texas-specific rules
-    skills/health-insurance: Deeper insurance-plan comparison and terminology support
-
+  version: "1.0.0"
+  openclaw: '{"emoji":"🤠","requires":{"config":["<state_root>/texas/"]}}'
+  related-skills: '{"travel":"General itinerary design and travel planning structure beyond Texas-only routing.","car-rental":"Rental car, pickup, and handoff decisions for Texas trips.","booking":"Reservation workflows for flights, hotels, and schedule holds.","business":"Broader business operations guidance beyond Texas-specific rules.","health-insurance":"Deeper insurance-plan comparison and terminology support."}'
 ---
 
 ## When to Use
 
 User needs Texas-specific guidance that generic U.S. advice usually gets wrong: choosing a metro, moving, driving, taxes, weather prep, family logistics, small business setup, or road trip execution.
 
-This skill should activate for four modes: visiting, moving to Texas, living in Texas, and operating a Texas-based business.
+Activate for four modes: visiting, moving to Texas, living in Texas, and operating a Texas-based business.
 
-## Architecture
+## State location
 
-This skill works statelessly for one-off Texas questions. If the user wants continuity across sessions, memory lives in `<state_root>/texas/`. If `<state_root>/texas/` does not exist, read `references/setup.md`, explain planned local storage in plain language, and ask for confirmation before creating files. See `references/memory-template.md` for structure.
+Optional continuity lives in portable `<state_root>/texas/`. One-off Texas questions stay stateless.
 
 ```text
 <state_root>/texas/
 └── memory.md     # User context, region, timelines, constraints, and open loops
 ```
 
-## State location
-This skill requires a persistent state directory to store memory and context.
+- Resolve `<state_root>` from the active agent/workspace convention; do not hard-code a machine-specific home path in instructions.
+- Preferred path: `<state_root>/texas/`.
+- If the directory does not exist and the user wants continuity, read `references/setup.md`, explain the planned local storage in plain language, and ask for confirmation before creating files. Use `references/memory-template.md` for structure.
+- Before creating or changing local files under `<state_root>/texas/`, explain the planned write and ask for confirmation.
 
-State directory candidate order:
-1. `<state_root>/texas/` (Preferred: if `<state_root>` is defined by the environment)
-2. `~/.local/share/agentskills/texas/` (Linux/macOS fallback)
-3. `%APPDATA%\agentskills\texas\` (Windows fallback)
-
-If the state directory does not exist, explain the planned local storage location and ask for confirmation before creating files.
-
-## Quick Reference
+## When to Load References
 
 | Topic | When to load | File |
 |-------|--------------|------|
-| Setup guide | Core configuration | `references/setup.md` |
+| Setup guide | First persistent-memory use | `references/setup.md` |
 | Memory template | Updating user context | `references/memory-template.md` |
-| Region fit and metro tradeoffs | Choosing a city | `references/regions.md` |
+| Region fit and metro tradeoffs | Choosing a city or base | `references/regions.md` |
 | Move-in sequence and admin checklist | Moving planning | `references/moving-and-settling.md` |
-| License, registration, tolls, and vehicles | Driving rules | `references/texas-dmv-and-vehicles.md` |
+| License, registration, tolls, and vehicles | Driving / vehicle admin | `references/texas-dmv-and-vehicles.md` |
 | Renting, buying, property tax, and flood risk | Housing | `references/housing-and-property.md` |
 | Power, water, internet, and recurring bills | Utilities | `references/utilities-and-bills.md` |
-| Taxes, insurance pressure, and cost reality | Costs | `references/costs-and-taxes.md` |
+| Taxes, insurance pressure, and cost reality | Budget / cost claims | `references/costs-and-taxes.md` |
 | Heat, storms, freezes, outages, and prep | Weather risks | `references/weather-and-emergencies.md` |
-| Laws, scams, and practical safety | Safety / Laws | `references/laws-and-safety.md` |
+| Laws, scams, and practical safety | Safety / laws | `references/laws-and-safety.md` |
 | Schools, childcare, and family planning | Family context | `references/family-and-schools.md` |
 | Health insurance, urgent care, and care access | Healthcare | `references/healthcare-and-insurance.md` |
 | Jobs, LLC setup, sales tax, and compliance | Business | `references/work-and-business.md` |
 | Road trips, visiting, and city-hopping | Travel | `references/road-trips-and-visiting.md` |
-| Official sources map | Finding links | `references/sources.md` |
+| Official sources map | Verifying unstable rules | `references/sources.md` |
 
 ## Core Rules
 
 ### 1. Classify the User Before Giving Advice
 - Decide which Texas mode applies first: visitor, future resident, current resident, or business operator.
-- Then anchor the answer to the user's region, metro, county, ZIP, and school district when those variables change the recommendation.
-- If that context is missing, ask for it before pretending Texas is uniform.
+- Anchor the answer to region, metro, county, ZIP, and school district when those variables change the recommendation.
+- If that context is missing, ask for it before treating Texas as uniform.
 
 ### 2. Separate State Rules from Local Reality
 - Texas-level rules are only the first layer. City, county, appraisal district, utility territory, school district, and flood zone often change the real answer.
-- Always label which parts are statewide and which parts must be verified locally.
+- Label which parts are statewide and which parts must be verified locally.
 - For address-specific questions, prefer official portals over memory or generic summaries.
 
 ### 3. Distances and Drive Time Beat Map Intuition
 - Texas plans fail when users underestimate distance, tolls, fatigue, weather, and event traffic.
-- For both relocation and travel, convert geography into realistic drive-time, airport, and corridor tradeoffs.
-- Recommend realistic multi-day plans when destinations are far, rather than overstuffing a single day.
+- For relocation and travel, convert geography into realistic drive-time, airport, and corridor tradeoffs.
+- Prefer multi-day plans when destinations are far instead of packing everything into one day.
 
 ### 4. Texas Cost Reality Is Broader Than "No State Income Tax"
 - Include housing, property tax pressure, insurance, toll roads, summer power bills, car dependence, and weather-driven costs.
 - For homeowners and businesses, mention appraisal, deductible, flood, hail, and outage exposure when relevant.
-- Use `references/costs-and-taxes.md` before saying a place is "cheap."
+- Load `references/costs-and-taxes.md` before calling a place "cheap."
 
 ### 5. Weather and Grid Risk Change Good Advice
-- Heat, flood, hail, hurricanes, tornadoes, wildfire smoke, and winter freezes are not edge cases.
+- Heat, flood, hail, hurricanes, tornadoes, wildfire smoke, and winter freezes are normal planning inputs.
 - Adjust moving plans, road trips, home choice, and seasonal recommendations around actual hazard exposure.
-- When weather is part of the problem, lead with readiness and fallback plans, not brochure copy.
+- When weather is part of the problem, lead with readiness and fallback plans.
 
 ### 6. Deliver Checklists, Not Tourism Copy
 - Texas users usually need deadlines, documents, portals, sequence, and tradeoffs.
-- For administrative questions, answer in the form "do this today / this week / later" whenever possible.
+- For administrative questions, answer as "do this today / this week / later" when possible.
 - For destination questions, show why one base city or region fits better than another.
-- Before creating or changing local files in `<state_root>/texas/`, explain the planned write and ask for confirmation.
 
 ### 7. Use Official Sources for Unstable Rules
 - License rules, registration steps, sales tax, homestead details, district lookups, and emergency guidance can change.
 - Verify current information from the official state or local source before giving precise compliance steps.
-- If current verification is blocked, say so plainly and provide verified estimates.
+- If current verification is blocked, say so plainly and give only verified ranges or next lookup steps.
 
 ## Common Traps
 
-- Treating Texas like one market instead of multiple different metros and risk zones.
-- Recommending a neighborhood or suburb without checking commute shape, flood exposure, and school district.
+- Treating Texas like one market instead of multiple metros and risk zones.
+- Recommending a neighborhood or suburb without commute shape, flood exposure, and school district.
 - Saying "no state income tax" while ignoring property tax, insurance, tolls, and electricity spikes.
 - Mixing up Texas DPS, TxDMV, county tax offices, appraisal districts, and city utilities.
 - Planning a road trip by miles instead of daylight, heat, event traffic, and fuel gaps.
-- Giving housing advice without mentioning HOA, wind or hail exposure, and renter or owner insurance gaps.
+- Giving housing advice without HOA, wind/hail exposure, and renter or owner insurance gaps.
 - Using U.S.-generic legal guidance for cannabis, DWI, landlord-tenant, or permit questions.
 
 ## External Endpoints
@@ -140,10 +130,3 @@ No other data is sent externally.
 By using this skill, location details such as ZIP, county, or district may be checked against official Texas or local-government websites when the user asks for precise guidance.
 
 Only install if you trust those public services with that lookup context.
-
-## Related Skills
-- `travel` — General itinerary design and travel planning structure
-- `car-rental` — Rental car, pickup, and handoff decisions for Texas trips
-- `booking` — Reservation workflows for flights, hotels, and schedule holds
-- `business` — Broader business operations guidance beyond Texas-specific rules
-- `health-insurance` — Deeper insurance-plan comparison and terminology support
