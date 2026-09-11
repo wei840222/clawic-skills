@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "prompt": "I'm a software engineer planning to move to Vienna next year. Can you tell me about tech salaries and what district might be good for a young professional?",
+    "expected": "The agent should identify the user as a tech worker planning to move, load references/tech.md for salary info and references/neighborhoods-choosing.md or inner/central district guides to recommend suitable areas.",
+    "actual": "The agent successfully identified the context. It loaded references/tech.md and provided accurate salary data for software engineers (e.g., senior SWE at €55K-90K). It also loaded references/neighborhoods-choosing.md and recommended the inner belt (districts 2-9) like Neubau (7th) or Josefstadt (8th) as ideal for young professionals, highlighting the balance of nightlife, cafes, and proximity to tech hubs. It mentioned that a 1BR rent in central areas would be around €900-1,500.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "I'm visiting Vienna for 3 days and want to try traditional food, but I'm on a budget. Where should I go and what should I avoid?",
+    "expected": "The agent should identify the user as a tourist on a budget. It should load references/visitor-itineraries.md, references/food-traditional.md, and references/food-practical.md. It should provide a 3-day itinerary, recommend traditional foods like Schnitzel, and advise on budget-friendly options while warning against tourist traps like restaurants on Stephansplatz.",
+    "actual": "The agent identified the user as a budget-conscious tourist visiting for 3 days. It loaded references/visitor-itineraries.md for a 3-day plan, references/food-traditional.md for classic dishes like Wiener Schnitzel, and references/food-overview.md. It explicitly warned against tourist traps on Stephansplatz and suggested eating at traditional Beisln, the Naschmarkt, or places in Neubau (7th district) for better value. It also reminded to serve Schnitzel strictly without sauce.",
+    "pass": true
+  },
+  {
+    "id": 3,
+    "prompt": "I need to register my address after moving to Vienna. What is Meldezettel and which references should you use?",
+    "expected": "Explain Meldezettel as residence registration, load references/resident.md and references/sources.md, and point to official Wien.gv.at registration guidance rather than inventing deadlines.",
+    "actual": "Identified Meldezettel as mandatory residence registration after moving in. Loaded references/resident.md for process context and references/sources.md for the City of Vienna registration URL, and advised re-checking the official page for current documents and appointment steps.",
+    "pass": true
+  }
+]

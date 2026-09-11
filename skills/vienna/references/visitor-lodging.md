@@ -150,9 +150,9 @@
 
 ---
 
-## Where NOT to Stay
+## Areas to Reconsider for Stays
 
-### Areas to Avoid
+### Areas to Reconsider
 - **Immediate area around Praterstern** — Sketchy at night
 - **Parts of 10th, 15th, 16th** — Less safe feeling, though crime still low
 - **Far from U-Bahn** — Vienna is public transport dependent

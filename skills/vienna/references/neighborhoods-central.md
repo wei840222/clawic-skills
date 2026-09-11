@@ -130,7 +130,7 @@ The 1st district is Vienna's historic heart — UNESCO World Heritage, St. Steph
 - Corporate expats with housing packages
 - Empty nesters downsizing with budget
 
-**Who should avoid:**
+**Who should look elsewhere:**
 - Families with children (no playgrounds, no space)
 - Budget-conscious anyone
 - People wanting community/neighborhood feel

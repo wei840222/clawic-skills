@@ -156,11 +156,11 @@ Vienna's specialty coffee scene has exploded:
 6. **Tip 5-10%** — Round up or leave coins
 
 ### What Not to Do
-- Don't ask for wifi password immediately (many don't have it)
-- Don't rush
-- Don't ask for decaf at traditional places
-- Don't ask for takeaway cups
-- Don't treat it like Starbucks
+- Wait before asking for wifi password (many operate offline)
+- Take your time
+- Order standard coffee at traditional places
+- Drink coffee on the premises
+- Respect the traditional coffeehouse etiquette
 
 ---
 
@@ -206,7 +206,7 @@ Vienna's specialty coffee scene has exploded:
 - **Afternoon (3-5pm):** "Jause" — traditional cake time
 - **Evening:** Different atmosphere, sometimes live music
 
-### Avoid
+### Places to Reconsider
 - Weekend afternoons at Central/Sacher — tourist crush
 - Monday at Sperl (closed in summer)
 
