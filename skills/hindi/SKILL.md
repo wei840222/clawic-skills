@@ -1,101 +1,29 @@
 ---
 name: hindi
-slug: hindi
-version: 1.0.0
-description: Write Hindi that sounds human. Not formal, not robotic, not AI-generated.
-homepage: https://clawic.com/skills/hindi
+description: When requested to write in Hindi, generate human-sounding, casual Hindi or Hinglish instead of formal, pure, AI-like Hindi.
 metadata:
-  clawdbot:
-    emoji: 🇮🇳
-    displayName: Hindi
+  version: "1.0.0"
+  openclaw: '{"emoji":"🇮🇳"}'
 ---
 
-## The Real Problem
+## Intent and Scope
 
-AI Hindi is technically correct but sounds off. Too शुद्ध (pure). Too formal. Natives mix Hindi-English (Hinglish) and use casual registers. Match that.
+When generating Hindi text, default to a casual, human-sounding tone rather than formal or "pure" (शुद्ध) Hindi. Most native speakers use a mix of Hindi and English (Hinglish).
 
-## Formality Default
+**Trigger:** Activate this skill whenever asked to draft, translate, or communicate in Hindi, especially for informal or conversational contexts (e.g., social media, chat, emails to peers).
 
-Default register is too high. Casual Hindi is warm and direct. Unless explicitly formal: lean casual. आप is not always needed. तुम/तू with peers is natural.
+## State location
 
-## तुम vs आप
+This skill is stateless and does not store any local configuration or data.
 
-Critical distinction:
-- आप: elders, strangers, formal respect
-- तुम: friends, peers, casual respect
-- तू: very close friends, family, intimate (or rude if wrong context)
-- Online peers usually use तुम
+## Instructions
 
-## Hinglish is Natural
+- When requested to write in Hindi, load `references/formality.md` to understand default registers and pronouns.
+- Load `references/hinglish.md` to grasp the natural mixing of English and Hindi.
+- Load `references/expressions.md` for common fillers, casual shortcuts, and natural reactions.
+- Only load `references/regional.md` if the user specifies a specific region (e.g., Mumbai, Delhi, UP).
+- Load `references/script.md` to ensure consistency in writing script (Devanagari vs. Roman).
 
-Native Hindi speakers mix English constantly:
-- "यार, वो movie बहुत amazing थी"
-- "Actually, मुझे लगता है..."
-- "Let me know करना"
-- Pure Hindi without English = overly formal, artificial
+## Verification
 
-## Fillers & Flow
-
-Real Hindi has fillers:
-- यार, अरे, अच्छा
-- बस, वो, मतलब
-- असल में, सच में
-- हाँ तो, तो फिर
-
-## Particles & Emphasis
-
-Natural emphasis patterns:
-- ही: emphasis ("यही चाहिए")
-- तो: "so, then" ("तो फिर चलते हैं")
-- ना: seeking agreement ("अच्छा है ना?")
-- भी: "also, even" 
-
-## Casual Shortcuts
-
-Spoken patterns:
-- क्या हुआ → क्या हुआ यार
-- कुछ नहीं → कुछ नी
-- रहा है → रहा है ना
-- Use है ना? frequently
-
-## Expressiveness
-
-Don't pick the safe word:
-- अच्छा → बढ़िया, मस्त, झक्कास, कमाल
-- बुरा → बेकार, घटिया, बकवास
-- बहुत → बोहोत, काफी, एकदम
-
-## Common Expressions
-
-Natural expressions:
-- चलता है, कोई बात नहीं
-- क्या बात है!, बहुत बढ़िया!
-- हाँ हाँ, ठीक है ठीक है
-- अरे वाह!, क्या scene है!
-
-## Reactions
-
-React naturally:
-- सच में?, अच्छा?, पक्का?
-- अरे वाह!, OMG!, क्या!
-- हाहाहा, lol, 😂
-- यार!, भाई!
-
-## Regional Flavors
-
-If region known:
-- Mumbai: भाई, बोले तो, टपोरी style
-- Delhi: यार, बे, दिल्ली वाली attitude
-- UP/Bihar: का हो, रउआ, भोजपुरी influence
-- Stay consistent
-
-## Script Flexibility
-
-Be consistent within message:
-- Devanagari: नमस्ते, कैसे हो
-- Roman: namaste, kaise ho
-- Both are valid, don't mix randomly
-
-## The "Native Test"
-
-Before sending: would an Indian screenshot this as "AI-generated"? If yes—too शुद्ध, no English mixing, too formal. Add Hinglish.
+Before outputting text, apply the "Native Test": Ask yourself if a native speaker would find the text too formal, lacking English mixing, or artificially pure. If so, rewrite it using a more casual Hinglish tone.
