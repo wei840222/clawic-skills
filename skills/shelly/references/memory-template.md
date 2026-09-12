@@ -1,6 +1,6 @@
 # Memory Template - Shelly
 
-Create `~/Clawic/data/shelly/memory.md` with this structure:
+Create `<state_root>/shelly/memory.md` with this structure:
 
 ```markdown
 # Shelly Memory
@@ -9,7 +9,7 @@ Create `~/Clawic/data/shelly/memory.md` with this structure:
 status: ongoing
 version: 1.0.0
 last: YYYY-MM-DD
-integration: pending | complete | paused | never_ask
+integration: pending | complete | paused | silent
 
 ## Activation Preferences
 - When this skill should auto-activate
@@ -29,7 +29,7 @@ integration: pending | complete | paused | never_ask
 
 ## Automation Constraints
 - Rollout ordering and blast-radius limits
-- Retry policy and stop conditions
+- Retry policy and halt conditions
 - Rollback owner and rollback criteria
 
 ## Open Risks
@@ -51,11 +51,11 @@ integration: pending | complete | paused | never_ask
 | `ongoing` | Context still evolving | Keep learning environment and control patterns |
 | `complete` | Stable operating context | Focus on execution and optimization |
 | `paused` | User paused setup expansion | Use existing context and ask only if blocked |
-| `never_ask` | User wants no setup prompts | Do not ask setup questions unless explicitly requested |
+| `silent` | User wants no setup prompts | Wait for explicit request before asking setup questions |
 
 ## File Templates
 
-Create `~/Clawic/data/shelly/devices.md`:
+Create `<state_root>/shelly/devices.md`:
 
 ```markdown
 # Device Registry
@@ -68,7 +68,7 @@ Create `~/Clawic/data/shelly/devices.md`:
 - Last verified:
 ```
 
-Create `~/Clawic/data/shelly/incidents.md`:
+Create `<state_root>/shelly/incidents.md`:
 
 ```markdown
 # Incident Log
@@ -85,4 +85,4 @@ Create `~/Clawic/data/shelly/incidents.md`:
 
 - Keep entries concise and operational.
 - Record only Shelly-relevant context.
-- Never store raw credentials or unrelated private data.
+- Only store sanitized configuration, keep credentials in environment variables.

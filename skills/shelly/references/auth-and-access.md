@@ -19,7 +19,7 @@ Use this guide to keep access mode and credential handling coherent.
 ## Credential Handling
 
 - Use `SHELLY_CLOUD_TOKEN` only from environment variables.
-- Do not store raw token values in `~/Clawic/data/shelly/` notes.
+- Store only sanitized configurations in `<state_root>/shelly/` notes, keeping raw token values in environment variables.
 - Rotate and scope credentials to least-privilege operations where possible.
 
 ## Policy Rules
@@ -33,4 +33,4 @@ Use this guide to keep access mode and credential handling coherent.
 
 - Validate target device identity before every write.
 - Keep local and cloud device references in one mapping table.
-- Stop rollout immediately on authentication drift or repeated permission errors.
+- Halt rollout immediately on authentication drift or repeated permission errors.

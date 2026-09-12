@@ -1,6 +1,6 @@
 # Setup - Shelly
 
-Read this when `~/Clawic/data/shelly/` does not exist or is empty.
+Read this when `<state_root>/shelly/` does not exist or is empty.
 Keep onboarding short and immediately useful.
 
 ## Operating Priorities
@@ -15,7 +15,7 @@ Keep onboarding short and immediately useful.
 1. Confirm activation boundaries early:
 - Should this activate whenever Shelly, relay, switch, power meter, automation, or scene terms are mentioned?
 - Should behavior be proactive or only on explicit request?
-- Are there contexts where this must never auto-activate?
+- Are there contexts where auto-activation should be disabled?
 
 2. Confirm environment model:
 - local network scope and reachability
@@ -26,14 +26,14 @@ Keep onboarding short and immediately useful.
 3. Confirm risk and write boundaries:
 - inspection only vs command execution allowed
 - single-device canary first vs batch rollout allowed
-- mandatory verification checkpoints after each write
+- mandatory verification steps after each write
 
 4. If context is approved, initialize local workspace:
 ```bash
-mkdir -p ~/shelly
-touch ~/Clawic/data/shelly/{memory.md,environments.md,devices.md,automations.md,incidents.md}
-chmod 700 ~/shelly
-chmod 600 ~/Clawic/data/shelly/{memory.md,environments.md,devices.md,automations.md,incidents.md}
+mkdir -p <state_root>/shelly
+touch <state_root>/shelly/{memory.md,environments.md,devices.md,automations.md,incidents.md}
+chmod 700 <state_root>/shelly
+chmod 600 <state_root>/shelly/{memory.md,environments.md,devices.md,automations.md,incidents.md}
 ```
 
 5. If `memory.md` is empty, initialize it from `memory-template.md`.
@@ -55,6 +55,6 @@ chmod 600 ~/Clawic/data/shelly/{memory.md,environments.md,devices.md,automations
 
 ## Guardrails
 
-- Never request pasting raw cloud tokens into chat text.
-- Never imply write success without explicit state verification evidence.
-- Never recommend bypassing device authentication or platform policy controls.
+- Request cloud tokens only via environment variables.
+- State write success only when supported by explicit state verification evidence.
+- Ensure recommendations adhere to device authentication and platform policy controls.

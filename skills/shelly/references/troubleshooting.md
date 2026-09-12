@@ -57,4 +57,4 @@ Checks:
 Recovery:
 - Split cohort by capability profile.
 - Reduce batch size and apply canary-first rollout.
-- Add hard stop and rollback checkpoints per batch.
+- Add halt and rollback verification steps per batch.

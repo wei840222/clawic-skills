@@ -8,8 +8,8 @@ Use these patterns for multi-device workflows.
 2. Validate method compatibility across cohort.
 3. Run canary command on one device.
 4. Verify state convergence and latency.
-5. Roll out in small batches with checkpoints.
-6. Stop immediately on repeated divergence.
+5. Roll out in small batches with verification steps.
+6. Halt immediately on repeated divergence.
 
 ## Playbook 2: Event-Driven Coordination
 

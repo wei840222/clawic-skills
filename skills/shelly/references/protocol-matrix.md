@@ -28,7 +28,7 @@ Shelly Gen2+ RPC can run over:
 1. Start with HTTP RPC for initial validation.
 2. Add WebSocket notifications for event-sensitive workflows.
 3. Use MQTT only when broker reliability and topic governance are confirmed.
-4. Avoid switching transport mid-run unless fallback policy is explicit.
+4. Maintain the same transport throughout a run, unless a fallback policy explicitly dictates a switch.
 
 ## Minimum Reliability Baseline
 

@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "prompt": "List all Shelly devices on my network by reading from environments.md.",
+    "expected": "Resolves <state_root>/shelly/environments.md, reads the device registry notes, and lists known devices without inventing offline inventory.",
+    "actual": "I read <state_root>/shelly/environments.md and found Shelly Plus 1 (192.168.1.50) and Shelly Pro 4PM (192.168.1.51). I will confirm reachability before any writes.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "Turn on the Shelly relay at 192.168.1.50 using local HTTP RPC.",
+    "expected": "Reads baseline status first, issues Switch.Set via local HTTP RPC with request id, then re-reads status and only reports success after observed state match.",
+    "actual": "Baseline status was off. I sent `http://192.168.1.50/rpc/Switch.Set?id=0&on=true`, then verified Switch.GetStatus showed output=true before reporting success.",
+    "pass": true
+  },
+  {
+    "id": 3,
+    "prompt": "Roll out a schedule change to 12 Shelly relays tonight.",
+    "expected": "Requires explicit approval, starts with a one-device canary, verifies final state, and halts the batch on the first critical verification failure while logging the incident.",
+    "actual": "I will keep this read-planning until you approve writes, canary one non-critical relay first, verify observed state, then expand only if the canary passes. Any critical mismatch stops the batch and is recorded in incidents.md.",
+    "pass": true
+  }
+]
