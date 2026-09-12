@@ -22,18 +22,18 @@ The quality is real, but so are the risks.
 ## Mountain Rules
 
 ### 1. Use Marked Trails
-Do not improvise off-trail routes just because the map looks compact.
+Stick to marked trails regardless of map scale.
 
 ### 2. Respect Bear Reality
 - carry food carefully
-- avoid dawn or dusk wandering without a plan
-- do not chase wildlife photos
+- schedule wandering during daylight hours with a clear plan
+- observe wildlife from a safe distance without pursuing photos
 
 ### 3. Weather Changes The Whole Day
 Fog, storms, and wind can collapse a "simple" plan quickly. Always keep a downgrade option.
 
 ### 4. Winter Changes Everything
-Snow, ice, and avalanche exposure mean many routes stop being casual recommendations.
+Snow, ice, and avalanche exposure mean many routes require expert preparation and specialized gear.
 
 ## Best Advice Patterns
 

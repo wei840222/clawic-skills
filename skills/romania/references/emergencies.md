@@ -25,7 +25,7 @@ Romania is generally manageable for travelers. The bigger issues are practical, 
 - use marked routes
 - check weather before leaving town
 - respect bear warnings and food discipline
-- do not assume rescue is instant
+- plan for delayed rescue times
 
 ## Beach and Delta Safety
 
@@ -36,6 +36,6 @@ Romania is generally manageable for travelers. The bigger issues are practical, 
 ## Good Safety Advice
 
 - use ride apps in cities
-- avoid isolated shortcuts late at night in unfamiliar districts
-- keep some cash, but do not carry a full-trip amount
+- stick to well-lit main paths late at night
+- keep some cash, but carry only daily spending amounts
 - if driving, plan generous daylight buffers

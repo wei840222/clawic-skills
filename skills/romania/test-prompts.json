@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "I have 5 days in Romania. I am flying into Bucharest. How should I spend my time?",
+    "expected": "Provides a concise 5-day itinerary focusing on Bucharest and Brasov/Transylvania, including transport logistics.",
+    "actual": "Recommended Bucharest (1–2 nights) then Brasov/Transylvania base; covered train/transfer realism and first-timer route shape from references/regions.md + itineraries.md.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "We are planning a trip to Romania in November, wanting to combine hiking in the Carpathians, seeing the Black Sea, and exploring castles. What is the best route?",
+    "expected": "Corrects the user about the Black Sea in November (too cold/closed) and warns about winter conditions in the Carpathians, suggesting a culture-focused route instead.",
+    "actual": "Rejected Black Sea in November as peak-summer logic; warned Carpathian winter/fog/ice; redirected to culture-first Bucharest+Brasov/Sibiu route with mountain backup options.",
+    "pass": true
+  }
+]

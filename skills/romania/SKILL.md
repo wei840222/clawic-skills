@@ -1,38 +1,30 @@
 ---
 name: romania
-slug: romania
-version: 1.0.0
-description: Plan Romania trips with regional contrasts, Transylvania and Black Sea logistics, local food cues, and practical local guidance.
-homepage: https://clawic.com/skills/romania
-changelog: Initial release with regional trip logic, city playbooks, mountain and Black Sea guidance, and practical local execution.
+description: Plan Romania travel itineraries. Trigger when the user asks about Romanian regions, Transylvania bases, Bucharest transit, or local logistics.
 metadata:
-  clawdbot:
-    emoji: 🇷🇴
-    requires:
-      bins: []
-      config:
-      - ~/Clawic/data/romania/
-    os:
-    - linux
-    - darwin
-    - win32
-    displayName: Romania
+  openclaw: '{"emoji":"🇷🇴","requires":{"config":["<state_root>/romania/"]}}'
+  related-skills:
+    - travel
+    - europe
+    - food
+    - booking
+    - family
 ---
 
 ## Setup
 
-If `~/Clawic/data/romania/` does not exist or is empty, read `setup.md` and start naturally.
+If `<state_root>/romania/` does not exist or is empty, read `references/setup.md` and start naturally.
 
 ## When to Use
 
 User is planning a Romania trip and needs help that goes beyond generic Europe advice: route shape, regional differences, local food, mountain and seaside timing, practical logistics, and what is worth skipping.
 
-## Architecture
+## State location
 
-Memory lives in `~/Clawic/data/romania/`. If `~/Clawic/data/romania/` does not exist or is empty, run `setup.md`. See `memory-template.md` for structure.
+Stateful skill. Memory lives in `<state_root>/romania/`. If `<state_root>/romania/` does not exist or is empty, run `references/setup.md`. See `references/memory-template.md` for structure.
 
 ```text
-~/Clawic/data/romania/
+<state_root>/romania/
 └── memory.md     # Trip context, route logic, and evolving constraints
 ```
 
@@ -40,34 +32,34 @@ Memory lives in `~/Clawic/data/romania/`. If `~/Clawic/data/romania/` does not e
 
 Use this map to load only the Romania subtopic that changes the decision in front of you.
 
-| Topic | File |
-|-------|------|
-| **Cities** | |
-| Bucharest entry hub and urban strategy | `bucharest.md` |
-| Brasov and first Transylvania base | `brasov.md` |
-| Cluj-Napoca for cafes, festivals, and western access | `cluj-napoca.md` |
-| Sibiu for slower culture and southern Transylvania | `sibiu.md` |
-| **Planning** | |
-| Region choice and route logic | `regions.md` |
-| Sample itineraries for 3-10 days | `itineraries.md` |
-| Where to stay by trip style | `accommodation.md` |
-| Essential travel apps | `apps.md` |
-| **Food and Drink** | |
-| Dishes, markets, and restaurant logic | `food-guide.md` |
-| Wine regions, tuica, palinca, and ordering cues | `wine.md` |
-| **Experiences** | |
-| High-value Romania experiences | `experiences.md` |
-| Black Sea coast and Danube Delta choice | `black-sea.md` |
-| Carpathian hiking and mountain safety | `carpathians-and-hiking.md` |
-| **Reference** | |
-| Culture, etiquette, and language cues | `culture.md` |
-| Family travel and mixed-age planning | `with-kids.md` |
-| **Practical** | |
-| Trains, buses, driving, and route tradeoffs | `transport.md` |
-| SIMs, data, and roaming | `telecoms.md` |
-| Safety, health, and emergency response | `emergencies.md` |
-| Setup process | `setup.md` |
-| Memory structure | `memory-template.md` |
+| Topic | File | When to load |
+|-------|------|--------------|
+| **Cities** | | |
+| Bucharest entry hub and urban strategy | `references/bucharest.md` | User asks about bucharest entry hub and urban strategy |
+| Brasov and first Transylvania base | `references/brasov.md` | User asks about brasov and first transylvania base |
+| Cluj-Napoca for cafes, festivals, and western access | `references/cluj-napoca.md` | User asks about cluj-napoca for cafes, festivals, and western access |
+| Sibiu for slower culture and southern Transylvania | `references/sibiu.md` | User asks about sibiu for slower culture and southern transylvania |
+| **Planning** | | |
+| Region choice and route logic | `references/regions.md` | User asks about region choice and route logic |
+| Sample itineraries for 3-10 days | `references/itineraries.md` | User asks about sample itineraries for 3-10 days |
+| Where to stay by trip style | `references/accommodation.md` | User asks about where to stay by trip style |
+| Essential travel apps | `references/apps.md` | User asks about essential travel apps |
+| **Food and Drink** | | |
+| Dishes, markets, and restaurant logic | `references/food-guide.md` | User asks about dishes, markets, and restaurant logic |
+| Wine regions, tuica, palinca, and ordering cues | `references/wine.md` | User asks about wine regions, tuica, palinca, and ordering cues |
+| **Experiences** | | |
+| High-value Romania experiences | `references/experiences.md` | User asks about high-value romania experiences |
+| Black Sea coast and Danube Delta choice | `references/black-sea.md` | User asks about black sea coast and danube delta choice |
+| Carpathian hiking and mountain safety | `references/carpathians-and-hiking.md` | User asks about carpathian hiking and mountain safety |
+| **Reference** | | |
+| Culture, etiquette, and language cues | `references/culture.md` | User asks about culture, etiquette, and language cues |
+| Family travel and mixed-age planning | `references/with-kids.md` | User asks about family travel and mixed-age planning |
+| **Practical** | | |
+| Trains, buses, driving, and route tradeoffs | `references/transport.md` | User asks about trains, buses, driving, and route tradeoffs |
+| SIMs, data, and roaming | `references/telecoms.md` | User asks about sims, data, and roaming |
+| Safety, health, and emergency response | `references/emergencies.md` | User asks about safety, health, and emergency response |
+| Setup process | `references/setup.md` | User asks about setup process |
+| Memory structure | `references/memory-template.md` | User asks about memory structure |
 
 ## Core Rules
 
@@ -79,17 +71,17 @@ Romania works best when the trip has one dominant shape:
 - Black Sea or Danube Delta only in warm-season windows
 
 ### 2. Specific Beats Generic
-Do not say "visit Transylvania." Say which base, how many nights, what it unlocks, and what the tradeoff is:
+Provide specific base recommendations instead of generic Transylvania advice. Say which base, how many nights, what it unlocks, and what the tradeoff is:
 - Brasov for easiest first trip and day trips
 - Sibiu for slower old-town rhythm and southern routes
 - Cluj for urban energy, festivals, and west-side access
 
-### 3. Flag Tourist Traps and Overhyped Stops
+### 3. Evaluate Popular Destinations Realistically
 Be explicit when something is popular but weak:
 - Bran Castle is an icon, not the best castle experience
 - Bucharest Old Town is good for a walk, noisy for sleeping
 - Mamaia is for party energy, not the best quiet seaside
-- Pele's Castle can justify a detour; random "Dracula" branding usually cannot
+- Peles Castle can justify a detour; random "Dracula" branding usually cannot
 
 ### 4. Treat Transport and Season as Core Planning Inputs
 - Trains are best on some corridors, but not all
@@ -101,11 +93,11 @@ Be explicit when something is popular but weak:
 
 | Traveler | Best starting files |
 |----------|---------------------|
-| First-time culture trip | `bucharest.md`, `brasov.md`, `itineraries.md` |
-| Food-led trip | `food-guide.md`, `wine.md`, `bucharest.md`, `sibiu.md` |
-| Nature and hiking | `carpathians-and-hiking.md`, `regions.md`, `brasov.md` |
-| Family trip | `with-kids.md`, `accommodation.md`, `black-sea.md` |
-| Beach trip | `black-sea.md`, `transport.md`, `accommodation.md` |
+| First-time culture trip | `references/bucharest.md`, `references/brasov.md`, `references/itineraries.md` |
+| Food-led trip | `references/food-guide.md`, `references/wine.md`, `references/bucharest.md`, `references/sibiu.md` |
+| Nature and hiking | `references/carpathians-and-hiking.md`, `references/regions.md`, `references/brasov.md` |
+| Family trip | `references/with-kids.md`, `references/accommodation.md`, `references/black-sea.md` |
+| Beach trip | `references/black-sea.md`, `references/transport.md`, `references/accommodation.md` |
 
 ### 6. Protect the User From Practical Friction
 Always cover the execution details that break Romania trips:
@@ -127,21 +119,9 @@ Always cover the execution details that break Romania trips:
 
 ## Security & Privacy
 
-**Data that stays local:** Trip preferences, route decisions, and saved constraints in `~/Clawic/data/romania/`
+**Data that stays local:** Trip preferences, route decisions, and saved constraints in `<state_root>/romania/`
 
-**This skill does NOT:** Access files outside `~/Clawic/data/romania/` or make network requests.
+**This skill does NOT:** Access files outside `<state_root>/romania/` or make network requests.
 
 **Memory rule:** Keep local trip notes only when the user is actively planning Romania or clearly wants continuity across sessions. For one-off answers, help without creating extra trip memory.
 
-## Related Skills
-More Clawic skills, get them at https://clawic.com/skills/<slug> (install if the user confirms):
-- `travel` — General trip planning and itinerary structure
-- `europe` — Better wider-Europe context when Romania is part of a longer route
-- `food` — Deeper restaurant and cuisine planning
-- `booking` — Reservation workflows and confirmation hygiene
-- `family` — Extra support when multiple ages or family constraints drive the plan
-
-## Feedback
-
-- If useful, star it: https://clawic.com/skills/romania
-- Latest version: https://clawic.com/skills/romania

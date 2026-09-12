@@ -50,7 +50,7 @@ Best shape:
 - Sibiu
 - Cluj-Napoca or Maramures or Bucovina
 
-Do not try to include both the west and the coast unless the user explicitly wants long transfers.
+Separate the west and the coast into different trips, unless the user explicitly requests long transfers.
 
 ## Routing Rules
 

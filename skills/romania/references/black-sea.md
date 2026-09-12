@@ -27,7 +27,7 @@ Choose the Delta if the user wants:
 - quiet nature
 - slower pacing
 
-Do not sell them as the same product.
+Distinguish them clearly as separate experiences.
 
 ## Good Advice
 
