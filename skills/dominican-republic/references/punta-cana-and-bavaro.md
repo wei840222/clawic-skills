@@ -21,9 +21,9 @@
 - Controlled excursion menu instead of self-built logistics
 - Combining beach days with one or two curated off-property outings
 
-## Trap Avoidance
+## Success Factors
 
-- Do not promise a local town-based experience from within a self-contained resort strip.
+- Clarify that self-contained resort strips provide relaxation and amenities rather than walkable local town experiences.
 - Clarify whether the user wants calm-water swimming, adult nightlife, or a family pool machine because each points to different properties.
 - If the user wants cultural depth, add Santo Domingo or another non-resort base rather than pretending Bavaro already covers it.
 

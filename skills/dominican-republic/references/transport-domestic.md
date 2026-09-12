@@ -11,7 +11,7 @@
 
 ## Airports
 
-- Choose the airport that matches the coast. East-coast resort trips do not need a capital-city arrival unless pricing or routing clearly justifies it.
+- Choose the airport that matches the coast. For east-coast resort trips, prioritize Punta Cana airport arrivals unless Santo Domingo routing offers significant cost or timing advantages.
 - Santo Domingo works for city trips and some southeast pairings.
 - Puerto Plata works best for north-coast stays.
 - Samana or eastern arrivals can reduce road friction when available.

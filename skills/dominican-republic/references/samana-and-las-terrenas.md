@@ -20,9 +20,9 @@
 - Mixing beach time with waterfalls, viewpoints, or boat days
 - Couples or friend groups who do not need all-inclusive structure
 
-## Trap Avoidance
+## Success Factors
 
-- Do not send low-tolerance travelers here for a 3-night quick escape unless flights and transfers are unusually clean.
+- Route low-tolerance travelers here only for trips of 4+ nights or when flights and transfers are exceptionally straightforward.
 - A remote villa without a car or driver can turn the trip into logistics work.
 - Weather and road time matter more here than in classic east-coast resort stays.
 

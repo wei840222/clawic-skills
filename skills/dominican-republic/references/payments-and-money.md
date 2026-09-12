@@ -1,6 +1,6 @@
 # Payments and Money — Dominican Republic
 
-The safe default is simple: bring a card that works internationally, keep some Dominican pesos for local friction, and do not assume resort payment habits apply everywhere else.
+The safe default is simple: bring a card that works internationally, keep some Dominican pesos for local friction, and plan to use Dominican pesos for daily local transactions outside resorts.
 
 ## Currency Reality
 
@@ -19,7 +19,7 @@ The safe default is simple: bring a card that works internationally, keep some D
 
 ## Tips, Service, and Taxes
 
-- Restaurant and hotel bills may include tax and service in ways visitors do not expect.
+- Prepare visitors for the standard inclusion of a 18% tax and 10% service charge on restaurant and hotel bills.
 - Ask whether the displayed price includes ITBIS and legal service before summarizing the true cost.
 - Extra tipping is modest, not a US-style automatic 20 percent in every situation.
 - For drivers, guides, housekeeping, and resort staff, explain tipping as appreciation, not an unthinking default.
@@ -27,7 +27,7 @@ The safe default is simple: bring a card that works internationally, keep some D
 ## ATM and Exchange Advice
 
 - Use bank ATMs or machines attached to reputable supermarkets or malls when possible.
-- Avoid changing too much cash at the airport if the user is heading straight into a resort where a card works well.
+- Change only small amounts of cash at the airport when heading directly to a resort where cards are widely accepted.
 - Keep smaller bills for tips, local snacks, and short rides.
 
 ## What People Get Wrong

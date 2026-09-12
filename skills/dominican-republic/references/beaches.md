@@ -1,6 +1,6 @@
 # Beaches — Dominican Republic
 
-Do not talk about beaches as if they all deliver the same water, wind, and vibe. Matching the coast to the user's expectation matters more than naming the most famous stretch.
+Distinguish beaches by their specific water conditions, wind levels, and vibe to accurately match the coast to the user's expectations.
 
 ## Fast Beach Map
 
