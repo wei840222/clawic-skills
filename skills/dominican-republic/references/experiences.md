@@ -16,10 +16,10 @@ Good experience planning should reduce randomness. Choose experiences by trip sh
 ## How to Choose
 
 - Pick one signature experience per 3-4 days of trip length, not one every day.
-- If the user is staying in a resort to rest, do not overload the schedule with bus or boat days.
+- For users staying in a resort primarily to rest, keep the schedule relaxed and minimize long bus or boat excursions.
 - If the user is in Samana or the mountains, keep a weather backup ready.
 
-## What to Avoid
+## Essential Protections
 
 - Selling every boat trip as mandatory
 - Combining long transfer days with physically demanding activities

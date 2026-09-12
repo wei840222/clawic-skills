@@ -4,7 +4,7 @@
 
 - Punta Cana and Bavaro for maximum hotel infrastructure and easiest airport flow
 - Bayahibe for calmer-water family priorities with a quieter tone
-- Santo Domingo only as a short contrast stop, not the whole family holiday
+- Position Santo Domingo as a short cultural contrast stop, rather than the primary base for a family holiday
 
 ## Planning Rules
 
@@ -19,7 +19,7 @@
 - One city-plus-beach pairing with clean transfer logic
 - Older-kid adventure pairing with Jarabacoa or a north-coast activity base
 
-## Trap Avoidance
+## Success Factors
 
 - A beautiful remote villa is not family-friendly if it creates transport and food stress.
 - Long same-day detours after beach time usually fail with children.

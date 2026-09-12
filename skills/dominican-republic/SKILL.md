@@ -1,155 +1,102 @@
 ---
 name: dominican-republic
-slug: dominican-republic
-version: 1.0.0
-description: Plan Dominican Republic trips with beach-region routing, verified entry steps, off-resort logistics, and practical local safety.
-homepage: https://clawic.com/skills/dominican-republic
-changelog: Initial release with verified entry guidance, resort-vs-independent routing, and practical beach, transport, and safety playbooks.
+description: Plan Dominican Republic trips with beach-region routing, verified entry
+  steps, off-resort logistics, and practical local safety. Use when choosing a coast
+  or base, deciding resort vs independent travel, handling e-ticket and entry steps,
+  or answering transport, weather, and safety questions for Dominican Republic travel.
+  Not for general multi-country trip systems (`travel`), day-by-day multi-destination
+  itineraries (`travel-planning`), or Spanish-language writing (`spanish`).
 metadata:
-  clawdbot:
-    emoji: 🇩🇴
-    requires:
-      bins: []
-      config:
-      - ~/Clawic/data/dominican-republic/
-    os:
-    - linux
-    - darwin
-    - win32
-    displayName: Dominican Republic
+  version: "1.1.0"
+  openclaw: '{"emoji":"🇩🇴"}'
+  related-skills: '{"travel":"Standing traveler system for passports, visas, bookings, and trip memory across destinations.","travel-planning":"Multi-city itineraries, packing lists, and budget tracking beyond one-country DR routing.","spanish":"Write or edit Spanish-language text rather than plan Dominican Republic travel.","mexico":"Plan Mexico travel instead of Dominican Republic destinations.","spain":"Plan Spain travel instead of Dominican Republic destinations.","flight":"Search or compare flights once the DR route and airports are decided.","booking":"Search lodging after the coast and stay style are chosen.","car-rental":"Arrange rental cars after DR road and transfer decisions are set."}'
 ---
+
+## State location
+
+Dominican Republic trip state may exist in `<workspace>/dominican-republic/`, `<workspace>/memory/dominican-republic/`, or `~/dominican-republic/`.
+Before reading or writing state, resolve `<state_root>` as follows:
+
+1. Use an explicitly configured path when one exists.
+2. Otherwise use the first existing directory in this order:
+   `<workspace>/dominican-republic/`, `<workspace>/memory/dominican-republic/`, `~/dominican-republic/`.
+3. If none exists and state must be created, default to `<workspace>/dominican-republic/`.
+
+Use the selected `<state_root>` for every state operation in this skill.
 
 ## When to Use
 
-User is planning a Dominican Republic trip and needs execution help beyond generic resort marketing: entry rules, which coast fits the trip, resort vs independent travel tradeoffs, city and beach base strategy, transport reality, weather timing, and practical local safety.
+- Planning a Dominican Republic trip beyond generic resort marketing
+- Choosing which coast or base fits calm water, surf, city depth, or independent travel
+- Confirming e-ticket, entry, passport, and visa-check paths before non-refundable bookings
+- Handling domestic transport, night-driving risk, weather timing, and practical safety
+- Not for standing multi-destination travel systems (`travel`), multi-country itineraries (`travel-planning`), or Spanish composition (`spanish`)
 
 ## Architecture
 
-Memory lives in `~/Clawic/data/dominican-republic/`. If `~/Clawic/data/dominican-republic/` does not exist or is empty, run `setup.md`. See `memory-template.md` for structure.
+Memory lives in `<state_root>/`. If `<state_root>/` does not exist or is empty, run `references/setup.md`. See `references/memory-template.md` for structure.
 
 ```text
-~/Clawic/data/dominican-republic/
+<state_root>/
 └── memory.md     # Trip context, route logic, and evolving constraints
 ```
 
 ## Data Storage
 
-- `~/Clawic/data/dominican-republic/memory.md` stores durable trip context, route decisions, and constraints for future Dominican Republic planning.
+- `<state_root>/memory.md` stores durable trip context, route decisions, and constraints for future Dominican Republic planning.
 - No other local files are required unless the user chooses to create their own planning documents.
+- Do not store credentials, full passport numbers, payment details, or third-party private data in skill state.
 
 ## Quick Reference
 
 Use this map to load only the decision module that changes the plan in front of you.
 
-| Topic | File |
-|-------|------|
-| **Entry and Compliance** | |
-| Entry flow, passport logic, e-ticket, onward proof | `entry-and-documents.md` |
-| Official source map for re-checking moving parts | `sources.md` |
-| **Planning Backbone** | |
-| Coast and region choice | `regions.md` |
-| Sample itineraries for 4-12 days | `itineraries.md` |
-| Where to stay by trip style | `accommodation.md` |
-| Budget framing | `budget-and-costs.md` |
-| Cards, cash, taxes, tipping, and payment reality | `payments-and-money.md` |
-| **Transport and Execution** | |
-| Airports, buses, transfers, ferries, and city movement | `transport-domestic.md` |
-| Rental-car fit, toll roads, and driving risk | `road-trips-and-driving.md` |
-| Connectivity, ride-hailing, maps, and booking tools | `telecoms-and-apps.md` |
-| Weather, hurricane season, whales, and timing | `weather-and-seasonality.md` |
-| **Major Bases and Regions** | |
-| Santo Domingo city strategy | `santo-domingo.md` |
-| Punta Cana, Bavaro, and Cap Cana | `punta-cana-and-bavaro.md` |
-| Samana, Las Terrenas, and Las Galeras logic | `samana-and-las-terrenas.md` |
-| Puerto Plata, Sosua, and Cabarete | `puerto-plata-cabarete-and-sosua.md` |
-| Bayahibe, La Romana, Saona, and diving fit | `bayahibe-and-la-romana.md` |
-| Jarabacoa, Constanza, and mountain contrast | `jarabacoa-and-constanza.md` |
-| **Lifestyle and Trip Style** | |
-| Food strategy and local dishes | `food-guide.md` |
-| Beaches by water fit, vibe, and coast | `beaches.md` |
-| Signature activities and experience selection | `experiences.md` |
-| Family pacing and mixed-age planning | `family-travel.md` |
-| Nightlife and evening tradeoffs | `nightlife.md` |
-| Etiquette, language, and social rhythm | `culture.md` |
-| Emergencies, water safety, and street risk | `safety-and-emergencies.md` |
+| Topic | File | Load when |
+|-------|------|-----------|
+| Regions and coast fit | `references/regions.md` | Choosing base coast or multi-base route |
+| Beaches and water fit | `references/beaches.md` | Calm swim, surf, snorkel, or boat days |
+| Entry and documents | `references/entry-and-documents.md` | E-ticket, visa path, passport checks |
+| Domestic transport | `references/transport-domestic.md` | Airports, transfers, buses, domestic hops |
+| Road trips and driving | `references/road-trips-and-driving.md` | Rental car, night driving, toll roads |
+| Safety and emergencies | `references/safety-and-emergencies.md` | 911, beach flags, theft, storm buffer |
+| Weather and seasonality | `references/weather-and-seasonality.md` | Hurricane season, heat, rain timing |
+| Budget and costs | `references/budget-and-costs.md` | Stay style and daily spend bands |
+| Payments and money | `references/payments-and-money.md` | Cards, cash, tips, ATMs |
+| Accommodation styles | `references/accommodation.md` | Resort, boutique, apartment, villa |
+| Punta Cana / Bavaro | `references/punta-cana-and-bavaro.md` | East-coast resort ease |
+| Bayahibe / La Romana | `references/bayahibe-and-la-romana.md` | Calm Caribbean water, lighter AI density |
+| Samana / Las Terrenas | `references/samana-and-las-terrenas.md` | Independent beach-town base |
+| Puerto Plata / Cabarete / Sosua | `references/puerto-plata-cabarete-and-sosua.md` | North-coast wind and surf |
+| Santo Domingo | `references/santo-domingo.md` | City culture overnight, not beach filler |
+| Jarabacoa / Constanza | `references/jarabacoa-and-constanza.md` | Highlands and cooler climate |
+| Itineraries | `references/itineraries.md` | Sample day patterns and base changes |
+| Experiences | `references/experiences.md` | Tours, boats, nature days |
+| Food guide | `references/food-guide.md` | Local dining beyond resort buffet |
+| Nightlife | `references/nightlife.md` | Evening plans by region |
+| Family travel | `references/family-travel.md` | Kids, mobility, beach safety |
+| Culture | `references/culture.md` | Local norms and etiquette |
+| Telecoms and apps | `references/telecoms-and-apps.md` | SIM, rideshare, delivery apps |
+| Setup | `references/setup.md` | First use or empty state |
+| Memory template | `references/memory-template.md` | Creating or reshaping memory.md |
+| Sources | `references/sources.md` | Official URLs to re-check |
 
 ## Core Rules
 
-### 1. Route by Coast, Not by Resort Ads
-The right Dominican Republic trip depends first on which coast matches the goal:
-- Punta Cana and Bavaro for easiest resort execution
-- Bayahibe and La Romana for calmer southeast water and island-day logic
-- Samana and Las Terrenas for independent beach-plus-nature travel
-- Puerto Plata and Cabarete for north-coast wind, surfing, and mixed town energy
-- Santo Domingo for city, history, food, and nightlife
+1. Choose the coast before packing stops. East-coast resort ease, north-coast wind, Samana nature, and Santo Domingo city logic are different products.
+2. Prefer fewer transfers and clearer water-fit over ambitious multi-base routes for first-time or low-tolerance travelers.
+3. Treat commercial-flight e-ticket completion as a travel-day task; verify nationality-specific visa rules before non-refundable purchases.
+4. Default against night self-driving after long flights; prefer professional transfers or an initial hotel night.
+5. Load only the reference files needed for the current decision; keep answers execution-oriented and source-checkable.
 
-### 2. Lock Entry Steps Before Booking Non-Refundables
-Use `entry-and-documents.md` early to confirm:
-- passport and nationality logic
-- official e-ticket completion for air arrival and departure
-- onward-proof issues for one-way or unusual itineraries
-- whether the trip is resort-only, multi-stop, or includes onward international travel
+## Progressive Disclosure
 
-### 3. Resort Trips and Independent Trips Need Different Advice
-Do not plan Punta Cana, Santo Domingo, Samana, Bayahibe, and Cabarete with the same assumptions.
-- All-inclusive users usually want airport-transfer simplicity and selective day trips
-- Independent users need base strategy, transport friction, cash logic, and realistic road-time protection
+- Start from this file plus `references/regions.md` or the single topic the user asked about.
+- Open destination files only after the coast or trip style is in play.
+- Open `references/sources.md` when quoting entry, safety, or official destination claims that may change.
 
-### 4. Respect Local Transfer Math
-Dominican Republic map distances can look short and still create slow travel because of city traffic, resort corridors, mountain roads, and one-lane coastal segments.
-- Favor fewer bases with cleaner transfers
-- Treat Santo Domingo traffic and cross-country moves seriously
-- Avoid stacking arrival, long road transfer, and late-night check-in unless necessary
+## Failure Modes
 
-### 5. Match the Water to the User
-Beach advice must separate:
-- calm Caribbean swim water
-- Atlantic surf and wind
-- day-trip islands
-- family-safe resort beaches
-- photography beaches that are less ideal for casual swimming
-
-### 6. Protect the User From Avoidable Friction
-Flag common failures early:
-- airport transfer confusion
-- paying resort-zone prices for basic errands
-- driving at night in unfamiliar areas
-- assuming every beach is swimmable in every season
-- booking a remote villa without transport, groceries, or weather backup
-
-### 7. Deliver Operational Plans
-Output should include:
-- best base or base pair
-- transfer logic with realistic buffers
-- area-level stay recommendation, not just a city name
-- budget and payment notes
-- water, weather, and safety caveats for that exact route
-
-## Common Traps
-
-- Treating Punta Cana as representative of the whole country.
-- Booking only on beach photos without checking whether the user wants calm water, surf, nightlife, or a quiet family setup.
-- Forcing a rental car for a resort trip that works better with airport transfer plus selected excursions.
-- Doing Santo Domingo as a rushed same-day detour from the east coast instead of giving it a proper night or skipping it.
-- Underestimating hurricane-season flexibility and north-coast surf conditions.
-- Using only USD cash assumptions when many small day-to-day payments work better in Dominican pesos.
-- Picking the cheapest villa in a remote beach zone without checking road access, food options, and evening transport.
-
-## Security & Privacy
-
-**Data that stays local:** Trip preferences in `~/Clawic/data/dominican-republic/`
-
-**This skill does NOT:** Access files outside `~/Clawic/data/dominican-republic/` or make network requests.
-
-## Related Skills
-More Clawic skills, get them at https://clawic.com/skills/<slug> (install if the user confirms):
-- `travel` — General trip planning and itinerary structure
-- `booking` — Reservation workflows and confirmation hygiene
-- `car-rental` — Better self-drive strategy and handoff logistics
-- `food` — Deeper restaurant and cuisine planning
-- `spanish` — Language support for bookings, menus, and practical interactions
-
-## Feedback
-
-- If useful, star it: https://clawic.com/skills/dominican-republic
-- Latest version: https://clawic.com/skills/dominican-republic
+- Overselling Punta Cana all-inclusives when the user wants calm independent beaches or city depth
+- Treating Santo Domingo as a same-day beach side trip from far east-coast resorts
+- Ignoring night-driving, transfer time, and hurricane-season buffer
+- Inventing visa or e-ticket rules without checking official sources for the traveler's nationality

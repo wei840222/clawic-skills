@@ -10,7 +10,7 @@
 - Santo Domingo city stays
 - Short Punta Cana resort trips
 - Users arriving late and facing a long unfamiliar drive
-- Travelers who do not want road ambiguity, parking friction, or toll stops
+- Travelers seeking a relaxed experience without road navigation, parking logistics, or toll stops
 
 ## Practical Rules
 

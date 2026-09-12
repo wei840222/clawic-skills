@@ -12,7 +12,7 @@
 - Commercial airline passengers should complete the official free e-ticket before both inbound and outbound travel.
 - For many tourist nationalities, the tourist card cost is already bundled into airline tickets on scheduled flights.
 - Visa rules are nationality-specific. If there is any doubt, check the Dominican foreign-ministry path before buying non-refundable travel.
-- Do not answer passport-validity questions from memory if the traveler's nationality falls outside the common U.S., Canada, EU, U.K., or Latin America tourist pathways.
+- Verify passport-validity rules using the official portal for travelers outside the common U.S., Canada, EU, U.K., or Latin America tourist pathways.
 
 ## Practical Planning Advice
 

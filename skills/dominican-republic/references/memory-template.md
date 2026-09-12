@@ -1,6 +1,6 @@
 # Memory Template - Dominican Republic
 
-Create `~/Clawic/data/dominican-republic/memory.md` with this structure:
+Use this file only after resolving `<state_root>`. Create `<state_root>/memory.md` with this structure when durable trip context must persist.
 
 ```markdown
 # Dominican Republic Trip Memory
@@ -38,7 +38,7 @@ integration: pending | complete | paused | never_ask
 
 ## Conditions
 - Must-see places:
-- Must-avoid:
+- Exclude preferences:
 - Heat tolerance:
 - Rain tolerance:
 - Hurricane-season flexibility:
@@ -69,11 +69,12 @@ integration: pending | complete | paused | never_ask
 |-------|---------|----------|
 | `ongoing` | still learning trip shape | ask only high-impact follow-ups |
 | `complete` | core context is stable | act quickly from saved defaults |
-| `paused` | memory use paused | do not expand without need |
-| `never_ask` | no setup prompts wanted | avoid future setup questions |
+| `paused` | memory use paused | keep responses concise and skip memory expansion |
+| `never_ask` | no setup prompts wanted | bypass future setup questions |
 
 ## Key Principles
 
 - Save coast choice, water fit, and transfer tolerance because they decide most Dominican Republic plans.
 - Preserve airport, resort, and driving decisions because they create the biggest downstream friction.
 - Replace guesses once flights, hotels, and transport become fixed.
+- Never store credentials, full passport numbers, payment card data, or third-party private contact details.

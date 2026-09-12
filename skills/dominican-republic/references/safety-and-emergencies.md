@@ -16,7 +16,7 @@
 - In remote areas, resorts, hotels, and tour operators may still be the fastest first layer of help.
 - Respect beach flags, surf warnings, and rough-water days, especially on Atlantic-facing beaches.
 - Keep passports, cards, phones, and transport details controlled in cities, beaches, and transit points.
-- Avoid casual late-night road moves after long flights if a transfer or hotel night solves the risk better.
+- Recommend a professional transfer or an initial hotel night instead of late-night self-driving after long flights.
 
 ## Health and Execution
 
