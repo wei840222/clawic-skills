@@ -94,7 +94,7 @@ private fun handlePurchase(purchase: Purchase) {
             }
         }
         Purchase.PurchaseState.PENDING -> {
-            // Don't grant access yet - payment pending (3D Secure, etc.)
+            // Block access while payment is pending (3D Secure, etc.)
         }
     }
 }
