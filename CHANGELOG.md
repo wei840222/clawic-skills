@@ -9,6 +9,7 @@ This table is the canonical record of skill refactor pull requests merged into `
 | Skill                        | Date       | Darwin Score  |
 | ---------------------------- | ---------- | ------------- | ---- |
 | austin | 2026-09-12 | 85/100 (#351) |
+| in-app-purchases | 2026-09-12 | 85/100 (#352) |
 | friend | 2026-09-12 | 85/100 (#350) |
 | czech | 2026-09-12 | 85/100 (#349) |
 | testflight | 2026-09-12 | 85/100 (#348) |
