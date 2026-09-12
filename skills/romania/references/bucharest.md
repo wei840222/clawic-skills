@@ -41,11 +41,11 @@ It is not the prettiest part of Romania, but it is useful, lively, and much stro
 - Village Museum if the user wants Romanian vernacular culture fast
 - Revolution Square for modern history context
 - Parliament only if they care about state scale or communist-era legacy
-- Therme if they want a leisure day and do not mind a polished, popular venue
+- Therme if they want a leisure day and enjoy polished, popular venues
 
 ## When To Cut It Short
 
-If the user has only 4-5 nights total in Romania, do not let Bucharest eat the trip. One or two nights is usually enough before moving to Brasov or Sibiu.
+If the user has only 4-5 nights total in Romania, limit Bucharest to one or two nights to preserve time for other regions. One or two nights is usually enough before moving to Brasov or Sibiu.
 
 ## Local Traps
 

@@ -1,6 +1,6 @@
 # Memory Template — Romania
 
-Create `~/Clawic/data/romania/memory.md` with this structure:
+Create `<state_root>/romania/memory.md` with this structure:
 
 ```markdown
 # Romania Memory
@@ -34,11 +34,11 @@ integration: pending
 | `ongoing` | Still learning the trip | Gather context opportunistically |
 | `complete` | Enough context exists | Give direct guidance without extra setup questions |
 | `paused` | User does not want deeper planning now | Help with current asks only |
-| `never_ask` | User explicitly does not want memory-building | Never push for more context |
+| `never_ask` | User explicitly requests transient answers | Answer directly without seeking extra context |
 
 ## Key Principles
 
 - Keep notes short and trip-relevant
 - Save constraints before preferences
 - Update `last` when Romania planning meaningfully advances
-- Avoid speculative details that were never confirmed
+- Record only confirmed details

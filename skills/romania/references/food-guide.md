@@ -2,7 +2,7 @@
 
 ## The Core Idea
 
-Romanian food is hearty, generous, and better when the user stops chasing gimmicks and leans into soups, grilled meats, baked dishes, and regional produce.
+Romanian food is hearty, generous, and better when the user focuses on traditional preparations and leans into soups, grilled meats, baked dishes, and regional produce.
 
 ## Dishes Worth Naming
 
@@ -41,8 +41,8 @@ Romanian food is hearty, generous, and better when the user stops chasing gimmic
 
 ## Practical Advice
 
-- lunch and dinner timing is easier than in Spain or Italy; do not overcomplicate it
-- many strong dishes are filling, so avoid overordering
+- lunch and dinner timing is easier than in Spain or Italy; timing is flexible
+- many strong dishes are filling, so order conservatively for heavy dishes
 - ask for the house soup or grill when the menu is huge and generic
 - in tourist cores, steer away from places that sell only "Dracula" atmosphere
 
