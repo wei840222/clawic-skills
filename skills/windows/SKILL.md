@@ -1,98 +1,42 @@
 ---
 name: windows
-slug: windows
-version: 1.0.0
-description: Windows-specific patterns, security practices, and operational traps that cause silent failures.
-homepage: https://clawic.com/skills/windows
+description: Diagnose silent Windows failures, manage credentials safely, and navigate
+  PowerShell, WinRM, Defender, service-account, and file-lock traps. Use when scripting
+  or troubleshooting on Windows hosts, scheduled tasks, remoting, or ops automation.
+  Not for PowerShell language syntax depth (`powershell`) or broad defensive security
+  programs (`cybersecurity`).
 metadata:
-  category: system
-  skills:
-  - windows
-  - powershell
-  - security
-  - automation
-  clawdbot:
-    emoji: 🪟
-    displayName: Windows
+  version: "1.1.0"
+  openclaw: '{"emoji":"🪟","os":["win32"]}'
+  related-skills: '{"powershell":"PowerShell language, pipelines, arrays, operators, and cross-version syntax beyond Windows host traps.","cybersecurity":"Broader defensive security triage, detection, and program work beyond Windows ops traps.","security-best-practices":"Secure-by-default code review and remediation rather than Windows host operations."}'
 ---
 
-## Credential Management
+## When to Use
 
-- Never hardcode passwords in scripts — use Windows Credential Manager:
-  ```powershell
-  # Store
-  cmdkey /generic:"MyService" /user:"admin" /pass:"secret"
-  # Retrieve in script
-  $cred = Get-StoredCredential -Target "MyService"
-  ```
-- For scripts, use `Get-Credential` and export securely:
-  ```powershell
-  $cred | Export-Clixml -Path "cred.xml"  # Encrypted to current user/machine
-  $cred = Import-Clixml -Path "cred.xml"
-  ```
+- Windows scripts or automation fail silently or intermittently
+- Credentials, scheduled tasks, WinRM, Defender, or service accounts are involved
+- Choosing safe defaults for PowerShell ops, file locks, temp files, or event logging on Windows
+- Not for deep PowerShell language craft (`powershell`) or org-wide security program design (`cybersecurity`)
 
-## Silent Failures
+This skill is stateless and does not store local configuration or persistent user state.
 
-- Windows Defender silently quarantines downloaded scripts/executables — check quarantine if script disappears
-- Group Policy overrides local settings silently — `gpresult /r` to see what's actually applied
-- Antivirus real-time scanning blocks file operations intermittently — add exclusions for build/automation folders
-- PowerShell `-ErrorAction SilentlyContinue` hides problems — use `Stop` and handle explicitly
+## Quick Reference
 
-## Symbolic Links
+| Topic | File | When to load |
+|-------|------|--------------|
+| Credentials, silent failures, symlinks, signing, safety | `references/windows-operations.md` | Default ops and troubleshooting |
+| WinRM, event log, file locks, temp files, service accounts | `references/windows-operations.md` | Remoting and long-running automation |
+| Official sources | `references/sources.md` | Verify current Microsoft guidance |
 
-- Creating symlinks requires admin OR SeCreateSymbolicLinkPrivilege — regular users fail silently
-- Enable Developer Mode for symlinks without admin: Settings → For Developers → Developer Mode
-- `mklink` is CMD-only, PowerShell uses `New-Item -ItemType SymbolicLink`
+## Core Rules
 
-## Script Signing
+1. Prefer explicit errors over quiet failure: avoid `-ErrorAction SilentlyContinue` for control-flow paths; use `Stop` and handle.
+2. Never hardcode passwords. Use Windows Credential Manager, `Get-Credential` + `Export-Clixml`, or a secrets store scoped to the run identity.
+3. Assume Defender, GPO, AV, and execution policy can change observed behavior without a loud error — verify the effective policy before blaming the script.
+4. Service/scheduled-task identity is not the interactive user: no mapped drives, different `$env:USERPROFILE`, machine credentials for network access.
+5. Destructive ops start with `-WhatIf` / canary; file writes check locks; temp files clean up in `try/finally`.
+6. For PowerShell language details (streams, arrays, operators, `pwsh` vs Windows PowerShell), load `powershell` instead of expanding this skill.
 
-- Unsigned scripts fail on restricted machines with confusing errors — sign for production:
-  ```powershell
-  $cert = Get-ChildItem Cert:\CurrentUser\My -CodeSigningCert
-  Set-AuthenticodeSignature -FilePath script.ps1 -Certificate $cert
-  ```
-- AllSigned policy requires ALL scripts signed including profile.ps1
+## Operations
 
-## Operational Safety
-
-- Always `-WhatIf` first on destructive operations — `Remove-Item -Recurse -WhatIf`
-- `Start-Transcript` for audit trail — forgotten until incident investigation
-- NTFS permissions: `icacls` for CLI, but inheritance rules are non-obvious — test changes on copy first
-
-## WinRM Remoting
-
-- Enable correctly: `Enable-PSRemoting -Force` isn't enough on workgroups
-- Workgroup machines need TrustedHosts: `Set-Item WSMan:\localhost\Client\TrustedHosts -Value "server1,server2"`
-- HTTPS remoting needs certificate setup — HTTP sends credentials readable on network
-
-## Event Logging
-
-- Scripts should log to Windows Event Log for centralized monitoring:
-  ```powershell
-  New-EventLog -LogName Application -Source "MyScript" -ErrorAction SilentlyContinue
-  Write-EventLog -LogName Application -Source "MyScript" -EventId 1000 -Message "Started"
-  ```
-- Custom event sources require admin to create — create during install, not runtime
-
-## File Locking
-
-- Windows locks files aggressively — test file access before operations:
-  ```powershell
-  try { [IO.File]::OpenWrite($path).Close(); $true } catch { $false }
-  ```
-- Scheduled tasks writing to same file as user → conflicts. Use unique temp files and atomic rename
-
-## Temp File Hygiene
-
-- `$env:TEMP` fills silently — scripts should cleanup with `try/finally`:
-  ```powershell
-  $tmp = New-TemporaryFile
-  try { ... } finally { Remove-Item $tmp -Force }
-  ```
-- Orphaned temp files accumulate across reboots — unlike Linux /tmp
-
-## Service Account Gotchas
-
-- Services run in different user context — `$env:USERPROFILE` points to system profile, not user's
-- Network access from SYSTEM account uses machine credentials — may fail where user succeeds
-- Mapped drives don't exist for services — use UNC paths `\\server\share`
+For credential management, silent failures, scripting safety, WinRM, logging, file locking, temp files, and service accounts, load [Windows Operational Details](references/windows-operations.md).

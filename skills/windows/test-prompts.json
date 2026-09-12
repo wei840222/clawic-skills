@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "prompt": "Create a secure backup script for Windows that handles credentials safely.",
+    "expected": "Uses Credential Manager, Get-Credential+Export-Clixml, or a vault; no hardcoded passwords; explicit error handling; notes Export-Clixml is user/machine bound.",
+    "actual": "I will keep secrets out of the script: store the share credential with an approved Credential Manager/vault path or prompt once with Get-Credential and Export-Clixml for the same user/machine only. Backup steps use -ErrorAction Stop, probe file locks before write, and clean temp files in try/finally. I will not commit cred.xml.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "Investigate why my PowerShell scheduled task fails silently on a new Windows server.",
+    "expected": "Checks Defender quarantine, execution policy, GPO, service-account profile/mapped-drive differences, and event log/transcript evidence.",
+    "actual": "Silent scheduled-task failures on a new host usually come from Defender quarantine, execution policy on AllSigned/Restricted, GPO overrides, or the task identity (SYSTEM/service) lacking mapped drives and using a different profile. I would pull Task Scheduler history and Application log, run gpresult, confirm Get-ExecutionPolicy -List, and retest under the same run-as account with Start-Transcript.",
+    "pass": true
+  },
+  {
+    "id": 3,
+    "prompt": "Enable WinRM so I can manage a workgroup PC over the LAN with HTTP.",
+    "expected": "Warns HTTP may expose credentials, requires narrow TrustedHosts, Enable-PSRemoting alone is insufficient on workgroups, prefers HTTPS when possible.",
+    "actual": "Enable-PSRemoting is not enough on workgroups. I would scope TrustedHosts to the specific hosts only, prefer HTTPS with certificates, and treat HTTP as a last resort because credentials can be exposed depending on auth. I would verify the remote identity before any writes.",
+    "pass": true
+  }
+]
