@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "prompt": "How can I make my SaaS product's pricing tier visible to an agent?",
+    "expected": "Advises machine-readable exposure (OpenAPI/JSON-LD/Schema.org Offer fields, capability manifests) and rejects HTML-only pricing pages or 'contact sales' gates.",
+    "actual": "Expose tiers as structured Offer/price fields via OpenAPI or JSON-LD, publish capability metadata agents can query, and avoid HTML-only pricing or human sales gates.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "What's the best way to handle inventory for agents doing zero-click replenishment?",
+    "expected": "Recommends real-time stock APIs, stockout avoidance, price stability after lock-in, and rate limits that protect competitive inventory strategy.",
+    "actual": "Publish live availability quantities, keep fulfillment reliable and prices stable after auto-reorder lock-in, and rate-limit bulk inventory queries that leak strategy.",
+    "pass": true
+  },
+  {
+    "id": 3,
+    "prompt": "Our marketing site looks great but agents never convert. What is wrong?",
+    "expected": "Identifies missing machine-readable APIs/errors/onboarding as the failure mode and points to infrastructure/discovery references rather than more copy.",
+    "actual": "Agents ignore visual marketing; add structured catalog/pricing APIs, JSON errors, sandbox onboarding, and registry metadata from references/infrastructure.md and discovery.md.",
+    "pass": true
+  }
+]

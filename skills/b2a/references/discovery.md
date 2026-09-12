@@ -3,7 +3,7 @@
 ## The New Discovery Landscape
 
 Agents discover services through:
-1. **Skill registries** (Clawic, plugin stores)
+1. **Skill registries** (plugin stores / capability directories)
 2. **API directories** (RapidAPI, Postman)
 3. **MCP server listings**
 4. **Schema.org crawlers**
@@ -76,7 +76,7 @@ You win by having:
 | Coverage | Clear list of supported regions/features |
 | Freshness | Data timestamp in every response |
 
-### Avoid "Unknown" Status
+### Prevent "Unknown" Status
 Missing data = losing comparison. Ensure:
 - Every product has all standard fields
 - Every endpoint documents response schema

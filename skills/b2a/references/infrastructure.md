@@ -115,7 +115,7 @@ Agents need programmatic confirmation:
 }
 ```
 
-Never return HTML error pages. Agents can't parse them.
+Always return JSON error pages to ensure agents can parse them.
 
 ### Error Codes for Agents
 | Code | Meaning | Agent Action |
@@ -146,7 +146,7 @@ Simulate different agent behaviors:
 ## Versioning & Deprecation
 
 ### Agent-Friendly Deprecation
-Agents don't read emails. Deprecation must be in-band:
+Agents only read in-band messages. Deprecation must be in-band:
 ```http
 HTTP/1.1 200 OK
 Sunset: Sat, 01 Jun 2026 00:00:00 GMT
