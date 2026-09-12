@@ -8,7 +8,7 @@
 
 ## Logos and Marks
 
-- Detailed wordmarks and tiny taglines usually do not survive favicon or avatar sizes.
+- Simplify wordmarks and omit tiny taglines for favicon or avatar sizes.
 - Prepare simplified marks for tiny surfaces: favicon, social avatar, app icon, browser tab, and notification icon are not the same job as hero branding.
 - Test logos on light and dark backgrounds before declaring the export done.
 - Thin outlines, hairline strokes, and low-contrast brand colors disappear first at small sizes.
@@ -17,7 +17,7 @@
 
 - Preserve the vector master when the destination supports SVG.
 - Keep the SVG simple: remove hidden layers, editor cruft, and unnecessary groups.
-- Use a consistent viewBox and avoid accidental off-canvas whitespace.
+- Use a consistent viewBox and ensure precise cropping to eliminate accidental off-canvas whitespace.
 - For icon sets, keep stroke width, caps, joins, padding, and optical weight consistent across the set.
 - If the SVG is going to be styled by CSS, prefer `currentColor` over hardcoded fills when appropriate.
 
@@ -25,7 +25,7 @@
 
 - Export PNG when transparency matters and SVG is unsupported or blocked.
 - Export JPEG only when the asset is photographic or the destination forbids alpha-safe formats.
-- Do not let transparent logos pick up accidental matte colors during export.
+- Verify transparency settings to prevent unintended matte backgrounds during export.
 - If a logo is going onto colored backgrounds, preview that exact background before final export.
 
 ## Favicons and App Icons
@@ -37,7 +37,7 @@
 
 ## Icon-Set Consistency
 
-- Do not mix filled, outlined, rounded, and sharp-corner icons randomly in one set unless that contrast is intentional.
+- Maintain consistent styles (filled, outlined, rounded, or sharp-corner) across icon sets unless contrasting intentionally.
 - Similar icons should share the same baseline geometry, padding, and visual weight.
 - Curves often look optically thinner than straight segments, so balance by shape size, not random stroke-width overrides.
 - Review icons at 1x and 2x sizes on both light and dark surfaces.

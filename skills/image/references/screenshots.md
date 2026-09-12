@@ -5,18 +5,18 @@
 - Capture from the real rendered interface, not from a scaled preview inside a design tool or browser zoom guess.
 - Use PNG or lossless WebP for screenshots, UI captures, terminal images, and annotated docs unless there is a strong reason not to.
 - Keep a clean master before adding arrows, callouts, blurs, or frames.
-- If a screenshot is evidence or documentation, do not crop away the context that proves what the user should see.
+- If a screenshot is evidence or documentation, retain the context that proves what the user should see.
 
 ## Redaction and Privacy
 
 - Check for tokens, emails, names, avatars, tabs, URLs, timestamps, and notifications before sharing.
-- Blur, mask, or replace sensitive data deliberately; do not rely on tiny text being unreadable.
+- Blur, mask, or replace sensitive data deliberately; fully obscure sensitive elements rather than relying on illegibility.
 - Redaction must be irreversible in the exported asset, not just hidden behind a translucent layer in the editor.
 
 ## Annotation Rules
 
 - Add arrows, highlights, and callouts sparingly and keep them high contrast.
-- Do not let annotations cover the thing they are trying to explain.
+- Position annotations clearly outside or alongside the target element they explain.
 - If multiple steps are shown, use consistent numbering and visual language across the set.
 - For bug reports or release notes, the annotation should point at the defect or change without forcing the reader to hunt for it.
 
@@ -36,7 +36,7 @@
 ## Documentation and OCR Safety
 
 - Screenshots that contain code, logs, or settings should keep text readable enough for OCR and human scanning.
-- Avoid aggressive compression on terminal captures and code screenshots.
+- Use conservative or lossless compression for terminal captures and code screenshots.
 - If the user needs the content to be searchable or screen-reader-friendly, duplicate the important text in surrounding copy rather than relying on the screenshot alone.
 
 ## Common Screenshot Traps
