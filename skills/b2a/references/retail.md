@@ -5,7 +5,7 @@
 In B2C: win the shelf → win the sale.
 In B2A: win the API → win the sale.
 
-Agents don't see:
+Agents only see machine-readable data, missing things like:
 - Product photography
 - Shelf placement
 - Eye-level positioning
@@ -78,8 +78,8 @@ Agents expect fresh data:
 
 ### What NOT to Expose
 Competitive intelligence protection:
-- Don't reveal total inventory strategy
-- Don't expose supplier information
+- Conceal total inventory strategy
+- Protect supplier information
 - Rate-limit bulk inventory queries
 - Require authentication for detailed data
 
@@ -95,8 +95,8 @@ An agent that auto-reorders is a locked customer:
 ### Winning the Default
 To become the auto-reorder vendor:
 1. **First mover**: Be selected for first successful reorder
-2. **Consistency**: Never stockout, never late
-3. **Price stability**: Don't spike prices after lock-in
+2. **Consistency**: Maintain stock and ensure on-time delivery
+3. **Price stability**: Keep prices consistent after lock-in
 4. **API reliability**: Agent trusts your uptime
 
 ### Replenishment API

@@ -1,32 +1,36 @@
 ---
 name: b2a
-slug: b2a
-version: 1.0.0
-description: Sell to AI agents with machine-readable products, agent-optimized APIs, structured pricing, and discovery strategies for the agentic economy.
-homepage: https://clawic.com/skills/b2a
+description: Design products and services for AI agents as buyers. Use when making
+  offerings agent-discoverable, exposing machine-readable catalogs and pricing,
+  supporting autonomous purchasing or replenishment, or competing on structured
+  data instead of human marketing.
 metadata:
-  clawdbot:
-    emoji: 🤖
-    requires:
-      bins: []
-    os:
-    - linux
-    - darwin
-    - win32
-    displayName: B2A
+  version: "1.0.0"
+  openclaw: '{"emoji":"🤖"}'
+  related-skills: '{"api":"Consume or debug third-party REST/GraphQL APIs once the agent-facing contract exists.","pricing":"Set B2B/SaaS list prices, packaging, and willingness-to-pay research beyond agent-readable exposure.","ecommerce":"Operate the human storefront, checkout, inventory, and tax paths around agent-facing APIs.","payments":"Implement provider checkout, webhooks, and subscription rails for autonomous agent spend.","product":"Broader product strategy and launch craft when the question is not agent-buyer mechanics."}'
 ---
+
+## State location
+
+This skill is stateless. It teaches agent-buyer design rules and does not store local configuration, caches, or runtime state under `<state_root>`.
 
 ## When to Use
 
-User building products/services for AI agents as customers. Covers making products agent-discoverable, designing for autonomous purchasing, payment integration, and competing when buyers compare cold data instead of responding to storytelling.
+Use when the user is building or adapting products/services so **AI agents** can discover, compare, trial, purchase, or reorder without a human UI:
+
+- Expose catalogs, pricing, inventory, SLAs, and capabilities as structured APIs
+- Design for autonomous purchasing, zero-click replenishment, or agent payment rails
+- Compete when buyers rank cold structured data instead of storytelling
+- Not for generic human ecommerce ops alone (`ecommerce`), list-price strategy alone (`pricing`), or low-level third-party API client debugging alone (`api`)
 
 ## Quick Reference
 
-| Topic | File |
-|-------|------|
-| Technical implementation | `infrastructure.md` |
-| Agent discovery & SEO | `discovery.md` |
-| Retail/ecommerce specifics | `retail.md` |
+| Topic | File | Load when |
+|-------|------|-----------|
+| Technical implementation | `references/infrastructure.md` | Protocols, OpenAPI/MCP shapes, auth, errors, versioning |
+| Agent discovery | `references/discovery.md` | Registries, capability metadata, ranking signals |
+| Retail / ecommerce | `references/retail.md` | Catalog attributes, inventory feeds, auto-reorder lock-in |
+| Sources | `references/sources.md` | Verify domain claims against primary URLs |
 
 ## The Paradigm Shift
 
@@ -50,37 +54,37 @@ User building products/services for AI agents as customers. Covers making produc
 ### 2. Comparability Is Everything
 Agents compare ruthlessly. Win by being comparable:
 - Standardized attributes across your catalog
-- Same fields as competitors (price_currency, availability_stock)
+- Same fields as competitors (`price_currency`, `availability_stock`)
 - SLAs with concrete numbers, not promises
 - "Better" must be objectively measurable
 
 ### 3. Discovery ≠ SEO
-Agents don't Google. They query registries and APIs:
+Agents use structural queries instead of Google. They query registries and APIs:
 - Publish in skill stores / capability directories
 - `/.well-known/ai-plugin.json` or MCP tools
 - Metadata must declare capabilities, not market them
-- The new PageRank = ranking in agent skill stores
+- Ranking comes from structured capability indexes, not keyword SEO
 
 ### 4. Trust Is Verified, Not Told
-Agents don't believe claims. They verify:
+Agents require verifiable proof rather than claims. They verify:
 - Uptime/latency/SLA history via API, not badges
 - Reviews from other agents (programmatic reputation)
 - Certifications as queryable data, not PDF downloads
 - Track record > marketing copy
 
 ### 5. Zero-Friction Trial or Death
-Agents don't "consider"—they test or discard:
-- Onboarding < 1 API call
+Agents test immediately instead of "considering":
+- Onboarding < 1 API call when possible
 - Sandbox with rate limits, not "talk to sales"
-- Must work perfectly first time (no second chances)
-- Errors must be machine-readable, not HTML pages
+- Must work correctly on first attempt
+- Errors must be machine-readable JSON, not HTML pages
 
 ### 6. Payments for Agents
 The agent needs to transact autonomously:
-- Stripe Agent Toolkit, Mastercard Agent Pay, or similar
-- Pre-authorized budgets (agent has $X to spend)
+- Agent payment toolkits / pre-authorized budgets
 - Programmatic receipts and confirmations
-- Escrow for trust between unknown parties
+- Escrow patterns when counterparties are unknown
+- Hand off provider-specific integration depth to `payments` / `stripe-api-integration`
 
 ### 7. Metrics That Matter
 
@@ -92,28 +96,28 @@ The agent needs to transact autonomously:
 | Repeat Agent Retention | % agents that return |
 | API Error Rate | Failures causing agent to discard |
 
-Traditional metrics (page views, bounce rate) are meaningless.
+Traditional metrics (page views, bounce rate) are weak proxies for agent buyers.
 
 ## Common Traps
 
 | Trap | Why It Fails |
 |------|--------------|
-| Pretty website, no API | Agents don't see your UI |
+| Pretty website, no API | Agents only parse your API |
 | "Contact us for pricing" | Agents need programmatic pricing |
 | Marketing copy in descriptions | Agents parse data, skip prose |
 | HTML error pages | Agents need JSON errors |
-| Manual onboarding | Agents won't wait |
+| Manual onboarding | Agents will not wait |
 | Trust badges instead of APIs | Unverifiable = untrusted |
 | Optimizing for humans first | Delays agent-readiness |
 
 ## Honest Limitations
 
 What an AI helping you with B2A cannot do:
-- **Create track record** — You have to actually deliver 99.9% uptime
-- **Know internal rankings** — How Claude/GPT rank skills is opaque
-- **Predict agent decisions** — Each agent has its own heuristics
-- **Guarantee discovery** — Skill stores may have hidden placement deals
-- **Prevent gaming** — Competitors lying about specs is real
+- **Create track record** — you still have to deliver measurable uptime and fulfillment
+- **Know internal rankings** — how closed agent platforms rank skills can be opaque
+- **Predict every agent heuristic** — each buyer agent may weight fields differently
+- **Guarantee discovery** — registry placement and ranking can include private deals
+- **Prevent competitor gaming** — false structured claims remain a real risk; verify
 
 ## Readiness Checklist
 
@@ -123,7 +127,7 @@ What an AI helping you with B2A cannot do:
 □ Inventory/availability real-time
 □ Authentication supports client_credentials (not interactive)
 □ Errors return JSON with semantic codes
-□ Onboarding works in < 5 API calls
+□ Onboarding works in a small number of API calls
 □ Payment rails support autonomous agents
 □ SLA metrics exposed via API
 □ Listed in relevant skill registries
