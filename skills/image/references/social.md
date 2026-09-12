@@ -25,7 +25,7 @@ Platform UIs change often. Use these as high-confidence working defaults, then r
 ## Social Export Rules
 
 - Use RGB and sRGB.
-- Avoid tiny text that only works in the full-resolution editor view.
+- Ensure text size is legible in standard compressed preview views.
 - Compress enough to upload fast, but not so hard that gradients, skin, or text show visible damage.
 - If text matters, validate legibility on a small preview, not only at full size.
 - Platform uploaders often recompress again, so leave enough quality headroom for the second pass.
@@ -35,7 +35,7 @@ Platform UIs change often. Use these as high-confidence working defaults, then r
 ## Content Guidance
 
 - Put the main subject, offer, or headline in the central safe area.
-- Do not rely on corner badges, tiny logos, or edge-aligned text surviving previews.
+- Position badges, logos, and critical text centrally to ensure they survive preview crops.
 - Faces, products, and callouts need more breathing room in stories, reels, and banners than in square feed posts.
 - The real first impression is often the tiny preview tile, not the full-screen asset; optimize for that moment too.
 

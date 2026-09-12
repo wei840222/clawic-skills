@@ -16,11 +16,11 @@ Standard `srcset` widths: **320w, 640w, 768w, 1024w, 1366w, 1600w, 1920w**
 >
 ```
 
-- Do not generate every possible size; match real CSS breakpoints.
+- Generate sizes targeted only to specific CSS breakpoints.
 - Four or five sizes is usually enough for one asset.
 - Width descriptors are safer than DPR-only guesswork when layouts vary.
 - If art direction changes by viewport, use `<picture>` or separate crops, not one crop forced everywhere.
-- Do not force a single desktop crop into mobile if the subject or text loses meaning; mobile often needs a different crop, not just fewer pixels.
+- Apply customized crops for mobile when a single desktop crop loses subject focus or text meaning.
 
 ## LCP, Lazy Loading, and Fetch Priority
 
@@ -28,7 +28,7 @@ Use `loading="lazy"` for:
 - Below-the-fold images
 - Galleries and long lists
 
-Do not lazy-load:
+Eagerly load:
 - Hero or likely LCP images
 - First visible product or content images
 - Critical background replacements that define the first viewport
@@ -61,7 +61,7 @@ Common ratios:
 | 1:1 | Products, avatars, social |
 | 21:9 | Wide banners |
 
-- Never ship web images without reserved space if layout stability matters.
+- Reserve structural space for web images to ensure layout stability.
 
 ## Format Rules for Web
 
@@ -78,7 +78,7 @@ Common ratios:
 - Run SVGs through SVGO.
 - Keep `viewBox`; remove hardcoded `width` and `height` when CSS should control size.
 - Inline very small critical SVGs; externalize bigger or reusable ones.
-- Avoid embedding essential copy inside raster images when HTML text should carry meaning.
+- Rely on HTML text for essential copy instead of embedding it inside raster images.
 - If the SVG comes from design tools, inspect it for hidden raster layers, giant embedded paths, or exported cruft before shipping it.
 
 ## CMS and Pipeline Reality

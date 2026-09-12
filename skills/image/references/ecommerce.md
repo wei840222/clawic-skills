@@ -18,7 +18,7 @@
 ## Color and Consistency
 
 - Use sRGB for marketplace delivery.
-- Do not auto-enhance product color without validating against the real item.
+- Validate product color against the real item before applying auto-enhancement.
 - Keep crop margins, lighting direction, and white balance consistent across the set.
 - Catalog inconsistency makes the whole store feel lower quality even when each image is individually acceptable.
 - Variant images should preserve a consistent camera angle and scale unless the marketplace expects a different shot type.
@@ -34,7 +34,7 @@
 | Walmart | White-background expectations are stricter |
 
 - Marketplace uploaders normalize aggressively; validate the processed result after upload when it matters.
-- Some catalogs require the main image to be cleaner and stricter than secondary lifestyle images; do not apply one styling rule to both.
+- Some catalogs require the main image to be cleaner and stricter than secondary lifestyle images; apply specialized styling rules independently for main and lifestyle images.
 - If a store theme renders product cards larger than the uploaded image can support, the fix is usually source dimensions and theme sizing together, not more sharpening alone.
 
 ## Product-Image Traps

@@ -1,33 +1,27 @@
 ---
 name: image
-slug: image
-version: 1.0.4
-description: Create, inspect, process, and optimize image files and visual assets with reliable format choice, resizing, compression, color-profile, metadata, and platform-export checks. Use when (1) the task is about images, screenshots, logos, product photos, or graphics; (2) resizing, converting, compressing, cropping, metadata, or export specs matter; (3) the asset must survive web, social, ecommerce, or print delivery without quality or format mistakes.
-homepage: https://clawic.com/skills/image
-changelog: Expanded the skill with branding, screenshot, accessibility, and richer platform-specific workflows while preserving stronger image-processing guidance.
+description: Applies intent-focused rules, compression strategies, and asset-type formatting (WebP, AVIF, PNG) to optimize images for their destination contexts.
 metadata:
-  clawdbot:
-    emoji: 🖼️
-    os:
-    - linux
-    - darwin
-    - win32
-    displayName: Image
+  openclaw: '{"emoji": "🖼️"}'
 ---
+
+
+## State location
+This is a stateless skill. It provides rules, recommendations, and workflows for image processing, but does not store local configuration, caches, or state files in the workspace.
 
 ## When to Use
 
 Use when the main artifact is an image file or visual asset, especially when format choice, resizing, cropping, compression, metadata, transparency, color profile, responsive delivery, social specs, marketplace requirements, or print readiness matter.
 
 If the task is destination-specific, load the matching file before deciding:
-- `web.md` for responsive delivery, LCP/CLS, `srcset`, lazy loading, SVG, and modern web formats.
-- `social.md` for platform dimensions, safe zones, and feed/story/banner exports.
-- `ecommerce.md` for marketplace product-image rules, white backgrounds, zoom, and catalog consistency.
-- `photography.md` for RAW, ICC profiles, print export, EXIF, and non-destructive editing.
-- `branding.md` for logos, icons, favicons, app icons, SVG consistency, and small-size legibility.
-- `screenshots.md` for UI captures, documentation images, annotations, redaction, and marketing/device frames.
-- `accessibility.md` for alt text, decorative vs informative images, text in images, charts, and contrast-aware image delivery.
-- `commands.md` when the user needs concrete ImageMagick or Pillow examples.
+- `references/web.md` for responsive delivery, LCP/CLS, `srcset`, lazy loading, SVG, and modern web formats.
+- `references/social.md` for platform dimensions, safe zones, and feed/story/banner exports.
+- `references/ecommerce.md` for marketplace product-image rules, white backgrounds, zoom, and catalog consistency.
+- `references/photography.md` for RAW, ICC profiles, print export, EXIF, and non-destructive editing.
+- `references/branding.md` for logos, icons, favicons, app icons, SVG consistency, and small-size legibility.
+- `references/screenshots.md` for UI captures, documentation images, annotations, redaction, and marketing/device frames.
+- `references/accessibility.md` for alt text, decorative vs informative images, text in images, charts, and contrast-aware image delivery.
+- `references/commands.md` when the user needs concrete ImageMagick or Pillow examples.
 
 Keep the main workflow in this file, then pull in the specialized file for the exact delivery context instead of guessing from generic image advice.
 
@@ -35,14 +29,14 @@ Keep the main workflow in this file, then pull in the specialized file for the e
 
 | Situation | Load | Why |
 |-----------|------|-----|
-| Web optimization, responsive images, lazy loading, SVG | `web.md` | Avoid CLS/LCP mistakes, oversized assets, and wrong web formats |
-| Color profiles, metadata, RAW, print, non-destructive workflows | `photography.md` | Protect color intent, print readiness, and master-file quality |
-| Social platform dimensions, safe zones, banners, previews | `social.md` | Prevent unsafe crops, unreadable text, and uploader recompression surprises |
-| Product photos, marketplace standards, catalog consistency | `ecommerce.md` | Preserve zoom detail, white-background compliance, and catalog consistency |
-| Logos, favicons, SVGs, app icons, icon sets | `branding.md` | Protect small-size legibility, SVG consistency, and multi-format icon delivery |
-| UI screenshots, docs captures, redaction, annotations | `screenshots.md` | Avoid blurry captures, privacy leaks, and misleading before/after comparisons |
-| Alt text, text-in-image risk, charts, decorative vs informative images | `accessibility.md` | Keep image work usable and compliant, not only visually correct |
-| ImageMagick and Pillow commands | `commands.md` | Use concrete commands once the export decision is already clear |
+| Web optimization, responsive images, lazy loading, SVG | `references/web.md` | Prevent CLS/LCP mistakes, control asset sizes, use optimal web formats |
+| Color profiles, metadata, RAW, print, non-destructive workflows | `references/photography.md` | Protect color intent, print readiness, and master-file quality |
+| Social platform dimensions, safe zones, banners, previews | `references/social.md` | Prevent unsafe crops, unreadable text, and uploader recompression surprises |
+| Product photos, marketplace standards, catalog consistency | `references/ecommerce.md` | Preserve zoom detail, white-background compliance, and catalog consistency |
+| Logos, favicons, SVGs, app icons, icon sets | `references/branding.md` | Protect small-size legibility, SVG consistency, and multi-format icon delivery |
+| UI screenshots, docs captures, redaction, annotations | `references/screenshots.md` | Maintain crisp captures, obscure private data, ensure accurate before/after comparisons |
+| Alt text, text-in-image risk, charts, decorative vs informative images | `references/accessibility.md` | Keep image work usable and compliant, not only visually correct |
+| ImageMagick and Pillow commands | `references/commands.md` | Use concrete commands once the export decision is already clear |
 
 ## Fast Workflow
 
@@ -56,15 +50,15 @@ Keep the main workflow in this file, then pull in the specialized file for the e
 
 ## Asset-Type Defaults
 
-| Asset type | Usually best starting point | Watch out for |
-|-----------|-----------------------------|---------------|
-| Photo | WebP or AVIF for web, JPEG fallback, layered/RAW master for editing | Color profile shifts, overcompression, platform recompression |
-| Product photo | JPEG or WebP for delivery, high-res clean master | White background, edge cleanup, zoom detail, consistency |
-| Screenshot or UI capture | PNG or lossless WebP | JPEG blur, privacy leaks, unreadable text |
-| Logo or simple icon | SVG master, PNG fallbacks only when needed | Tiny details, unsupported SVG pipelines, dark/light contrast |
-| Social/OG card | PNG or high-quality JPEG sized for preview | Unsafe crop, tiny text, double compression |
-| Diagram or chart | SVG when possible, PNG when fixed raster needed | Thin lines, low contrast, missing explanatory text |
-| Print image | TIFF or high-quality JPEG with correct profile | Wrong profile, wrong physical size, no bleed |
+| Asset type | Usually best starting point | Watch out for | When to load reference |
+|-----------|-----------------------------|---------------|------------------------|
+| Photo | WebP or AVIF for web, JPEG fallback, layered/RAW master for editing | Color profile shifts, overcompression, platform recompression | `references/photography.md` |
+| Product photo | JPEG or WebP for delivery, high-res clean master | White background, edge cleanup, zoom detail, consistency | `references/ecommerce.md` |
+| Screenshot or UI capture | PNG or lossless WebP | JPEG blur, privacy leaks, unreadable text | `references/screenshots.md` |
+| Logo or simple icon | SVG master, PNG fallbacks only when needed | Tiny details, unsupported SVG pipelines, dark/light contrast | `references/branding.md` |
+| Social/OG card | PNG or high-quality JPEG sized for preview | Unsafe crop, tiny text, double compression | `references/social.md` |
+| Diagram or chart | SVG when possible, PNG when fixed raster needed | Thin lines, low contrast, missing explanatory text | `references/accessibility.md` |
+| Print image | TIFF or high-quality JPEG with correct profile | Wrong profile, wrong physical size, no bleed | `references/photography.md` |
 
 ## Core Rules
 
@@ -79,7 +73,7 @@ Keep the main workflow in this file, then pull in the specialized file for the e
 ### 2. Pick formats by content, not by trend
 
 - Photos usually want AVIF or WebP for modern web delivery, with JPEG fallback when compatibility matters.
-- Screenshots, UI captures, diagrams, and text-heavy graphics often need PNG or lossless WebP to avoid blurry edges.
+- Screenshots, UI captures, diagrams, and text-heavy graphics often need PNG or lossless WebP to preserve sharp edges.
 - Logos, icons, and simple illustrations should stay vector (`.svg`) when the target supports it.
 - Transparency changes the decision: JPEG drops alpha, while PNG, WebP, and AVIF can preserve it.
 - Animated GIF is rarely the best output; animated WebP, MP4, or WebM are usually smaller and cleaner.
@@ -98,7 +92,7 @@ Keep the main workflow in this file, then pull in the specialized file for the e
 ### 4. Resize, crop, and compress in the right order
 
 - Decide aspect ratio first, crop second, resize third, and compress last.
-- Do not upscale by default; extra pixels do not create missing detail.
+- Maintain original resolution; upscaling introduces artificial detail rather than restoring missing information.
 - Retina or HiDPI exports should be intentional, not automatic overkill.
 - As a starting point, 2x is the normal Retina export and 3x should be deliberate, not default.
 - Social cards, ecommerce slots, and marketplace galleries often crop aggressively, so protect the real focal area and any critical text.
@@ -112,14 +106,14 @@ Keep the main workflow in this file, then pull in the specialized file for the e
 - Copyright, author, or provenance metadata may need to be preserved for editorial, legal, or archive use.
 - Metadata decisions are part of the workflow, not an afterthought.
 - Preserve filenames and output naming conventions when downstream systems map assets by exact names or SKU patterns.
-- Do not strip metadata blindly if the workflow depends on authoring info, rights data, timestamps, or orientation.
+- Retain metadata when the workflow depends on authoring info, rights data, timestamps, or orientation.
 
 ### 6. Use practical budgets and delivery defaults
 
 - For web work, use budgets as a forcing function, not as decoration.
 - A useful default starting point is: hero image under 200 KB, content image under 100 KB, thumbnail under 30 KB, raster icon under 5 KB.
 - Reserve layout space with explicit dimensions or aspect ratio when the image ships on the web.
-- Do not lazy-load the primary hero or likely LCP image.
+- Eagerly load the primary hero or likely LCP image.
 - A file that "looks fine locally" is not finished if it breaks CLS, LCP, or responsive delivery in the real page.
 - A small file is not automatically good if detail, text legibility, product edges, or gradients collapse.
 - If a platform will recompress the image anyway, leave enough headroom that the second compression does not destroy the result.
@@ -143,9 +137,9 @@ Keep the main workflow in this file, then pull in the specialized file for the e
 
 ## Specialized Cases Worth Loading
 
-- Load `branding.md` when the asset is a logo, app icon, favicon, social avatar, badge, or reusable icon set.
-- Load `screenshots.md` when the asset is a UI capture, bug report image, tutorial screenshot, release-note image, or device-framed marketing visual.
-- Load `accessibility.md` when the image needs alt text, contains embedded text, carries chart/diagram meaning, or may be decorative instead of informative.
+- Load `references/branding.md` when the asset is a logo, app icon, favicon, social avatar, badge, or reusable icon set.
+- Load `references/screenshots.md` when the asset is a UI capture, bug report image, tutorial screenshot, release-note image, or device-framed marketing visual.
+- Load `references/accessibility.md` when the image needs alt text, contains embedded text, carries chart/diagram meaning, or may be decorative instead of informative.
 
 ## What Good Looks Like
 
@@ -174,14 +168,9 @@ Keep the main workflow in this file, then pull in the specialized file for the e
 - Treating alt text, captions, or chart summaries as someone else's problem after the pixels look good.
 
 ## Related Skills
-More Clawic skills, get them at https://clawic.com/skills/<slug> (install if the user confirms):
 - `image-edit` — Masking, cleanup, inpainting, and targeted visual edits.
 - `image-generation` — AI image generation and editing across current model providers.
 - `photography` — Capture, color, and print-oriented photo workflows.
 - `svg` — Vector graphics workflows when raster files are the wrong output.
 - `ecommerce` — Marketplace and product-listing requirements that often constrain image delivery.
 
-## Feedback
-
-- If useful, star it: https://clawic.com/skills/image
-- Latest version: https://clawic.com/skills/image

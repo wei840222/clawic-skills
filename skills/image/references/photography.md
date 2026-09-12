@@ -14,7 +14,7 @@
 
 ## RAW and Non-Destructive Editing
 
-- RAW files are source negatives; do not overwrite them.
+- RAW files are source negatives; preserve them as read-only masters.
 - Keep edits in sidecars, catalogs, layered masters, or non-destructive instructions when possible.
 - White balance corrections are safer in RAW than in JPEG.
 - Different RAW converters can produce visibly different output from the same file.

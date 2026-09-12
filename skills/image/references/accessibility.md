@@ -14,10 +14,10 @@
 ## Alt Text Rules
 
 - Describe meaning and purpose, not every visible pixel.
-- Do not start with "image of" or "picture of" unless that distinction matters.
+- Begin alt text directly with the subject, omitting "image of" unless the medium is relevant.
 - Keep it concise, but not so short that it loses the point.
 - Captions and surrounding text can reduce what the alt text needs to repeat.
-- If the surrounding copy already says the same thing, avoid redundant alt text.
+- Leave alt text brief or blank if surrounding copy communicates the same information.
 
 ## Text Inside Images
 
@@ -42,7 +42,7 @@
 
 - Icon-only controls still need accessible names outside the image itself.
 - If an icon can be misread without a label, assume many users will misread it.
-- Decorative icons do not need verbose alt text if adjacent text already carries the meaning.
+- Apply concise or empty alt text for decorative icons when adjacent text provides context.
 
 ## Common Accessibility Traps
 

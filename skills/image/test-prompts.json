@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "Optimize this photograph for web delivery on our landing page.",
+    "expected": "The skill evaluates the request for web delivery, recommends AVIF or WebP, provides a JPEG fallback, outlines compression strategies (sRGB, 100KB budget), and instructs checking `references/web.md` and `references/photography.md`.",
+    "actual": "I will load `references/web.md` and `references/photography.md` to optimize the photograph for web delivery. The recommended approach is to convert the original image to AVIF or WebP format for optimal modern web performance, while providing a JPEG fallback for older clients. The color profile will be explicitly maintained as sRGB. I will ensure the file size target remains around 100-200 KB depending on the landing page placement, resizing dimensions as needed before applying lossy compression. We will also ensure LCP characteristics are optimized (not lazy loaded).",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "I need to share this app UI screenshot on social media (Twitter/X and LinkedIn).",
+    "expected": "The skill instructs keeping PNG or lossless WebP for crisp text, preventing blur, referencing `references/social.md` for sizing (1200x628 or 1200x1200), and `references/screenshots.md` to check for privacy leaks before export.",
+    "actual": "I will load `references/social.md` and `references/screenshots.md` to format your app UI screenshot for Twitter/X and LinkedIn. For UI captures, we will maintain the asset in PNG or lossless WebP to prevent text edge blurring often caused by JPEG compression. For X, we will target a 1.91:1 ratio (1200x628), and for LinkedIn a 1:1 ratio (1200x1200). We must also inspect the screenshot for any PII, credentials, or unstable UI elements before finalizing the asset, and ensure the crop keeps the core focus in the safe zones.",
+    "pass": true
+  }
+]
