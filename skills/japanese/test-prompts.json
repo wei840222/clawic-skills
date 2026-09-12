@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "prompt": "Rewrite this email to a client politely: Hello, we received your request. We will send the estimate by Friday.",
+    "expected": "Writes a concise external-business Japanese email using appropriate greeting, respectful phrasing, a concrete Friday placeholder/date boundary, and no invented facts.",
+    "actual": "件名：お見積り送付の件\n\n［会社名］［氏名］様\n\nいつもお世話になっております。［自社名］の［氏名］です。\nご依頼を承りました。お見積りは金曜日までにお送りいたします。\n何卒よろしくお願いいたします。",
+    "pass": true,
+    "eval_mode": "full_test",
+    "bm25_prompt": "Japanese business email client estimate polite keigo"
+  },
+  {
+    "id": 2,
+    "prompt": "Make this casual LINE message sound natural: I bought apples at the shop today. It was fun.",
+    "expected": "Produces a natural casual Japanese LINE-style message with omitted recoverable subject and no stiff final full stop.",
+    "actual": "今日お店でりんご買ってきた！　なんか楽しかった〜",
+    "pass": true,
+    "eval_mode": "full_test",
+    "bm25_prompt": "natural casual Japanese LINE message rewrite"
+  },
+  {
+    "id": 3,
+    "prompt": "Please correct this sentence for a customer: ご説明させていただきます。資料をご覧になられます。",
+    "expected": "Explains honorific direction and removes unnecessary させていただく and double honorifics without inventing context.",
+    "actual": "ご説明します。資料をご覧になります。\n\n`ご説明します` で十分です。また、`ご覧になられます` は二重敬語なので `ご覧になります` にします。",
+    "pass": true,
+    "eval_mode": "full_test",
+    "bm25_prompt": "Japanese keigo double honorific customer correction"
+  }
+]
