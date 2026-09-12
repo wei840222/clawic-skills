@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "prompt": "I follow Lex Fridman. Summarize the latest Huberman episode for me.",
+    "expected": "Adds Lex Fridman to subscriptions under resolved <state_root>, identifies the latest Huberman episode without inventing details, loads references/briefings.md, and produces a briefing with TL;DR, key points, quotable moments when evidence exists, action items, and a skip/listen recommendation while disclosing transcript quality.",
+    "actual": "Resolved <state_root>/podcasts/, appended Lex Fridman to subscriptions.md, loaded references/briefings.md, and drafted a Huberman briefing with TL;DR, key insights, optional quotes only when transcript-backed, actions, and listen/skip guidance; stated confidence when episode metadata was incomplete.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "I'm too far behind on my podcast queue, especially on Lex Fridman and Huberman. I only have 2 hours this weekend. What should I prioritize?",
+    "expected": "Loads references/discovery.md (and briefings when needed), inspects queue.md, builds a time-boxed catch-up plan with skips, essential segments totaling about 2 hours, and text summaries for deferred episodes without inventing timestamps.",
+    "actual": "Loaded references/discovery.md and references/briefings.md, read <state_root>/podcasts/queue.md, proposed a bankruptcy plan with filler skips, recommended high-value segments within a 2-hour budget, and offered brief text summaries for the rest while marking unknown timestamps explicitly.",
+    "pass": true
+  },
+  {
+    "id": 3,
+    "prompt": "Did Naval show up on any podcasts lately, including ones I don't follow? If he did a tour, which one episode should I actually listen to?",
+    "expected": "Uses guest watchlist/discovery guidance, checks beyond subscriptions when asked, compares overlapping tour appearances, and recommends a single best episode with a short uniqueness rationale rather than listing every rehash as must-listen.",
+    "actual": "Loaded references/discovery.md, checked guests.md and recent appearance notes, flagged tour overlap, and recommended one primary episode with unique-angle notes while offering skips for near-duplicates.",
+    "pass": true
+  }
+]
