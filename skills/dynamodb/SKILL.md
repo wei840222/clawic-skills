@@ -1,102 +1,69 @@
 ---
 name: dynamodb
-slug: dynamodb
-version: 1.0.0
-description: Design DynamoDB tables and write efficient queries avoiding common NoSQL pitfalls.
-homepage: https://clawic.com/skills/dynamodb
+description: Design scalable DynamoDB tables, model access patterns, and avoid NoSQL bottlenecks. Use when choosing partition/sort keys, writing Query vs Scan logic, adding GSIs, planning capacity or TTL, implementing pagination, conditional writes, or transactions, or when hot partitions, throttling, or expensive scans appear. Not for general AWS account architecture (`aws`), object-storage workflows (`s3`), Terraform language mechanics (`terraform`), or Kubernetes manifests.
 metadata:
-  clawdbot:
-    emoji: ⚡
-    requires:
-      anyBins:
-      - aws
-    os:
-    - linux
-    - darwin
-    - win32
-    displayName: DynamoDB
+  version: "1.1.0"
+  openclaw: '{"emoji":"⚡","requires":{"anyBins":["aws"]}}'
+  related-skills: '{"aws":"Broad AWS architecture, IAM, networking, and cost work beyond DynamoDB data modeling.","s3":"Store large objects in S3 and keep only references or metadata keys in DynamoDB.","terraform":"Author Terraform resources for DynamoDB tables and indexes after the access model is decided."}'
 ---
 
-## Key Design
+Use this skill to design DynamoDB data models, pick efficient access patterns, and prevent cost or latency failures before they reach production.
 
-- Partition key determines data distribution—high-cardinality keys spread load evenly
-- Hot partition = one key gets all traffic—use composite keys or add random suffix
-- Sort key enables range queries within partition—design for access patterns
-- Can't change keys after creation—model all access patterns before creating table
+## State location
 
-## Query vs Scan
+This skill is stateless. It does not create or require a local `<state_root>`. Keep skill resources under `references/`. Any AWS credentials, profiles, or temporary CLI output belong to the host environment or caller workspace—never hardcode absolute paths inside the skill package.
 
-- Query uses partition key + optional sort key—O(items in partition), always prefer
-- Scan reads entire table—expensive, slow, avoids indexes; almost never correct
-- "I need to filter by X" usually means missing GSI—add index, don't scan
-- FilterExpression applies AFTER read—still consumes full read capacity
+## When to Use
 
-## Global Secondary Indexes
+- Designing a new table or rewriting keys around real access patterns
+- Choosing Query, GSI, sparse index, or single-table patterns instead of Scan
+- Handling pagination, eventual consistency, conditional writes, batch ops, or transactions
+- Diagnosing hot partitions, throttling, oversized items, or TTL surprises
+- Not for whole-account AWS architecture (`aws`), S3 object workflows (`s3`), or Terraform syntax (`terraform`)
 
-- GSI = different partition/sort key—enables alternate access patterns
-- GSI is eventually consistent—writes propagate with slight delay
-- GSI consumes separate capacity—provision or pay for each GSI independently
-- Sparse index trick: only items with attribute appear in GSI
+## Quick Reference
 
-## Single-Table Design
+| Topic | File | Load when |
+|-------|------|-----------|
+| Key design & single-table patterns | `references/best-practices.md` | Partition/sort keys, hot partitions, entity prefixes |
+| Query, GSI, pagination, consistency, writes | `references/operations.md` | Query vs Scan, GSI, batch, transactions, optimistic locking |
+| TTL, capacity modes, hard limits | `references/limits-and-capacity.md` | On-demand vs provisioned, item size, throughput ceilings |
 
-- One table for multiple entity types—prefix partition key: `USER#123`, `ORDER#456`
-- Overloaded sort key: `METADATA`, `ORDER#2024-01-15`, `ITEM#abc`
-- Query returns mixed types—filter client-side or use begins_with
-- Not always right—start with access patterns, not doctrine
+## Core Rules
 
-## Pagination
+1. Model every required access pattern before creating the table—keys cannot change later.
+2. Prefer Query on partition key (+ optional sort key). Treat Scan as a last resort.
+3. If callers need “filter by X”, add a GSI or sparse index; do not Scan + FilterExpression as the primary path.
+4. Always paginate: loop on `LastEvaluatedKey` until absent. `Limit` caps evaluated items, not total matches.
+5. Default reads are eventually consistent. Use `ConsistentRead` only when stale data is unacceptable and budget for 2x RCU.
+6. Keep large blobs in S3; store references in DynamoDB. Item size hard limit is 400KB.
+7. TTL uses Unix epoch **seconds**. Deletion is eventual background work—items may linger after expiry.
+8. Treat `BatchWriteItem` as non-atomic; retry `UnprocessedItems`. Use `TransactWriteItems` only when all-or-nothing is required.
 
-- Results capped at 1MB per request—must handle pagination
-- `LastEvaluatedKey` in response means more pages—pass as `ExclusiveStartKey`
-- Loop until `LastEvaluatedKey` is absent—common mistake: assume one call gets all
-- `Limit` limits evaluated items, not returned—still need pagination logic
+## Anti-Patterns
 
-## Consistency
+- Low-cardinality partition keys that create hot partitions
+- Scan + FilterExpression as the default read path
+- Assuming one Query/Scan call returns the full result set
+- Conditional logic missing on overwrite-sensitive writes
+- Putting multi-MB payloads in items instead of S3 references
+- TTL values in milliseconds (silently ineffective)
 
-- Reads are eventually consistent by default—may return stale data
-- `ConsistentRead: true` for strong consistency—costs 2x read capacity
-- GSI reads always eventually consistent—no strong consistency option
-- Write-then-read needs consistent read or retry—eventual consistency bites here
+## Failure Recovery
 
-## Conditional Writes
+| Symptom | Likely cause | Recovery |
+|---------|--------------|----------|
+| `ProvisionedThroughputExceededException` | Hot key or undersized capacity | Back off/retry; spread keys; raise capacity or switch on-demand |
+| Stale read after write | Eventual consistency / GSI lag | Consistent read on base table, short retry, or redesign read-after-write |
+| `ConditionCheckFailedException` | Optimistic lock lost | Re-read, recompute, retry with fresh version |
+| Partial batch write | Non-atomic batch | Retry only `UnprocessedItems` with exponential backoff |
+| Item grows toward 400KB | Oversized attributes | Move bulk content to S3; keep metadata keys only |
 
-- `ConditionExpression` for optimistic locking—fails if condition false
-- Prevent overwrites: `attribute_not_exists(pk)`
-- Version check: `version = :expected` then increment
-- ConditionCheckFailedException = retry with fresh data, don't just fail
+## Sources
 
-## Batch Operations
-
-- `BatchWriteItem` is NOT atomic—partial success possible, check UnprocessedItems
-- Retry unprocessed with exponential backoff—built into AWS SDK
-- Max 25 items per batch, 16MB total—split larger batches
-- No conditional writes in batch—use TransactWriteItems for atomicity
-
-## Transactions
-
-- `TransactWriteItems` for atomic multi-item writes—all or nothing
-- Max 100 items per transaction, 4MB total
-- TransactGetItems for consistent multi-read—snapshot isolation
-- 2x cost of normal operations—use only when atomicity required
-
-## TTL
-
-- Enable TTL on timestamp attribute—DynamoDB deletes expired items automatically
-- Deletion is background process—items may persist hours after expiration
-- TTL value is Unix epoch seconds—milliseconds silently fails
-- Filter `attribute_exists(ttl) AND ttl > :now` for queries if needed
-
-## Capacity
-
-- On-demand: pay per request, auto-scales—good for unpredictable traffic
-- Provisioned: set RCU/WCU, cheaper at scale—needs capacity planning
-- Provisioned with auto-scaling for predictable patterns—set min/max/target
-- ProvisionedThroughputExceededException = throttled—back off and retry
-
-## Limits
-
-- Item size max 400KB—store large objects in S3, reference in DynamoDB
-- Partition throughput: 3000 RCU, 1000 WCU—spread across partitions
-- Query/Scan returns max 1MB—pagination required for more
-- Attribute name max 64KB total per item—don't use long attribute names
+- [Amazon DynamoDB Developer Guide](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html)
+- [Best practices for designing and using partition keys](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-partition-key-design.html)
+- [Best practices for query and scan](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-query-scan.html)
+- [Global secondary indexes](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GSI.html)
+- [Time to Live (TTL)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TTL.html)
+- [Service, account, and table quotas in Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ServiceQuotas.html)
