@@ -10,4 +10,3 @@ Ask whose action the verb describes. Raise the other party with 尊敬語; lower
 | する | なさる | いたす |
 
 Avoid double honorifics such as `お読みになられる`. Use `させていただく` only when the listener's permission is genuinely involved **and** the action benefits the speaker; otherwise use the direct humble form (`ご説明します`, `参加します`). `了解しました` may be accepted in some workplaces, but `承知しました` is the safer upward reply and `かしこまりました` fits external service communication.
-

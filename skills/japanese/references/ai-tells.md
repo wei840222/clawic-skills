@@ -10,4 +10,3 @@ Before delivery, remove structural signals of translated or generated Japanese:
 - Literal English idioms and heavy Sino-Japanese padding (`〜における`, `〜に関して`) where a simple relation works.
 
 Read the result aloud. Keep a deliberate register and the facts from the request; polish must not add claims.
-

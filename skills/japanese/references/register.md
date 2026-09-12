@@ -11,4 +11,3 @@ Choose the register from relationship and channel, then keep it throughout the t
 | 親しい | close friends and family | name alone | contractions and shared slang |
 
 When uncertain, round up one level for a first contact. `様` belongs to a person; `御中` belongs to an organisation or department, never both. Do not use `各位様` because `各位` is already honorific.
-
