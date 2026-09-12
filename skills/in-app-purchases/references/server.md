@@ -233,9 +233,9 @@ CREATE TABLE entitlements (
 
 ## Security Best Practices
 
-1. **Always verify server-side** — never trust client
+1. **Verify server-side** — grant entitlements only after server verification succeeds
 2. **Idempotent processing** — handle duplicate notifications
 3. **Store raw receipts** — for dispute resolution
 4. **Rate limit verification** — prevent abuse
-5. **Use webhooks** — don't poll for status changes
+5. **Use webhooks** — replace polling with event-driven updates
 6. **Log everything** — purchases are money, audit trail is essential

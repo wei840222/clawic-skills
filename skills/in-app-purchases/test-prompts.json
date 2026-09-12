@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "How do I implement a basic consumable purchase in iOS using StoreKit 2?",
+    "expected": "Provide code examples and instructions for using StoreKit 2 for consumable purchases.",
+    "actual": "To implement a basic consumable purchase in iOS using StoreKit 2, load `references/storekit.md` for specific instructions. Generally, you need to use `Product.purchase()` and verify the JWS transaction.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "Our RevenueCat webhook is failing to update user status when a subscription is cancelled but still in the grace period. How should we handle this state?",
+    "expected": "Explain subscription lifecycle events, specifically GRACE_PERIOD and CANCELLATION, and advise on server verification.",
+    "actual": "When a subscription is cancelled but in a grace period, handle the GRACE_PERIOD event by providing limited access and prompting for payment. Load `references/revenuecat.md` and `references/server.md` for detailed webhook and server verification strategies.",
+    "pass": true
+  }
+]

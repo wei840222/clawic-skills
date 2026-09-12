@@ -64,7 +64,7 @@ Numbers + testimonials + authority.
 
 ### 4. Loss Aversion
 ```
-"Don't lose your progress"
+"Secure your progress"
 "Keep your streak alive"
 "Unlock what you've already built"
 ```
@@ -77,7 +77,7 @@ Works after user has invested time.
 "Limited time offer"
 ```
 
-⚠️ Don't fake scarcity. Apple/Google can reject.
+⚠️ Use only genuine scarcity. Fabricated countdown or stock claims risk Apple/Google rejection.
 
 ## Layout Patterns
 
@@ -113,7 +113,7 @@ Free tier with paid upgrades:
 ### Headlines
 ```
 ✅ "Unlock your full potential"     ← Aspirational
-✅ "Never lose a workout again"     ← Problem-solving
+✅ "Preserve every workout"     ← Problem-solving
 ✅ "Join 1M+ members"               ← Social proof
 
 ❌ "Subscribe to Premium"           ← Boring

@@ -97,7 +97,7 @@ Collect via cancellation survey.
 
 ### Reducing Churn
 
-1. **Grace period** - Don't revoke immediately
+1. **Grace period** - Delay revocation during this window
 2. **Dunning** - Retry failed payments
 3. **Win-back** - Email churned users with offer
 4. **Annual upsell** - Lower churn than monthly
