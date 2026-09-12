@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "prompt": "How should I design my DynamoDB table for querying orders by customer, sorted by date?",
+    "expected": "Recommend customer id as partition key and order date/time as sort key; load references/best-practices.md; avoid Scan.",
+    "actual": "Load references/best-practices.md. Use customer ID as the partition key for even distribution per customer, and order date (or order datetime) as the sort key so recent orders can be range-queried efficiently. Do not Scan the table for this access pattern.",
+    "pass": true
+  },
+  {
+    "id": 2,
+    "prompt": "I need to get all users who have is_active=true. How do I do this efficiently?",
+    "expected": "Reject Scan+Filter as primary path; recommend sparse GSI on an active marker attribute; cite references/operations.md.",
+    "actual": "From references/operations.md, prefer a sparse GSI over Scan. Only set an is_active (or similar) attribute on active users so the GSI contains just that subset, then Query the GSI. Scan with FilterExpression still consumes full read capacity and is the wrong default.",
+    "pass": true
+  },
+  {
+    "id": 3,
+    "prompt": "My write just succeeded but a follow-up read sometimes returns the old item. What should I check?",
+    "expected": "Explain eventual consistency, ConsistentRead tradeoff, and GSI lag; point to references/operations.md consistency section.",
+    "actual": "Default DynamoDB reads are eventually consistent. For base-table read-after-write, use ConsistentRead when stale data is unacceptable (2x RCU) or retry briefly. If the read path uses a GSI, strong consistency is unavailable—redesign or accept lag. See references/operations.md.",
+    "pass": true
+  },
+  {
+    "id": 4,
+    "prompt": "Should I put a 12MB product image inside a DynamoDB item?",
+    "expected": "No—400KB item limit; store object in S3 and keep reference/metadata in DynamoDB; cite limits-and-capacity and related s3 skill.",
+    "actual": "No. DynamoDB items max out at 400KB (references/limits-and-capacity.md). Put the image in S3 and store the object key/URL plus metadata attributes in DynamoDB. Use the s3 skill for object-storage mechanics.",
+    "pass": true
+  }
+]
